@@ -1,225 +1,197 @@
-	<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Olivia Griffin — Portfolio</title>
 
-<html>
-	<head>
-		<title>Olivia Grffin</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="header">
+    <nav class="nav-inner" aria-label="Main">
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button id="menu-icon" class="hamb" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+    </nav>
+    <!-- Mobile drawer -->
+    <div id="mobile-nav" class="nav-bg"></div>
+  </header>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>OLIVIA GRIFFIN</h1>
-						<p>PORTFOLIO</a>.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero" aria-label="Intro">
+    <div class="title-wrap">
+      <h1>Olivia Griffin</h1>
+      <h2>Portfolio</h2>
+    </div>
+    <a class="glass-button" href="/Olivia-Griffin-Resume.pdf" download>Download Now</a>
+  </section>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">OLIVIA GRIFFIN</a>
-					</header>
+  <!-- ===== FEATURE BAND ===== -->
+  <section class="feature-band" id="feature">
+    <div class="feature-wrap">
+      <div class="feature-copy">
+        <h2 class="roles">
+          <span class="line">Security-Minded Developer</span>
+          <span class="dot" aria-hidden="true">•</span>
+          <span class="line">Full-Stack</span>
+          <span class="dot" aria-hidden="true">•</span>
+          <span class="line">AppSec Automation &amp; DevSecOps</span>
+        </h2>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">ABOUT</a></li>
-							<li><a href="resume.html">RESUME</a></li>
-							<li><a href="projects.html">PROJECTS</a></li>
-							<li><a href="contact.html">CONTACT</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-gmail"><span class="label">Gmail</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						</ul>
-					</nav>
+        <p class="next-steps">
+          Next Steps: Expanding projects that merge application security with modern web development.
+        </p>
+      </div>
+    </div>
 
-				<!-- Main -->
-					<div id="main">
+    <!-- Phone pinned bottom-right (crops bottom + right only) -->
+    <div class="feature-mock" aria-hidden="true">
+      <img src="images/icons/ipad4.png" alt="">
+    </div>
+  </section>
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class="date">2025</span>
-									<h2><a href="#">   Mizzou Alum • <br /> 
-									WashU Cybersecurity Grad <br />				
-									 </a></h2>
-									<p> Building & Designing Secure, Scalable Applications.<br />
-        							 Full-Stack Developer in Progress — Python, JavaScript & more.<br /></p>
-								</header>
-								<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="#" class="button large">ABOUT</a></li>
-								</ul>
-							</article>
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about">
+    <div class="section-intro">
+      <h5>About</h5>
+      <h1>Let me introduce myself.</h1>
+      <p class="lead">Security-Minded Developer.</p>
+    </div>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">2025</span>
-										<h2><a href="#">RECENT WORKS </a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-									<p>Hands-on practice: scripts, utilities, and small web pieces. Iterating toward full-stack fluency.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">View</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">2025</span>
-										<h2><a href="#">PYTHON<br />
-										Mini Projects</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-									<p> Mini Python Projects </p>
-									<ul class="actions special">
-										<li><a href="#" class="button">View</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">2025</span>
-										<h2><a href="#"> Google Sheets + Apps Script Tools <br />
-										Personal Projects </a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-									<p> Apps Sheet.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">View</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">2025</span>
-										<h2><a href="#"> JS • HTML • CSS <br />
-										 Mini Projects </a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<p>mini projects</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">View</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">2025</span>
-										<h2><a href="#">JS • HTML • CSS<br />
-										Mini Projects </a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-									<p>Mini projects. </p>
-									<ul class="actions special">
-										<li><a href="#" class="button">View</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">2025</span>
-										<h2><a href="#">JS • HTML • CSS <br />
-										Mini Projects</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-									<p>Mini Projects.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">View</a></li>
-									</ul>
-								</article>
-							</section>
+    <div class="about-content">
+      <div class="about-col">
+        <h3>Profile</h3>
+        <p>Comments.</p>
+        <ul class="info-list">
+          <li><strong>Fullname:</strong> <span>Olivia Griffin</span></li>
+          <li><strong>Birth Date:</strong> <span>September 28, 1987</span></li>
+          <li><strong>Job:</strong> <span>Freelancer, Frontend Developer</span></li>
+          <li><strong>Website:</strong> <span>oliviagriffin.pro</span></li>
+          <li><strong>Email:</strong> <span>oliviagriffindev@gmail.com</span></li>
+        </ul>
+      </div>
 
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
+      <div class="about-col">
+        <h3>Skills</h3>
+        <p>Security-Minded Developer.</p>
+        <ul class="skill-bars">
+          <li><div class="progress percent90"><span>90%</span></div><strong>HTML5</strong></li>
+          <li><div class="progress percent85"><span>85%</span></div><strong>CSS3</strong></li>
+          <li><div class="progress percent70"><span>70%</span></div><strong>jQuery</strong></li>
+          <li><div class="progress percent95"><span>95%</span></div><strong>PHP</strong></li>
+          <li><div class="progress percent95"><span>95%</span></div><strong>Python</strong></li>
+          <li><div class="progress percent75"><span>75%</span></div><strong>WordPress</strong></li>
+        </ul>
+      </div>
+    </div>
 
-					</div>
+    <div class="button-section">
+      <a href="#contact" class="btn-outline">me</a>
+      <a href="#" class="btn-outline">Download Resume</a>
+    </div>
+  </section>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p>St.Louis, MO<br /></p>
-							</section>
-							<section>
-								<h3>CodePen</h3>
-								<p><a href="#"> https://codepen.io/ginesthoi </a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">oliviagriffindev@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="mailto:oliviagriffindev@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-									<li><a href="https://github.com/ginesthoii" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="@olivia_griffin" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
 
-								</ul>
-							</section>
-						</section>
-					</footer>
 
-			</div>
+<!-- ===== ICON STACK SECTION ===== -->
+<section class="icon-stack" id="icons">
+  <div class="icon-wrapper">
+    <img src="images/icons/icon1.jpg" alt="Icon 1" class="icon" loading="lazy">
+    <img src="images/icons/icon2.jpg" alt="Icon 2" class="icon" loading="lazy">
+  </div>
+</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  <!-- JS -->
+  <script src="main.js" defer></script>
+</body>
 
-	</body>
+
+<!-- ===== Projects ===== -->
+<section id="your-id" class="wallpaper"
+         style="--bg:url('images/background/serpentine.jpeg'); --overlay:rgba(0,0,0,.45)">
+  <div class="section-inner center">
+    <h3 class="eyebrow">Projects</h3>
+    <h2>Main Title for This Section</h2>
+    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
+
+    <div class="actions center">
+      <a href="#link1" class="btn-ghost">Primary Button</a>
+      <a href="#link2" class="btn-ghost">Secondary Button</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="your-id" class="wallpaper"
+         style="--bg:url('images/background/picasso.jpg'); --overlay:rgba(0,0,0,.45)">
+  <div class="section-inner center">
+    <h3 class="eyebrow">Section Label</h3>
+    <h2>Main Title for This Section</h2>
+    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
+
+    <div class="actions center">
+      <a href="#link1" class="btn-ghost">Primary Button</a>
+      <a href="#link2" class="btn-ghost">Secondary Button</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MISC 1 ===== -->
+<section id="your-id" class="wallpaper"
+         style="--bg:url('images/background/beige.jpeg'); --overlay:rgba(0,0,0,.45)">
+  <div class="section-inner center">
+    <h3 class="eyebrow">Section Label</h3>
+    <h2>Main Title for This Section</h2>
+    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
+
+    <div class="actions center">
+      <a href="#link1" class="btn-ghost">Primary Button</a>
+      <a href="#link2" class="btn-ghost">Secondary Button</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MISC 2 ===== -->
+<section id="your-id" class="wallpaper"
+         style="--bg:url('images/background/tanwhite.png'); --overlay:rgba(0,0,0,.45)">
+  <div class="section-inner center">
+    <h3 class="eyebrow">Section Label</h3>
+    <h2>Main Title for This Section</h2>
+    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
+
+    <div class="actions center">
+      <a href="#link1" class="btn-ghost">Primary Button</a>
+      <a href="#link2" class="btn-ghost">Secondary Button</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MISC 3 ===== -->
+<section id="your-id" class="wallpaper"
+         style="--bg:url('images/background/tan-abstract.jpeg'); --overlay:rgba(0,0,0,.45)">
+  <div class="section-inner center">
+    <h3 class="eyebrow">Section Label</h3>
+    <h2>Main Title for This Section</h2>
+    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
+
+    <div class="actions center">
+      <a href="#link1" class="btn-ghost">Primary Button</a>
+      <a href="#link2" class="btn-ghost">Secondary Button</a>
+    </div>
+  </div>
+</section>
 
 </html>
-
-
-
 
 
 
