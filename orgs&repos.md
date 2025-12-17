@@ -178,4 +178,72 @@ In development. Architecture and scope are not yet locked.
 
 
 
-  
+
+
+# CaregiverQR
+
+## Summary
+Lightweight QR-based care tracking system for caregivers, facilities, and families.
+
+## Description
+CaregiverQR is a simple, transparent alternative to complex EMR systems. It uses QR codes and lightweight web tooling to log meals, medications, and daily activities with quick scans. The system is designed for clarity and accountability rather than regulatory-heavy medical record keeping.
+
+CaregiverQR prioritizes ease of use, low infrastructure requirements, and minimal sensitive data storage. It is intentionally not a full HIPAA EMR and is best suited for home care, assisted living, family caregiving, and low-resource environments.
+
+## Repositories
+
+### caregiver-qr
+- Visibility: Private
+- Summary: Core QR-based care tracking application
+- Description: Primary application for generating QR codes and logging care events such as meals, medications, and daily activities. Supports timestamped entries and caregiver attribution.
+- Primary languages: HTML, Python
+- Tags: caregiver-application, qr-codes, care-tracking, accountability
+
+### CareSheets
+- Visibility: Private
+- Summary: Template-based QR and care sheet generator
+- Description: Generates printable care sheets and QR codes used by the CaregiverQR system. Designed for rapid setup and non-technical caregivers.
+- Primary languages: Not finalized
+- Tags: care-templates, qr-codes, caregiving
+
+### SideScripts
+- Visibility: Private
+- Summary: Utility and support scripts
+- Description: Small helper scripts used for data handling, automation, and experimentation related to the CaregiverQR ecosystem.
+- Primary languages: Python
+- Tags: utilities, scripts, automation
+
+### .github
+- Visibility: Private
+- Summary: Organization-level GitHub configuration
+- Description: Shared configuration files and defaults for repositories within the CaregiverQR organization.
+- Primary languages: N/A
+- Tags: infrastructure, github-config
+
+## Architecture Overview
+- Frontend: Simple HTML interfaces for scanning and logging
+- Backend: Google Apps Script and Google Sheets for automation and validation
+- Visualization: Optional Looker Studio dashboards for reporting and trend analysis
+
+## Design Principles
+- Minimal PHI storage
+- Fast, low-friction logging
+- Offline- and mobile-friendly usage
+- Transparency for families and administrators
+- Low cost and low infrastructure overhead
+
+## Intended Use
+- Home caregiving
+- Assisted living and small facilities
+- Family care coordination
+- Situations where full EMR systems are impractical
+
+## Notes
+- Not a full HIPAA EMR
+- Designed for accountability and visibility, not clinical diagnosis
+- Scope favors simplicity over feature completeness
+
+
+
+
+
