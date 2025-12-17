@@ -248,7 +248,7 @@ body {
   /* FIX: no fixed attachment here either */
   background: radial-gradient(60% 60% at 85% 50%, #00000022 0%, #0000 60%),
     linear-gradient(180deg, var(--gold-1), var(--gold-2));
-  min-height: clamp(260px, 40vh, 70px);
+  min-height: clamp(320px, 45vh, 620px);
   width: 100%;
   max-width: none;
   margin: 0;
