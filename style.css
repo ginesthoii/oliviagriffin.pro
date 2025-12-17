@@ -27,7 +27,7 @@ body {
   font-family: "Lato", system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
     Arial, sans-serif;
   background: #000;
-  overflow-x: hidden;
+  overflow-x: visible;
   scroll-behavior: smooth;
 }
 .section {
@@ -244,7 +244,7 @@ body {
 .feature-band {
   position: relative;
   color: #fff;
-  overflow: hidden;
+  overflow: visible;
   /* FIX: no fixed attachment here either */
   background: radial-gradient(60% 60% at 85% 50%, #00000022 0%, #0000 60%),
     linear-gradient(180deg, var(--gold-1), var(--gold-2));
@@ -675,7 +675,7 @@ body {
 }
 
 /* ========== Parallax Glow Card (scoped) ========== */
-.wallpaper--parallax { overflow: hidden; }
+.wallpaper--parallax { overflow: visible; }
 
 .parallax-scene{
   position: relative;
@@ -768,13 +768,13 @@ body {
   color: #f9f9ff;
   opacity:.95;
 }
-/* ===== Services (no Bootstrap / no Owl) ===== */
+/* ===== Services ===== */
 .services-section{
   position:relative; isolation:isolate;
   padding:72px var(--pad);
   color: var(--ink);
-  background: #0b0b0f; /* dark section so the cards pop */
-  overflow:hidden;
+  background: #0b0b0f; /* dark section so cards pop */
+  overflow:visible;
 }
 .services-section .overlay{
   position:absolute; inset:0; z-index:-1;
@@ -1016,7 +1016,7 @@ body {
   position: relative;
   height: 12px;
   border-radius: 999px;
-  overflow: hidden;
+  overflow: visible;
   background: rgba(255,255,255,.18);
   flex: 1;
 }
@@ -1067,7 +1067,7 @@ body {
 }
 .proj-card{
   background:#0f0f14; border:1px solid rgba(255,255,255,.1);
-  border-radius:14px; overflow:hidden; cursor:pointer;
+  border-radius:14px; overflow:visible; cursor:pointer;
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 .proj-card:hover{ transform:translateY(-4px); border-color: rgba(255,255,255,.2); box-shadow:0 18px 40px rgba(0,0,0,.45); }
