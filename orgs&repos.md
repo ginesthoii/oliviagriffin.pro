@@ -247,3 +247,92 @@ CaregiverQR prioritizes ease of use, low infrastructure requirements, and minima
 
 
 
+# CatholicMedusa
+
+## Summary
+Modular ecosystem for snake husbandry, genetics, and automation.
+
+## Description
+CatholicMedusa is a connected systems project focused on snake husbandry, breeding genetics, and enclosure automation. It combines biological modeling, data tracking, and engineering discipline into a cohesive toolkit designed for long-term collection management.
+
+The organization is structured as an ecosystem rather than a single application. Each repository represents a distinct layer—data collection, genetic logic, visualization, or sensing—designed to interoperate through shared models and APIs. The project emphasizes correctness, extensibility, and security-conscious design over consumer polish.
+
+## Repositories
+
+### SerpentTracker
+- Visibility: Private
+- Summary: Husbandry and breeding log for snakes
+- Description: Tracks feedings, sheds, pairings, clutches, and related lifecycle events for individual animals. Designed as the primary historical record for collections.
+- Primary languages: Python, Java
+- Tags: snake-husbandry, logging, breeding, data-tracking
+
+### GorgonGenetics
+- Visibility: Private
+- Summary: Morph inheritance and genetics simulation engine
+- Description: Ball python morph genetics system with morph IDs and a rule-based inheritance engine. Generates Punnett squares and probability distributions for dominant, recessive, and co-dominant traits. Includes scrapers and tooling for building and validating morph datasets.
+- Primary languages: Python
+- Tags: genetics, ballpython, morphs, punnett-square, simulation
+
+### SnakeSnack
+- Visibility: Private
+- Summary: Feeding intelligence toolkit for snake collections
+- Description: Calculates ideal prey size from snake weight, recommends feeding intervals, tracks growth and refusals, predicts when to size up, and generates vendor order plans. Powered by Python and SQLite with a modular core.
+- Primary languages: Python
+- Tags: feeding, husbandry, nutrition, sqlite, cli
+
+### MedusasGaze
+- Visibility: Private
+- Summary: Vision and sensor toolkit for enclosure monitoring
+- Description: Early-stage system for incubator and enclosure monitoring using cameras and sensors. Initial focus is image logging and environmental snapshots, with planned expansion into ML-based morph recognition and automated alerts.
+- Primary languages: Python
+- Tags: computer-vision, sensors, automation, monitoring
+
+### ClutchKeeper
+- Visibility: Private
+- Summary: Clutch and hatch outcome analytics dashboard
+- Description: Visualization and reporting tools for clutch data, hatch rates, and breeding outcomes, providing high-level insight into reproductive success and trends.
+- Primary languages: Python
+- Tags: breeding, analytics, visualization, clutches
+
+### HydraHub
+- Visibility: Private
+- Summary: Integration and API layer for CatholicMedusa
+- Description: Connects trackers, genetics, and sensor systems through shared models and APIs. Intended to unify data flow between SerpentTracker and GorgonGenetics and future components.
+- Primary languages: Python
+- Tags: api, integration, data-models
+
+### MedusaCore
+- Visibility: Private
+- Summary: Shared core models and utilities
+- Description: Common domain models and utilities used across CatholicMedusa projects, including representations for snakes, morphs, genetics, and logs.
+- Primary languages: Java
+- Tags: core-library, shared-models
+
+### SideScripts
+- Visibility: Private
+- Summary: Utility and support scripts
+- Description: Helper scripts for data cleanup, migration, scraping, and experimentation across the ecosystem.
+- Primary languages: Python
+- Tags: utilities, scripts
+
+### .github
+- Visibility: Private
+- Summary: Organization-level GitHub configuration
+- Description: Shared configuration files and defaults for repositories within the CatholicMedusa organization.
+- Primary languages: N/A
+- Tags: infrastructure, github-config
+
+## Ecosystem Structure
+- SerpentTracker: Data layer (husbandry history and records)
+- GorgonGenetics: Logic layer (genetics and outcome prediction)
+- MedusasGaze: Sensor layer (vision, monitoring, automation)
+- HydraHub: Integration layer (shared APIs and data flow)
+- MedusaCore: Shared domain models
+
+## Notes
+- Designed for serious keepers and long-term collections
+- Emphasizes correctness and extensibility over UI polish
+- Architecture supports future automation and ML expansion
+
+
+
