@@ -888,3 +888,910 @@ Current focus on animal automation foundations and system architecture.
 ---
 
 
+# SelfTaughtSandbox
+
+## Identity Version
+
+### Tagline
+Deliberate practice over polished outcomes.
+
+### Summary
+SelfTaughtSandbox is a private, skill-building organization used to learn, test, and internalize core software, data, and systems concepts through hands-on experimentation.
+
+### Description
+SelfTaughtSandbox exists as a controlled learning environment rather than a portfolio.
+
+This organization is where fundamentals are broken apart, reassembled, and stress-tested. It favors breadth with structure: multiple domains explored in parallel, each isolated into its own repository to reduce cognitive bleed and keep learning intentional.
+
+The goal is not showcase-ready code. The goal is durable understanding.
+
+Projects inside this org include tutorials, experiments, demos, snippets, and half-finished ideas that collectively form a technical apprenticeship trail. Cleanliness is secondary to clarity. Repetition is expected. Refactors are learning artifacts, not failures.
+
+SelfTaughtSandbox is explicitly allowed to be messy, exploratory, and iterative. It is where mistakes are made on purpose.
+
+### Philosophy
+Learning beats polish.  
+Repetition builds intuition.  
+Experiments are allowed to fail.  
+Structure prevents chaos.  
+Understanding compounds.
+
+### Repositories
+
+prompts  
+Private repository.  
+Prompt engineering experiments, prompt libraries, and exploratory work related to LLM interaction, reasoning styles, and system behavior.
+
+back-end  
+Private repository.  
+Backend development practice including APIs, server logic, authentication patterns, and data handling. Used to learn backend fundamentals across languages and frameworks.
+
+ai-ml  
+Private repository.  
+Experiments and learning projects related to artificial intelligence and machine learning, including notebooks, model exploration, and applied examples.
+
+sql  
+Private repository.  
+SQL practice repository covering queries, schema design, normalization, indexing concepts, and database reasoning.
+
+hardware-iot  
+Private repository.  
+Hardware and IoT experiments including microcontrollers, sensors, embedded logic, and early automation concepts.
+
+automation  
+Private repository.  
+Scripts and workflows focused on automating repetitive tasks, system interactions, and small operational problems.
+
+game-dev  
+Private repository.  
+Game development learning experiments including engines, mechanics, rendering concepts, and interaction logic.
+
+mobile  
+Private repository.  
+Mobile development practice covering app structure, UI logic, and platform-specific workflows.
+
+cloud  
+Private repository.  
+Cloud fundamentals including deployment concepts, services exploration, and infrastructure patterns.
+
+devops  
+Private repository.  
+DevOps learning space covering CI/CD concepts, pipelines, environment setup, and operational tooling.
+
+data-science  
+Private repository.  
+Data science experiments including analysis, visualization, and exploratory modeling.
+
+front-end  
+Private repository.  
+Frontend development practice covering layout, styling, interactivity, and browser behavior.
+
+cybersecurity  
+Private repository.  
+Security learning experiments including defensive concepts, vulnerability exploration, and secure design principles.
+
+javascript  
+Private repository.  
+JavaScript-specific learning repository covering language fundamentals, patterns, and browser or Node behavior.
+
+python  
+Private repository.  
+Primary Python learning and experimentation repository containing tutorials, demos, experiments, snippets, and polished mini-projects.
+
+gitbook  
+Public repository.  
+Documentation and learning notes published using GitBook.
+
+gitbook-certifications  
+Public repository.  
+Certification-related documentation and structured study materials.
+
+## Normalized Version
+
+### Tagline
+Structured learning repositories for hands-on technical practice.
+
+### Summary
+SelfTaughtSandbox is a multi-repository organization used to learn software, data, automation, and systems concepts through experimentation and repetition.
+
+### Description
+SelfTaughtSandbox provides isolated learning spaces for different technical domains including backend development, frontend development, data, security, automation, hardware, and programming languages.
+
+Each repository functions as a sandbox rather than a finished product. Content includes tutorials, experiments, partial implementations, and exploratory code intended to build understanding rather than presentation-ready artifacts.
+
+The organization emphasizes deliberate practice, domain separation, and long-term skill accumulation.
+
+### Status
+Active and ongoing.  
+Repositories are private by design and used as a personal learning environment rather than a public portfolio.
+
+
+---
+# SelfTaughtSandbox
+
+## Identity Version
+
+### Summary
+SelfTaughtSandbox is a private, skill-building organization used to learn, test, and internalize core software, data, and systems concepts through hands-on experimentation.
+
+### Description
+SelfTaughtSandbox exists as a controlled learning environment rather than a portfolio.
+
+This organization is where fundamentals are broken apart, reassembled, and stress-tested. It favors breadth with structure: multiple domains explored in parallel, each isolated into its own repository to reduce cognitive bleed and keep learning intentional.
+
+The goal is not showcase-ready code. The goal is durable understanding.
+
+Projects inside this org include tutorials, experiments, demos, snippets, and half-finished ideas that collectively form a technical apprenticeship trail. Cleanliness is secondary to clarity. Repetition is expected. Refactors are learning artifacts, not failures.
+
+SelfTaughtSandbox is explicitly allowed to be messy, exploratory, and iterative.
+
+### Repositories
+
+prompts  
+back-end  
+ai-ml  
+sql  
+hardware-iot  
+automation  
+game-dev  
+mobile  
+cloud  
+devops  
+data-science  
+front-end  
+cybersecurity  
+javascript  
+python  
+gitbook  
+gitbook-certifications  
+
+## Normalized Version
+
+### Summary
+SelfTaughtSandbox is a multi-repository organization used for structured, hands-on technical learning across software, data, infrastructure, and automation domains.
+
+### Description
+Each repository functions as a sandbox rather than a finished product. The organization prioritizes learning depth, repetition, and system understanding over polish or presentation.
+
+
+---
+
+
+# small-land-management
+
+## Identity Version
+
+### Summary
+small-land-management is a systems-first organization for designing, operating, and maintaining small-scale land in a way that is resilient, automatable, and grounded in real constraints.
+
+### Description
+This organization treats land stewardship as an engineering problem rather than a lifestyle aesthetic.
+
+Land, animals, plants, infrastructure, labor, automation, and business realities are modeled as interconnected systems. Each repository isolates one domain to keep decisions deliberate, documented, and evolvable without collapsing into chaos.
+
+The focus is on survivability, repeatability, and labor realism. Systems are designed to tolerate failure, absence, weather, and partial automation.
+
+### Repositories
+
+3Dprints  
+animals  
+defense-systems  
+skills  
+plants  
+food-systems  
+ai-knowledge-systems  
+sensors-and-automation  
+land-and-infrastructure  
+business-plans  
+utilities  
+
+## Normalized Version
+
+### Summary
+small-land-management documents and tools real-world land systems with an emphasis on reliability, automation readiness, and long-term sustainability.
+
+### Description
+The organization supports planning and operation of animals, plants, infrastructure, food systems, and automation for small parcels of land.
+
+---
+
+
+# small-land-management
+
+## Identity Version
+
+### Tagline
+Land, labor, and living systems treated as infrastructure.
+
+### Summary
+small-land-management is a systems-first organization for designing, operating, and maintaining small-scale land in a way that is resilient, automatable, and grounded in real constraints.
+
+### Description
+small-land-management exists to treat land stewardship as an engineering problem rather than a lifestyle aesthetic.
+
+This organization models land as a set of interdependent systems: animals, plants, infrastructure, skills, food production, defense, automation, and business reality. Each repository isolates one domain so decisions can be made deliberately, documented clearly, and evolved without collapsing into chaos.
+
+The focus is on survivability, repeatability, and labor realism. Everything is designed with the assumption that time, energy, and attention are finite. Systems must tolerate bad weeks, weather failures, human absence, and partial automation.
+
+Documentation and tooling prioritize offline usability, long-term reference, and future integration with sensors, automation, and decision-support systems.
+
+### Philosophy
+Land is infrastructure.
+Labor is the limiting factor.
+Biology sets hard constraints.
+Automation must reduce fragility.
+Design beats improvisation.
+
+### Repositories
+
+3Dprints  
+Private repository.  
+OpenSCAD and related files for functional land, animal, and infrastructure components designed to be printable, repairable, and replaceable on-site.
+
+animals  
+Private repository.  
+Animal management systems covering care, housing, workload, health, reproduction, and integration into land operations.
+
+defense-systems  
+Private repository.  
+Physical and operational defense planning for land, animals, and infrastructure including deterrence, layout strategy, and failure scenarios.
+
+skills  
+Private repository.  
+Skill documentation and learning paths required to operate land systems effectively, including maintenance, repair, fabrication, and applied knowledge.
+
+plants  
+Private repository.  
+Plant systems documentation covering crops, perennials, soil management, seasonal planning, and integration with animals and infrastructure.
+
+food-systems  
+Private repository.  
+Food production, preservation, storage, and processing systems focused on reliability and seasonal continuity.
+
+ai-knowledge-systems  
+Private repository.  
+Knowledge modeling, AI-assisted planning, and structured data systems used to reason about land, animals, and operational decisions.
+
+sensors-and-automation  
+Private repository.  
+Sensor layouts, automation concepts, and embedded system planning for monitoring and reducing manual land management labor.
+
+land-and-infrastructure  
+Private repository.  
+Physical land layout, fencing, water systems, buildings, paths, and long-term infrastructure planning.
+
+business-plans  
+Private repository.  
+Financial models, cost tracking, risk analysis, and sustainability planning for small land operations.
+
+utilities  
+Private repository.  
+Supporting scripts, tools, and helpers used across the organization for data handling, automation, and experimentation.
+
+## Normalized Version
+
+### Tagline
+Systems documentation and tooling for small-scale land management.
+
+### Summary
+small-land-management is a multi-repository organization focused on designing and operating resilient, low-drama land systems.
+
+### Description
+small-land-management provides structured documentation and tooling for managing animals, plants, infrastructure, food systems, automation, and operational planning on small parcels of land.
+
+Each repository addresses a specific domain to allow focused development while maintaining consistency across the broader system. The organization emphasizes labor realism, automation readiness, and long-term sustainability.
+
+Content is designed for offline use, gradual evolution, and integration with future sensing and automation systems.
+
+### Status
+Active development.
+All repositories are private and intended for long-term system design and operational use.
+
+
+---
+
+# SnakeWitch
+
+## Identity Version
+
+### Summary
+SnakeWitch is a grimoire of lightweight snake-keeping tools — quick utilities, integrations, and experiments that make husbandry easier.
+
+### Description
+SnakeWitch focuses on small, purpose-built tools rather than ecosystem-scale platforms.
+
+The organization contains calculators, scripts, spreadsheets, reminders, and micro-helpers that solve one problem cleanly and get out of the way. These tools are intentionally lightweight, fast to deploy, and easy to discard or replace.
+
+The goal is clarity and support without demanding heavy infrastructure.
+
+### Repositories
+
+SideScripts  
+MorphNotes  
+ShedAlert  
+IncubatorCalc  
+FeedingCharm  
+TankTemp  
+SnakeWitchSheets  
+.github  
+
+## Normalized Version
+
+### Summary
+SnakeWitch is a collection of small utilities supporting snake husbandry tasks such as feeding logs, shed tracking, temperature conversion, and incubation planning.
+
+### Description
+Each repository addresses a narrow workflow and is designed to function independently or alongside larger systems.
+
+---
+
+
+# SnakeWitch
+
+## Identity Version
+
+### Tagline
+Small spells for snake keepers.
+
+### Summary
+SnakeWitch is a collection of lightweight, purpose-built tools for snake husbandry, logging, and decision support, designed to reduce friction without demanding a full ecosystem.
+
+### Description
+SnakeWitch exists as a grimoire of small, focused utilities rather than a monolithic platform.
+
+Where larger systems like CatholicMedusa operate at the ecosystem level, SnakeWitch focuses on micro-tools: calculators, scripts, spreadsheets, reminders, and helpers that solve one problem cleanly and get out of the way.
+
+The tools in this organization are intentionally simple, fast to deploy, and easy to abandon or replace. They are designed for keepers who want clarity and assistance without committing to heavy infrastructure or long-running services.
+
+SnakeWitch prioritizes local-first thinking, transparency, and correctness. These tools are meant to support real husbandry decisions, not obscure them behind dashboards or abstractions.
+
+### Philosophy
+Small tools beat big platforms.
+One problem per tool.
+Clarity over cleverness.
+Local-first by default.
+Magic is just well-designed automation.
+
+### Repositories
+
+SideScripts  
+Private repository.  
+Utility scripts and small helpers used across SnakeWitch projects for automation, data handling, and experimentation.
+
+MorphNotes  
+Private repository.  
+Markdown templates and documentation for recording morph projects, pairings, outcomes, and breeding notes.
+
+ShedAlert  
+Private repository.  
+Lightweight reminder and prediction tool that estimates upcoming shed cycles based on feeding logs and historical data.
+
+IncubatorCalc  
+Private repository.  
+Quick calculator for humidity and temperature ranges tuned for incubators and hatch setups.
+
+FeedingCharm  
+Private repository.  
+Minimal CLI tool for logging feedings and reminding keepers when the next meal is due.
+
+TankTemp  
+Private repository.  
+Temperature and unit conversion utility supporting °F, °C, and K with presets for incubators, racks, and display enclosures. Includes CLI and small GUI options.
+
+SnakeWitchSheets  
+Private repository.  
+Google Sheets templates and AppScript snippets for cloud-friendly snake tracking, including feeding logs, shed tracking, and simple calculators.
+
+.github  
+Public repository.  
+Organization profile, README, and shared configuration defaults for the SnakeWitch organization.
+
+## Normalized Version
+
+### Tagline
+Lightweight utilities for snake husbandry and tracking.
+
+### Summary
+SnakeWitch is a modular collection of small tools that assist with snake keeping tasks such as feeding logs, shed prediction, temperature conversion, and incubation planning.
+
+### Description
+SnakeWitch provides focused utilities rather than a unified application. Each repository addresses a single task or narrow workflow, allowing keepers to adopt only what they need.
+
+The organization emphasizes simplicity, local-first operation, and minimal setup. Tools are designed to complement larger systems or stand alone as quick solutions.
+
+### Status
+Active development.
+All functional repositories are private, with a public organization profile and shared configuration.
+
+
+---
+
+
+# StoryShield
+
+## Identity Version
+
+### Tagline
+Reading secured. Privacy assured.
+
+### Summary
+StoryShield is a privacy-first reading tracker designed to protect personal reading data using encryption, local-first thinking, and transparent tooling.
+
+### Description
+StoryShield exists to prove that even personal, non-obvious data like reading habits deserves strong security guarantees.
+
+The project combines Google Sheets, AppSheet, Google Apps Script, and AES-128 encryption to create a secure reading companion that tracks books, progress, and metadata while ensuring that stored data is encrypted at rest and handled intentionally.
+
+StoryShield treats reading history as sensitive personal data. The system is designed to prevent casual exposure, unauthorized access, and silent data leakage while remaining usable for everyday readers.
+
+Rather than building a heavy platform, StoryShield focuses on practical security patterns that real users can understand, audit, and maintain. The goal is not obscurity, but clarity and control.
+
+### Philosophy
+Personal data deserves real security.
+Encryption should be understandable.
+Privacy should not reduce usability.
+Cloud tools require defensive design.
+Transparency builds trust.
+
+### Repositories
+
+storyshield-framework  
+Private repository.  
+Quality and integrity framework for StoryShield including unified linting, privacy audits, workflow enforcement, and a plugin-based architecture.
+
+SideScripts  
+Private repository.  
+Supporting scripts and utilities used for automation, encryption workflows, validation, and experimentation.
+
+StoryShield  
+Private repository.  
+Core StoryShield web components and interfaces used for managing reading data and interactions.
+
+Immersiverse  
+Private repository.  
+Exploratory and experimental components related to immersive reading experiences and extended StoryShield concepts.
+
+StoryShield-App  
+Private repository.  
+AppSheet-based application layer used for interacting with encrypted reading data via mobile and web interfaces.
+
+myStoryShield  
+Public repository.  
+Public-facing repository showcasing the StoryShield concept, documentation, and example implementations.
+
+## Normalized Version
+
+### Tagline
+A secure, privacy-focused reading tracker.
+
+### Summary
+StoryShield is an encrypted reading management system built on Google Sheets and AppSheet with AES-based data protection.
+
+### Description
+StoryShield provides readers with a way to track books, reading progress, and preferences while ensuring that stored data is encrypted and access-controlled.
+
+The system integrates Google Forms, Google Sheets, Google Apps Script, and AppSheet, using AES-128 encryption to protect data before storage. It emphasizes practical security, clear data flow, and user awareness rather than opaque platforms.
+
+StoryShield is designed as a learning-focused, security-conscious project demonstrating how privacy principles can be applied to everyday tools.
+
+### Status
+Active development.
+Core repositories are private, with a public repository used for documentation and demonstration.
+
+---
+
+# the-waterworks
+
+## Identity Version
+
+### Summary
+the-waterworks is a focused organization dedicated to designing and managing water systems as infrastructure.
+
+### Description
+This organization treats water as a first-order system with real constraints, failure modes, and engineering tradeoffs.
+
+Work centers on capture, storage, movement, filtration, reuse, and monitoring, with an emphasis on redundancy, reliability, and maintainability.
+
+### Repositories
+
+SideScripts  
+
+## Normalized Version
+
+### Summary
+the-waterworks provides foundational tooling and documentation for water system design and automation.
+
+### Description
+The organization is early-stage and focused on experimentation and infrastructure modeling.
+
+---
+
+# the-waterworks
+
+## Identity Version
+
+### Tagline
+Water as infrastructure, not an afterthought.
+
+### Summary
+the-waterworks is a systems-focused organization dedicated to designing, automating, and managing water infrastructure for small land, homestead, and distributed environments.
+
+### Description
+the-waterworks exists to treat water as a first-order system with real constraints, failure modes, and engineering tradeoffs.
+
+This organization focuses on capture, storage, movement, filtration, reuse, and monitoring of water across physical environments. The emphasis is on reliability, redundancy, and labor reduction rather than aesthetic or lifestyle-driven designs.
+
+Projects under the-waterworks are intentionally grounded in practical realities: pumps fail, power drops, pipes freeze, filters clog, and water access determines whether other systems survive. Documentation and tooling are built to anticipate those realities rather than react to them.
+
+The long-term intent is to support sensor-driven monitoring, automation, and integration with broader land and animal systems while remaining understandable and maintainable by humans.
+
+### Philosophy
+Water is a bottleneck system.
+Failure must be anticipated.
+Redundancy beats optimization.
+Automation should reduce fragility.
+If water fails, everything fails.
+
+### Repositories
+
+SideScripts  
+Private repository.  
+Supporting scripts and utilities used for experimentation, calculations, automation helpers, and operational tooling related to water systems.
+
+## Normalized Version
+
+### Tagline
+Infrastructure and tooling for water system management.
+
+### Summary
+the-waterworks is a focused organization for developing documentation and utilities related to water capture, movement, monitoring, and automation.
+
+### Description
+the-waterworks provides a foundation for reasoning about water systems as infrastructure components within larger land, animal, and automation ecosystems.
+
+Current work emphasizes supporting scripts and exploratory tooling, with future expansion expected into monitoring, sensing, and automated control systems.
+
+### Status
+Early development.
+The organization currently contains a single private repository used for foundational tooling and experimentation.
+
+--
+
+
+# TheRestOfUsGame
+
+## Identity Version
+
+### Tagline
+A survival story about the people who were never meant to save the world.
+
+### Summary
+The Rest of Us is a narrative-driven survival game built in Godot 4, set in a post-collapse American Midwest and focused on grounded storytelling, environmental realism, and human-scale survival.
+
+### Description
+The Rest of Us exists as a response to the question most apocalypse stories skip: what happened to everyone else.
+
+Rather than centering on immunity, saviors, or world-changing heroes, the game follows ordinary people trying to survive quietly after the collapse. The focus is not spectacle but endurance — finding food, making hard choices, protecting what little remains, and holding onto humanity when no grand solution exists.
+
+The project is heavily inspired by The Last of Us, but shifts perspective away from cinematic hero arcs and toward environmental storytelling, emotional realism, and small, human moments. Towns are reclaimed by nature. Highways flood. Silence becomes a character.
+
+This is a learning-driven game project. Systems, narrative, and mechanics are developed iteratively, with equal emphasis on writing, world-building, and technical implementation.
+
+### Philosophy
+Survival is quiet.
+Environment tells the story.
+Small choices matter.
+Humanity persists in fragments.
+Not the first. Not the last. Just the rest of us.
+
+### Repositories
+
+TheRestOfUsPrototype  
+Private repository.  
+Core Godot 4 project containing the playable prototype, including world design, mechanics, narrative systems, and GDScript logic.
+
+SideScripts  
+Private repository.  
+Supporting scripts and tooling used for development tasks such as asset processing, experimentation, and workflow helpers.
+
+.github  
+Public repository.  
+Organization profile, README, and shared configuration for the TheRestOfUsGame organization.
+
+## Normalized Version
+
+### Tagline
+A grounded narrative survival game set in the post-collapse Midwest.
+
+### Summary
+The Rest of Us is an in-development survival narrative game built with Godot 4, emphasizing environmental storytelling, emotional realism, and human-scale survival.
+
+### Description
+The project explores survival after societal collapse without relying on hero narratives or world-saving mechanics. Gameplay and story focus on exploration, resource management, trust, and quiet decision-making within reclaimed Midwestern environments.
+
+The repository structure separates the core game prototype from supporting scripts and organizational configuration. Development is iterative and learning-focused, with systems evolving alongside narrative depth.
+
+### Status
+Active development.
+The main game prototype is private, with a public organization profile used for presentation and documentation.
+
+
+---
+
+
+# TheRestOfUsGame
+
+## Identity Version
+
+### Tagline
+A Godot 4-built survival narrative inspired by The Last of Us, set in a post-collapse American Midwest. Focused on grounded storytelling and environmental realism.
+
+### Summary
+The Rest of Us is a narrative-driven survival game built in Godot 4, set in a post-collapse American Midwest and centered on environmental realism, quiet survival, and human-scale storytelling.
+
+### Description
+The Rest of Us exists as a response to the question most apocalypse stories skip: what happened to everyone else.
+
+Rather than centering immunity, saviors, or world-altering heroes, the game follows ordinary people trying to survive after collapse. The focus is endurance rather than spectacle — finding food, making hard choices, protecting what little remains, and holding onto humanity without the promise of a cure.
+
+The project is inspired by The Last of Us, but shifts perspective away from cinematic hero arcs toward environmental storytelling, emotional restraint, and small, human moments. Towns are reclaimed by nature. Highways flood. Silence carries weight.
+
+This is a learning-driven game project developed iteratively. Narrative, systems, and mechanics evolve together, with equal emphasis on writing, world-building, and technical implementation.
+
+### Philosophy
+Survival is quiet.
+Environment tells the story.
+Small choices matter.
+Humanity persists in fragments.
+Not the first. Not the last. Just the rest of us.
+
+### Repositories
+
+TheRestOfUsPrototype  
+Private repository.  
+Core Godot 4 project containing the playable prototype, including world design, narrative systems, survival mechanics, and GDScript logic.
+
+SideScripts  
+Private repository.  
+Supporting scripts and tooling used for asset handling, experimentation, and development workflow helpers.
+
+.github  
+Public repository.  
+Organization profile, README, and shared configuration for the TheRestOfUsGame organization.
+
+## Normalized Version
+
+### Tagline
+A grounded survival narrative game built in Godot 4.
+
+### Summary
+The Rest of Us is an in-development narrative survival game set in the post-collapse American Midwest, focused on environmental realism and emotionally grounded storytelling.
+
+### Description
+The project explores survival after societal collapse without relying on hero narratives or world-saving mechanics. Gameplay emphasizes exploration, environmental storytelling, resource management, trust, and quiet decision-making.
+
+The repository structure separates the core game prototype from supporting tooling and organizational configuration. Development is iterative and learning-focused, with systems evolving alongside narrative depth.
+
+### Status
+Active development.
+The main game prototype is private, with a public organization profile used for presentation and documentation.
+
+
+
+
+---
+# TheRestOfUsGame
+
+## Identity Version
+
+### Tagline
+A Godot 4-built survival narrative inspired by The Last of Us, set in post-collapse American Midwest. Focused on grounded storytelling and environmental realism.
+
+### Summary
+The Rest of Us is a narrative-driven survival game built in Godot 4 and set in a post-collapse American Midwest.
+
+### Description
+The project explores survival without saviors, cures, or heroic arcs. It focuses on ordinary people enduring collapse through small decisions, environmental storytelling, and emotional realism.
+
+Development is iterative and learning-driven, balancing writing, world-building, and technical systems.
+
+### Repositories
+
+TheRestOfUsPrototype  
+SideScripts  
+.github  
+
+## Normalized Version
+
+### Summary
+The Rest of Us is an in-development survival narrative game emphasizing environmental realism and human-scale storytelling.
+
+### Description
+The repository structure separates the playable prototype from supporting tooling and organizational configuration.
+
+
+---
+
+# WickedBotany
+
+## Identity Version
+
+### Tagline
+A darkly practical field guide to the world’s most fascinating plants—how to grow them, survive them, and occasionally outsmart them.
+
+### Summary
+WickedBotany is a structured ecosystem for studying dangerous, carnivorous, toxic, and otherwise unruly plants through code, documentation, simulation, and applied horticulture.
+
+### Description
+WickedBotany treats plants not as decoration, but as systems with agency, chemistry, failure modes, and consequences.
+
+The organization blends botany, toxicology, simulation, automation, and cultural history to understand how plants trap, poison, defend, and adapt. Each repository isolates a facet of this world—chemical analysis, behavioral modeling, diagnostics, automation, craft, or narrative history—while remaining interoperable with the others.
+
+This is not aesthetic gardening. It is fieldwork, analysis, and controlled curiosity. Beauty is acknowledged, but never trusted.
+
+WickedBotany is equal parts laboratory, conservatory, and archive: a place where nature’s most elegant threats are studied carefully, documented precisely, and handled with respect.
+
+### Repositories
+
+SideScripts  
+Private repository.  
+Shared scripts and utilities supporting analysis, automation, data handling, and internal tooling across WickedBotany projects.
+
+PredatoryBotanicals  
+Private repository.  
+A structured archive of carnivorous and poisonous flora, documenting care data, anatomy, chemical defenses, and evolutionary strategies.
+
+ToxicLogic  
+Private repository.  
+The analytical engine of WickedBotany, focused on decoding plant chemistry, tracking alkaloids and toxins, and translating reactions into actionable data.
+
+DigitalCarnivore  
+Private repository.  
+A behavioral simulator for carnivorous plants, modeling feeding cycles, trap response, and growth conditions as measurable systems.
+
+EdenMachina  
+Private repository.  
+The automated gardener at the heart of WickedBotany, balancing code and chlorophyll to maintain stable, responsive greenhouse systems.
+
+StrangeStems  
+Private repository.  
+Explorations into plant reuse, pigments, fibers, and organic remnants—tracking second lives beyond decay and traditional horticulture.
+
+HouseOfThorns  
+Private repository.  
+The design and craft atelier of WickedBotany, covering greenhouse builds, Gothic pot design, and material experimentation with soil, clay, and glass.
+
+RootCause  
+Private repository.  
+Diagnostics and analytics for complex plant systems, decoding soil, moisture, and nutrient data to predict failure before it occurs.
+
+BotanicalBadlands  
+Private repository.  
+A raw field journal of experiments, invasive misadventures, failed trials, and unexpected successes.
+
+ToxicTales  
+Private repository.  
+Historical and cultural research into deadly plants and their human conspirators, spanning poison, politics, medicine, and myth.
+
+PredatoryGardens  
+Private repository.  
+A digital conservatory for exploring carnivorous and toxic species through interactive design, simulation, and curated greenhouse concepts.
+
+DeathTraps  
+Private repository.  
+A practical field guide for identifying, understanding, and surviving the world’s most dangerous plants, with safety-first documentation.
+
+.github  
+Public repository.  
+Organization profile, shared configuration, and documentation for WickedBotany.
+
+## Normalized Version
+
+### Summary
+WickedBotany is a multi-repository organization dedicated to the study of dangerous and predatory plants through data, simulation, automation, and documentation.
+
+### Description
+The organization integrates plant chemistry, behavior modeling, diagnostics, automation systems, and historical research. Each repository addresses a specific domain while contributing to a cohesive understanding of hostile and complex plant life.
+
+WickedBotany emphasizes precision, caution, and systems thinking, treating plants as active biological forces rather than passive subjects.
+
+### Status
+Active development.
+All functional repositories are private, with a public organization profile used for documentation and presentation.
+
+
+---
+
+# WickedBotany
+
+## Identity Version
+
+### Tagline
+A darkly practical field guide to the world’s most fascinating plants—how to grow them, survive them, and occasionally outsmart them.
+
+### Summary
+WickedBotany is a structured ecosystem for studying dangerous, carnivorous, toxic, and otherwise unruly plants through code, documentation, simulation, and applied horticulture.
+
+### Description
+WickedBotany treats plants not as decoration, but as systems with agency, chemistry, failure modes, and consequences.
+
+The organization blends botany, toxicology, simulation, automation, diagnostics, and cultural history to understand how plants trap, poison, defend, and adapt. Each repository isolates a facet of this world—chemical analysis, behavioral modeling, diagnostics, automation, craft, or narrative history—while staying interoperable with the others.
+
+This is not aesthetic gardening. It is fieldwork, analysis, and controlled curiosity. Beauty is acknowledged, but never trusted.
+
+### Languages
+Python.
+
+### Repositories
+
+SideScripts  
+Private repository.  
+Language: Python.
+
+PredatoryBotanicals  
+Private repository.  
+Language: Python.  
+A structured archive of carnivorous and poisonous flora, documenting care data, anatomy, and chemical defense patterns.
+
+ToxicLogic  
+Private repository.  
+Language: Python.  
+The analytical engine of WickedBotany, focused on decoding plant chemistry and tracking alkaloids, toxins, and compound behavior.
+
+DigitalCarnivore  
+Private repository.  
+Language: Not shown in screenshot.  
+A behavioral simulator for carnivorous plants, modeling feeding cycles, trap response, and growth conditions as measurable systems.
+
+EdenMachina  
+Private repository.  
+Language: Not shown in screenshot.  
+The automated gardener at the heart of WickedBotany, balancing code and chlorophyll to keep each system running in steady rhythm.
+
+StrangeStems  
+Private repository.  
+Language: Not shown in screenshot.  
+Explorations into plant reuse, pigments, fibers, and organic remnants—tracking second lives beyond decay.
+
+HouseOfThorns  
+Private repository.  
+Language: Not shown in screenshot.  
+The design and craft atelier of WickedBotany—greenhouse builds, pot designs, and material experimentation.
+
+RootCause  
+Private repository.  
+Language: Not shown in screenshot.  
+Diagnostics and analytics for plant systems, decoding soil, moisture, and nutrient signals to predict failure early.
+
+BotanicalBadlands  
+Private repository.  
+Language: Not shown in screenshot.  
+A raw field journal of experiments, invasive misadventures, failed trials, and strange successes.
+
+ToxicTales  
+Private repository.  
+Language: Not shown in screenshot.  
+Grim histories of deadly plants and the humans who learned to weaponize them—poison, politics, medicine, and myth.
+
+PredatoryGardens  
+Private repository.  
+Language: Not shown in screenshot.
+
+DeathTraps  
+Private repository.  
+Language: Not shown in screenshot.
+
+.github  
+Public repository.  
+Language: Not shown in screenshot.
+
+## Normalized Version
+
+### Summary
+WickedBotany is a multi-repository organization for studying dangerous plants using structured documentation, data work, simulation, and automation.
+
+### Description
+The system emphasizes analysis and safety, integrating plant chemistry, behavioral modeling, diagnostics, and applied horticulture into linked modules.
+
+### Languages
+Python (observed).
