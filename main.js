@@ -294,3 +294,57 @@ document.addEventListener('DOMContentLoaded', () => {
       c.addEventListener("focusout", () => paused = false);
     });
   })();
+
+  /* =========================
+     Continuous Scrolling Strips (Projects + Orgs)
+     - clones items for seamless loop
+     - pauses on hover/focus
+  ========================== */
+  (() => {
+    const tracks = document.querySelectorAll('.marquee__track');
+    if (!tracks.length) return;
+
+    tracks.forEach(track => {
+      const viewport = track.closest('.marquee__viewport');
+      if (!viewport) return;
+
+      // Clone children so it loops seamlessly
+      const items = [...track.children];
+      if (items.length < 2) return;
+
+      items.forEach(node => track.appendChild(node.cloneNode(true)));
+
+      let x = 0;
+      let paused = false;
+
+      // Speed: px per frame-ish (tweak this number)
+      const SPEED = 0.55;
+
+      const getLoopWidth = () => {
+        // Half of the scrollWidth = original set
+        return track.scrollWidth / 2;
+      };
+
+      const tick = () => {
+        if (!paused) {
+          x += SPEED;
+          const loopW = getLoopWidth();
+
+          // When we've moved one full set, reset without visual jump
+          if (x >= loopW) x = 0;
+
+          track.style.transform = `translateX(${-x}px)`;
+        }
+
+        requestAnimationFrame(tick);
+      };
+
+      // Pause behavior
+      viewport.addEventListener('mouseenter', () => paused = true);
+      viewport.addEventListener('mouseleave', () => paused = false);
+      viewport.addEventListener('focusin', () => paused = true);
+      viewport.addEventListener('focusout', () => paused = false);
+
+      tick();
+    });
+  })();
