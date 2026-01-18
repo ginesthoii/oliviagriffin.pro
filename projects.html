@@ -10,6 +10,35 @@
 </head>
 
 <body id="projects">
+  
+  <!-- ===== NAVBAR ===== -->
+  <header class="header">
+    <nav class="nav-inner" aria-label="Main">
+      <div class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="organizations.html">Organizations</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <button id="menu-icon" class="hamb" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+    </nav>
+    <div id="mobile-nav" class="nav-bg"></div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Olivia Griffin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+</head>
+
+<body id="projects">
   <!-- ===== NAVBAR ===== -->
   <header class="header">
     <nav class="nav-inner" aria-label="Main">
@@ -43,6 +72,51 @@
       <button class="chip" data-filter="python">Python</button>
       <button class="chip" data-filter="node">Node</button>
     </div>
+
+    <!-- ===== Continuous Scroll Strip (Projects) ===== -->
+    <section class="marquee" aria-label="Featured projects scrolling strip">
+      <div class="marquee__viewport">
+        <div class="marquee__track" data-marquee="projects">
+
+          <!-- Card 1 -->
+          <article class="proj-card marquee__item" data-tags="security fullstack python" onclick="location.href='projects/feedingcharm.html'">
+            <figure class="proj-thumb">
+              <img src="images/projects/feedingcharm-cover.jpg" alt="FeedingCharm dashboard screenshot" loading="lazy">
+            </figure>
+            <div class="proj-body">
+              <h3 class="proj-title">FeedingCharm</h3>
+              <p class="proj-blurb">Caregiver tool with AppSec guardrails, encrypted notes, and QR-based access.</p>
+              <ul class="proj-meta"><li>Python</li><li>Flask</li><li>Security</li></ul>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="proj-card marquee__item" data-tags="frontend node">
+            <figure class="proj-thumb">
+              <img src="images/projects/ui-kit.jpg" alt="UI kit components" loading="lazy">
+            </figure>
+            <div class="proj-body">
+              <h3 class="proj-title">UI Kit • Gold on Black</h3>
+              <p class="proj-blurb">Accessible component system with performance budgets and tests.</p>
+              <ul class="proj-meta"><li>Vite</li><li>Node</li><li>A11y</li></ul>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="proj-card marquee__item" data-tags="automation python security">
+            <figure class="proj-thumb">
+              <img src="images/projects/appsec-automation.jpg" alt="Automation pipelines" loading="lazy">
+            </figure>
+            <div class="proj-body">
+              <h3 class="proj-title">AppSec Automation</h3>
+              <p class="proj-blurb">CI/CD hooks for SAST/DAST, dependency risk, and secret scanning.</p>
+              <ul class="proj-meta"><li>Python</li><li>GitHub Actions</li><li>DevSecOps</li></ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
 
     <!-- Grid -->
     <section class="proj-grid">
@@ -80,117 +154,7 @@
         </div>
       </article>
 
-<!-- ===== MISC 27 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/black-tan.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MISC 37 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/yellow.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MISC 38 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/black-stripes.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2 class="main-title">Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MISC 32 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/snake.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MISC 18 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/black-arrow.jpg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MISC 7 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/green-stripes.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
     </section>
   </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <p>© 2025 Olivia Griffin. All rights reserved.</p>
-  </footer>
-
-  <script>
-  // simple tag filtering
-  document.addEventListener('DOMContentLoaded', () => {
-    const chips = document.querySelectorAll('.proj-controls .chip');
-    const cards = document.querySelectorAll('.proj-card');
-    chips.forEach(c => c.addEventListener('click', () => {
-      chips.forEach(x => x.classList.remove('is-active'));
-      c.classList.add('is-active');
-      const f = c.dataset.filter;
-      cards.forEach(card => {
-        card.style.display = (f === '*' || card.dataset.tags.includes(f)) ? '' : 'none';
-      });
-    }));
-  });
-  </script>
 </body>
 </html>
