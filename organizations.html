@@ -10,7 +10,9 @@
 </head>
 
 <body id="organizations">
+  
   <!-- ===== NAVBAR ===== -->
+  
   <header class="header">
     <nav class="nav-inner" aria-label="Main">
       <div class="nav-links">
@@ -26,10 +28,65 @@
   </header>
 
   <!-- ===== MAIN CONTENT ===== -->
-  <main style="padding-top:120px">
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Organizations — Olivia Griffin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+</head>
+
+<body id="organizations">
+  <!-- ===== NAVBAR ===== -->
+  <header class="header">
+    <nav class="nav-inner" aria-label="Main">
+      <div class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="organizations.html" aria-current="page">Organizations</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <button id="menu-icon" class="hamb" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+    </nav>
+    <div id="mobile-nav" class="nav-bg"></div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="section" style="padding-top:120px">
+
+    <div class="section-intro" style="text-align:left;max-width:var(--maxw);margin-inline:auto">
+      <h5>Organizations</h5>
+      <h1>Labs + Ecosystems</h1>
+      <p class="lead">Collections of projects grouped by mission, tools, and long-term focus.</p>
+    </div>
+
+    <!-- ===== Continuous Scroll Strip (Organizations) ===== -->
+    <section class="marquee" aria-label="Organizations scrolling strip">
+      <div class="marquee__viewport">
+        <div class="marquee__track" data-marquee="orgs">
+
+          <article class="org-card marquee__item" onclick="location.href='#snakewitch'">
+            <h3>SnakeWitch</h3>
+            <p>Security-minded utilities and caregiver tooling.</p>
+            <ul class="proj-meta"><li>Security</li><li>Tools</li><li>Ops</li></ul>
+          </article>
+
+          <article class="org-card marquee__item" onclick="location.href='#storyshield'">
+            <h3>StoryShield</h3>
+            <p>Private writing tools with threat-modeling baked in.</p>
+            <ul class="proj-meta"><li>Privacy</li><li>Writing</li><li>Threat Model</li></ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
 
     <!-- SnakeWitch -->
-    <section class="org-section">
+    <section class="org-section" id="snakewitch">
       <header class="org-header">
         <img src="images/orgs/snakewitch-logo.svg" class="org-logo" alt="SnakeWitch logo">
         <div>
@@ -54,7 +111,7 @@
     </section>
 
     <!-- StoryShield -->
-    <section class="org-section">
+    <section class="org-section" id="storyshield">
       <header class="org-header">
         <img src="images/orgs/storyshield-logo.svg" class="org-logo" alt="StoryShield logo">
         <div>
@@ -72,177 +129,10 @@
       </div>
     </section>
 
-    <!-- ===== MISC 28 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/black-white-circles.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MISC 30 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/black-tan-banner.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- ===== MISC 4 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/orange-sun.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- ===== MISC 35 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/bronze.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MISC 29 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/black-tan-swirls.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MISC 31 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/blackswirls.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MISC 6 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/green-leaves.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MISC 33 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/rust-swirls.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- ===== MISC 11 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/multiple-cheetahs.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MISC 12 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/red-circles.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MISC 2 ===== -->
-<section id="your-id" class="wallpaper"
-         style="--bg:url('images/background/beige.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Section Label</h3>
-    <h2>Main Title for This Section</h2>
-    <p class="lead">Your description goes here. This is a lead paragraph that explains the section.</p>
-
-    <div class="actions center">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
-  </div>
-</section>
-    
   </main>
+</body>
+</html>
+  
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
