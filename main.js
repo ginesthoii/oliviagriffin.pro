@@ -348,3 +348,313 @@ document.addEventListener('DOMContentLoaded', () => {
       tick();
     });
   })();
+
+
+  /* =========================
+     Data: Projects + Orgs
+     (single source of truth)
+  ========================== */
+
+  const PROJECTS = [
+    {
+      title: "WUSTL Cybersecurity Boot Camp",
+      desc: "Structured labs, capstone work, and assessments from an intensive cybersecurity program. Emphasis on blue-team operations, incident response, malware analysis & system hardening.",
+      tags: ["security", "training"],
+      tech: ["Wireshark", "Kali", "Metasploit", "Bash"],
+      href: "https://github.com/ginesthoii/WUSTL-VIRT-CYBER-PT-01-2024-U-LOLC-main",
+      img: "images/projects/wustl.jpg"
+    },
+    {
+      title: "WashU Projects",
+      desc: "Applied cybersecurity investigations in networking, vulnerability assessment, cloud security, penetration testing & digital forensics.",
+      tags: ["security", "cloud"],
+      tech: ["Azure", "IAM", "Crypto"],
+      href: "https://github.com/ginesthoii/WashU-Projects",
+      img: "images/projects/washu-projects.jpg"
+    },
+    {
+      title: "ScenarioEngine",
+      desc: "Timeline-based stochastic simulation engine for modeling risk, failure, and long-term outcomes for real-world planning problems.",
+      tags: ["python", "systems"],
+      tech: ["Python", "Monte Carlo", "Modeling"],
+      href: "https://github.com/ginesthoii/ScenarioEngine",
+      img: "images/projects/scenarioengine.jpg"
+    },
+    {
+      title: "Mini-Massive",
+      desc: "Agent-based simulation framework for modeling emergent system behavior (crowds, traffic, tactical interactions).",
+      tags: ["python", "frontend", "systems"],
+      tech: ["Python", "WebGL", "Three.js"],
+      href: "https://github.com/ginesthoii/Mini-Massive",
+      img: "images/projects/mini-massive.jpg"
+    },
+    {
+      title: "metadata-librarian",
+      desc: "Local-first archival and metadata extraction system for documents, media, and images.",
+      tags: ["python", "automation"],
+      tech: ["Python", "YAML", "OCR", "SQLite"],
+      href: "https://github.com/ginesthoii/metadata_librarian",
+      img: "images/projects/metadata-librarian.jpg"
+    },
+    {
+      title: "smart-tag-system",
+      desc: "Universal hierarchical tagging framework for cross-domain organization.",
+      tags: ["python", "automation"],
+      tech: ["Python", "PyQt6", "SQLite"],
+      href: "https://github.com/ginesthoii/smart-tag-system",
+      img: "images/projects/smart-tag.jpg"
+    },
+    {
+      title: "framework",
+      desc: "Personal operating system for ideas, projects, and research. Templates + automation + consistent structure.",
+      tags: ["python", "automation"],
+      tech: ["Python", "PyQt6", "SQLite", "Markdown"],
+      href: "https://github.com/ginesthoii/framework",
+      img: "images/projects/framework.jpg"
+    },
+    {
+      title: "phantom-terminal",
+      desc: "Animated self-typing terminal emulator for creating realistic command-line demos. Export PNG/GIF/video.",
+      tags: ["frontend", "automation"],
+      tech: ["JS", "HTML", "CSS"],
+      href: "https://github.com/ginesthoii/phantom-terminal",
+      img: "images/projects/phantom-terminal.jpg"
+    },
+    {
+      title: "Notflix",
+      desc: "Local Netflix-style streaming demo for learning full-stack + DevSecOps. Zero paid dependencies.",
+      tags: ["fullstack", "node", "security"],
+      tech: ["Node", "Docker", "React"],
+      href: "https://github.com/ginesthoii/Notflix",
+      img: "images/projects/notflix.jpg"
+    }
+  ];
+
+  const ORGS = [
+    {
+      id: "snakewitch",
+      name: "SnakeWitch",
+      desc: "Security-minded utilities and caregiver tooling.",
+      logo: "images/orgs/snakewitch-logo.svg",
+      projects: [
+        {
+          title: "FeedingCharm",
+          desc: "Encrypted caregiver notes with QR access and audit trails.",
+          tech: ["Python", "Flask", "Security"],
+          href: "https://github.com/ginesthoii"
+        }
+      ]
+    },
+    {
+      id: "storyshield",
+      name: "StoryShield",
+      desc: "Private writing tools with threat-modeling baked in.",
+      logo: "images/orgs/storyshield-logo.svg",
+      projects: [
+        {
+          title: "QuillLock",
+          desc: "Client-side encrypted notes with anonymous sharing links.",
+          tech: ["TypeScript", "WebCrypto", "PWA"],
+          href: "https://github.com/ginesthoii"
+        }
+      ]
+    }
+  ];
+
+  /* =========================
+     Helpers
+  ========================== */
+
+  const uniq = (arr) => [...new Set(arr)];
+  const qs = (sel) => document.querySelector(sel);
+
+  const cardHTML = (p) => `
+    <article class="proj-card marquee__item" data-tags="${p.tags.join(" ")}" tabindex="0" role="link">
+      <figure class="proj-thumb">
+        <img src="${p.img}" alt="${p.title} cover" loading="lazy">
+      </figure>
+      <div class="proj-body">
+        <h3 class="proj-title">${p.title}</h3>
+        <p class="proj-blurb">${p.desc}</p>
+        <ul class="proj-meta">
+          ${p.tech.map(t => `<li>${t}</li>`).join("")}
+        </ul>
+      </div>
+    </article>
+  `;
+
+  const gridCardHTML = (p) => `
+    <article class="proj-card" data-tags="${p.tags.join(" ")}" tabindex="0" role="link">
+      <figure class="proj-thumb">
+        <img src="${p.img}" alt="${p.title} cover" loading="lazy">
+      </figure>
+      <div class="proj-body">
+        <h3 class="proj-title">${p.title}</h3>
+        <p class="proj-blurb">${p.desc}</p>
+        <ul class="proj-meta">
+          ${p.tech.map(t => `<li>${t}</li>`).join("")}
+        </ul>
+      </div>
+    </article>
+  `;
+
+  const attachLinkBehavior = (container, list) => {
+    const cards = [...container.querySelectorAll("[role='link']")];
+    cards.forEach((card, idx) => {
+      const href = list[idx]?.href;
+      if (!href) return;
+      card.addEventListener("click", () => window.open(href, "_blank"));
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          window.open(href, "_blank");
+        }
+      });
+    });
+  };
+
+  /* =========================
+     Projects page render + filter
+  ========================== */
+
+  const marqueeEl = qs("#projectsMarquee");
+  const gridEl = qs("#projectsGrid");
+  const filtersEl = qs("#projFilters");
+
+  if (marqueeEl && gridEl && filtersEl) {
+    marqueeEl.innerHTML = PROJECTS.map(cardHTML).join("");
+    gridEl.innerHTML = PROJECTS.map(gridCardHTML).join("");
+
+    attachLinkBehavior(marqueeEl, PROJECTS);
+    attachLinkBehavior(gridEl, PROJECTS);
+
+    const allTags = uniq(PROJECTS.flatMap(p => p.tags));
+    const FILTERS = ["*", ...allTags];
+
+    filtersEl.innerHTML = FILTERS.map(f => {
+      const label = f === "*" ? "All" : f[0].toUpperCase() + f.slice(1);
+      return `<button class="chip ${f === "*" ? "is-active" : ""}" data-filter="${f}">${label}</button>`;
+    }).join("");
+
+    const applyFilter = (filter) => {
+      const show = (el) => el.style.display = "";
+      const hide = (el) => el.style.display = "none";
+
+      [...gridEl.children].forEach(card => {
+        const tags = card.getAttribute("data-tags") || "";
+        if (filter === "*" || tags.includes(filter)) show(card);
+        else hide(card);
+      });
+    };
+
+    filtersEl.addEventListener("click", (e) => {
+      const btn = e.target.closest(".chip");
+      if (!btn) return;
+      filtersEl.querySelectorAll(".chip").forEach(c => c.classList.remove("is-active"));
+      btn.classList.add("is-active");
+      applyFilter(btn.dataset.filter);
+    });
+  }
+
+  /* =========================
+     Orgs page render
+  ========================== */
+
+  const orgsMarquee = qs("#orgsMarquee");
+  const orgSections = qs("#orgSections");
+
+  if (orgsMarquee && orgSections) {
+    orgsMarquee.innerHTML = ORGS.map(o => `
+      <article class="org-card marquee__item" tabindex="0" role="link" data-org="${o.id}">
+        <h3>${o.name}</h3>
+        <p>${o.desc}</p>
+        <ul class="proj-meta">${o.projects?.[0]?.tech?.slice(0,3).map(t=>`<li>${t}</li>`).join("") || ""}</ul>
+      </article>
+    `).join("");
+
+    orgSections.innerHTML = ORGS.map(o => `
+      <section class="org-section" id="${o.id}">
+        <header class="org-header">
+          <img src="${o.logo}" class="org-logo" alt="${o.name} logo">
+          <div>
+            <h2>${o.name}</h2>
+            <p class="lead">${o.desc}</p>
+          </div>
+        </header>
+
+        <div class="org-grid">
+          ${o.projects.map(p => `
+            <article class="org-card" tabindex="0" role="link" data-href="${p.href}">
+              <h3>${p.title}</h3>
+              <p>${p.desc}</p>
+              <ul class="proj-meta">${p.tech.map(t=>`<li>${t}</li>`).join("")}</ul>
+            </article>
+          `).join("")}
+        </div>
+      </section>
+    `).join("");
+
+    // org marquee click -> jump to section
+    [...orgsMarquee.children].forEach(card => {
+      card.addEventListener("click", () => {
+        const id = card.getAttribute("data-org");
+        const target = document.getElementById(id);
+        target?.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    // org project click -> open
+    orgSections.querySelectorAll("[data-href]").forEach(card => {
+      card.addEventListener("click", () => window.open(card.dataset.href, "_blank"));
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          window.open(card.dataset.href, "_blank");
+        }
+      });
+    });
+  }
+
+  /* =========================
+     Continuous marquee loop (seamless)
+  ========================== */
+
+  (() => {
+    const tracks = document.querySelectorAll('.marquee__track');
+    if (!tracks.length) return;
+
+    tracks.forEach(track => {
+      const viewport = track.closest('.marquee__viewport');
+      if (!viewport) return;
+
+      const items = [...track.children];
+      if (items.length < 2) return;
+
+      // Clone to loop
+      items.forEach(node => track.appendChild(node.cloneNode(true)));
+
+      let x = 0;
+      let paused = false;
+
+      const SPEED = 0.55;
+
+      const getLoopWidth = () => track.scrollWidth / 2;
+
+      const tick = () => {
+        if (!paused) {
+          x += SPEED;
+          const loopW = getLoopWidth();
+          if (x >= loopW) x = 0;
+          track.style.transform = `translateX(${-x}px)`;
+        }
+        requestAnimationFrame(tick);
+      };
+
+      viewport.addEventListener('mouseenter', () => paused = true);
+      viewport.addEventListener('mouseleave', () => paused = false);
+      viewport.addEventListener('focusin', () => paused = true);
+      viewport.addEventListener('focusout', () => paused = false);
+
+      tick();
+    });
+  })();
