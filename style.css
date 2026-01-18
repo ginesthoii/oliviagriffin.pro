@@ -783,15 +783,15 @@ body {
   }
 }
 
-/* ========== Parallax Glow Card (scoped) ========== */
+/* ========== Parallax Glow Card ========== */
 .wallpaper--parallax { overflow: visible; }
 
 .parallax-scene{
   position: relative;
   display: grid;
   place-items: center;
-  perspective: 900px;          /* enables 3D tilt */
-  min-height: min(70vh, 680px); /* keep it comfy inside the section */
+  perspective: 900px;          /*  3D tilt */
+  min-height: min(70vh, 680px); /* keep it comfy inside section */
 }
 
 /* Subtle floating specks behind the card */
@@ -1240,7 +1240,7 @@ body {
 }
 
 .contact-form textarea{
-  min-height: 160px;
+  min-height: 100px;
   resize: vertical;
 }
 
