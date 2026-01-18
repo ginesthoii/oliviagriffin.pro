@@ -1212,39 +1212,36 @@ body {
 
 
 
-/* ================== Card Slider ===================== */
+/* ================================
+  Expandable Featured Cards
+================================== */
 
-.exp-slider {
-  --card-h: 360px;
-  --radius: 18px;
-  --gap: 14px;
-  --border: rgba(255,255,255,.12);
-  --shadow: 0 16px 60px rgba(0,0,0,.45);
-
-  padding: 2rem 1rem;
+.exp-slider{
+  padding: clamp(60px, 8vw, 110px) var(--pad);
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
-.exp-slider__wrap {
-  max-width: 1100px;
-  margin: 0 auto;
+.exp-slider__wrap{
+  max-width: var(--maxw);
+  margin: 2rem auto 0;
   display: flex;
-  gap: var(--gap);
-  height: var(--card-h);
+  gap: 14px;
+  height: 360px;
 }
 
-/* Card base */
-.exp-card {
+.exp-card{
   position: relative;
   flex: 1;
   min-width: 90px;
-  border-radius: var(--radius);
+  border-radius: 18px;
   overflow: hidden;
   cursor: pointer;
 
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 16px 60px rgba(0,0,0,.45);
 
-  /* IMPORTANT for your GitHub icon backgrounds */
   background:
     linear-gradient(to bottom, rgba(0,0,0,.20), rgba(0,0,0,.78)),
     var(--bg) center/contain no-repeat;
@@ -1253,35 +1250,22 @@ body {
   outline: none;
 }
 
-.exp-card:hover {
+.exp-card:hover{
   transform: translateY(-2px);
 }
 
-/* Expanded card */
-.exp-card.is-active {
+.exp-card.is-active{
   flex: 5;
 }
 
-/* Floating highlight sheen */
-.exp-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 25% 15%, rgba(255,255,255,.09), transparent 46%);
-  pointer-events: none;
-  opacity: .9;
-}
-
-/* Overlay layer (soft focus for legibility) */
-.exp-card__overlay {
+.exp-card__overlay{
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.08), transparent 45%);
   pointer-events: none;
 }
 
-/* Content at bottom */
-.exp-card__content {
+.exp-card__content{
   position: absolute;
   left: 0;
   right: 0;
@@ -1294,33 +1278,31 @@ body {
   transition: opacity 420ms ease, transform 420ms ease;
 }
 
-/* Only show content when active */
-.exp-card.is-active .exp-card__content {
+.exp-card.is-active .exp-card__content{
   transform: translateY(0);
   opacity: 1;
 }
 
-.exp-card__title {
+.exp-card__title{
   margin: 0;
   font-size: 1.2rem;
   letter-spacing: .2px;
   color: #fff;
 }
 
-.exp-card__sub {
+.exp-card__sub{
   margin: .35rem 0 0.85rem;
   color: rgba(255,255,255,.82);
   font-size: .92rem;
 }
 
-/* Buttons */
-.exp-card__actions {
+.exp-card__actions{
   display: flex;
   gap: .6rem;
   flex-wrap: wrap;
 }
 
-.exp-btn {
+.exp-btn{
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1338,45 +1320,40 @@ body {
   transition: transform 160ms ease, background 160ms ease;
 }
 
-.exp-btn:hover {
+.exp-btn:hover{
   transform: translateY(-1px);
 }
 
-.exp-btn--ghost {
+.exp-btn--ghost{
   background: rgba(0,0,0,.38);
   color: #fff;
   border: 1px solid rgba(255,255,255,.18);
 }
 
-/* Nice focus ring for keyboard users */
-.exp-card:focus-visible {
+.exp-card:focus-visible{
   outline: 2px solid rgba(255,255,255,.65);
   outline-offset: 3px;
 }
 
-/* Mobile stacks nicely */
-@media (max-width: 900px) {
-  .exp-slider__wrap {
+@media (max-width: 900px){
+  .exp-slider__wrap{
     flex-direction: column;
     height: auto;
   }
 
-  .exp-card {
+  .exp-card{
     height: 260px;
   }
 
-  /* On mobile, expanding is weird, so keep them equal height */
-  .exp-card.is-active {
+  .exp-card.is-active{
     flex: 1;
   }
 
-  /* Always show content (no hover / no shrinking) */
-  .exp-card__content {
+  .exp-card__content{
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 
 /* ===== Contact Form ===== */
 .contact-form{
