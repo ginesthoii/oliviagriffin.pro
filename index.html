@@ -285,24 +285,74 @@
 <!-- ===== Glow Card  ===== -->
   
 <section class="wallpaper wallpaper--parallax" style="--bg:url('images/background/starry-night.jpg'); --overlay:rgba(0,0,0,.35)">
-  <div class="section-inner center">
-    <div class="parallax-scene">
-      <!-- Optional floating layer behind the card -->
-      <div class="parallax-layer parallax-dust" aria-hidden="true"></div>
+<main class="main-container">
+  <svg class="svg-container">
+    <defs>
+      <!-- KEEP ALL YOUR FILTERS EXACTLY THE SAME -->
+    </defs>
+  </svg>
 
-      <!-- The glow card -->
-      <article class="glow-card" tabindex="0">
-        <h1 class="glow-title">Let it Glow</h1>
-        <p class="glow-sub">With a little bit of CSS light</p>
-        <p class="glow-text">
-          Web application, devsecops, Automation, ML
-        </p>
-      </article>
-    <div class="actions center" style="margin-top:0.5rem">
-      <a href="#link1" class="btn-ghost">Primary Button</a>
-      <a href="#link2" class="btn-ghost">Secondary Button</a>
-    </div>
+  <!-- TWO WIDE BUTTONS -->
+  <div class="button-row">
+    <!-- Button 1 -->
+    <a class="glow-btn" href="projects.html" aria-label="Go to Projects">
+      <div class="card-container">
+        <div class="inner-container">
+          <div class="border-outer">
+            <div class="main-card"></div>
+          </div>
+          <div class="glow-layer-1"></div>
+          <div class="glow-layer-2"></div>
+        </div>
+
+        <div class="overlay-1"></div>
+        <div class="overlay-2"></div>
+
+        <div class="content-container">
+          <div class="content-top">
+            <div class="scrollbar-glass">Browse</div>
+            <p class="title">Projects</p>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="content-bottom">
+            <p class="description">See all apps + tools.</p>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Button 2 -->
+    <a class="glow-btn" href="orgs.html" aria-label="Go to Orgs">
+      <div class="card-container">
+        <div class="inner-container">
+          <div class="border-outer">
+            <div class="main-card"></div>
+          </div>
+          <div class="glow-layer-1"></div>
+          <div class="glow-layer-2"></div>
+        </div>
+
+        <div class="overlay-1"></div>
+        <div class="overlay-2"></div>
+
+        <div class="content-container">
+          <div class="content-top">
+            <div class="scrollbar-glass">Browse</div>
+            <p class="title">Orgs</p>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="content-bottom">
+            <p class="description">All organizations & ecosystems.</p>
+          </div>
+        </div>
+      </div>
+    </a>
   </div>
+</main>
 </section>
 
 
