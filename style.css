@@ -1406,6 +1406,63 @@ body {
   }
 }
 
+
+
+/* ================================
+   Continuous Scrolling Strip
+================================ */
+
+.marquee{
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 1.25rem auto 2.25rem;
+}
+
+.marquee__viewport{
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 14px 50px rgba(0,0,0,.35);
+}
+
+.marquee__track{
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee__item{
+  flex: 0 0 auto;
+  min-width: 320px;
+  max-width: 360px;
+}
+
+/* Pause on hover/focus so humans win */
+.marquee__viewport:hover .marquee__track,
+.marquee__viewport:focus-within .marquee__track{
+  animation-play-state: paused;
+}
+
+@media (max-width: 700px){
+  .marquee__item{
+    min-width: 280px;
+    max-width: 320px;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .marquee__track{
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
 /* ===== FOOTER ===== */
 .footer{
   width: 100%;
