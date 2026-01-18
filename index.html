@@ -288,8 +288,58 @@
 <main class="main-container">
   <svg class="svg-container">
     <defs>
-      <!-- KEEP ALL YOUR FILTERS EXACTLY THE SAME -->
-    </defs>
+<svg class="svg-container">
+  <defs>
+    <filter id="turbulent-displace" color-interpolation-filters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="1" />
+      <feOffset in="noise1" dx="0" dy="0" result="offsetNoise1">
+        <animate attributeName="dy" values="700; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+      </feOffset>
+
+      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="1" />
+      <feOffset in="noise2" dx="0" dy="0" result="offsetNoise2">
+        <animate attributeName="dy" values="0; -700" dur="6s" repeatCount="indefinite" calcMode="linear" />
+      </feOffset>
+
+      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise3" seed="2" />
+      <feOffset in="noise3" dx="0" dy="0" result="offsetNoise3">
+        <animate attributeName="dx" values="490; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+      </feOffset>
+
+      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise4" seed="2" />
+      <feOffset in="noise4" dx="0" dy="0" result="offsetNoise4">
+        <animate attributeName="dx" values="0; -490" dur="6s" repeatCount="indefinite" calcMode="linear" />
+      </feOffset>
+
+      <feMerge result="mergedNoise">
+        <feMergeNode in="offsetNoise1" />
+        <feMergeNode in="offsetNoise2" />
+        <feMergeNode in="offsetNoise3" />
+        <feMergeNode in="offsetNoise4" />
+      </feMerge>
+
+      <feDisplacementMap
+        in="SourceGraphic"
+        in2="mergedNoise"
+        scale="80"
+        xChannelSelector="R"
+        yChannelSelector="G"
+        result="displaced"
+      />
+
+      <feColorMatrix
+        in="displaced"
+        type="matrix"
+        values="
+          1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          0 0 0 0.9 0"
+        result="colored"
+      />
+    </filter>
+  </defs>
+</svg>    </defs>
   </svg>
 
   <!-- TWO WIDE BUTTONS -->
