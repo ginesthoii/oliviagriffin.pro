@@ -306,105 +306,63 @@
 </section>
 
 
-<section class="exp-slider" aria-label="Featured Projects">
-  <div class="exp-slider__wrap">
+<!-- ===== Expandable Featured Cards ===== -->
+  
+<section class="exp-slider" aria-label="Featured">
+  <div class="section-inner center">
+    <h3 class="eyebrow">Featured</h3>
+    <h2>Projects + Orgs</h2>
+    <p class="lead">Click a card to expand. Auto-rotates unless you interact.</p>
+  </div>
 
-    <!-- 1) ScenarioEngine -->
+  <div class="exp-slider__wrap">
+    <!-- 1) Projects -->
     <article class="exp-card is-active"
       style="--bg:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/scenario-engine.png');"
-      data-title="ScenarioEngine"
-      data-sub="Stochastic simulation • Monte Carlo">
+      data-title="Projects"
+      data-sub="Builds • Case Studies • Code">
       <div class="exp-card__overlay"></div>
       <div class="exp-card__content">
-        <h3 class="exp-card__title">ScenarioEngine</h3>
-        <p class="exp-card__sub">Timeline-based risk simulation for modeling outcomes, failure, and long-term planning.</p>
+        <h3 class="exp-card__title">Projects</h3>
+        <p class="exp-card__sub">Deep dives, demos, and full writeups.</p>
         <div class="exp-card__actions">
-          <a class="exp-btn" href="projects.html#scenarioengine">View</a>
-          <a class="exp-btn exp-btn--ghost" href="https://github.com/ginesthoii/ScenarioEngine">GitHub</a>
+          <a class="exp-btn" href="projects.html">Open Projects</a>
+          <a class="exp-btn exp-btn--ghost" href="projects.html#top">Browse</a>
         </div>
       </div>
     </article>
 
-    <!-- 2) Mini-Massive -->
+    <!-- 2) Organizations -->
     <article class="exp-card"
       style="--bg:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/mini-massive.png');"
-      data-title="Mini-Massive"
-      data-sub="Agent-based sims • Emergent behavior">
+      data-title="Organizations"
+      data-sub="Ecosystems • Tooling • Labs">
       <div class="exp-card__overlay"></div>
       <div class="exp-card__content">
-        <h3 class="exp-card__title">Mini-Massive</h3>
-        <p class="exp-card__sub">Lightweight agent simulation framework (crowds, traffic, tactics).</p>
+        <h3 class="exp-card__title">Organizations</h3>
+        <p class="exp-card__sub">Grouped workstreams + themes (security, creative, ops).</p>
         <div class="exp-card__actions">
-          <a class="exp-btn" href="projects.html#mini-massive">View</a>
-          <a class="exp-btn exp-btn--ghost" href="https://github.com/ginesthoii/Mini-Massive">GitHub</a>
+          <a class="exp-btn" href="organizations.html">Open Orgs</a>
+          <a class="exp-btn exp-btn--ghost" href="organizations.html#top">Browse</a>
         </div>
       </div>
     </article>
 
-    <!-- 3) metadata-librarian -->
+    <!-- 3) WashU Cyber -->
     <article class="exp-card"
-      style="--bg:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/metadata-librarian.png');"
-      data-title="metadata-librarian"
-      data-sub="Local-first • OCR • SQLite">
+      style="--bg:url('images/badges/washu-cyber.png');"
+      data-title="WashU Cybersecurity"
+      data-sub="Tools • Labs • Security">
       <div class="exp-card__overlay"></div>
       <div class="exp-card__content">
-        <h3 class="exp-card__title">metadata-librarian</h3>
-        <p class="exp-card__sub">Offline archival + metadata extraction for documents, media, and images.</p>
+        <h3 class="exp-card__title">WashU Cybersecurity</h3>
+        <p class="exp-card__sub">Wireshark, Kali, Metasploit, Nessus — hands-on security training.</p>
         <div class="exp-card__actions">
-          <a class="exp-btn" href="projects.html#metadata-librarian">View</a>
-          <a class="exp-btn exp-btn--ghost" href="https://github.com/ginesthoii/metadata_librarian">GitHub</a>
+          <a class="exp-btn" href="about.html#certifications">Credentials</a>
+          <a class="exp-btn exp-btn--ghost" href="projects.html" title="Show security work">Security Work</a>
         </div>
       </div>
     </article>
-
-    <!-- 4) smart-tag-system -->
-    <article class="exp-card"
-      style="--bg:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/smart-tag.png');"
-      data-title="smart-tag-system"
-      data-sub="Universal tags • Hierarchies • Offline">
-      <div class="exp-card__overlay"></div>
-      <div class="exp-card__content">
-        <h3 class="exp-card__title">smart-tag-system</h3>
-        <p class="exp-card__sub">Hierarchical tagging framework for cross-domain organization.</p>
-        <div class="exp-card__actions">
-          <a class="exp-btn" href="projects.html#smart-tag-system">View</a>
-          <a class="exp-btn exp-btn--ghost" href="https://github.com/ginesthoii/smart-tag-system">GitHub</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- 5) phantom-terminal -->
-    <article class="exp-card"
-      style="--bg:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/phantom-terminal.gif');"
-      data-title="phantom-terminal"
-      data-sub="CLI demos • Export GIF/PNG/video">
-      <div class="exp-card__overlay"></div>
-      <div class="exp-card__content">
-        <h3 class="exp-card__title">phantom-terminal</h3>
-        <p class="exp-card__sub">Self-typing terminal emulator for realistic command-line demos.</p>
-        <div class="exp-card__actions">
-          <a class="exp-btn" href="projects.html#phantom-terminal">View</a>
-          <a class="exp-btn exp-btn--ghost" href="https://github.com/ginesthoii/phantom-terminal">GitHub</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- 6) Notflix -->
-    <article class="exp-card"
-      style="--bg:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/notflix.png');"
-      data-title="Notflix"
-      data-sub="Local full-stack • Docker • React">
-      <div class="exp-card__overlay"></div>
-      <div class="exp-card__content">
-        <h3 class="exp-card__title">Notflix</h3>
-        <p class="exp-card__sub">Local Netflix-style stack for learning full-stack + DevSecOps.</p>
-        <div class="exp-card__actions">
-          <a class="exp-btn" href="projects.html#notflix">View</a>
-          <a class="exp-btn exp-btn--ghost" href="https://github.com/ginesthoii/Notflix">GitHub</a>
-        </div>
-      </div>
-    </article>
-
   </div>
 </section>
 
