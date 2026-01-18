@@ -1355,6 +1355,205 @@ body {
   }
 }
 
+
+
+
+/* ================================
+   Cards + Continuous Scrolling Strip
+================================ */
+
+.proj-controls{
+  max-width: var(--maxw);
+  margin: 1.25rem auto 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip{
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.06);
+  color: var(--ink);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font: 500 0.95rem/1 "Lato", sans-serif;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+.chip:hover{ transform: translateY(-1px); }
+.chip.is-active{
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.36);
+}
+
+.proj-grid{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+@media (max-width: 980px){
+  .proj-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px){
+  .proj-grid{ grid-template-columns: 1fr; }
+}
+
+/* Project card */
+.proj-card{
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 50px rgba(0,0,0,.35);
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+.proj-card:hover{
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,.25);
+  background: rgba(255,255,255,.06);
+}
+.proj-thumb{
+  margin: 0;
+  height: 160px;
+  overflow: hidden;
+}
+.proj-thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.proj-body{
+  padding: 14px 14px 16px;
+}
+.proj-title{
+  margin: 0 0 6px;
+  font: 700 1.05rem/1.15 "Lato", sans-serif;
+}
+.proj-blurb{
+  margin: 0 0 10px;
+  color: #ffffffcc;
+  font: 300 0.98rem/1.45 "Lato", sans-serif;
+}
+.proj-meta{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+.proj-meta li{
+  font: 600 0.78rem/1 "Lato", sans-serif;
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.06);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+/* Org sections */
+.org-section{
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
+}
+.org-header{
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.org-logo{
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  object-fit: cover;
+}
+.org-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (max-width: 840px){
+  .org-grid{ grid-template-columns: 1fr; }
+}
+
+.org-card{
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 14px 50px rgba(0,0,0,.35);
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+  cursor: pointer;
+}
+.org-card:hover{
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,.25);
+  background: rgba(255,255,255,.06);
+}
+.org-card h3{
+  margin: 0 0 8px;
+}
+.org-card p{
+  margin: 0 0 10px;
+  color: #ffffffcc;
+  font: 300 0.98rem/1.45 "Lato", sans-serif;
+}
+
+/* ===== Marquee Strip ===== */
+.marquee{
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 1.1rem auto 2rem;
+}
+
+.marquee__viewport{
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 14px 50px rgba(0,0,0,.35);
+}
+
+.marquee__track{
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee__item{
+  flex: 0 0 auto;
+  min-width: 320px;
+  max-width: 360px;
+}
+
+@media (max-width: 700px){
+  .marquee__item{ min-width: 280px; max-width: 320px; }
+}
+
+/* pause on hover/focus */
+.marquee__viewport:hover .marquee__track,
+.marquee__viewport:focus-within .marquee__track{
+  animation-play-state: paused;
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .marquee__track{
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
 /* ===== Contact Form ===== */
 .contact-form{
   max-width: 760px;
