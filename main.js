@@ -217,3 +217,80 @@ document.addEventListener('DOMContentLoaded', () => {
     io.observe(skillsSection);
   }
 });
+
+  /* =========================
+     Expandable Featured Cards: click + keyboard + aria
+  ========================== */
+  (() => {
+    const cards = document.querySelectorAll(".exp-card");
+    if (!cards.length) return;
+
+    // Ensure at least one card is active
+    if (![...cards].some(c => c.classList.contains("is-active"))) {
+      cards[0].classList.add("is-active");
+    }
+
+    const setActive = (card) => {
+      cards.forEach(c => c.classList.remove("is-active"));
+      card.classList.add("is-active");
+    };
+
+    cards.forEach(card => {
+      // Click to activate
+      card.addEventListener("click", () => setActive(card));
+
+      // Make focusable + keyboard supported
+      card.setAttribute("tabindex", "0");
+      card.setAttribute("role", "button");
+      card.setAttribute("aria-pressed", card.classList.contains("is-active") ? "true" : "false");
+
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          setActive(card);
+        }
+      });
+    });
+
+    // Update aria-pressed when active changes
+    const observer = new MutationObserver(() => {
+      cards.forEach(c =>
+        c.setAttribute(
+          "aria-pressed",
+          c.classList.contains("is-active") ? "true" : "false"
+        )
+      );
+    });
+
+    cards.forEach(c => observer.observe(c, { attributes: true, attributeFilter: ["class"] }));
+  })();
+
+  /* =========================
+     Expandable Featured Cards: auto-rotate + pause on hover/focus
+  ========================== */
+  (() => {
+    const cards = [...document.querySelectorAll(".exp-card")];
+    if (!cards.length) return;
+
+    let i = cards.findIndex(c => c.classList.contains("is-active"));
+    if (i < 0) i = 0;
+
+    let paused = false;
+
+    const goNext = () => {
+      if (paused) return;
+      cards[i].classList.remove("is-active");
+      i = (i + 1) % cards.length;
+      cards[i].classList.add("is-active");
+    };
+
+    setInterval(goNext, 6000);
+
+    // Pause on hover/focus so it doesn't fight the user
+    cards.forEach(c => {
+      c.addEventListener("mouseenter", () => paused = true);
+      c.addEventListener("mouseleave", () => paused = false);
+      c.addEventListener("focusin", () => paused = true);
+      c.addEventListener("focusout", () => paused = false);
+    });
+  })();
