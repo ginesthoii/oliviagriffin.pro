@@ -930,9 +930,9 @@ body {
   .services-controls .nav-btn{ transition:none; }
 }
 
-/* ===== Stats (with Lato font) ===== */
+/* ===== Stats  ===== */
 :root{
-  --stats-bg: #9b0f45;         /* magenta/burgundy band */
+  --stats-bg: #836763;         /* dusty rose band */
   --stats-ink: #ffffff;        /* numbers */
   --stats-muted: #f5f5f5cc;    /* labels */
   --stats-divider: rgba(255,255,255,.22);
