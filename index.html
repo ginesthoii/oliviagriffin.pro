@@ -1,48 +1,52 @@
-<html lang="en"><head>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <!-- Favicon -->
-  
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="manifest" href="images/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="images/site.webmanifest">
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Olivia Griffin — Portfolio</title>
 
   <!-- Fonts -->
-  
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  
-  <link rel="stylesheet" href="style.css"></head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
-<!-- ===== NAVBAR ===== -->
-  
-<header class="header">
-  <nav class="nav-inner" aria-label="Main">
-    <div class="nav-links">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="header">
+    <nav class="nav-inner" aria-label="Main">
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="organizations.html">Organizations</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <button id="menu-icon" class="hamb" aria-expanded="false" aria-controls="mobile-nav">
+        ☰
+      </button>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div id="mobile-nav" class="nav-bg">
       <a href="#home">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="organizations.html">Organizations</a>
       <a href="#contact">Contact</a>
     </div>
-
-    <button id="menu-icon" class="hamb" aria-expanded="false" aria-controls="mobile-nav">
-      ☰
-    </button>
-  </nav>
-
-  <!-- Mobile drawer -->
-  
-  <div id="mobile-nav" class="nav-bg"><a href="#home">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="organizations.html">Organizations</a><a href="#contact">Contact</a></div>
-</header>
+  </header>
 
   <!-- ===== HERO ===== -->
-  
   <section id="home" class="hero" aria-label="Intro">
     <div class="title-wrap">
       <h1>Olivia Griffin</h1>
@@ -51,7 +55,6 @@
   </section>
 
   <!-- ===== FEATURE BAND ===== -->
-  
   <section class="feature-band" id="feature">
     <div class="feature-wrap">
       <div class="feature-copy">
@@ -69,14 +72,13 @@
       </div>
     </div>
 
-    <!-- Phone pinned bottom-right (crops bottom + right only) -->
+    <!-- Phone pinned bottom-right -->
     <div class="feature-mock" aria-hidden="true">
       <img src="images/icons/iphone1.png" alt="">
     </div>
   </section>
 
   <!-- ===== ABOUT ===== -->
-  
   <section id="about" class="about">
     <div class="section-intro">
       <h5>About</h5>
@@ -90,17 +92,17 @@
         <p>Comments.</p>
         <ul class="info-list">
           <li><strong>Fullname:</strong> <span>Olivia Griffin</span></li>
-          <li><strong>Profession:</strong> <span> Full-Stack Developer with Security Emphasis</span></li>
+          <li><strong>Profession:</strong> <span>Full-Stack Developer with Security Emphasis</span></li>
           <li><strong>Website:</strong> <span>oliviagriffin.pro</span></li>
           <li><strong>Email:</strong> <span>oliviagriffindev@gmail.com</span></li>
           <li><strong>Github:</strong> <span>https://github.com/ginesthoii</span></li>
-
         </ul>
       </div>
 
-    <div class="about-col">
+      <div class="about-col">
         <h3>Skills</h3>
         <p>Specializations.</p>
+
         <ul class="skill-bars">
           <li><div class="progress percent90"><span>90%</span></div><strong>HTML5</strong></li>
           <li><div class="progress percent85"><span>85%</span></div><strong>CSS3</strong></li>
@@ -113,282 +115,256 @@
     </div>
   </section>
 
-<!-- ===== Certifications ===== -->
-
-<section id="certifications"
-  class="certifications-section wallpaper wallpaper--parallax"
-  style="--bg:url('images/background/starry-night.jpg'); --overlay:rgba(0,0,0,.35)">
-
-  <div class="section-intro">
-    <h5>Credentials</h5>
-    <h1>Certifications</h1>
-    <p class="lead">Verified training and security fundamentals.</p>
-  </div>
-
-  <div class="cert-grid">
-    <div class="cert-item">
-      <img class="cert-badge" src="images/badges/security-plus-badge.png" alt="CompTIA Security+ badge">
-      <div class="cert-card">
-        <div class="cert-name">CompTIA Security+</div>
-      </div>
-    </div>
-
-    <div class="cert-item">
-      <img class="cert-badge" src="images/badges/washu-cyber.png" alt="WashU Cybersecurity Certification badge">
-      <div class="cert-card">
-        <div class="cert-name">WashU Cybersecurity Certification</div>
-      </div>
-    </div>
-
-    <div class="cert-item">
-      <img class="cert-badge" src="images/badges/mizzou-multicultural.png" alt="Multicultural Certificate — Mizzou badge">
-      <div class="cert-card">
-        <div class="cert-name">Multicultural Certificate (Mizzou)</div>
-      </div>
-    </div>
-
-    <div class="cert-item">
-      <img class="cert-badge" src="images/badges/oracle-ai-foundations.png" alt="Oracle AI Foundations badge">
-      <div class="cert-card">
-        <div class="cert-name">Oracle AI Foundations (OCI)</div>
-      </div>
-    </div>
-
-    <div class="cert-item">
-      <img class="cert-badge" src="images/badges/oracle-tech-jumpstart.png" alt="Oracle Tech Jumpstart badge">
-      <div class="cert-card">
-        <div class="cert-name">Oracle Tech Jumpstart</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- ===== Skills ===== -->
-  
-<section id="skills" class="skills-section" section class="wallpaper wallpaper--parallax" style="--bg:url('images/background/starry-night.jpg'); --overlay:rgba(0,0,0,.35)">
-  <div class="section-intro">
-    <h3>Skills</h3>
-    <p>Specializations.</p>
-  </div>
-
-  <div class="skills-grid">
-    
-    <!-- LEFT COLUMN-->
-    
-    <ul class="skills-col">
-      <li class="skill skill--left">
-        <strong class="label">HTML5</strong>
-        <div class="bar" style="--pct:90%"><span class="pct">90%</span></div>
-      </li>
-      <li class="skill skill--left">
-        <strong class="label">CSS3</strong>
-        <div class="bar" style="--pct:85%"><span class="pct">85%</span></div>
-      </li>
-      <li class="skill skill--left">
-        <strong class="label">jQuery</strong>
-        <div class="bar" style="--pct:70%"><span class="pct">70%</span></div>
-      </li>
-    </ul>
-
-    <!-- RIGHT COLUMN -->
-    
-    <ul class="skills-col">
-      <li class="skill skill--right">
-        <strong class="label">PHP</strong>
-        <div class="bar" style="--pct:95%"><span class="pct">95%</span></div>
-      </li>
-      <li class="skill skill--right">
-        <strong class="label">Python</strong>
-        <div class="bar" style="--pct:95%"><span class="pct">95%</span></div>
-      </li>
-      <li class="skill skill--right">
-        <strong class="label">WordPress</strong>
-        <div class="bar" style="--pct:75%"><span class="pct">75%</span></div>
-      </li>
-    </ul>
-  </div>
-</section>
-
-
-   
-
-
-
-<!-- ===== ICON STACK SECTION ===== -->
-  
-<section class="icon-stack" id="icons">
-  <div class="icon-wrapper">
-    <img src="images/icons/icon1.jpg" alt="Icon 1" class="icon" loading="lazy">
-    <img src="images/icons/icon2.jpg" alt="Icon 2" class="icon" loading="lazy">
-  </div>
-</section>
-<br><br>
-
-  
-
-  
-
-    <!-- ===== Stats ===== -->
-  
-<section id="stats" class="stats-section" aria-labelledby="stats-title">
-  <div class="section-intro">
-    <h5>Stats</h5>
-    <h1 id="stats-title">By the Numbers</h1>
-  </div>
-
-  <div class="stats-list">
-    <article class="stat">
-      <div class="icon-part" aria-hidden="true"><i class="icon-pencil-ruler"></i></div>
-      <h3 class="stat-count" data-target="115">0</h3>
-      <h5 class="stat-title">Projects Completed</h5>
-    </article>
-
-    <article class="stat">
-      <div class="icon-part" aria-hidden="true"><i class="icon-users"></i></div>
-      <h3 class="stat-count" data-target="5">0</h3>
-      <h5 class="stat-title">Certifications</h5>
-    </article>
-
-    <article class="stat">
-      <div class="icon-part" aria-hidden="true"><i class="icon-badge"></i></div>
-      <h3 class="stat-count" data-target="4"></h3>
-      <h5 class="stat-title">Awards</h5>
-    </article>
-
-    <article class="stat">
-      <div class="icon-part" aria-hidden="true"><i class="icon-light-bulb"></i></div>
-      <h3 class="stat-count" data-target="2000">0</h3>
-      <h5 class="stat-title">Crazy Ideas</h5>
-    </article>
-
-    <article class="stat">
-      <div class="icon-part" aria-hidden="true"><i class="icon-cup"></i></div>
-      <h3 class="stat-count" data-target="1500">0</h3>
-      <h5 class="stat-title">Coffee Cups</h5>
-    </article>
-
-    <article class="stat">
-      <div class="icon-part" aria-hidden="true"><i class="icon-clock"></i></div>
-      <h3 class="stat-count" data-target="7200">0</h3>
-      <h5 class="stat-title">Hours</h5>
-    </article>
-  </div>
-</section>
-
-
-
-<!-- =====  Featured Cards ===== -->
-  
-<section class="exp-slider" aria-label="Featured">
-  <div class="section-inner center">
-    <h3 class="eyebrow">Featured</h3>
-    <h2>Projects + Orgs</h2>
-    <p class="lead">Click a card to expand. Auto-rotates unless you interact.</p>
-  </div>
-
-  <div class="exp-slider__wrap">
-    <!-- 1) Projects -->
-    <article class="exp-card is-active"
-      style="--bg:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/scenario-engine.png');"
-      data-title="Projects"
-      data-sub="Builds • Case Studies • Code">
-      <div class="exp-card__overlay"></div>
-      <div class="exp-card__content">
-        <h3 class="exp-card__title">Projects</h3>
-        <p class="exp-card__sub">Deep dives, demos, and full writeups.</p>
-        <div class="exp-card__actions">
-          <a class="exp-btn" href="projects.html">Open Projects</a>
-          <a class="exp-btn exp-btn--ghost" href="projects.html#top">Browse</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- 2) Organizations -->
-    <article class="exp-card"
-      style="--bg:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/mini-massive.png');"
-      data-title="Organizations"
-      data-sub="Ecosystems • Tooling • Labs">
-      <div class="exp-card__overlay"></div>
-      <div class="exp-card__content">
-        <h3 class="exp-card__title">Organizations</h3>
-        <p class="exp-card__sub">Grouped workstreams + themes (security, creative, ops).</p>
-        <div class="exp-card__actions">
-          <a class="exp-btn" href="organizations.html">Open Orgs</a>
-          <a class="exp-btn exp-btn--ghost" href="organizations.html#top">Browse</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- 3) WashU Cyber -->
-    <article class="exp-card"
-      style="--bg:url('images/badges/washu-cyber.png');"
-      data-title="WashU Cybersecurity"
-      data-sub="Tools • Labs • Security">
-      <div class="exp-card__overlay"></div>
-      <div class="exp-card__content">
-        <h3 class="exp-card__title">WashU Cybersecurity</h3>
-        <p class="exp-card__sub">Wireshark, Kali, Metasploit, Nessus — hands-on security training.</p>
-        <div class="exp-card__actions">
-          <a class="exp-btn" href="about.html#certifications">Credentials</a>
-          <a class="exp-btn exp-btn--ghost" href="projects.html" title="Show security work">Security Work</a>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
-
-  
-<!-- ===== CONTACT ===== -->
-  
-<section id="contact" class="wallpaper" style="--bg:url('images/background/black.jpeg'); --overlay:rgba(0,0,0,.45)">
-  <div class="section-inner center">
+  <!-- ===== Certifications ===== -->
+  <section id="certifications"
+    class="certifications-section wallpaper wallpaper--parallax"
+    style="--bg:url('images/background/starry-night.jpg'); --overlay:rgba(0,0,0,.35)">
 
     <div class="section-intro">
-      <h5>Contact</h5>
-      <h1>Let’s connect.</h1>
-      <p class="lead">Send me a message and I’ll get back to you.</p>
+      <h5>Credentials</h5>
+      <h1>Certifications</h1>
+      <p class="lead">Verified training and security fundamentals.</p>
     </div>
 
-    <form
-      class="contact-form"
-      action="https://formspree.io/f/xlggjggb"
-      method="POST"
-    >
-      <div class="contact-grid">
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="email" name="email" placeholder="Your email" required />
+    <div class="cert-grid">
+      <div class="cert-item">
+        <img class="cert-badge" src="images/badges/security-plus-badge.png" alt="CompTIA Security+ badge">
+        <div class="cert-card">
+          <div class="cert-name">CompTIA Security+</div>
+        </div>
       </div>
 
-      <input type="text" name="subject" placeholder="Subject" />
+      <div class="cert-item">
+        <img class="cert-badge" src="images/badges/washu-cyber.png" alt="WashU Cybersecurity Certification badge">
+        <div class="cert-card">
+          <div class="cert-name">WashU Cybersecurity Certification</div>
+        </div>
+      </div>
 
-      <textarea
-        name="message"
-        placeholder="Message (at least 15 characters)"
-        minlength="15"
-        required
-      ></textarea>
+      <div class="cert-item">
+        <img class="cert-badge" src="images/badges/mizzou-multicultural.png" alt="Multicultural Certificate — Mizzou badge">
+        <div class="cert-card">
+          <div class="cert-name">Multicultural Certificate (Mizzou)</div>
+        </div>
+      </div>
 
-      <input type="text" name="_gotcha" style="display:none" />
+      <div class="cert-item">
+        <img class="cert-badge" src="images/badges/oracle-ai-foundations.png" alt="Oracle AI Foundations badge">
+        <div class="cert-card">
+          <div class="cert-name">Oracle AI Foundations (OCI)</div>
+        </div>
+      </div>
 
-      <button type="submit" class="btn-outline">Send Message</button>
-    </form>
+      <div class="cert-item">
+        <img class="cert-badge" src="images/badges/oracle-tech-jumpstart.png" alt="Oracle Tech Jumpstart badge">
+        <div class="cert-card">
+          <div class="cert-name">Oracle Tech Jumpstart</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ===== Skills (mirrored bars) ===== -->
+  <section id="skills"
+    class="skills-section wallpaper wallpaper--parallax"
+    style="--bg:url('images/background/starry-night.jpg'); --overlay:rgba(0,0,0,.35)">
 
-<br>
+    <div class="section-intro">
+      <h3>Skills</h3>
+      <p>Specializations.</p>
+    </div>
+
+    <div class="skills-grid">
+
+      <!-- LEFT COLUMN -->
+      <ul class="skills-col">
+        <li class="skill skill--left">
+          <strong class="label">HTML5</strong>
+          <div class="bar" style="--pct:90%"><span class="pct">90%</span></div>
+        </li>
+        <li class="skill skill--left">
+          <strong class="label">CSS3</strong>
+          <div class="bar" style="--pct:85%"><span class="pct">85%</span></div>
+        </li>
+        <li class="skill skill--left">
+          <strong class="label">jQuery</strong>
+          <div class="bar" style="--pct:70%"><span class="pct">70%</span></div>
+        </li>
+      </ul>
+
+      <!-- RIGHT COLUMN -->
+      <ul class="skills-col">
+        <li class="skill skill--right">
+          <strong class="label">PHP</strong>
+          <div class="bar" style="--pct:95%"><span class="pct">95%</span></div>
+        </li>
+        <li class="skill skill--right">
+          <strong class="label">Python</strong>
+          <div class="bar" style="--pct:95%"><span class="pct">95%</span></div>
+        </li>
+        <li class="skill skill--right">
+          <strong class="label">WordPress</strong>
+          <div class="bar" style="--pct:75%"><span class="pct">75%</span></div>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- ===== ICON STACK SECTION ===== -->
+  <section class="icon-stack" id="icons">
+    <div class="icon-wrapper">
+      <img src="images/icons/icon1.jpg" alt="Icon 1" class="icon" loading="lazy">
+      <img src="images/icons/icon2.jpg" alt="Icon 2" class="icon" loading="lazy">
+    </div>
+  </section>
+
+  <br><br>
+
+  <!-- ===== Stats ===== -->
+  <section id="stats" class="stats-section" aria-labelledby="stats-title">
+    <div class="section-intro">
+      <h5>Stats</h5>
+      <h1 id="stats-title">By the Numbers</h1>
+    </div>
+
+    <div class="stats-list">
+      <article class="stat">
+        <div class="icon-part" aria-hidden="true"><i class="icon-pencil-ruler"></i></div>
+        <h3 class="stat-count" data-target="115">0</h3>
+        <h5 class="stat-title">Projects Completed</h5>
+      </article>
+
+      <article class="stat">
+        <div class="icon-part" aria-hidden="true"><i class="icon-users"></i></div>
+        <h3 class="stat-count" data-target="5">0</h3>
+        <h5 class="stat-title">Certifications</h5>
+      </article>
+
+      <article class="stat">
+        <div class="icon-part" aria-hidden="true"><i class="icon-badge"></i></div>
+        <h3 class="stat-count" data-target="4">0</h3>
+        <h5 class="stat-title">Awards</h5>
+      </article>
+
+      <article class="stat">
+        <div class="icon-part" aria-hidden="true"><i class="icon-light-bulb"></i></div>
+        <h3 class="stat-count" data-target="2000">0</h3>
+        <h5 class="stat-title">Crazy Ideas</h5>
+      </article>
+
+      <article class="stat">
+        <div class="icon-part" aria-hidden="true"><i class="icon-cup"></i></div>
+        <h3 class="stat-count" data-target="1500">0</h3>
+        <h5 class="stat-title">Coffee Cups</h5>
+      </article>
+
+      <article class="stat">
+        <div class="icon-part" aria-hidden="true"><i class="icon-clock"></i></div>
+        <h3 class="stat-count" data-target="7200">0</h3>
+        <h5 class="stat-title">Hours</h5>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Featured Expand Cards ===== -->
+  <section class="exp-slider" aria-label="Featured">
+    <div class="section-inner center">
+      <h3 class="eyebrow">Featured</h3>
+      <h2>Projects + Orgs</h2>
+      <p class="lead">Click a card to expand. Auto-rotates unless you interact.</p>
+    </div>
+
+    <div class="exp-slider__wrap">
+      <!-- 1) Projects -->
+      <article class="exp-card is-active"
+        style="--bg:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/scenario-engine.png');"
+        data-title="Projects"
+        data-sub="Builds • Case Studies • Code">
+        <div class="exp-card__overlay"></div>
+        <div class="exp-card__content">
+          <h3 class="exp-card__title">Projects</h3>
+          <p class="exp-card__sub">Deep dives, demos, and full writeups.</p>
+          <div class="exp-card__actions">
+            <a class="exp-btn" href="projects.html">Open Projects</a>
+            <a class="exp-btn exp-btn--ghost" href="projects.html#top">Browse</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2) Organizations -->
+      <article class="exp-card"
+        style="--bg:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/mini-massive.png');"
+        data-title="Organizations"
+        data-sub="Ecosystems • Tooling • Labs">
+        <div class="exp-card__overlay"></div>
+        <div class="exp-card__content">
+          <h3 class="exp-card__title">Organizations</h3>
+          <p class="exp-card__sub">Grouped workstreams + themes (security, creative, ops).</p>
+          <div class="exp-card__actions">
+            <a class="exp-btn" href="organizations.html">Open Orgs</a>
+            <a class="exp-btn exp-btn--ghost" href="organizations.html#top">Browse</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3) WashU Cyber -->
+      <article class="exp-card"
+        style="--bg:url('images/badges/washu-cyber.png');"
+        data-title="WashU Cybersecurity"
+        data-sub="Tools • Labs • Security">
+        <div class="exp-card__overlay"></div>
+        <div class="exp-card__content">
+          <h3 class="exp-card__title">WashU Cybersecurity</h3>
+          <p class="exp-card__sub">Wireshark, Kali, Metasploit, Nessus — hands-on security training.</p>
+          <div class="exp-card__actions">
+            <a class="exp-btn" href="about.html#certifications">Credentials</a>
+            <a class="exp-btn exp-btn--ghost" href="projects.html" title="Show security work">Security Work</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="wallpaper" style="--bg:url('images/background/black.jpeg'); --overlay:rgba(0,0,0,.45)">
+    <div class="section-inner center">
+
+      <div class="section-intro">
+        <h5>Contact</h5>
+        <h1>Let’s connect.</h1>
+        <p class="lead">Send me a message and I’ll get back to you.</p>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/xlggjggb" method="POST">
+        <div class="contact-grid">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+        </div>
+
+        <input type="text" name="subject" placeholder="Subject">
+
+        <textarea name="message" placeholder="Message (at least 15 characters)" minlength="15" required></textarea>
+
+        <input type="text" name="_gotcha" style="display:none">
+
+        <button type="submit" class="btn-outline">Send Message</button>
+      </form>
+
+    </div>
+  </section>
+
+  <br>
 
   <!-- ===== FOOTER ===== -->
-  
   <footer class="footer">
     <p>© 2025 Olivia Griffin. All rights reserved.</p>
   </footer>
+
+  <!-- ===== JS ===== -->
+  <script src="script.js"></script>
 </body>
 </html>
-
 
 
 
