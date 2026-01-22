@@ -164,25 +164,10 @@
 
 
 
- 
 
-
-
-<!-- ===== ICON STACK SECTION ===== -->
-  
-<section class="icon-stack" id="icons">
-  <div class="icon-wrapper">
-    <img src="images/icons/icon1.jpg" alt="Icon 1" class="icon" loading="lazy">
-    <img src="images/icons/icon2.jpg" alt="Icon 2" class="icon" loading="lazy">
-  </div>
-</section>
-<br><br>
-
-  
 
 <!-- ===== Skills ===== -->
-
-  <section id="skills" class="skills-section" section class="wallpaper wallpaper--parallax" style="--bg:url('images/background/black-arrow-right.jpg'); --overlay:rgba(0,0,0,.35)">
+  <section id="skills" class="skills-section" section class="wallpaper wallpaper--parallax" style="--bg:url('images/background/starry-night.jpg'); --overlay:rgba(0,0,0,.35)">
 
   <div class="section-intro">
     <h3>Skills</h3>
@@ -228,6 +213,21 @@
 </section>
 
 
+   
+
+
+
+<!-- ===== ICON STACK SECTION ===== -->
+  
+<section class="icon-stack" id="icons">
+  <div class="icon-wrapper">
+    <img src="images/icons/icon1.jpg" alt="Icon 1" class="icon" loading="lazy">
+    <img src="images/icons/icon2.jpg" alt="Icon 2" class="icon" loading="lazy">
+  </div>
+</section>
+<br><br>
+
+  
 
   
 
@@ -280,133 +280,7 @@
 
 
 
-
-
-<!-- ===== Glow Card  ===== -->
-  
-<section class="wallpaper wallpaper--parallax" style="--bg:url('images/background/starry-night.jpg'); --overlay:rgba(0,0,0,.35)">
-<main class="main-container">
-  <svg class="svg-container">
-    <defs>
-<svg class="svg-container">
-  <defs>
-    <filter id="turbulent-displace" color-interpolation-filters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
-      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="1" />
-      <feOffset in="noise1" dx="0" dy="0" result="offsetNoise1">
-        <animate attributeName="dy" values="700; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
-      </feOffset>
-
-      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="1" />
-      <feOffset in="noise2" dx="0" dy="0" result="offsetNoise2">
-        <animate attributeName="dy" values="0; -700" dur="6s" repeatCount="indefinite" calcMode="linear" />
-      </feOffset>
-
-      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise3" seed="2" />
-      <feOffset in="noise3" dx="0" dy="0" result="offsetNoise3">
-        <animate attributeName="dx" values="490; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
-      </feOffset>
-
-      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise4" seed="2" />
-      <feOffset in="noise4" dx="0" dy="0" result="offsetNoise4">
-        <animate attributeName="dx" values="0; -490" dur="6s" repeatCount="indefinite" calcMode="linear" />
-      </feOffset>
-
-      <feMerge result="mergedNoise">
-        <feMergeNode in="offsetNoise1" />
-        <feMergeNode in="offsetNoise2" />
-        <feMergeNode in="offsetNoise3" />
-        <feMergeNode in="offsetNoise4" />
-      </feMerge>
-
-      <feDisplacementMap
-        in="SourceGraphic"
-        in2="mergedNoise"
-        scale="80"
-        xChannelSelector="R"
-        yChannelSelector="G"
-        result="displaced"
-      />
-
-      <feColorMatrix
-        in="displaced"
-        type="matrix"
-        values="
-          1 0 0 0 0
-          0 1 0 0 0
-          0 0 1 0 0
-          0 0 0 0.9 0"
-        result="colored"
-      />
-    </filter>
-  </defs>
-</svg>    </defs>
-  </svg>
-
-  <!-- TWO WIDE BUTTONS -->
-  <div class="button-row">
-    <!-- Button 1 -->
-    <a class="glow-btn" href="projects.html" aria-label="Go to Projects">
-      <div class="card-container">
-        <div class="inner-container">
-          <div class="border-outer">
-            <div class="main-card"></div>
-          </div>
-          <div class="glow-layer-1"></div>
-          <div class="glow-layer-2"></div>
-        </div>
-
-        <div class="overlay-1"></div>
-        <div class="overlay-2"></div>
-
-        <div class="content-container">
-          <div class="content-top">
-            <div class="scrollbar-glass">Browse</div>
-            <p class="title">Projects</p>
-          </div>
-
-          <hr class="divider" />
-
-          <div class="content-bottom">
-            <p class="description">See all apps + tools.</p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- Button 2 -->
-    <a class="glow-btn" href="orgs.html" aria-label="Go to Orgs">
-      <div class="card-container">
-        <div class="inner-container">
-          <div class="border-outer">
-            <div class="main-card"></div>
-          </div>
-          <div class="glow-layer-1"></div>
-          <div class="glow-layer-2"></div>
-        </div>
-
-        <div class="overlay-1"></div>
-        <div class="overlay-2"></div>
-
-        <div class="content-container">
-          <div class="content-top">
-            <div class="scrollbar-glass">Browse</div>
-            <p class="title">Orgs</p>
-          </div>
-
-          <hr class="divider" />
-
-          <div class="content-bottom">
-            <p class="description">All organizations & ecosystems.</p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-</main>
-</section>
-
-
-<!-- ===== Expandable Featured Cards ===== -->
+<!-- =====  Featured Cards ===== -->
   
 <section class="exp-slider" aria-label="Featured">
   <div class="section-inner center">
