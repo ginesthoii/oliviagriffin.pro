@@ -821,7 +821,6 @@ body {
 .glow-btn {
   transition: transform 0.15s ease;
 }
-}
 /* ===== Services ===== */
 .services-section{
   position:relative; isolation:isolate;
