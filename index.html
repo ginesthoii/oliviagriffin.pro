@@ -265,89 +265,189 @@
   </section>
 
   <!-- ===== Featured Expand Cards ===== -->
-<div class="message">
-  hello 😅
-</div>
-<section class="section">
-  <h1>Nom Nom Gallery</h1>
-  <div class="grid">
-    <div class="item">
-      <div class="item__details">
-        jelly-o brownie sweet
-      </div>
-    </div>
-    <div class="item item--large">
-      <div class="item__details">
-        Muffin jelly gingerbread 
-      </div>
-    </div>
-    <div class="item item--medium">
-      <div class="item__details">
-        sesame snaps chocolate
-      </div>
-    </div>
-    <div class="item item--large">
-      <div class="item__details">
-        Oat cake
-      </div>
-    </div>
-    <div class="item item--full">
-      <div class="item__details">
-         jujubes cheesecake
-      </div>
-    </div>
-    <div class="item item--medium">
-      <div class="item__details">
-        Dragée pudding brownie
-      </div>
-    </div>
-    <div class="item item--large">
-      <div class="item__details">
-        Oat cake
-      </div>
-    </div>
-    <div class="item">
-      <div class="item__details">
-        powder toffee
-      </div>
-    </div>
-    <div class="item item--medium">
-      <div class="item__details">
-        pudding cheesecake
-      </div>
-    </div>
-    <div class="item item--large">
-      <div class="item__details">
-        toffee bear claw 
-      </div>
-    </div>
-    <div class="item">
-      <div class="item__details">
-        cake cookie croissant
-      </div>
-    </div>
-    <div class="item item--medium">
-      <div class="item__details">
-        liquorice sweet roll
-      </div>
-    </div>
-    <div class="item item--medium">
-      <div class="item__details">
-        chocolate marzipan
-      </div>
-    </div>
-    <div class="item item--large">
-      <div class="item__details">
-        danish dessert lollipop
-      </div>
-    </div>
-    <div class="item">
-      <div class="item__details">
-        sugar plum dragée
-      </div>
-    </div>
+
+  <section class="repo-gallery" id="repos">
+  <div class="repo-gallery__head">
+    <h2 class="repo-gallery__title">Repo Gallery</h2>
+    <p class="repo-gallery__sub">
+      A visual snapshot of builds I’m actively evolving — offline-first, automation-heavy, and practical.
+    </p>
   </div>
-</div>
+
+  <div class="repo-grid">
+    <!-- Item 1 -->
+    <a class="repo-card" href="https://github.com/ginesthoii/esp32-panic-assist-button" target="_blank" rel="noopener"
+       style="--img:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/esp32-panic-assist-button.png');">
+      <div class="repo-card__overlay"></div>
+      <div class="repo-card__meta">
+        <h3 class="repo-card__name">ESP32 Assist / Panic Button</h3>
+        <p class="repo-card__desc">One-press alert → MQTT → Home Assistant → SMS/email/push notifications.</p>
+        <div class="repo-card__tags">
+          <span>ESP32</span><span>MQTT</span><span>Home Assistant</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Item 2 (medium) -->
+    <a class="repo-card repo-card--medium" href="https://github.com/ginesthoii/Offline-Maps" target="_blank" rel="noopener"
+       style="--img:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/offline-maps.png');">
+      <div class="repo-card__overlay"></div>
+      <div class="repo-card__meta">
+        <h3 class="repo-card__name">Offline Maps</h3>
+        <p class="repo-card__desc">Local-first map tiles + search + routes that don’t panic during outages.</p>
+        <div class="repo-card__tags">
+          <span>Leaflet</span><span>Offline</span><span>SQLite</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Item 3 (large) -->
+    <a class="repo-card repo-card--large" href="https://github.com/ginesthoii/Room-Reader" target="_blank" rel="noopener"
+       style="--img:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/room-reader.png');">
+      <div class="repo-card__overlay"></div>
+      <div class="repo-card__meta">
+        <h3 class="repo-card__name">Room Reader</h3>
+        <p class="repo-card__desc">Offline proof-of-care tracking using NFC, local logs, and sync options.</p>
+        <div class="repo-card__tags">
+          <span>Python</span><span>NFC</span><span>Care Tech</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Item 4 -->
+    <a class="repo-card" href="https://github.com/ginesthoii/SeedLedger" target="_blank" rel="noopener"
+       style="--img:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/seed-ledger.png');">
+      <div class="repo-card__overlay"></div>
+      <div class="repo-card__meta">
+        <h3 class="repo-card__name">SeedLedger</h3>
+        <p class="repo-card__desc">A seed + planting database for real-world tracking and planning.</p>
+        <div class="repo-card__tags">
+          <span>SQLite</span><span>Offline-first</span><span>Gardening</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Item 5 (full width feature tile) -->
+    <a class="repo-card repo-card--full" href="https://github.com/ginesthoii/The-Hive" target="_blank" rel="noopener"
+       style="--img:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/the-hive.png');">
+      <div class="repo-card__overlay"></div>
+      <div class="repo-card__meta">
+        <h3 class="repo-card__name">The Hive Ecosystem</h3>
+        <p class="repo-card__desc">Homestead automation stack: sensors, dashboards, offline ops, and resilient systems.</p>
+        <div class="repo-card__tags">
+          <span>Automation</span><span>IoT</span><span>Local-first</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Item 6 (medium) -->
+    <a class="repo-card repo-card--medium" href="https://github.com/ginesthoii/DIY-Insect-Protein-Farm" target="_blank" rel="noopener"
+       style="--img:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/insect-protein.png');">
+      <div class="repo-card__overlay"></div>
+      <div class="repo-card__meta">
+        <h3 class="repo-card__name">DIY Insect Protein Farm</h3>
+        <p class="repo-card__desc">Mealworms/BSFL setup tracking + automation ideas for feed independence.</p>
+        <div class="repo-card__tags">
+          <span>Homestead</span><span>Systems</span><span>Low-maintenance</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- ========== NEW ONES YOU REQUESTED ========== -->
+
+    <!-- Item 7 -->
+    <a class="repo-card" href="https://github.com/ginesthoii/ScenarioEngine" target="_blank" rel="noopener"
+       style="--img:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/scenario-engine.png');">
+      <div class="repo-card__overlay"></div>
+      <div class="repo-card__meta">
+        <h3 class="repo-card__name">Scenario Engine</h3>
+        <p class="repo-card__desc">Timeline-based simulation engine for risk modeling, failure paths, and outcomes.</p>
+        <div class="repo-card__tags">
+          <span>Python</span><span>Monte Carlo</span><span>Modeling</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Item 8 (medium) -->
+    <a class="repo-card repo-card--medium" href="https://github.com/ginesthoii/mini-massive" target="_blank" rel="noopener"
+       style="--img:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/mini-massive.png');">
+      <div class="repo-card__overlay"></div>
+      <div class="repo-card__meta">
+        <h3 class="repo-card__name">Mini Massive</h3>
+        <p class="repo-card__desc">Small-scale systems with big intent — compact tools built to scale cleanly.</p>
+        <div class="repo-card__tags">
+          <span>Utilities</span><span>Systems</span><span>Local-first</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Item 9 (large) -->
+    <a class="repo-card repo-card--large" href="https://github.com/ginesthoii/mini-metadata" target="_blank" rel="noopener"
+       style="--img:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/mini-metadata.png');">
+      <div class="repo-card__overlay"></div>
+      <div class="repo-card__meta">
+        <h3 class="repo-card__name">Mini Metadata</h3>
+        <p class="repo-card__desc">Generate clean project metadata fast — descriptions, tags, and README scaffolds.</p>
+        <div class="repo-card__tags">
+          <span>Automation</span><span>Docs</span><span>Tooling</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Item 10 -->
+    <a class="repo-card" href="https://github.com/ginesthoii/metadata-librarian" target="_blank" rel="noopener"
+       style="--img:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/metadata-librarian.png');">
+      <div class="repo-card__overlay"></div>
+      <div class="repo-card__meta">
+        <h3 class="repo-card__name">Metadata Librarian</h3>
+        <p class="repo-card__desc">Organize, validate, and normalize project metadata across a whole ecosystem.</p>
+        <div class="repo-card__tags">
+          <span>Catalog</span><span>Validation</span><span>Automation</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Item 11 (full width feature tile) -->
+    <a class="repo-card repo-card--full" href="https://github.com/ginesthoii/license-wizard" target="_blank" rel="noopener"
+       style="--img:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/license-wizard.png');">
+      <div class="repo-card__overlay"></div>
+      <div class="repo-card__meta">
+        <h3 class="repo-card__name">License Wizard</h3>
+        <p class="repo-card__desc">Pick the right license fast — generates clean files + explains tradeoffs clearly.</p>
+        <div class="repo-card__tags">
+          <span>Open Source</span><span>Docs</span><span>Compliance</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Item 12 (medium) -->
+    <a class="repo-card repo-card--medium" href="https://github.com/ginesthoii/pdf-engine" target="_blank" rel="noopener"
+       style="--img:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/pdf-engine.png');">
+      <div class="repo-card__overlay"></div>
+      <div class="repo-card__meta">
+        <h3 class="repo-card__name">PDF Engine</h3>
+        <p class="repo-card__desc">Generate and process PDFs offline — structured reports, exports, and templates.</p>
+        <div class="repo-card__tags">
+          <span>Python</span><span>PDF</span><span>Offline</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Item 13 -->
+    <a class="repo-card" href="https://github.com/ginesthoii/paper-witch" target="_blank" rel="noopener"
+       style="--img:url('https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/paper-witch.png');">
+      <div class="repo-card__overlay"></div>
+      <div class="repo-card__meta">
+        <h3 class="repo-card__name">Paper Witch</h3>
+        <p class="repo-card__desc">Turn chaos into clean docs — formatting, exporting, and document spellwork.</p>
+        <div class="repo-card__tags">
+          <span>Docs</span><span>Automation</span><span>Tooling</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="wallpaper" style="--bg:url('images/background/black.jpeg'); --overlay:rgba(0,0,0,.45)">
