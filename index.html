@@ -449,33 +449,49 @@
   </div>
 </section>
 
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="wallpaper" style="--bg:url('images/background/black.jpeg'); --overlay:rgba(0,0,0,.45)">
-    <div class="section-inner center">
 
-      <div class="section-intro">
-        <h5>Contact</h5>
-        <h1>Let’s connect.</h1>
-        <p class="lead">Send me a message and I’ll get back to you.</p>
+  
+  
+
+  <!-- ===== CONTACT ===== -->
+  
+<section id="contact" class="wallpaper" style="--bg:url('images/background/black.jpeg'); --overlay:rgba(0,0,0,.45)">
+  <div class="section-inner center">
+
+    <div class="section-intro">
+      <h5>Contact</h5>
+      <h1>Let’s connect.</h1>
+      <p class="lead">Send me a message and I’ll get back to you.</p>
+    </div>
+
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/xlggjggb"
+      method="POST"
+    >
+      <div class="contact-grid">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
       </div>
 
-      <form class="contact-form" action="https://formspree.io/f/xlggjggb" method="POST">
-        <div class="contact-grid">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="Your email" required>
-        </div>
+      <input type="text" name="subject" placeholder="Subject" />
 
-        <input type="text" name="subject" placeholder="Subject">
+      <textarea
+        name="message"
+        placeholder="Message (at least 15 characters)"
+        minlength="15"
+        required
+      ></textarea>
 
-        <textarea name="message" placeholder="Message (at least 15 characters)" minlength="15" required></textarea>
+      <input type="text" name="_gotcha" style="display:none" />
 
-        <input type="text" name="_gotcha" style="display:none">
+      <button type="submit" class="btn-outline">Send Message</button>
+    </form>
 
-        <button type="submit" class="btn-outline">Send Message</button>
-      </form>
+  </div>
+</section>
 
-    </div>
-  </section>
+  
 
   <br>
 
