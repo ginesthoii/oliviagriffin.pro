@@ -1269,15 +1269,37 @@ body{
   }
 }
 
+
 /* ========== FOOTER ========== */
+
 .footer{
   width:100%;
   text-align:center;
   padding:28px var(--pad);
   margin:0;
   border-top:1px solid rgba(255,255,255,.16);
-  background:rgba(0,0,0,.35);
-  backdrop-filter:blur(4px);
+
+  /* FOOTER IMAGE BEHIND TEXT */
+  background: url("images/background/footer.jpg") center/cover no-repeat;
+
+  /* keep your glass vibe */
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+}
+
+/* dark overlay */
+.footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.55); /* adjust darkness */
+  z-index:0;
+}
+
+.footer > *{
+  position:relative;
+  z-index:1;
 }
 
 .footer p{
@@ -1286,13 +1308,9 @@ body{
   font-weight:300;
   font-size:14px;
   letter-spacing:.06em;
-  color:rgba(255,255,255,.75);
+  color:rgba(255,255,255,.85);
 }
 
-.footer-wall{
-  min-height:auto;
-  padding:28px var(--pad);
-}
 
 /* ========== SHARED KEYFRAMES ========== */
 @keyframes twinkleStrong{
