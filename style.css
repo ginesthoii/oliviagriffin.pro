@@ -1114,7 +1114,7 @@ body{
   color: #fff;
 
   /*  wallpaper behind section */
-  background: url("images/background/serpent.png") center/cover no-repeat;
+  background: url("images/background/geometric.jpg") center/cover no-repeat;
   background-attachment: fixed;
   overflow: hidden;
 }
