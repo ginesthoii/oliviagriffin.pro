@@ -15,7 +15,7 @@
   --gold-1:#e3b96c;
   --gold-2:#dcae5b;
 
-  /* ===== Stats vars merged here ===== */
+  /* ===== Stats vars merged here  ===== */
   --stats-bg:#566970;
   --stats-ink:#ffffff;
   --stats-muted:#f5f5f5cc;
@@ -38,7 +38,7 @@ body{
   color:var(--ink);
   font-family:"Lato",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   background:#000;
-  overflow-x:hidden; /* IMPORTANT: do not delete olivia! */
+  overflow-x:hidden; /* IMPORTANT: do not delete olivia!! */
   scroll-behavior:smooth;
 }
 
@@ -175,6 +175,7 @@ body{
 }
 
 /* ========== HERO ========== */
+
 .hero{
   position:relative;
   min-height:100vh;
@@ -382,7 +383,9 @@ body{
 
 .feature-copy .roles .dot:hover{ animation:sparkleGlow 1s ease-in-out; }
 
-/* ========== ABOUT ========== */
+
+/* ========== ABOUT  ========== */
+
 .about,
 .about *{
   font-family:"Lato",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
@@ -496,7 +499,7 @@ body{
 
 
 
-/* ========== CERTIFICATIONS   ========== */
+/* ========== CERTIFICATIONS SECTION  ========== */
 
 .certifications-section{
   position: relative;
@@ -527,6 +530,7 @@ body{
 
 
 /* ========== CERTIFICATIONS GRID ========== */
+
 .cert-grid{
   margin-top: 4rem;
   display: grid;
@@ -648,19 +652,19 @@ body{
 
 
 
-/* ========== SKILLS (Mirrored) ========== */
+/* ========== SKILLS  ========== */
 
 .skills-section,
 .skills-section *{ font-family:'Lato', sans-serif; }
 
 .skills-section{
   position: relative;
-  isolation: isolate; /* creates safe stacking context */
-  padding: clamp(50px,6vw,90px) var(--pad);
+  isolation: isolate;
+  padding: clamp(90px, 9vw, 160px) var(--pad);
   color:#fff;
 
-  /* FULL wallpaper behind entire skills section */
-  background: url("images/background/swirl.jpeg") center/cover no-repeat;
+  /* BIGGER wallpaper look (zoomed in) */
+  background: url("images/background/geometric.jpg") center / 150% no-repeat;
   background-attachment: fixed;
 
   width: 100%;
@@ -675,10 +679,10 @@ body{
   position:absolute;
   inset:0;
   background: rgba(0,0,0,.45);
-  z-index: 0;              
+  z-index: 0;
 }
 
-/* keep actual content above overlay */
+/* keep content above overlay */
 .skills-section > *{
   position: relative;
   z-index: 1;
@@ -686,8 +690,10 @@ body{
 
 .skills-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:clamp(28px,4vw,60px);
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: clamp(40px, 5vw, 90px);
   align-items:start;
 }
 
@@ -696,13 +702,13 @@ body{
 .skill{
   display:flex;
   align-items:center;
-  gap:14px;
-  margin-bottom:22px;
+  gap: 18px;
+  margin-bottom: 34px;
 }
 
 .skill .label{
   font-weight:700;
-  font-size:14px;
+  font-size: 16px;
   text-transform:uppercase;
   letter-spacing:.04em;
   white-space:nowrap;
@@ -710,28 +716,28 @@ body{
 
 .skill .bar{
   position:relative;
-  height:12px;
+  height: 18px;
   border-radius:999px;
   overflow: visible;
   background: rgba(255,255,255,.18);
   flex:1;
 }
 
-/* default fill = --pct */
 .skill .bar::before{
   content:"";
   position:absolute;
   top:0;
   bottom:0;
   width: var(--pct, 0%);
-  background: linear-gradient(180deg, #e3b96c, #dcae5b);
+  border-radius:999px;
+  background: linear-gradient(180deg, #cbc6c6, #f3f2f2);
 }
 
 .skill .pct{
   position:absolute;
-  top:-24px;
-  font-size:13px;
-  font-weight:700;
+  top: -30px;
+  font-size: 14px;
+  font-weight:400;
   color:#fff;
 }
 
@@ -742,14 +748,25 @@ body{
 .skill--right .bar::before{ left:0; }
 .skill--right .pct{ right:0; transform:translateX(4px); }
 
-@media (max-width:800px){
-  .skills-grid{ grid-template-columns:1fr; }
+@media (max-width: 800px){
+  .skills-grid{
+    grid-template-columns:1fr;
+    max-width: 700px;
+  }
+}
+
+/* OPTIONAL: iOS fix (background-attachment: fixed can glitch on mobile) */
+@media (max-width: 900px){
+  .skills-section{
+    background-attachment: scroll;
+    background-position: center;
+    background-size: 270%; 
+  }
 }
 
 
-
-
 /* ========== ICON STACK ========== */
+
 .icon-stack{
   display:flex;
   justify-content:center;
