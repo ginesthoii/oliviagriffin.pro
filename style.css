@@ -699,7 +699,7 @@ body{
   color:var(--stats-ink);
 
   /* image behind stats */
-  background: url("images/background/geometric.jpg") center/cover no-repeat;
+  background: url("images/background/espresso-dots.jpeg") center/cover no-repeat;
   background-attachment: fixed;
 
   width:100%;
@@ -1103,7 +1103,7 @@ body{
   color: #fff;
 
   /* wallpaper image behind entire section */
-  background: url("images/background/starry-night.jpg") center/cover no-repeat;
+  background: url("images/background/black-on-black-stripes.jpeg") center/cover no-repeat;
   background-attachment: fixed;
   overflow: hidden;
 }
@@ -1147,7 +1147,7 @@ body{
   color: #fff;
 
   /*  wallpaper behind section */
-  background: url("images/background/espresso-dots.jpeg") center/cover no-repeat;
+  background: url("images/background/black-glitter-rain.jpeg") center/cover no-repeat;
   background-attachment: fixed;
   overflow: hidden;
 }
