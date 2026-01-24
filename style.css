@@ -569,16 +569,16 @@ body{
 .cert-item:nth-child(5){ grid-column: 4 / span 2; }
 
 
-/* BADGES: KEEP SAME SIZE FOR ALL */
+/* BADGES */
 .cert-badge{
-  width: 92px;
-  height: 92px;
+  width: 130px;
+  height: 130px;
   object-fit: contain;
   filter: drop-shadow(0 8px 18px rgba(0,0,0,.35));
 }
 
 
-/* Card only holds text */
+/* Card only text */
 .cert-card{
   width: 100%;
   padding: 14px 14px;
@@ -617,7 +617,7 @@ body{
   .cert-grid{
     grid-template-columns: repeat(2, minmax(0, 1fr));
     row-gap: 28px;     /* still spaced */
-    column-gap: 22px;  /* give them breathing room on tablet */
+    column-gap: 22px;  /* breathing room for tablet */
   }
 
   .cert-item{
@@ -629,10 +629,10 @@ body{
     grid-column: auto;
   }
 
-  /* KEEP badge size consistent */
+  /*  badge size consistentcy */
   .cert-badge{
-    width: 92px;
-    height: 92px;
+    width: 130px;
+    height: 130px;
   }
 }
 
