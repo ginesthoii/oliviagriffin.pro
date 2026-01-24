@@ -1211,6 +1211,159 @@ body{
   }
 }
 
+
+
+
+
+
+/* ========== PROJECT VISUAL SHOWCASE ========== */
+
+.project-showcase{
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: clamp(70px, 8vw, 120px) var(--pad);
+  color: #fff;
+
+  /*  wallpaper behind section */
+  background: url("images/background/serpent.png") center/cover no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.project-showcase::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.55);
+  z-index:0;
+}
+
+.project-showcase > *{
+  position: relative;
+  z-index: 1;
+}
+
+.hex-grid{
+  margin: clamp(22px, 3vw, 44px) auto 0;
+  max-width: 1200px;
+
+  display: grid;
+  gap: clamp(14px, 2vw, 22px);
+  grid-template-columns: repeat(5, minmax(160px, 1fr));
+  align-items: center;
+}
+
+/* the diamond/hex shape using clip-path */
+.hex-card{
+  --size: clamp(150px, 18vw, 220px);
+
+  width: var(--size);
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+
+  text-decoration: none;
+  color: #fff;
+
+  position: relative;
+  margin: 0 auto;
+
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  border-radius: 18px;
+
+  transform: translateZ(0);
+  transition: transform .18s ease, filter .18s ease;
+}
+
+.hex-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image: var(--hex-img);
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.1) contrast(1.05);
+  transform: scale(1.04);
+}
+
+.hex-card::after{
+  content:"";
+  position:absolute;
+  inset: -1px;
+  border-radius: 18px;
+  clip-path: inherit;
+
+  /* glass border + colored glow */
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.18),
+    0 0 0 2px color-mix(in srgb, var(--hex-accent) 65%, transparent),
+    0 18px 60px rgba(0,0,0,.55);
+
+  pointer-events:none;
+}
+
+.hex-title{
+  position: relative;
+  z-index: 2;
+  padding: 10px 12px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  text-align: center;
+
+  background: rgba(0,0,0,.55);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 999px;
+
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 22px rgba(0,0,0,.35);
+}
+
+/* hover = lift + dim image a bit so title pops */
+.hex-card:hover{
+  transform: translateY(-6px) scale(1.02);
+}
+
+.hex-card:hover::before{
+  filter: saturate(1.05) contrast(1.05) brightness(.70);
+}
+
+/* stagger rows on wider screens */
+@media (min-width: 980px){
+  .hex-grid .hex-card:nth-child(even){
+    transform: translateY(18px);
+  }
+  .hex-grid .hex-card:nth-child(even):hover{
+    transform: translateY(12px) scale(1.02);
+  }
+}
+
+/* responsive breakpoints */
+@media (max-width: 1100px){
+  .hex-grid{ grid-template-columns: repeat(3, minmax(160px, 1fr)); }
+}
+
+@media (max-width: 650px){
+  .hex-grid{ grid-template-columns: repeat(2, minmax(150px, 1fr)); }
+}
+
+@media (max-width: 420px){
+  .hex-grid{ grid-template-columns: 1fr; }
+}
+
+/* iOS fix */
+@media (max-width: 900px){
+  .project-showcase{
+    background-attachment: scroll;
+  }
+}
+
+
 /* ========== CONTACT FORM ========== */
 
 .contact-form{
