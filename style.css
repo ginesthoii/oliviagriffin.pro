@@ -691,10 +691,43 @@ body{
 }
 
 .stats-section{
+  position: relative;
+  isolation: isolate;
+
   padding:clamp(50px,7vw,90px) var(--pad);
   text-align:left;
   color:var(--stats-ink);
-  background:var(--stats-bg);
+
+  /* image behind stats */
+  background: url("images/background/stats-bg.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+
+  width:100%;
+  max-width:none;
+  margin:0;
+  overflow:hidden;
+}
+
+/* dark overlay so text stays readable */
+.stats-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.55);
+  z-index:0;
+}
+
+/* keep content above overlay */
+.stats-section > *{
+  position:relative;
+  z-index:1;
+}
+
+/* iOS fix */
+@media (max-width: 900px){
+  .stats-section{
+    background-attachment: scroll;
+  }
 }
 
 .stats-section .section-intro{
