@@ -1134,7 +1134,7 @@ body{
 
 
 
-/* ========== PROJECT VISUAL SHOWCASE ========== */
+/* ========== PROJECTS VISUAL SHOWCASE ========== */
 
 .project-showcase{
   position: relative;
@@ -1146,7 +1146,7 @@ body{
   color: #fff;
 
   /*  wallpaper behind section */
-  background: url("images/background/geometric.jpg") center/cover no-repeat;
+  background: url("images/background/espresso-dots.jpeg") center/cover no-repeat;
   background-attachment: fixed;
   overflow: hidden;
 }
@@ -1176,7 +1176,7 @@ body{
 
 /* the diamond/hex shape using clip-path */
 .hex-card{
-  --size: clamp(150px, 18vw, 220px);
+  --size: clamp(180px, 18vw, 320px);
 
   width: var(--size);
   aspect-ratio: 1 / 1;
