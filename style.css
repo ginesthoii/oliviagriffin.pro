@@ -654,6 +654,7 @@ body{
 
 .icon-stack{
   display:flex;
+  flex-direction:column;
   justify-content:center;
   align-items:center;
   padding:clamp(80px,10vw,160px) var(--pad);
@@ -669,7 +670,7 @@ body{
   gap:40px;
   width:min(90vw,1000px);
   position:relative;
-}
+}its 
 
 .icon-wrapper .icon{
   width:100%;
