@@ -39,6 +39,36 @@ body{
   background:#000;
   overflow-x:hidden; /* IMPORTANT: do not delete olivia!! */
   scroll-behavior:smooth;
+
+  /* ========== GLOBAL SECTION INTRO (default) ========== */
+.section-intro{
+  max-width: var(--maxw);
+  margin: 0 auto clamp(30px,4vw,50px);
+  text-align: center;
+}
+
+.section-intro h5{
+  margin: 0 0 .6rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: var(--muted);
+}
+
+.section-intro h1{
+  margin: 0 0 .5rem;
+  font-weight: 300;
+  font-size: clamp(2rem,4vw,3rem);
+  color: #fff;
+}
+
+.section-intro .lead{
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
 }
 
 .section{
