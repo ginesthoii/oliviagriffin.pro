@@ -409,36 +409,46 @@ body{
   background:rgba(0,0,0,.5);
 }
 
-/* Intro stays centered */
 .about .section-intro{
   text-align:center;
   margin-bottom:clamp(40px,6vw,70px);
 }
 
-/* ===== ABOUT GRID LAYOUT ===== */
+/* ===== ABOUT GRID ===== */
 .about-content{
   display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 80px);
 
-  /* pulls both columns toward center a bit */
-  grid-template-columns: minmax(320px, 460px) minmax(360px, 520px);
+  max-width: 1100px;
+  margin: 0 auto;
 
-  justify-content:center;
   align-items:start;
-
-  gap:clamp(22px,4vw,70px);
-  max-width:1100px;
-  margin:0 auto;
 }
 
-/* Mobile stacks */
+/* MOBILE STACK */
 @media (max-width:900px){
   .about-content{
     grid-template-columns: 1fr;
-    max-width:720px;
+    max-width: 720px;
   }
 }
 
-/* Column headers */
+/* ===== LEFT COLUMN CENTERED ===== */
+.about-col:first-child{
+  justify-self: center;        /* centers the whole profile block */
+  text-align: left;
+  max-width: 460px;
+  width: 100%;
+}
+
+/* ===== RIGHT COLUMN A BIT WIDER ===== */
+.about-col:last-child{
+  max-width: 560px;
+  width: 100%;
+}
+
+/* Column headings */
 .about-col h3{
   font-weight:600;
   margin:0 0 .8rem;
@@ -446,12 +456,12 @@ body{
 }
 
 .about-col p{
-  margin:0 0 1.1rem;
+  margin:0 0 1.2rem;
   color:var(--muted);
   font-weight:300;
 }
 
-/* ===== PROFILE LIST ===== */
+/* ===== PROFILE LIST: label left, value right, value wraps nicely ===== */
 .info-list{
   list-style:none;
   margin:0;
@@ -459,17 +469,25 @@ body{
 }
 
 .info-list li{
-  margin:.55rem 0;
+  display:grid;
+  grid-template-columns: 140px 1fr;
+  gap: 14px;
+
+  margin:.65rem 0;
   font-size:1rem;
   color: rgba(255,255,255,.92);
   line-height:1.45;
 }
 
 .info-list strong{
-  display:inline-block;
-  min-width:140px;
   font-weight:600;
   color: rgba(255,255,255,.72);
+}
+
+.info-list span{
+  display:block;               /* forces the value to sit as a “line” */
+  color: rgba(255,255,255,.92);
+  font-weight:300;
 }
 
 /* ===== BUTTON ROW ===== */
@@ -477,16 +495,15 @@ body{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
-  margin-top:14px;
+  margin-top:18px;
 }
 
-/* Glow button */
 .about .spark-btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
 
-  padding:10px 16px;
+  padding:10px 18px;
   border-radius:999px;
 
   color:#fff;
@@ -510,7 +527,6 @@ body{
 
 .about .spark-btn:hover{
   transform: translateY(-2px);
-
   background:rgba(255,255,255,.16);
   border-color:rgba(255,255,255,.95);
 
@@ -522,82 +538,86 @@ body{
   animation:sparkleGlow .9s ease-in-out;
 }
 
-/* ===== SKILL BARS ===== */
+/* ===== SKILL BARS (better spacing + label alignment + percent visible) ===== */
+
 .skill-bars{
   list-style:none;
   margin:0;
   padding:0;
 }
 
-.skill-bars li{
-  margin-bottom:18px;
+.skill-bars .skill{
+  margin-bottom: 22px;
 }
 
-/* bar */
-.skill-bars .progress{
-  position:relative;
+/* space between "Specializations." and first bar */
+.about-col:last-child p{
+  margin-bottom: 22px;
+}
+
+/* label row (left title + right %) */
+.skill-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:16px;
+
+  margin-bottom:10px;
+}
+
+.skill-head strong{
+  font-size: .98rem;
+  font-weight:600;
+  color:rgba(255,255,255,.92);
+}
+
+.skill-pct{
+  font-size: .9rem;
+  font-weight:700;
+  color:rgba(255,255,255,.88);
+  text-shadow: 0 0 8px rgba(255,255,255,.35);
+}
+
+/* bar background */
+.progress{
   width:100%;
   height:18px;
-  border-radius:8px;
+  border-radius:10px;
 
   background:rgba(255,255,255,.14);
   border:1px solid rgba(255,255,255,.18);
 
   overflow:hidden;
-  margin-bottom:8px;
-
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.15);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.12);
 }
 
-/* percentage text above the bar */
-.skill-bars .progress span{
-  position:absolute;
-  right:10px;
-  top:-26px;
-
-  font-size:.85rem;
-  font-weight:700;
-
-  color:rgba(255,255,255,.92);
-  letter-spacing:.02em;
-
-  text-shadow: 0 0 8px rgba(255,255,255,.35);
-}
-
-/* skill label */
-.skill-bars strong{
-  display:inline-block;
-  font-size:.98rem;
-  font-weight:600;
-  color:rgba(255,255,255,.92);
+/* bar fill */
+.progress .bar{
+  height:100%;
+  border-radius:10px;
 }
 
 /* fills */
-.skill-bars .percent90{
+.percent90{
   width:90%;
   background: linear-gradient(90deg, #e3b96c, #dcae5b);
 }
-
-.skill-bars .percent85{
+.percent85{
   width:85%;
   background: linear-gradient(90deg, #dcae5b, #e3b96c);
 }
-
-.skill-bars .percent70{
+.percent70{
   width:70%;
   background: linear-gradient(90deg, rgba(255,255,255,.70), rgba(255,255,255,.35));
 }
-
-.skill-bars .percent95{
+.percent95{
   width:95%;
   background: linear-gradient(90deg, rgba(255,255,255,.95), rgba(255,255,255,.55));
 }
-
-.skill-bars .percent75{
+.percent75{
   width:75%;
   background: linear-gradient(90deg, rgba(255,255,255,.80), rgba(255,255,255,.40));
 }
-
 
 /* ========== CERTIFICATIONS SECTION  ========== */
 
