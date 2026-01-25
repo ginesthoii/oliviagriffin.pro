@@ -513,6 +513,19 @@ body{
   }
 }
 
+/* Email + GitHub links - white sparkle */
+.about .info-list a{
+  color: #fff;
+  text-decoration: none;
+  opacity: .9;
+  transition: opacity .2s ease, text-shadow .2s ease;
+}
+
+/* Hover sparkle */
+.about .info-list a:hover{
+  opacity: 1;
+  text-shadow: 0 0 6px rgba(255,255,255,.7), 0 0 14px rgba(255,255,255,.35);
+}
 /* SKILL BARS */
 .skill-bars{
   list-style:none;
