@@ -800,7 +800,7 @@ body{
   color:var(--stats-ink);
 
   /* image behind stats */
-  background: url("images/background/green-tiger.jpg") center/cover no-repeat;
+  background: url("images/background/green-tigers.png") center/cover no-repeat;
   background-attachment: fixed;
 
   width:100%;
