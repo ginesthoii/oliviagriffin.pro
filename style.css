@@ -1518,66 +1518,174 @@ body{
 
 
 
-/* ========== ABOUT PAGE HERO ========== */
+/* ========== ABOUT HERO (Top-left photo + name) ========== */
 
-.about-page{
+.about-hero{
   max-width: var(--maxw);
   margin: 0 auto;
 }
 
-.about-page__wrap{
+.about-hero__wrap{
   display: grid;
-  grid-template-columns: 340px 1fr;
-  gap: clamp(22px, 4vw, 56px);
+  grid-template-columns: 420px 1fr;
+  gap: clamp(18px, 4vw, 60px);
+  align-items: start;
+}
+
+/* LEFT ID BLOCK */
+.about-id{
+  display: flex;
+  gap: 18px;
   align-items: center;
 }
 
-.about-page__photo{
-  width: 100%;
-  max-width: 340px;
+/* circular glass photo */
+.about-id__photo{
+  width: 108px;
+  height: 108px;
+  border-radius: 999px;
+  position: relative;
+  overflow: hidden;
+
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.16);
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 18px 50px rgba(0,0,0,.55),
+    inset 0 0 0 1px rgba(255,255,255,.06);
 }
 
-.about-page__photo img{
+/* image inside */
+.about-id__photo img{
   width: 100%;
-  height: auto;
-  border-radius: 22px;
-  display: block;
+  height: 100%;
   object-fit: cover;
-  border: 1px solid rgba(255,255,255,.18);
-  box-shadow: 0 18px 60px rgba(0,0,0,.45);
+  display: block;
+  transform: scale(1.02);
 }
 
-.about-page__copy h5{
-  font-weight: 600;
-  font-size: 1.1rem;
+/* sparkle ring */
+.about-id__photo::after{
+  content:"";
+  position:absolute;
+  inset: -2px;
+  border-radius: 999px;
+  pointer-events:none;
+
+  box-shadow:
+    0 0 0 2px rgba(255,255,255,.30),
+    0 0 18px rgba(255,255,255,.22),
+    0 0 40px rgba(255,255,255,.10);
+  mix-blend-mode: screen;
+  opacity: .85;
+}
+
+/* subtle moving shine */
+.about-id__photo::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(80px 80px at 25% 20%, rgba(255,255,255,.22), transparent 60%);
+  pointer-events:none;
+  opacity: .8;
+}
+
+/* NAME STACK */
+.about-id__name{
+  line-height: 1.05;
+}
+
+.about-id__eyebrow{
+  margin: 0 0 6px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  font-size: 12px;
+  color: var(--muted);
   text-transform: uppercase;
-  letter-spacing: .2em;
-  color: var(--muted);
-  margin: 0 0 .8rem;
 }
 
-.about-page__copy h1{
-  margin: 0 0 .5rem;
+.about-id__title{
+  margin: 0;
+  font-weight: 200;
+  letter-spacing: .04em;
+  font-size: clamp(34px, 3.4vw, 46px);
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.about-id__title span{
+  font-weight: 700;
+}
+
+.about-id__role{
+  margin: 10px 0 0;
   font-weight: 300;
-  font-size: clamp(2rem,4vw,3rem);
-}
-
-.about-page__copy .lead{
-  margin: 0 0 1rem;
-  font-size: 1.2rem;
-  font-weight: 300;
   color: var(--muted);
+  font-size: 1.05rem;
 }
 
-.about-page__copy p{
+/* RIGHT COPY */
+.about-hero__copy h2{
+  margin: 0 0 10px;
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 300;
+  color: #fff;
+}
+
+.about-hero__copy .lead{
+  margin: 0 0 14px;
   color: rgba(255,255,255,.85);
-  line-height: 1.8;
-  max-width: 65ch;
-  margin: 0 0 1.4rem;
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 68ch;
+  font-size: 1.1rem;
 }
 
-.about-page__actions{
+.about-hero__copy p{
+  margin: 0 0 16px;
+  color: rgba(255,255,255,.82);
+  line-height: 1.85;
+  max-width: 72ch;
+}
+
+/* buttons (uses your existing .btn-ghost if you have it, otherwise we define it here) */
+.about-hero__actions{
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  margin-top: 14px;
+}
+
+.btn-ghost{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.35);
+  background: rgba(255,255,255,.06);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: .02em;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.btn-ghost:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,.75);
+  background: rgba(255,255,255,.10);
+  animation: sparkleGlow .9s ease-in-out;
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px){
+  .about-hero__wrap{
+    grid-template-columns: 1fr;
+  }
+
+  .about-id{
+    justify-content: flex-start;
+  }
 }
