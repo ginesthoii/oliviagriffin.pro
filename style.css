@@ -409,84 +409,49 @@ body{
   background:rgba(0,0,0,.5);
 }
 
-/* INTRO */
-.section-intro{
+/* Intro stays centered */
+.about .section-intro{
   text-align:center;
-  margin-bottom:clamp(40px,6vw,80px);
+  margin-bottom:clamp(40px,6vw,70px);
 }
 
-.section-intro h5{
-  font-weight:600;
-  font-size:1.1rem;
-  text-transform:uppercase;
-  letter-spacing:.2em;
-  color:var(--muted);
-  margin-bottom:.8rem;
-}
-
-.section-intro h1{
-  font-size:clamp(2rem,4vw,3rem);
-  font-weight:300;
-  margin:0 0 .5rem;
-}
-
-.section-intro .lead{
-  font-size:1.2rem;
-  color:var(--muted);
-  font-weight:300;
-}
-
-/* LAYOUT */
+/* ===== ABOUT GRID LAYOUT ===== */
 .about-content{
   display:grid;
-  grid-template-columns: 0.95fr 1.05fr;   /* left slightly smaller, right slightly larger */
-  gap: clamp(18px, 3vw, 44px);            /* tighter gap so columns sit closer */
+
+  /* pulls both columns toward center a bit */
+  grid-template-columns: minmax(320px, 460px) minmax(360px, 520px);
+
+  justify-content:center;
   align-items:start;
 
-  max-width:1100px;                        /* keeps layout more centered */
-  margin:0 auto clamp(40px,6vw,80px);
+  gap:clamp(22px,4vw,70px);
+  max-width:1100px;
+  margin:0 auto;
 }
 
-/* Stack on smaller screens */
+/* Mobile stacks */
 @media (max-width:900px){
   .about-content{
-    grid-template-columns:1fr;
+    grid-template-columns: 1fr;
     max-width:720px;
   }
 }
 
-/* Keep it OPEN (no panels), but nudge the left col toward center */
-.about-col{
-  padding: 0;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-}
-
-/* Pull Profile column inward toward the bars */
-.about-col:first-child{
-  justify-self: end;        /* moves it toward the middle */
-  max-width: 420px;
-}
-
-/* Keep Skills column where it naturally sits */
-.about-col:last-child{
-  justify-self: start;
-}
-
+/* Column headers */
 .about-col h3{
   font-weight:600;
-  margin-bottom:.8rem;
+  margin:0 0 .8rem;
+  color:#fff;
 }
 
 .about-col p{
-  margin-bottom:1rem;
-  color: var(--muted);
-  font-weight: 300;
-  line-height: 1.7;
+  margin:0 0 1.1rem;
+  color:var(--muted);
+  font-weight:300;
 }
 
-/* INFO LIST */
+/* ===== PROFILE LIST ===== */
 .info-list{
   list-style:none;
   margin:0;
@@ -494,39 +459,70 @@ body{
 }
 
 .info-list li{
-  margin:.45rem 0;
+  margin:.55rem 0;
   font-size:1rem;
-  line-height: 1.5;
+  color: rgba(255,255,255,.92);
+  line-height:1.45;
 }
 
 .info-list strong{
   display:inline-block;
-  min-width:120px;
+  min-width:140px;
   font-weight:600;
-  color:var(--muted);
+  color: rgba(255,255,255,.72);
 }
 
-/* Slightly tighter label spacing on very small screens */
-@media (max-width:520px){
-  .info-list strong{
-    min-width:95px;
-  }
+/* ===== BUTTON ROW ===== */
+.link-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:14px;
 }
 
-/* Email + GitHub links - white sparkle */
-.about .info-list a{
-  color: #fff;
-  text-decoration: none;
-  opacity: .9;
-  transition: opacity .2s ease, text-shadow .2s ease;
+/* Glow button */
+.about .spark-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:10px 16px;
+  border-radius:999px;
+
+  color:#fff;
+  text-decoration:none;
+
+  background:rgba(255,255,255,.10);
+  border:2px solid rgba(255,255,255,.70);
+
+  box-shadow:
+    0 0 10px rgba(255,255,255,.35),
+    0 0 30px rgba(255,255,255,.18),
+    inset 0 0 0 1px rgba(255,255,255,.10);
+
+  backdrop-filter: blur(8px);
+
+  font-weight:300;
+  letter-spacing:.04em;
+
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
 }
 
-/* Hover sparkle */
-.about .info-list a:hover{
-  opacity: 1;
-  text-shadow: 0 0 6px rgba(255,255,255,.7), 0 0 14px rgba(255,255,255,.35);
+.about .spark-btn:hover{
+  transform: translateY(-2px);
+
+  background:rgba(255,255,255,.16);
+  border-color:rgba(255,255,255,.95);
+
+  box-shadow:
+    0 0 14px rgba(255,255,255,.55),
+    0 0 44px rgba(255,255,255,.28),
+    inset 0 0 0 1px rgba(255,255,255,.16);
+
+  animation:sparkleGlow .9s ease-in-out;
 }
-/* SKILL BARS */
+
+/* ===== SKILL BARS ===== */
 .skill-bars{
   list-style:none;
   margin:0;
@@ -534,73 +530,74 @@ body{
 }
 
 .skill-bars li{
-  margin-bottom:1rem;
+  margin-bottom:18px;
 }
 
+/* bar */
 .skill-bars .progress{
   position:relative;
-  background:#333;
-  border-radius:4px;
-  height:14px;
-  margin-bottom:.4rem;
+  width:100%;
+  height:18px;
+  border-radius:8px;
+
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.18);
+
   overflow:hidden;
+  margin-bottom:8px;
+
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.15);
 }
 
-/* Percent number above bar */
+/* percentage text above the bar */
 .skill-bars .progress span{
   position:absolute;
-  right:8px;
-  top:-22px;
-  font-size:.8rem;
-  color: var(--muted);
-}
+  right:10px;
+  top:-26px;
 
-/* Bar label text */
-.skill-bars strong{
-  display:block;
-  margin-top:4px;
-  font-weight:600;
+  font-size:.85rem;
+  font-weight:700;
+
+  color:rgba(255,255,255,.92);
   letter-spacing:.02em;
-  color:#fff;
+
+  text-shadow: 0 0 8px rgba(255,255,255,.35);
 }
 
-/* Bar fill widths + colors */
-.skill-bars .percent90{ width:90%; background:#e3b96c; }
-.skill-bars .percent85{ width:85%; background:#dcae5b; }
-.skill-bars .percent70{ width:70%; background:#999; }
-.skill-bars .percent95{ width:95%; background:#f4f4f7; }
-.skill-bars .percent75{ width:75%; background:#bbb; }
-
-/* ===== SKILLS BARS ===== */
-
-.skill-bars{
-  list-style:none;
-  margin:0;
-  padding:0;
+/* skill label */
+.skill-bars strong{
+  display:inline-block;
+  font-size:.98rem;
+  font-weight:600;
+  color:rgba(255,255,255,.92);
 }
 
-.skill-bars li{ margin-bottom:1rem; }
-
-.skill-bars .progress{
-  position:relative;
-  background:#333;
-  border-radius:4px;
-  height:14px;
-  margin-bottom:.4rem;
+/* fills */
+.skill-bars .percent90{
+  width:90%;
+  background: linear-gradient(90deg, #e3b96c, #dcae5b);
 }
 
-.skill-bars .progress span{
-  position:absolute;
-  right:8px;
-  top:-22px;
-  font-size:.8rem;
+.skill-bars .percent85{
+  width:85%;
+  background: linear-gradient(90deg, #dcae5b, #e3b96c);
 }
 
-.skill-bars .percent90{ width:90%; background:#e3b96c; }
-.skill-bars .percent85{ width:85%; background:#dcae5b; }
-.skill-bars .percent70{ width:70%; background:#999; }
-.skill-bars .percent95{ width:95%; background:#f4f4f7; }
-.skill-bars .percent75{ width:75%; background:#bbb; }
+.skill-bars .percent70{
+  width:70%;
+  background: linear-gradient(90deg, rgba(255,255,255,.70), rgba(255,255,255,.35));
+}
+
+.skill-bars .percent95{
+  width:95%;
+  background: linear-gradient(90deg, rgba(255,255,255,.95), rgba(255,255,255,.55));
+}
+
+.skill-bars .percent75{
+  width:75%;
+  background: linear-gradient(90deg, rgba(255,255,255,.80), rgba(255,255,255,.40));
+}
+
 
 /* ========== CERTIFICATIONS SECTION  ========== */
 
