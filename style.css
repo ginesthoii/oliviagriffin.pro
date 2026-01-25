@@ -414,7 +414,9 @@ body{
 
 
 
-/* ========== ABOUT (scoped so it doesn't break other sections) ========== */
+
+
+/* ========== ABOUT  ========== */
 
 .about,
 .about *{
@@ -440,8 +442,7 @@ body{
   background:rgba(0,0,0,.50);
 }
 
-/* IMPORTANT: keep section-intro global behavior intact.
-   Only style the intro inside .about */
+/* IMPORTANT */
 .about .section-intro{
   text-align:center;
   margin-bottom:clamp(40px,6vw,80px);
@@ -468,20 +469,23 @@ body{
   font-weight:300;
 }
 
-/* Layout: bring left column closer to center */
+/* ====== LAYOUT ====== */
 .about .about-content{
   display:grid;
-  grid-template-columns: minmax(320px, 520px) minmax(420px, 1fr);
-  gap:clamp(22px,3vw,46px);
-  max-width: 1100px;
-  margin: 0 auto;
+  grid-template-columns: minmax(340px, 520px) minmax(520px, 620px);
+  gap:clamp(28px,4vw,70px);
+  max-width:1180px;
+  margin:0 auto;
   align-items:start;
 }
 
-/* Pull the left column toward the middle */
+/* Profile column: grouped + visually centered */
 .about .about-col.profile{
   justify-self:end;
   text-align:left;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
 }
 
 .about .about-col.skills{
@@ -489,17 +493,21 @@ body{
   text-align:left;
 }
 
+/* Mobile stack */
 @media (max-width:900px){
   .about .about-content{
     grid-template-columns:1fr;
-    max-width: 760px;
+    max-width:760px;
   }
+
   .about .about-col.profile,
   .about .about-col.skills{
     justify-self:stretch;
+    align-items:stretch;
   }
 }
 
+/* Headings inside columns */
 .about .about-col h3{
   font-weight:600;
   margin:0 0 .8rem;
@@ -507,22 +515,25 @@ body{
 
 .about .about-col p{
   margin:0 0 1rem;
-  color: var(--muted);
+  color:var(--muted);
 }
 
-/* Profile list */
+/* ====== PROFILE LIST ====== */
+
 .about .info-list{
   list-style:none;
   margin:0;
   padding:0;
+  width:100%;
+  max-width:520px; /* left block visually grouped */
 }
 
 .about .info-list li{
   display:grid;
-  grid-template-columns: 140px 1fr;
-  gap: 14px;
+  grid-template-columns:130px 1fr;
+  gap:16px;
   align-items:start;
-  margin:.55rem 0;
+  margin:.65rem 0;
   font-size:1rem;
 }
 
@@ -531,17 +542,21 @@ body{
   color:var(--muted);
 }
 
-/* Force the value to sit on its own clean lines */
+/* Force multiline education lines to behave, etc.. */
 .about .info-list .value{
   display:block;
-  line-height:1.45;
+  line-height:1.5;
   color:#fff;
   opacity:.92;
 }
 
-/* Link buttons row */
+/* ====== BUTTONS ====== */
+
 .about .link-row{
+  width:100%;
+  max-width:520px;
   display:flex;
+  justify-content:center; /* centers the buttons */
   gap:12px;
   margin-top:18px;
   flex-wrap:wrap;
@@ -552,51 +567,65 @@ body{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:10px 16px;
+  padding:10px 18px;
   border-radius:999px;
   text-decoration:none;
   color:#fff;
-  font-weight:500;
-  letter-spacing:.02em;
+  font-weight:300;
+  letter-spacing:.04em;
 
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.55);
+  background: rgba(255,255,255,.10);
+  border: 2px solid rgba(255,255,255,.70);
+
   box-shadow:
-    0 0 0 1px rgba(255,255,255,.10) inset,
-    0 10px 26px rgba(0,0,0,.25);
+    0 0 10px rgba(255,255,255,.35),
+    0 0 28px rgba(255,255,255,.18),
+    inset 0 0 0 1px rgba(255,255,255,.12);
 
-  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease, background .15s ease;
+  backdrop-filter: blur(8px);
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
 }
 
 .about .spark-btn:hover{
-  transform: translateY(-1px);
-  border-color: rgba(255,255,255,.9);
-  background: rgba(255,255,255,.12);
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.95);
+
   box-shadow:
-    0 0 0 1px rgba(255,255,255,.18) inset,
-    0 0 14px rgba(255,255,255,.22),
-    0 16px 34px rgba(0,0,0,.35);
+    0 0 14px rgba(255,255,255,.55),
+    0 0 44px rgba(255,255,255,.28),
+    inset 0 0 0 1px rgba(255,255,255,.16);
+
   animation: sparkleGlow .9s ease-in-out;
 }
 
-/* Skills list */
+/* ====== SKILLS ====== */
+
+/* spacing under “Specializations.” header. */
+.about .about-col.skills p{
+  margin:0 0 18px;
+  color:var(--muted);
+}
+
 .about .skill-bars{
   list-style:none;
   margin:0;
   padding:0;
+  width:100%;
+  max-width:600px; /* <-- makes bars longer */
 }
 
 .about .skill-bars li{
-  margin: 0 0 18px;
+  margin:0 0 18px;
 }
 
-/* Label row (name left, percent right) */
+/* label row */
 .about .skill-head{
   display:flex;
   align-items:baseline;
   justify-content:space-between;
-  gap: 14px;
-  margin: 0 0 8px;
+  gap:14px;
+  margin:0 0 8px;
 }
 
 .about .skill-name{
@@ -610,35 +639,35 @@ body{
   letter-spacing:.02em;
 }
 
-/* Bar track */
+/* track width:100% so it doesn't collapse and helps with mobile */
 .about .skill-bar{
+  width:100%;              /* <-- MAIN FIX for “short bars” DO NOT DELETE ! */
   position:relative;
-  height: 12px;
-  border-radius: 999px;
+  height:12px;
+  border-radius:999px;
   overflow:hidden;
   background: rgba(255,255,255,.18);
   border: 1px solid rgba(255,255,255,.18);
 }
 
-/* Bar fill uses --pct */
+/* fill uses --pct from inline style */
 .about .skill-bar::before{
   content:"";
   position:absolute;
   inset:0 auto 0 0;
   width: var(--pct, 0%);
-  border-radius: 999px;
+  border-radius:999px;
   background: linear-gradient(90deg, var(--gold-1), var(--gold-2));
   box-shadow: 0 0 14px rgba(227,185,108,.22);
 }
 
-/* slightly muted fills for non-top skills */
+/* muted fills for bars */
 .about .skill-bar.is-muted::before{
   background: linear-gradient(90deg, rgba(255,255,255,.75), rgba(255,255,255,.35));
   box-shadow:none;
 }
 
-
-/* ========== CERTIFICATIONS SECTION  ========== */
+/* ========== CERTIFICATIONS ========== */
 
 .certifications-section{
   position: relative;
