@@ -409,6 +409,7 @@ body{
   background:rgba(0,0,0,.5);
 }
 
+/* INTRO */
 .section-intro{
   text-align:center;
   margin-bottom:clamp(40px,6vw,80px);
@@ -435,30 +436,57 @@ body{
   font-weight:300;
 }
 
+/* LAYOUT */
 .about-content{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:clamp(24px,4vw,64px);
-  margin-bottom:clamp(40px,6vw,80px);
+  grid-template-columns: 0.95fr 1.05fr;   /* left slightly smaller, right slightly larger */
+  gap: clamp(18px, 3vw, 44px);            /* tighter gap so columns sit closer */
+  align-items:start;
+
+  max-width:1100px;                        /* keeps layout more centered */
+  margin:0 auto clamp(40px,6vw,80px);
 }
 
+/* Stack on smaller screens */
 @media (max-width:900px){
-  .about-content{ grid-template-columns:1fr; }
+  .about-content{
+    grid-template-columns:1fr;
+    max-width:720px;
+  }
 }
 
-/* MAKE THE TWO COLUMNS LOOK MATCHED / MIRRORED */
+/* Keep it OPEN (no panels), but nudge the left col toward center */
 .about-col{
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.14);
-  border-radius: 18px;
-  padding: 24px 22px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 14px 38px rgba(0,0,0,.35);
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
-.about-col h3{ font-weight:600; margin-bottom:.8rem; }
-.about-col p{ margin-bottom:1rem; }
+/* Pull Profile column inward toward the bars */
+.about-col:first-child{
+  justify-self: end;        /* moves it toward the middle */
+  max-width: 420px;
+}
 
+/* Keep Skills column where it naturally sits */
+.about-col:last-child{
+  justify-self: start;
+}
+
+.about-col h3{
+  font-weight:600;
+  margin-bottom:.8rem;
+}
+
+.about-col p{
+  margin-bottom:1rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* INFO LIST */
 .info-list{
   list-style:none;
   margin:0;
@@ -466,62 +494,69 @@ body{
 }
 
 .info-list li{
-  margin:.4rem 0;
+  margin:.45rem 0;
   font-size:1rem;
+  line-height: 1.5;
 }
 
 .info-list strong{
   display:inline-block;
-  min-width:110px;
+  min-width:120px;
   font-weight:600;
   color:var(--muted);
 }
 
-/* Mobile tweak so labels don't feel too wide */
+/* Slightly tighter label spacing on very small screens */
 @media (max-width:520px){
   .info-list strong{
-    min-width:90px;
+    min-width:95px;
   }
 }
 
-/* SPARKLE BUTTONS UNDER PROFILE */
-.about-links{
-  margin-top: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+/* SKILL BARS */
+.skill-bars{
+  list-style:none;
+  margin:0;
+  padding:0;
 }
 
-.sparkle-pill{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 10px 14px;
-  border-radius: 999px;
-
-  font-size: 14px;
-  font-weight: 300;
-  letter-spacing: .02em;
-
-  color: #fff;
-  text-decoration: none;
-
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.35);
-  backdrop-filter: blur(6px);
-
-  transition: transform .18s ease, border-color .18s ease, background .18s ease;
-  animation: subtleSparkle 7s ease-in-out infinite;
+.skill-bars li{
+  margin-bottom:1rem;
 }
 
-.sparkle-pill:hover{
-  transform: translateY(-2px);
-  border-color: rgba(255,255,255,.85);
-  background: rgba(255,255,255,.14);
-  animation: subtleSparkle 7s ease-in-out infinite, sparkleGlow .9s ease-in-out;
+.skill-bars .progress{
+  position:relative;
+  background:#333;
+  border-radius:4px;
+  height:14px;
+  margin-bottom:.4rem;
+  overflow:hidden;
 }
 
+/* Percent number above bar */
+.skill-bars .progress span{
+  position:absolute;
+  right:8px;
+  top:-22px;
+  font-size:.8rem;
+  color: var(--muted);
+}
+
+/* Bar label text */
+.skill-bars strong{
+  display:block;
+  margin-top:4px;
+  font-weight:600;
+  letter-spacing:.02em;
+  color:#fff;
+}
+
+/* Bar fill widths + colors */
+.skill-bars .percent90{ width:90%; background:#e3b96c; }
+.skill-bars .percent85{ width:85%; background:#dcae5b; }
+.skill-bars .percent70{ width:70%; background:#999; }
+.skill-bars .percent95{ width:95%; background:#f4f4f7; }
+.skill-bars .percent75{ width:75%; background:#bbb; }
 
 /* ===== SKILLS BARS ===== */
 
