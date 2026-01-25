@@ -446,6 +446,16 @@ body{
   .about-content{ grid-template-columns:1fr; }
 }
 
+/* MAKE THE TWO COLUMNS LOOK MATCHED / MIRRORED */
+.about-col{
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 18px;
+  padding: 24px 22px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 14px 38px rgba(0,0,0,.35);
+}
+
 .about-col h3{ font-weight:600; margin-bottom:.8rem; }
 .about-col p{ margin-bottom:1rem; }
 
@@ -462,10 +472,58 @@ body{
 
 .info-list strong{
   display:inline-block;
-  min-width:120px;
+  min-width:110px;
   font-weight:600;
   color:var(--muted);
 }
+
+/* Mobile tweak so labels don't feel too wide */
+@media (max-width:520px){
+  .info-list strong{
+    min-width:90px;
+  }
+}
+
+/* SPARKLE BUTTONS UNDER PROFILE */
+.about-links{
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.sparkle-pill{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 14px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: .02em;
+
+  color: #fff;
+  text-decoration: none;
+
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.35);
+  backdrop-filter: blur(6px);
+
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+  animation: subtleSparkle 7s ease-in-out infinite;
+}
+
+.sparkle-pill:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,.85);
+  background: rgba(255,255,255,.14);
+  animation: subtleSparkle 7s ease-in-out infinite, sparkleGlow .9s ease-in-out;
+}
+
+
+/* ===== SKILLS BARS ===== */
 
 .skill-bars{
   list-style:none;
@@ -495,8 +553,6 @@ body{
 .skill-bars .percent70{ width:70%; background:#999; }
 .skill-bars .percent95{ width:95%; background:#f4f4f7; }
 .skill-bars .percent75{ width:75%; background:#bbb; }
-
-
 
 /* ========== CERTIFICATIONS SECTION  ========== */
 
