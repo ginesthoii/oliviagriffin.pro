@@ -1689,3 +1689,39 @@ body{
     justify-content: flex-start;
   }
 }
+/* ===== FORCE WHITE GLOW BUTTONS (About page) ===== */
+.about-hero__actions .btn-ghost{
+  color:#fff !important;
+  text-decoration:none !important;
+
+  background: rgba(255,255,255,.10) !important;
+  border: 2px solid rgba(255,255,255,.70) !important;
+
+  border-radius: 999px;
+  padding: 12px 18px;
+
+  font-weight: 300;
+  letter-spacing: .04em;
+
+  box-shadow:
+    0 0 10px rgba(255,255,255,.35),
+    0 0 28px rgba(255,255,255,.18),
+    inset 0 0 0 1px rgba(255,255,255,.12);
+
+  backdrop-filter: blur(8px);
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+}
+
+.about-hero__actions .btn-ghost:hover{
+  transform: translateY(-2px);
+
+  background: rgba(255,255,255,.16) !important;
+  border-color: rgba(255,255,255,.95) !important;
+
+  box-shadow:
+    0 0 14px rgba(255,255,255,.55),
+    0 0 44px rgba(255,255,255,.28),
+    inset 0 0 0 1px rgba(255,255,255,.16);
+
+  animation: sparkleGlow .9s ease-in-out;
+}
