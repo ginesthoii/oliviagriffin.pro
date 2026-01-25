@@ -383,7 +383,8 @@ body{
 .feature-copy .roles .dot:hover{ animation:sparkleGlow 1s ease-in-out; }
 
 
-/* ========== ABOUT  ========== */
+
+/* ========== ABOUT (scoped so it doesn't break other sections) ========== */
 
 .about,
 .about *{
@@ -406,218 +407,206 @@ body{
   position:absolute;
   inset:0;
   z-index:-1;
-  background:rgba(0,0,0,.5);
+  background:rgba(0,0,0,.50);
 }
 
+/* IMPORTANT: keep section-intro global behavior intact.
+   Only style the intro inside .about */
 .about .section-intro{
   text-align:center;
-  margin-bottom:clamp(40px,6vw,70px);
+  margin-bottom:clamp(40px,6vw,80px);
 }
 
-/* ===== ABOUT GRID ===== */
-.about-content{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(24px, 4vw, 80px);
-
-  max-width: 1100px;
-  margin: 0 auto;
-
-  align-items:start;
-}
-
-/* MOBILE STACK */
-@media (max-width:900px){
-  .about-content{
-    grid-template-columns: 1fr;
-    max-width: 720px;
-  }
-}
-
-/* ===== LEFT COLUMN CENTERED ===== */
-.about-col:first-child{
-  justify-self: center;        /* centers the whole profile block */
-  text-align: left;
-  max-width: 460px;
-  width: 100%;
-}
-
-/* ===== RIGHT COLUMN A BIT WIDER ===== */
-.about-col:last-child{
-  max-width: 560px;
-  width: 100%;
-}
-
-/* Column headings */
-.about-col h3{
+.about .section-intro h5{
   font-weight:600;
+  font-size:1.1rem;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:var(--muted);
   margin:0 0 .8rem;
-  color:#fff;
 }
 
-.about-col p{
-  margin:0 0 1.2rem;
+.about .section-intro h1{
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:300;
+  margin:0 0 .5rem;
+}
+
+.about .section-intro .lead{
+  font-size:1.2rem;
   color:var(--muted);
   font-weight:300;
 }
 
-/* ===== PROFILE LIST: label left, value right, value wraps nicely ===== */
-.info-list{
+/* Layout: bring left column closer to center */
+.about .about-content{
+  display:grid;
+  grid-template-columns: minmax(320px, 520px) minmax(420px, 1fr);
+  gap:clamp(22px,3vw,46px);
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items:start;
+}
+
+/* Pull the left column toward the middle */
+.about .about-col.profile{
+  justify-self:end;
+  text-align:left;
+}
+
+.about .about-col.skills{
+  justify-self:start;
+  text-align:left;
+}
+
+@media (max-width:900px){
+  .about .about-content{
+    grid-template-columns:1fr;
+    max-width: 760px;
+  }
+  .about .about-col.profile,
+  .about .about-col.skills{
+    justify-self:stretch;
+  }
+}
+
+.about .about-col h3{
+  font-weight:600;
+  margin:0 0 .8rem;
+}
+
+.about .about-col p{
+  margin:0 0 1rem;
+  color: var(--muted);
+}
+
+/* Profile list */
+.about .info-list{
   list-style:none;
   margin:0;
   padding:0;
 }
 
-.info-list li{
+.about .info-list li{
   display:grid;
   grid-template-columns: 140px 1fr;
   gap: 14px;
-
-  margin:.65rem 0;
+  align-items:start;
+  margin:.55rem 0;
   font-size:1rem;
-  color: rgba(255,255,255,.92);
-  line-height:1.45;
 }
 
-.info-list strong{
+.about .info-list strong{
   font-weight:600;
-  color: rgba(255,255,255,.72);
+  color:var(--muted);
 }
 
-.info-list span{
-  display:block;               /* forces the value to sit as a “line” */
-  color: rgba(255,255,255,.92);
-  font-weight:300;
+/* Force the value to sit on its own clean lines */
+.about .info-list .value{
+  display:block;
+  line-height:1.45;
+  color:#fff;
+  opacity:.92;
 }
 
-/* ===== BUTTON ROW ===== */
-.link-row{
+/* Link buttons row */
+.about .link-row{
   display:flex;
-  flex-wrap:wrap;
   gap:12px;
   margin-top:18px;
+  flex-wrap:wrap;
 }
 
+/* White glowing sparkle buttons */
 .about .spark-btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-
-  padding:10px 18px;
+  padding:10px 16px;
   border-radius:999px;
-
-  color:#fff;
   text-decoration:none;
+  color:#fff;
+  font-weight:500;
+  letter-spacing:.02em;
 
-  background:rgba(255,255,255,.10);
-  border:2px solid rgba(255,255,255,.70);
-
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.55);
   box-shadow:
-    0 0 10px rgba(255,255,255,.35),
-    0 0 30px rgba(255,255,255,.18),
-    inset 0 0 0 1px rgba(255,255,255,.10);
+    0 0 0 1px rgba(255,255,255,.10) inset,
+    0 10px 26px rgba(0,0,0,.25);
 
-  backdrop-filter: blur(8px);
-
-  font-weight:300;
-  letter-spacing:.04em;
-
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease, background .15s ease;
 }
 
 .about .spark-btn:hover{
-  transform: translateY(-2px);
-  background:rgba(255,255,255,.16);
-  border-color:rgba(255,255,255,.95);
-
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,.9);
+  background: rgba(255,255,255,.12);
   box-shadow:
-    0 0 14px rgba(255,255,255,.55),
-    0 0 44px rgba(255,255,255,.28),
-    inset 0 0 0 1px rgba(255,255,255,.16);
-
-  animation:sparkleGlow .9s ease-in-out;
+    0 0 0 1px rgba(255,255,255,.18) inset,
+    0 0 14px rgba(255,255,255,.22),
+    0 16px 34px rgba(0,0,0,.35);
+  animation: sparkleGlow .9s ease-in-out;
 }
 
-/* ===== SKILL BARS (better spacing + label alignment + percent visible) ===== */
-
-.skill-bars{
+/* Skills list */
+.about .skill-bars{
   list-style:none;
   margin:0;
   padding:0;
 }
 
-.skill-bars .skill{
-  margin-bottom: 22px;
+.about .skill-bars li{
+  margin: 0 0 18px;
 }
 
-/* space between "Specializations." and first bar */
-.about-col:last-child p{
-  margin-bottom: 22px;
-}
-
-/* label row (left title + right %) */
-.skill-head{
+/* Label row (name left, percent right) */
+.about .skill-head{
   display:flex;
   align-items:baseline;
   justify-content:space-between;
-  gap:16px;
-
-  margin-bottom:10px;
+  gap: 14px;
+  margin: 0 0 8px;
 }
 
-.skill-head strong{
-  font-size: .98rem;
+.about .skill-name{
   font-weight:600;
-  color:rgba(255,255,255,.92);
+  color:#fff;
 }
 
-.skill-pct{
-  font-size: .9rem;
-  font-weight:700;
-  color:rgba(255,255,255,.88);
-  text-shadow: 0 0 8px rgba(255,255,255,.35);
+.about .skill-pct{
+  font-weight:600;
+  color: rgba(255,255,255,.85);
+  letter-spacing:.02em;
 }
 
-/* bar background */
-.progress{
-  width:100%;
-  height:18px;
-  border-radius:10px;
-
-  background:rgba(255,255,255,.14);
-  border:1px solid rgba(255,255,255,.18);
-
+/* Bar track */
+.about .skill-bar{
+  position:relative;
+  height: 12px;
+  border-radius: 999px;
   overflow:hidden;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.12);
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.18);
 }
 
-/* bar fill */
-.progress .bar{
-  height:100%;
-  border-radius:10px;
+/* Bar fill uses --pct */
+.about .skill-bar::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width: var(--pct, 0%);
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--gold-1), var(--gold-2));
+  box-shadow: 0 0 14px rgba(227,185,108,.22);
 }
 
-/* fills */
-.percent90{
-  width:90%;
-  background: linear-gradient(90deg, #e3b96c, #dcae5b);
+/* slightly muted fills for non-top skills */
+.about .skill-bar.is-muted::before{
+  background: linear-gradient(90deg, rgba(255,255,255,.75), rgba(255,255,255,.35));
+  box-shadow:none;
 }
-.percent85{
-  width:85%;
-  background: linear-gradient(90deg, #dcae5b, #e3b96c);
-}
-.percent70{
-  width:70%;
-  background: linear-gradient(90deg, rgba(255,255,255,.70), rgba(255,255,255,.35));
-}
-.percent95{
-  width:95%;
-  background: linear-gradient(90deg, rgba(255,255,255,.95), rgba(255,255,255,.55));
-}
-.percent75{
-  width:75%;
-  background: linear-gradient(90deg, rgba(255,255,255,.80), rgba(255,255,255,.40));
-}
+
 
 /* ========== CERTIFICATIONS SECTION  ========== */
 
