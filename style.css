@@ -1352,7 +1352,7 @@ body{
   border-top:1px solid rgba(255,255,255,.16);
 
   /* FOOTER IMAGE BEHIND TEXT */
-  background: url("images/background/footer.jpg") center/cover no-repeat;
+  background: url("images/background/black-on-black-stripes.jpeg") center/cover no-repeat;
 
   /* glass look  */
   position:relative;
