@@ -11,11 +11,11 @@
   <!-- Page-specific styles for projects directory -->
   <link rel="stylesheet" href="projects.css" />
 
-    <!-- Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap"
     rel="stylesheet"/>
-  
-    <!-- Favicon -->
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
@@ -23,7 +23,7 @@
 </head>
 
 <body id="projects">
-  
+
   <!-- ===== NAVBAR  ===== -->
   <header class="header">
     <nav class="nav-inner" aria-label="Main">
@@ -49,7 +49,18 @@
 
       <div class="controls">
         <input id="search" type="search" placeholder="Search projects…" autocomplete="off" />
-        <div id="tagBar" class="tagbar" aria-label="Tag filter"></div>
+
+        <!-- BIG category pills -->
+        <div id="catbar" class="catbar" aria-label="Category filter"></div>
+
+        <!-- Tag dropdown + clear -->
+        <div class="filter-right">
+          <select id="tagSelect" aria-label="Filter by tag">
+            <option value="">All tags</option>
+          </select>
+
+          <button id="clearFilters" class="clear-btn" type="button">Clear</button>
+        </div>
       </div>
     </div>
   </header>
