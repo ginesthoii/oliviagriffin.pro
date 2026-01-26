@@ -1601,7 +1601,7 @@ body{
 /* LEFT PHOTO */
 .about-page__photo{
   width: 100%;
-  max-width: 420px;
+  max-width: 120px;
 }
 
 .about-page__photo img{
