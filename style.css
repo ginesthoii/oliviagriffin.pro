@@ -1272,7 +1272,7 @@ body{
   color: #fff;
 
   /* wallpaper image behind entire section */
-  background: url("images/background/black-hexagons.jpeg") center/cover no-repeat;
+  background: url("images/background/black2.png") center/cover no-repeat;
   background-attachment: fixed;
   overflow: hidden;
 }
