@@ -29,7 +29,6 @@ export const REPO_SECTIONS = [
       },
     ],
   },
-
   {
     id: "sim-model",
     title: "Simulation & Systems Modeling",
@@ -57,7 +56,6 @@ export const REPO_SECTIONS = [
       },
     ],
   },
-
   {
     id: "knowledge-systems",
     title: "Knowledge, Metadata & Information Systems",
@@ -191,7 +189,6 @@ export const REPO_SECTIONS = [
       },
     ],
   },
-
   {
     id: "dev-tools-platforms",
     title: "Developer Tools, Platforms & Interactive Demos",
@@ -259,7 +256,6 @@ export const REPO_SECTIONS = [
       },
     ],
   },
-
   {
     id: "specialized-modeling",
     title: "Specialized Modeling & Computational Systems",
@@ -287,7 +283,6 @@ export const REPO_SECTIONS = [
       },
     ],
   },
-
   {
     id: "web-data-collection",
     title: "Web Data Collection & Systems",
@@ -416,7 +411,6 @@ export const REPO_SECTIONS = [
       },
     ],
   },
-
   {
     id: "language-translation-communication",
     title: "Language, Translation & Communication",
@@ -692,7 +686,6 @@ export const REPO_SECTIONS = [
       },
     ],
   },
-
   {
     id: "ops-asset-management",
     title: "Operational Tools & Asset Management",
