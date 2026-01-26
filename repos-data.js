@@ -2,7 +2,6 @@
 // Single source for portfolio cards.
 // Add repos here - auto-renders them.
 
-export const REPO_SECTIONS = [
   export const REPO_SECTIONS = [
   {
     id: "pro-cyber",
@@ -1949,3 +1948,4 @@ export const REPO_SECTIONS = [
     },
   ],
 }
+]
