@@ -1,6 +1,5 @@
  // repos-data.js
 // Single source for portfolio cards.
-// Add repos here - auto-renders them.
 
   export const REPO_SECTIONS = [
   {
