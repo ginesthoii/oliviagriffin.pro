@@ -922,5 +922,5 @@ export const REPO_SECTIONS = [
       },
     ],
   },
-
+];
 
