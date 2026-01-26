@@ -868,7 +868,7 @@ body{
   color:var(--stats-ink);
 
   /* image behind stats */
-  background: url("images/background/ticket.jpeg") center/cover no-repeat;
+  background: url("images/background/fireflies1.gif") center/cover no-repeat;
   background-attachment: fixed;
 
   width:100%;
