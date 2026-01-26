@@ -478,7 +478,6 @@ export const REPO_SECTIONS = [
       },
     ],
   },
-
   {
     id: "maker-diy",
     title: "Maker & DIY",
@@ -726,102 +725,102 @@ export const REPO_SECTIONS = [
     ],
   },
   {
-    id: "games-interactive-systems",
-    title: "Games & Interactive Systems",
-    subtitle: "Teaching-first game systems, toolchains, and interactive prototypes",
-    items: [
-      {
-        name: "CheckMate",
-        href: "https://github.com/ginesthoii/CheckMate",
-        image: "https://github.com/user-attachments/assets/905ead19-3392-4fe8-bbb6-8904cef3ae3b",
-        description:
-          "Teaching-first chess coach powered by Stockfish. Play against the engine or watch AI self-play duels with overlays explaining mistakes, tactics, and best-move plans in real time.",
-        tech: ["Python", "Pygame", "Stockfish", "python-chess"],
-        status: "Active",
-        tags: ["Games", "Teaching", "Chess", "AI"],
-      },
-  {
-        name: "CutCoach",
-        href: "https://github.com/ginesthoii/CutCoach",
-        image: "https://github.com/ginesthoii/ginesthoii/blob/main/assets/two/cut-coach.png?raw=1",
-        description:
-          "Augmented-reality app that teaches DIY haircuts in real time using structured steps for sectioning, cut planes, calibration, and mirrored UI modes.",
-        tech: ["Unity", "C#", "AR Foundation", "ARKit", "ARCore"],
-        status: "Active",
-        tags: ["AR", "Teaching", "Mobile", "Computer Vision"],
-      },
-      {
-        name: "OlivisionWorks",
-        href: "https://github.com/ginesthoii/OlivisionWorks",
-        image: "https://github.com/user-attachments/assets/1a73e9c5-bc52-47b0-ad8a-3a5c2187b064",
-        description:
-          "Tooling workshop for sprite, animation, and visual asset workflows. Editors and utilities for sprite slicing, palette work, and animation assets.",
-        tech: ["Python", "Tkinter", "Pillow", "PyGame"],
-        status: "Active",
-        tags: ["Tools", "Game Dev", "Art", "Assets"],
-      },
-      {
-        name: "PixelPortfolio",
-        href: "https://github.com/ginesthoii/PixelPortfolio",
-        image: "https://github.com/user-attachments/assets/b0a0fe50-8934-40a1-a102-f3171b689ba8",
-        description:
-          "Retro-inspired interactive gallery of bite-sized games and mechanics experiments showcasing arcade demos, puzzle loops, and sprite-driven feedback.",
-        tech: ["Python", "Pygame", "JavaScript", "HTML", "CSS", "C#"],
-        status: "Active",
-        tags: ["Games", "Portfolio", "Retro", "Experiments"],
-      },
-      {
-        name: "hook-and-ring",
-        href: "https://github.com/ginesthoii/hook-and-ring",
-        image: "https://github.com/ginesthoii/ginesthoii/blob/main/assets/two/hook-and-ring.png?raw=1",
-        description:
-          "Hybrid build: browser physics mini-game plus an Arduino scorer for a real hook & ring setup.",
-        tech: ["JavaScript", "HTML", "CSS", "Arduino (C++)", "OpenSCAD"],
-        status: "Active",
-        tags: ["Games", "Hardware", "Arduino", "Physics"],
-      },
-      {
-        name: "unity-csharp-games",
-        href: "https://github.com/ginesthoii/unity-csharp-games",
-        image: "https://github.com/ginesthoii/ginesthoii/blob/main/assets/two/csharpunity.jpg?raw=1",
-        description:
-          "Unity gameplay experiments exploring C# systems, component patterns, and engine-level mechanics.",
-        tech: ["Unity", "C#", "Gameplay Systems", "Component Patterns"],
-        status: "Active",
-        tags: ["Game Dev", "Unity", "C#", "Prototypes"],
-      },
-      {
-        name: "thats-what-im-tolkien-about",
-        href: "https://github.com/ginesthoii/thats-what-im-tolkien-about",
-        image: "https://github.com/ginesthoii/ginesthoii/blob/main/assets/two/thatwhattolkienabout.png?raw=1",
-        description:
-          "Retro-arcade mini-games inspired by Tolkien’s legendarium: platforming, maze chase, logic puzzles, and more.",
-        tech: ["Python", "2D Game Loops", "State Machines", "Arcade Logic"],
-        status: "Active",
-        tags: ["Games", "Tolkien", "Retro", "Arcade"],
-      },
-      {
-        name: "2D-character-creator",
-        href: "https://github.com/ginesthoii/2D-character-creator",
-        image: "https://github.com/ginesthoii/ginesthoii/blob/main/assets/two/character-creator.gif?raw=1",
-        description:
-          "Visual + biographical character builder for complete characters (appearance, outfits, background, identity) designed to pair with CyberPersona so characters stay coherent in look and behavior.",
-        tech: ["Python"],
-        status: "Active",
-        tags: ["Writing", "Characters", "Tools", "Worldbuilding"],
-      },
-      {
-        name: "CyberPersona",
-        href: "https://github.com/ginesthoii/CyberPersona",
-        image: "https://github.com/ginesthoii/ginesthoii/blob/main/assets/two/cyber-persona.gif?raw=1",
-        description:
-          "Personality + psychology engine for character logic (MBTI, Enneagram, attachment, values, stress behavior) to govern decisions and voice for writing and worldbuilding.",
-        tech: ["Python", "YAML", "Taxonomy Design"],
-        status: "Active",
-        tags: ["Psychology", "Writing", "Worldbuilding", "Generators"],
-      },
-    ],
-  },
+  id: "games-interactive-systems",
+  title: "Games & Interactive Systems",
+  subtitle: "Teaching-first game systems, toolchains, and interactive prototypes",
+  items: [
+    {
+      name: "CheckMate",
+      href: "https://github.com/ginesthoii/CheckMate",
+      image: "https://github.com/user-attachments/assets/905ead19-3392-4fe8-bbb6-8904cef3ae3b",
+      description:
+        "Teaching-first chess coach powered by Stockfish. Play against the engine or watch AI self-play duels with overlays explaining mistakes, tactics, and best-move plans in real time.",
+      tech: ["Python", "Pygame", "Stockfish", "python-chess"],
+      status: "Active",
+      tags: ["Games", "Teaching", "Chess", "AI"],
+    },
+    {
+      name: "CutCoach",
+      href: "https://github.com/ginesthoii/CutCoach",
+      image: "https://github.com/ginesthoii/ginesthoii/blob/main/assets/two/cut-coach.png?raw=1",
+      description:
+        "Augmented-reality app that teaches DIY haircuts in real time using structured steps for sectioning, cut planes, calibration, and mirrored UI modes.",
+      tech: ["Unity", "C#", "AR Foundation", "ARKit", "ARCore"],
+      status: "Active",
+      tags: ["AR", "Teaching", "Mobile", "Computer Vision"],
+    },
+    {
+      name: "OlivisionWorks",
+      href: "https://github.com/ginesthoii/OlivisionWorks",
+      image: "https://github.com/user-attachments/assets/1a73e9c5-bc52-47b0-ad8a-3a5c2187b064",
+      description:
+        "Tooling workshop for sprite, animation, and visual asset workflows. Editors and utilities for sprite slicing, palette work, and animation assets.",
+      tech: ["Python", "Tkinter", "Pillow", "PyGame"],
+      status: "Active",
+      tags: ["Tools", "Game Dev", "Art", "Assets"],
+    },
+    {
+      name: "PixelPortfolio",
+      href: "https://github.com/ginesthoii/PixelPortfolio",
+      image: "https://github.com/user-attachments/assets/b0a0fe50-8934-40a1-a102-f3171b689ba8",
+      description:
+        "Retro-inspired interactive gallery of bite-sized games and mechanics experiments showcasing arcade demos, puzzle loops, and sprite-driven feedback.",
+      tech: ["Python", "Pygame", "JavaScript", "HTML", "CSS", "C#"],
+      status: "Active",
+      tags: ["Games", "Portfolio", "Retro", "Experiments"],
+    },
+    {
+      name: "hook-and-ring",
+      href: "https://github.com/ginesthoii/hook-and-ring",
+      image: "https://github.com/ginesthoii/ginesthoii/blob/main/assets/two/hook-and-ring.png?raw=1",
+      description:
+        "Hybrid build: browser physics mini-game plus an Arduino scorer for a real hook & ring setup.",
+      tech: ["JavaScript", "HTML", "CSS", "Arduino (C++)", "OpenSCAD"],
+      status: "Active",
+      tags: ["Games", "Hardware", "Arduino", "Physics"],
+    },
+    {
+      name: "unity-csharp-games",
+      href: "https://github.com/ginesthoii/unity-csharp-games",
+      image: "https://github.com/ginesthoii/ginesthoii/blob/main/assets/two/csharpunity.jpg?raw=1",
+      description:
+        "Unity gameplay experiments exploring C# systems, component patterns, and engine-level mechanics.",
+      tech: ["Unity", "C#", "Gameplay Systems", "Component Patterns"],
+      status: "Active",
+      tags: ["Game Dev", "Unity", "C#", "Prototypes"],
+    },
+    {
+      name: "thats-what-im-tolkien-about",
+      href: "https://github.com/ginesthoii/thats-what-im-tolkien-about",
+      image: "https://github.com/ginesthoii/ginesthoii/blob/main/assets/two/thatwhattolkienabout.png?raw=1",
+      description:
+        "Retro-arcade mini-games inspired by Tolkien’s legendarium: platforming, maze chase, logic puzzles, and more.",
+      tech: ["Python", "2D Game Loops", "State Machines", "Arcade Logic"],
+      status: "Active",
+      tags: ["Games", "Tolkien", "Retro", "Arcade"],
+    },
+    {
+      name: "2D-character-creator",
+      href: "https://github.com/ginesthoii/2D-character-creator",
+      image: "https://github.com/ginesthoii/ginesthoii/blob/main/assets/two/character-creator.gif?raw=1",
+      description:
+        "Visual + biographical character builder for complete characters (appearance, outfits, background, identity) designed to pair with CyberPersona so characters stay coherent in look and behavior.",
+      tech: ["Python"],
+      status: "Active",
+      tags: ["Writing", "Characters", "Tools", "Worldbuilding"],
+    },
+    {
+      name: "CyberPersona",
+      href: "https://github.com/ginesthoii/CyberPersona",
+      image: "https://github.com/ginesthoii/ginesthoii/blob/main/assets/two/cyber-persona.gif?raw=1",
+      description:
+        "Personality + psychology engine for character logic (MBTI, Enneagram, attachment, values, stress behavior) to govern decisions and voice for writing and worldbuilding.",
+      tech: ["Python", "YAML", "Taxonomy Design"],
+      status: "Active",
+      tags: ["Psychology", "Writing", "Worldbuilding", "Generators"],
+    },
+  ],
+},
    {
     id: "nutrition-fitness-health",
     title: "Nutrition, Fitness & Health Systems",
