@@ -827,7 +827,7 @@ body{
   justify-content:center;
   align-items:center;
   padding:clamp(80px,10vw,160px) var(--pad);
-  background:url("images/background/stain-glass1.png") center/cover no-repeat fixed;
+  background:url("images/background/trees3.jpeg") center/cover no-repeat fixed;
   width:100%;
   max-width:none;
   margin:0;
@@ -868,7 +868,7 @@ body{
   color:var(--stats-ink);
 
   /* image behind stats */
-  background: url("images/background/trees3.jpeg") center/cover no-repeat;
+  background: url("images/background/stain-glass1.png") center/cover no-repeat;
   background-attachment: fixed;
 
   width:100%;
