@@ -1445,6 +1445,7 @@ export const REPO_SECTIONS = [
         tech: ["C", "C++", "C#"],
         status: "Archived",
         tags: ["Language", "Systems", "Foundations", "Archived"],
-      },
-    ],
+  },
+];
 
+export default REPO_SECTIONS;
