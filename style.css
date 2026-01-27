@@ -641,7 +641,7 @@ body{
 
 /* track width:100% so it doesn't collapse and helps with mobile */
 .about .skill-bar{
-  width:100%;              /* <-- MAIN FIX for “short bars” DO NOT DELETE ! */
+  width:150%;              /* <-- MAIN FIX for “short bars” DO NOT DELETE ! */
   position:relative;
   height:12px;
   border-radius:999px;
