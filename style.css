@@ -1005,7 +1005,7 @@ body{
   letter-spacing: .14em;
   text-transform: uppercase;
   font-weight: 800;
-  color: var(--gold-1);
+  color: var(--muted);
 }
 
 .project-showcase .section-intro h1{
