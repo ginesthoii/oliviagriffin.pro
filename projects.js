@@ -1,72 +1,123 @@
 // projects.js
 import { REPO_SECTIONS } from "./repos-data.js";
 
-const sectionsEl = document.getElementById("sections");
-const searchEl = document.getElementById("search");
-const tagBarEl = document.getElementById("tagBar");
+/* =========================
+   DOM
+========================= */
+const sectionsEl   = document.getElementById("sections");
+const searchEl     = document.getElementById("search");
+const catBarEl     = document.getElementById("catbar");
+const tagSelectEl  = document.getElementById("tagSelect");
+const clearBtn     = document.getElementById("clearFilters");
 
-let activeTag = null;
-let searchQuery = "";
+/* =========================
+   State
+========================= */
+let activeCategory = null;   // section id
+let activeTag      = "";
+let searchQuery    = "";
 
+/* =========================
+   Utils
+========================= */
 const normalize = (s) => (s || "").toLowerCase().trim();
 
+/* =========================
+   Collect tags
+========================= */
 function collectTags() {
-  const tags = new Set();
-  REPO_SECTIONS.forEach((sec) => {
-    sec.items.forEach((it) => (it.tags || []).forEach((t) => tags.add(t)));
+  const set = new Set();
+
+  REPO_SECTIONS.forEach(sec => {
+    sec.items.forEach(item => {
+      (item.tags || []).forEach(t => set.add(t));
+    });
   });
-  return [...tags].sort((a, b) => a.localeCompare(b));
+
+  return [...set].sort((a, b) => a.localeCompare(b));
 }
 
-function matchesFilters(item) {
-  const q = normalize(searchQuery);
-  const hay = normalize(
-    [
-      item.name,
-      item.description,
-      (item.tech || []).join(" "),
-      (item.tags || []).join(" "),
-      item.status,
-    ].join(" ")
-  );
+/* =========================
+   Filtering logic
+========================= */
+function matchesFilters(item, sectionId) {
+  // category
+  if (activeCategory && sectionId !== activeCategory) return false;
 
-  const searchOk = !q || hay.includes(q);
-  const tagOk = !activeTag || (item.tags || []).includes(activeTag);
+  // tag
+  if (activeTag && !(item.tags || []).includes(activeTag)) return false;
 
-  return searchOk && tagOk;
+  // search
+  const hay = normalize([
+    item.name,
+    item.description,
+    (item.tech || []).join(" "),
+    (item.tags || []).join(" "),
+    item.status
+  ].join(" "));
+
+  if (searchQuery && !hay.includes(searchQuery)) return false;
+
+  return true;
 }
 
-function renderTagBar() {
-  const tags = collectTags();
+/* =========================
+   Render category pills
+========================= */
+function renderCatBar() {
+  catBarEl.innerHTML = "";
 
-  tagBarEl.innerHTML = "";
-
-  const makeTag = (label, isActive) => {
+  const makeCat = (label, id, active) => {
     const btn = document.createElement("button");
-    btn.className = `tag ${isActive ? "active" : ""}`;
+    btn.className = `cat ${active ? "active" : ""}`;
     btn.type = "button";
     btn.textContent = label;
-    btn.addEventListener("click", () => {
-      activeTag = activeTag === label ? null : label;
-      renderTagBar();
+    btn.onclick = () => {
+      activeCategory = activeCategory === id ? null : id;
+      renderCatBar();
       renderSections();
-    });
+    };
     return btn;
   };
 
-  tagBarEl.appendChild(makeTag("All", !activeTag));
+  // All
+  catBarEl.appendChild(
+    makeCat("All", null, !activeCategory)
+  );
 
-  tags.forEach((t) => tagBarEl.appendChild(makeTag(t, activeTag === t)));
+  REPO_SECTIONS.forEach(sec => {
+    catBarEl.appendChild(
+      makeCat(sec.title, sec.id, activeCategory === sec.id)
+    );
+  });
 }
 
+/* =========================
+   Render tag dropdown
+========================= */
+function renderTagSelect() {
+  const tags = collectTags();
+  tagSelectEl.innerHTML = `<option value="">All tags</option>`;
+
+  tags.forEach(tag => {
+    const opt = document.createElement("option");
+    opt.value = tag;
+    opt.textContent = tag;
+    tagSelectEl.appendChild(opt);
+  });
+}
+
+/* =========================
+   Card template
+========================= */
 function cardHTML(item) {
   const pills = [
-    ...(item.tech || []).slice(0, 4).map((x) => `<span class="pill">${x}</span>`),
-    ...(item.tags || []).slice(0, 2).map((x) => `<span class="pill">${x}</span>`),
+    ...(item.tech || []).slice(0, 4).map(x => `<span class="pill">${x}</span>`),
+    ...(item.tags || []).slice(0, 2).map(x => `<span class="pill">${x}</span>`)
   ].slice(0, 6);
 
   return `
-    <article class="card" data-name="${item.name}">
+    <article class="card">
       <a href="${item.href}" target="_blank" rel="noopener">
         <div class="card-inner">
           <div class="card-top">
@@ -75,7 +126,7 @@ function cardHTML(item) {
           </div>
 
           <div class="media">
-            <img src="${item.image}" alt="${item.name}" loading="lazy" />
+            <img src="${item.image}" alt="${item.name}" loading="lazy">
           </div>
 
           <p class="desc">${item.description || ""}</p>
@@ -89,23 +140,26 @@ function cardHTML(item) {
   `;
 }
 
+/* =========================
+   Render sections
+========================= */
 function renderSections() {
   sectionsEl.innerHTML = "";
 
-  REPO_SECTIONS.forEach((sec) => {
-    const filteredItems = sec.items.filter(matchesFilters);
+  REPO_SECTIONS.forEach(sec => {
+    const visibleItems = sec.items.filter(item =>
+      matchesFilters(item, sec.id)
+    );
 
-    // Hide empty sections when filtering
-    if (filteredItems.length === 0) return;
+    if (!visibleItems.length) return;
 
     const section = document.createElement("section");
     section.className = "section";
-
     section.innerHTML = `
       <h2>${sec.title}</h2>
       ${sec.subtitle ? `<p class="subtitle">${sec.subtitle}</p>` : ""}
       <div class="grid">
-        ${filteredItems.map(cardHTML).join("")}
+        ${visibleItems.map(cardHTML).join("")}
       </div>
     `;
 
@@ -113,10 +167,34 @@ function renderSections() {
   });
 }
 
-searchEl.addEventListener("input", (e) => {
-  searchQuery = e.target.value;
+/* =========================
+   Events
+========================= */
+searchEl.addEventListener("input", e => {
+  searchQuery = normalize(e.target.value);
   renderSections();
 });
 
-renderTagBar();
+tagSelectEl.addEventListener("change", e => {
+  activeTag = e.target.value;
+  renderSections();
+});
+
+clearBtn.addEventListener("click", () => {
+  activeCategory = null;
+  activeTag = "";
+  searchQuery = "";
+
+  searchEl.value = "";
+  tagSelectEl.value = "";
+
+  renderCatBar();
+  renderSections();
+});
+
+/* =========================
+   Init
+========================= */
+renderCatBar();
+renderTagSelect();
 renderSections();
