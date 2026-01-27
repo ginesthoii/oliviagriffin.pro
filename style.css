@@ -868,7 +868,7 @@ body{
   color:var(--stats-ink);
 
   /* image behind stats */
-  background: url("images/background/diamond-window.png") center/cover no-repeat;
+  background: url("images/background/diamond-glass.jpeg") center/cover no-repeat;
   background-attachment: fixed;
 
   width:100%;
