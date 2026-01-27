@@ -612,7 +612,7 @@ body{
   margin:0;
   padding:0;
   width:100%;
-  max-width:600px; /* <-- makes bars longer */
+  max-width:900px; /* <-- makes bars longer */
 }
 
 .about .skill-bars li{
@@ -639,9 +639,9 @@ body{
   letter-spacing:.02em;
 }
 
-/* track width:100% so it doesn't collapse and helps with mobile */
+/* track width:100+% so it doesn't collapse and helps with mobile */
 .about .skill-bar{
-  width:150%;              /* <-- MAIN FIX for “short bars” DO NOT DELETE ! */
+  width:150%;              /* <-- MAIN FIX for “bars” DO NOT DELETE ! */
   position:relative;
   height:12px;
   border-radius:999px;
