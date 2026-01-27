@@ -1447,6 +1447,4 @@ export const REPO_SECTIONS = [
         tags: ["Language", "Systems", "Foundations", "Archived"],
       },
     ],
-  },
-];
 
