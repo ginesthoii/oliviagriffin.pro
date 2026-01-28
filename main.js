@@ -129,6 +129,49 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.setProperty('--mouse-y', '50%');
     };
 
+
+
+    /* =========================================
+   ORGANIZATIONS: glow tracking + expandable cards
+========================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cardsWrap = document.getElementById("cards");
+  if (!cardsWrap) return;
+
+  // Glow mouse tracking
+  cardsWrap.addEventListener("pointermove", (e) => {
+    const cards = cardsWrap.getElementsByClassName("card");
+    for (const card of cards) {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("--mouse-y", `${y}px`);
+    }
+  });
+
+  // Expand/collapse (click)
+  const expandables = cardsWrap.querySelectorAll(".card.expandable");
+  expandables.forEach((card) => {
+    const toggle = () => {
+      const isOpen = card.classList.toggle("open");
+      card.setAttribute("aria-expanded", String(isOpen));
+    };
+
+    card.addEventListener("click", toggle);
+
+    // Keyboard: Enter/Space
+    card.addEventListener("keydown", (ev) => {
+      if (ev.key === "Enter" || ev.key === " ") {
+        ev.preventDefault();
+        toggle();
+      }
+    });
+  });
+});
+
+
     card.addEventListener('mousemove', onMove);
     card.addEventListener('mouseleave', onLeave);
   });
