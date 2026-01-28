@@ -37,10 +37,11 @@ body{
   color:var(--ink);
   font-family:"Lato",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   background:#000;
-  overflow-x:hidden; /* IMPORTANT: do not delete olivia!! */
+  overflow-x:hidden; /* IMPORTANT */
   scroll-behavior:smooth;
+}
 
-  /* ========== GLOBAL SECTION INTRO (default) ========== */
+/* ========== GLOBAL SECTION INTRO  ========== */
 .section-intro{
   max-width: var(--maxw);
   margin: 0 auto clamp(30px,4vw,50px);
@@ -69,7 +70,7 @@ body{
   font-size: 1.15rem;
   color: var(--muted);
 }
-}
+
 
 .section{
   min-height:60vh;
