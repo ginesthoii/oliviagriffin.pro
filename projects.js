@@ -198,3 +198,14 @@ clearBtn.addEventListener("click", () => {
 renderCatBar();
 renderTagSelect();
 renderSections();
+
+
+document.addEventListener("mousemove", e => {
+  document.querySelectorAll(".card").forEach(card => {
+    const r = card.getBoundingClientRect();
+    const x = ((e.clientX - r.left) / r.width) * 100;
+    const y = ((e.clientY - r.top) / r.height) * 100;
+    card.style.setProperty("--mx", `${x}%`);
+    card.style.setProperty("--my", `${y}%`);
+  });
+});
