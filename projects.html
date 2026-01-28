@@ -5,17 +5,16 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projects — Olivia Griffin</title>
 
-  <!-- Global site styles (navbar + base theme) -->
+  <!-- Global site styles -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Page-specific styles for projects directory -->
+  <!-- Projects page styles -->
   <link rel="stylesheet" href="projects.css" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap"
-    rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap" rel="stylesheet"/>
 
-  <!-- Favicon -->
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
@@ -24,7 +23,7 @@
 
 <body id="projects">
 
-  <!-- ===== NAVBAR  ===== -->
+  <!-- ===== NAVBAR ===== -->
   <header class="header">
     <nav class="nav-inner" aria-label="Main">
       <div class="nav-links">
@@ -50,10 +49,8 @@
       <div class="controls">
         <input id="search" type="search" placeholder="Search projects…" autocomplete="off" />
 
-        <!-- BIG category pills -->
         <div id="catbar" class="catbar" aria-label="Category filter"></div>
 
-        <!-- Tag dropdown + clear -->
         <div class="filter-right">
           <select id="tagSelect" aria-label="Filter by tag">
             <option value="">All tags</option>
@@ -65,15 +62,19 @@
     </div>
   </header>
 
-  <!-- ===== MAIN CONTENT ===== -->
+  <!-- ===== MAIN ===== -->
   <main class="page-main">
     <div id="sections"></div>
   </main>
 
-  <!-- Navbar hamburger toggle (global JS) -->
+  <!-- ===== PRELOAD TEXTURES ===== -->
+  <img src="images/textures/noise-base.webp" alt="" hidden>
+  <img src="images/textures/noise-top.png" alt="" hidden>
+
+  <!-- Global JS -->
   <script defer src="main.js"></script>
 
-  <!-- Projects directory builder -->
+  <!-- Projects builder -->
   <script type="module" src="projects.js"></script>
 </body>
 </html>
