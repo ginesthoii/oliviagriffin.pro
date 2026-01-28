@@ -4,25 +4,27 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Organizations — Olivia Griffin</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
   <script defer src="main.js"></script>
 
-    <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap"
-    rel="stylesheet"/>
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap"
+    rel="stylesheet"
+  />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
   <link rel="manifest" href="images/site.webmanifest" />
-  
 </head>
 
 <body id="organizations">
-  
+
   <!-- ===== NAVBAR ===== -->
-  
   <header class="header">
     <nav class="nav-inner" aria-label="Main">
       <div class="nav-links">
@@ -32,37 +34,99 @@
         <a href="organizations.html" aria-current="page">Organizations</a>
         <a href="index.html#contact">Contact</a>
       </div>
-      <button id="menu-icon" class="hamb" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+      <button
+        id="menu-icon"
+        class="hamb"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        ☰
+      </button>
     </nav>
     <div id="mobile-nav" class="nav-bg"></div>
   </header>
 
+  <!-- ===== MAIN ===== -->
   <main class="section" style="padding-top:120px">
 
-    <div class="section-intro" style="text-align:left;max-width:var(--maxw);margin-inline:auto">
+    <div
+      class="section-intro"
+      style="text-align:left;max-width:var(--maxw);margin-inline:auto"
+    >
       <h5>Organizations</h5>
       <h1>Labs + Ecosystems</h1>
-      <p class="lead">Org strip + sections below. </p>
+      <p class="lead">
+        Independent orgs and long-running systems I maintain and evolve.
+      </p>
     </div>
 
-    <!-- Continuous scrolling strip -->
-    <section class="marquee" aria-label="Organizations scrolling strip">
-      <div class="marquee__viewport">
-        <div class="marquee__track" id="orgsMarquee"></div>
-      </div>
-    </section>
+    <!-- ===== ORG GRID ===== -->
+    <div id="orgSections" class="org-grid">
 
-    <!-- Org sections -->
-    <div id="orgSections"></div>
+      <a
+        class="card org-card"
+        href="https://github.com/LazyDaisyAcres"
+        target="_blank"
+        rel="noopener"
+      >
+        <div class="card-content">
+          <h3>LazyDaisyAcres</h3>
+          <p>
+            Homestead automation, IoT infrastructure, and offline-first farm systems.
+          </p>
+        </div>
+      </a>
+
+      <a
+        class="card org-card"
+        href="https://github.com/CloakAndCipher"
+        target="_blank"
+        rel="noopener"
+      >
+        <div class="card-content">
+          <h3>CloakAndCipher</h3>
+          <p>
+            Local-first AI, privacy tooling, AppSec research, and security experiments.
+          </p>
+        </div>
+      </a>
+
+      <a
+        class="card org-card"
+        href="https://github.com/HiveBeeWare"
+        target="_blank"
+        rel="noopener"
+      >
+        <div class="card-content">
+          <h3>HiveBeeWare</h3>
+          <p>
+            Smart apiary builds, sensor telemetry, and beekeeping automation.
+          </p>
+        </div>
+      </a>
+
+      <a
+        class="card org-card"
+        href="https://github.com/lorie-ai"
+        target="_blank"
+        rel="noopener"
+      >
+        <div class="card-content">
+          <h3>LORIE-AI</h3>
+          <p>
+            Local Offline Reasoning Intelligence Engine and agent simulations.
+          </p>
+        </div>
+      </a>
+
+    </div>
 
   </main>
-</body>
-</html>  
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <p>© 2025 Olivia Griffin. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
-
