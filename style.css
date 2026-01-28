@@ -1076,8 +1076,7 @@ body{
 }
 
 /* =========================================================
-   INTERACTIVE NOISE GLASS CARDS (CodePen-style)
-   Replaces hex / diamond project showcase
+   INTERACTIVE NOISE GLASS CARDS 
 ========================================================= */
 
 /* --- container --- */
@@ -1338,6 +1337,7 @@ body{
   .service,
   .services-controls .nav-btn{ transition:none; }
 }
+
 
 
 
@@ -1795,3 +1795,34 @@ body{
   }
 }
 
+
+/* ========== ORG CARDS ========== */
+
+.org-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+  gap:clamp(18px, 2.5vw, 28px);
+  max-width:var(--maxw);
+  margin:40px auto 0;
+}
+
+.org-card{
+  height:240px;         
+}
+
+.org-card .card-content{
+  padding:18px;
+}
+
+.org-card h3{
+  margin:0 0 .4em;
+  font-size:1.15rem;
+  font-weight:600;
+}
+
+.org-card p{
+  margin:0;
+  font-size:.95rem;
+  color:var(--muted);
+  line-height:1.5;
+}
