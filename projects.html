@@ -5,16 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projects — Olivia Griffin</title>
 
-  <!-- Global site styles -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Projects page styles -->
   <link rel="stylesheet" href="projects.css" />
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap" rel="stylesheet"/>
 
-  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
@@ -23,9 +18,8 @@
 
 <body id="projects">
 
-  <!-- ===== NAVBAR ===== -->
   <header class="header">
-    <nav class="nav-inner" aria-label="Main">
+    <nav class="nav-inner">
       <div class="nav-links">
         <a href="index.html#home">Home</a>
         <a href="about.html">About</a>
@@ -33,48 +27,36 @@
         <a href="organizations.html">Organizations</a>
         <a href="index.html#contact">Contact</a>
       </div>
-
-      <button id="menu-icon" class="hamb" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+      <button id="menu-icon" class="hamb">☰</button>
     </nav>
-
     <div id="mobile-nav" class="nav-bg"></div>
   </header>
 
-  <!-- ===== PAGE HERO ===== -->
   <header class="page-hero" style="padding-top:120px;">
     <div class="hero-inner">
       <h1>Projects</h1>
       <p>Local-first systems • Security-minded builds • Automation • Creative tools</p>
 
       <div class="controls">
-        <input id="search" type="search" placeholder="Search projects…" autocomplete="off" />
-
-        <div id="catbar" class="catbar" aria-label="Category filter"></div>
+        <input id="search" type="search" placeholder="Search projects…" />
+        <div id="catbar" class="catbar"></div>
 
         <div class="filter-right">
-          <select id="tagSelect" aria-label="Filter by tag">
+          <select id="tagSelect">
             <option value="">All tags</option>
           </select>
-
-          <button id="clearFilters" class="clear-btn" type="button">Clear</button>
+          <button id="clearFilters" class="clear-btn">Clear</button>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- ===== MAIN ===== -->
   <main class="page-main">
-    <div id="sections"></div>
+    <!-- IMPORTANT: wrapper for the interactive cards -->
+    <div id="sections" class="interactive-cards"></div>
   </main>
 
-  <!-- ===== PRELOAD TEXTURES ===== -->
-  <img src="images/textures/noise-base.webp" alt="" hidden>
-  <img src="images/textures/noise-top.png" alt="" hidden>
-
-  <!-- Global JS -->
   <script defer src="main.js"></script>
-
-  <!-- Projects builder -->
   <script type="module" src="projects.js"></script>
 </body>
 </html>
