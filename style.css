@@ -1826,33 +1826,165 @@ body{
 }
 
 
-/* ========== ORG CARDS ========== */
+/* =========================================
+   ORGANIZATIONS PAGE — GLOW + EXPAND CARDS
+   Scoped: body#organizations
+========================================= */
 
-.org-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
-  gap:clamp(18px, 2.5vw, 28px);
-  max-width:var(--maxw);
-  margin:40px auto 0;
+body#organizations .orgs-page{
+  padding-bottom: clamp(60px, 8vw, 120px);
 }
 
-.org-card{
-  height:240px;         
+body#organizations .orgs-intro{
+  text-align: left;
+  max-width: var(--maxw);
+  margin-inline: auto;
 }
 
-.org-card .card-content{
-  padding:18px;
+body#organizations .org-grid{
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding: clamp(18px, 3vw, 26px) var(--pad);
 }
 
-.org-card h3{
-  margin:0 0 .4em;
-  font-size:1.15rem;
-  font-weight:600;
+/* Grid */
+body#organizations #cards.cards-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 18px;
 }
 
-.org-card p{
-  margin:0;
-  font-size:.95rem;
-  color:var(--muted);
-  line-height:1.5;
+/* Noise images (used by glow layers) */
+body#organizations .glitter{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Card shell */
+body#organizations .card{
+  position: relative;
+  border-radius: 14px;
+  background: rgba(18,18,18,1);
+  min-height: 280px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Glow layers */
+body#organizations .card::before,
+body#organizations .card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius: inherit;
+  opacity:0;
+  transition: opacity 400ms ease;
+}
+
+body#organizations #cards:hover .card::before,
+body#organizations #cards:hover .card::after{
+  opacity: 1;
+}
+
+body#organizations .card::before{
+  background:
+    conic-gradient(
+      from 0deg at var(--mouse-x) var(--mouse-y),
+      #FFBD8C 0%,
+      #FD8585 14%,
+      #F882FF 30%,
+      #8785FE 45%,
+      #9AFCFF 60%,
+      #99FD9C 75%,
+      #FFFD84 90%,
+      #FFBD8C 100%
+    );
+  z-index: 1;
+}
+
+body#organizations .card::after{
+  inset: 1px;
+  border-radius: 13px;
+  background:
+    radial-gradient(320px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.16), rgba(0,0,0,0.92)),
+    url("images/textures/noise-top.png");
+  z-index: 2;
+}
+
+/* Card content surface */
+body#organizations .card-content{
+  position: relative;
+  z-index: 3;
+  background: rgba(34,34,34,0.92);
+  border-radius: 13px;
+  padding: 18px 18px 16px;
+  color: #fff;
+}
+
+/* Image/logo */
+body#organizations .org-logo{
+  max-width: 110px;
+  max-height: 110px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Text */
+body#organizations .card-content h3{
+  margin: 6px 0 6px;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+}
+
+body#organizations .summary{
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.35;
+  font-size: 0.92rem;
+}
+
+/* Tags */
+body#organizations .tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+body#organizations .tags span{
+  font-size: 0.72rem;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.09);
+  opacity: 0.95;
+}
+
+/* Expand/collapse */
+body#organizations .details{
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 320ms ease, opacity 200ms ease;
+  margin-top: 10px;
+}
+
+body#organizations .card.open .details{
+  max-height: 520px;
+  opacity: 1;
+}
+
+body#organizations .details p{
+  margin: 0 0 10px;
+  line-height: 1.45;
+  opacity: 0.92;
+}
+
+body#organizations .tech{
+  font-size: 0.85rem;
+  opacity: 0.85;
 }
