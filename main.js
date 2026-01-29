@@ -130,19 +130,3 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
 
-
-  /* =========================================
-   ORG CARDS — glow + expand
-========================================= */
-
-document.addEventListener("pointermove", e=>{
-document.querySelectorAll(".org-card").forEach(card=>{
-const r=card.getBoundingClientRect();
-card.style.setProperty("--mouse-x",((e.clientX-r.left)/r.width)*100+"%");
-card.style.setProperty("--mouse-y",((e.clientY-r.top)/r.height)*100+"%");
-});
-});
-
-document.querySelectorAll(".org-card").forEach(card=>{
-card.addEventListener("click",()=>card.classList.toggle("open"));
-});
