@@ -1834,238 +1834,89 @@ body{
 ========================================= */
 
 body#organizations{
-  background:#000;
-  color:#fff;
-  font-family:'Lato',system-ui,sans-serif;
+background:#000;
+color:#fff;
+font-family:Lato,sans-serif;
 }
 
-/* ---------- layout ---------- */
-
-body#organizations .org-grid{
-  max-width: var(--maxw);
-  margin-inline: auto;
-  padding: clamp(20px,3vw,28px) var(--pad);
+.org-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+gap:26px;
+max-width:1200px;
+margin:60px auto;
+padding:0 20px;
 }
 
-body#organizations #cards{
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
-  gap:20px;
+.org-card{
+border-radius:18px;
+background:#141414;
+overflow:hidden;
+position:relative;
+cursor:pointer;
 }
 
-/* ---------- hidden glitter texture loader ---------- */
-
-body#organizations .glitter{
-  position:absolute;
-  width:1px;
-  height:1px;
-  opacity:0;
-  pointer-events:none;
+.org-card::before{
+content:"";
+position:absolute;
+inset:0;
+background:conic-gradient(from 0deg at var(--mouse-x,50%) var(--mouse-y,50%),#FFBD8C,#FD8585,#F882FF,#8785FE,#9AFCFF,#99FD9C,#FFFD84,#FFBD8C);
+opacity:.9;
 }
 
-/* ---------- card shell ---------- */
-
-body#organizations .card{
-  position:relative;
-  border-radius:16px;
-  background:#111;
-  cursor:pointer;
-  min-height:300px;
-  overflow:hidden;
-  outline:none;
-  transition:transform .25s ease;
+.org-card::after{
+content:"";
+position:absolute;
+inset:1px;
+background:radial-gradient(320px circle at var(--mouse-x,50%) var(--mouse-y,50%),rgba(255,255,255,.18),rgba(0,0,0,.95)), url("images/textures/noise-top.png");
+border-radius:17px;
 }
 
-body#organizations .card:hover{
-  transform:translateY(-4px);
+.org-card-inner{
+position:relative;
+z-index:2;
+padding:22px;
+text-align:center;
+background:#1e1e1e;
+border-radius:17px;
 }
 
-/* ---------- glow layers ---------- */
-
-body#organizations .card::before,
-body#organizations .card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius:inherit;
-  opacity:0;
-  transition:opacity .35s ease;
+.org-logo{
+max-width:130px;
+max-height:130px;
+object-fit:contain;
+margin-bottom:12px;
 }
 
-/* turn glow on when hovering grid */
-body#organizations #cards:hover .card::before,
-body#organizations #cards:hover .card::after{
-  opacity:1;
+.org-desc{
+opacity:.85;
+font-size:.9rem;
 }
 
-/* rainbow edge glow */
-
-body#organizations .card::before{
-  background:
-    conic-gradient(
-      from 0deg at var(--mouse-x,50%) var(--mouse-y,50%),
-      #FFBD8C,
-      #FD8585,
-      #F882FF,
-      #8785FE,
-      #9AFCFF,
-      #99FD9C,
-      #FFFD84,
-      #FFBD8C
-    );
-  z-index:1;
+.org-tags{
+display:flex;
+gap:6px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-/* inner light + glitter noise */
-
-body#organizations .card::after{
-  inset:1px;
-  border-radius:15px;
-  background:
-    radial-gradient(
-      320px circle at var(--mouse-x,50%) var(--mouse-y,50%),
-      rgba(255,255,255,.18),
-      rgba(0,0,0,.92)
-    ),
-    url("images/textures/noise-top.png");
-  background-blend-mode:screen,normal;
-  z-index:2;
+.org-tags span{
+background:#333;
+padding:4px 10px;
+border-radius:999px;
+font-size:.7rem;
 }
 
-/* ---------- card content surface ---------- */
-
-body#organizations .card-content{
-  position:relative;
-  z-index:3;
-  background:rgba(34,34,34,.92);
-  border-radius:15px;
-  padding:22px 20px 18px;
-  color:#fff;
-
-  display:flex;
-  flex-direction:column;
-  text-align:center;
-
-  box-shadow:
-    inset 0 0 0 1px rgba(255,255,255,.06),
-    0 20px 40px rgba(0,0,0,.6);
+.org-details{
+max-height:0;
+overflow:hidden;
+opacity:0;
+transition:.4s;
 }
 
-/* ---------- hero image ---------- */
-
-body#organizations .org-image{
-  height:150px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:12px;
-}
-
-body#organizations .org-image img{
-  max-width:130px;
-  max-height:130px;
-  object-fit:contain;
-}
-
-/* ---------- title + summary ---------- */
-
-body#organizations .org-title{
-  font-size:1.05rem;
-  font-weight:600;
-  margin:6px 0;
-}
-
-body#organizations .org-desc{
-  font-size:.9rem;
-  opacity:.85;
-  line-height:1.4;
-}
-
-/* ---------- tags ---------- */
-
-body#organizations .org-tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:6px;
-  justify-content:center;
-  margin-top:12px;
-}
-
-body#organizations .org-tags span{
-  font-size:.7rem;
-  padding:4px 10px;
-  border-radius:999px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.14);
-  opacity:.95;
-}
-
-/* ---------- expand hint ---------- */
-
-body#organizations .org-expand-hint{
-  margin-top:auto;
-  padding-top:16px;
-  font-size:.7rem;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  opacity:.55;
-}
-
-/* ---------- expandable details ---------- */
-
-body#organizations .org-details{
-  max-height:0;
-  overflow:hidden;
-  opacity:0;
-  transition:
-    max-height .45s cubic-bezier(.4,0,.2,1),
-    opacity .25s ease;
-  margin-top:14px;
-}
-
-body#organizations .card.open .org-details{
-  max-height:520px;
-  opacity:1;
-}
-
-body#organizations .card.open .org-expand-hint{
-  opacity:0;
-}
-
-/* ---------- details text ---------- */
-
-body#organizations .org-details p{
-  margin:0 0 10px;
-  font-size:.85rem;
-  line-height:1.5;
-  opacity:.88;
-}
-
-body#organizations .tech{
-  margin-top:10px;
-  font-size:.78rem;
-  opacity:.72;
-}
-/* ===== ORG CARD LAYOUT CORRECTION ===== */
-
-body#organizations .card-content{
-  display:flex !important;
-  flex-direction:column !important;
-  text-align:center !important;
-}
-
-body#organizations .org-title{
-  text-align:center !important;
-}
-
-body#organizations .org-desc{
-  text-align:center !important;
-  max-width: 32ch;
-  margin-inline:auto;
-}
-
-body#organizations .org-tags{
-  justify-content:center !important;
+.org-card.open .org-details{
+max-height:400px;
+opacity:1;
 }
 
 
