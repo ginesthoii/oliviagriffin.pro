@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Organizations — Olivia Griffin</title>
 
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="main.js"></script>
-
+<link rel="stylesheet" href="orgs.css">
+  <script defer src="orgs.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap" rel="stylesheet"/>
 </head>
 
@@ -36,254 +35,809 @@
   </div>
 
   <section class="org-grid">
-    <div id="cards" class="cards-grid">
+    <div class="cards">
 
 <!-- room-reader -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/room-reader.png" alt="room-reader"></div>
-<h3 class="org-title">room-reader</h3>
-<p class="org-desc">Room-level care visibility for assisted living and nursing homes. Offline-first. No cameras.</p>
-<div class="org-tags"><span>ESP32</span><span>NFC</span><span>Healthcare</span></div>
-<div class="org-details">
-<p>Uses intentional NFC taps at doorway and bedside to confirm real care events without invasive monitoring. Designed for dignity, transparency, and outage resilience.</p>
-<p class="tech"><strong>Tech:</strong> ESP32 · PN532 · NTAG213 · Raspberry Pi · FastAPI · SQLite · Python</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/room-reader.png" alt="room-reader">
+</div>
+
+<button class="card-title">✦ room-reader</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Room-level care visibility using NFC tap checkpoints for assisted living and nursing care. Confirms real care events without cameras or invasive monitoring. Built for dignity, transparency, and outage resilience.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>ESP32 · PN532 NFC · NTAG213 · Raspberry Pi · FastAPI · SQLite · Python · Offline sync</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Healthcare</span><span>NFC</span><span>Offline-first</span><span>IoT</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- CaregiverQR -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/caregiver-qr.png" alt="CaregiverQR"></div>
-<h3 class="org-title">CaregiverQR</h3>
-<p class="org-desc">Lightweight QR-based care tracking for families and facilities.</p>
-<div class="org-tags"><span>QR</span><span>Care</span></div>
-<div class="org-details">
-<p>Logs meals, meds, and ADLs with simple scans. Transparency-first, low friction, not a full EMR.</p>
-<p class="tech"><strong>Tech:</strong> QR · Google Sheets · Apps Script · AppSheet · JavaScript</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/caregiver-qr.png" alt="CaregiverQR">
+</div>
+
+<button class="card-title">✦ CaregiverQR</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Lightweight QR-based care tracking for families and small facilities. Logs meals, medications, ADLs, and daily activity with simple scans. Transparency-first, not a heavy EMR platform.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>QR · Google Sheets · Apps Script · AppSheet · JavaScript</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Care</span><span>QR</span><span>Low-friction</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- lorie-ai -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/LORIE.gif" alt="lorie-ai"></div>
-<h3 class="org-title">lorie-ai</h3>
-<p class="org-desc">Local Offline Reasoning Intelligence Engine.</p>
-<div class="org-tags"><span>Local LLM</span><span>RAG</span></div>
-<div class="org-details">
-<p>Offline LLM + retrieval reasoning system for grounded answers without cloud dependency.</p>
-<p class="tech"><strong>Tech:</strong> Local LLMs · RAG · Embeddings · Python · PyQt6 · FastAPI</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/LORIE.gif" alt="lorie-ai">
+</div>
+
+<button class="card-title">✦ lorie-ai</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Local Offline Reasoning Intelligence Engine — offline LLM plus retrieval reasoning for grounded answers on local hardware without cloud dependence.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Local LLMs · RAG · Embeddings · Python · PyQt6 · FastAPI</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>LLM</span><span>Offline</span><span>Knowledge</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- ares-assist -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/ares.png" alt="ares-assist"></div>
-<h3 class="org-title">ares-assist</h3>
-<p class="org-desc">Local-first security and assistive framework.</p>
-<div class="org-tags"><span>Security</span><span>Automation</span></div>
-<div class="org-details">
-<p>Perimeter layer for offline intelligence systems — guardrails, sensors, alerts, control.</p>
-<p class="tech"><strong>Tech:</strong> Python · Sensors · Policy enforcement</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/ares.png" alt="ares-assist">
+</div>
 
+<button class="card-title">✦ ares-assist</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Local-first security and assistive perimeter framework providing guardrails, monitoring, sensors, and control for offline intelligence systems and physical interfaces.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Python · Sensors · Automation · Policy enforcement</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Security</span><span>Automation</span><span>Resilience</span>
+</div>
+</div>
+</div>
+</div>
 <!-- StoryShield -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/storyshield.png" alt="StoryShield"></div>
-<h3 class="org-title">StoryShield</h3>
-<p class="org-desc">Privacy-first reading and writing companion.</p>
-<div class="org-tags"><span>Privacy</span><span>Encryption</span></div>
-<div class="org-details">
-<p>Encrypts reading and creative metadata with transparent controls for writers and researchers.</p>
-<p class="tech"><strong>Tech:</strong> AES-128 · AppSheet · Sheets · JS</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/storyshield.png" alt="StoryShield">
+</div>
+
+<button class="card-title">✦ StoryShield</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Privacy-first reading and creative writing companion that encrypts reading data and creative metadata. Built for writers and researchers who want ownership and behavioral transparency instead of tracking platforms.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>AppSheet · Google Sheets · AES-128 · JavaScript · HTML</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Privacy</span><span>Writing</span><span>Encryption</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- GargoyleOffGrid -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/gargoyle.png" alt="GargoyleOffGrid"></div>
-<h3 class="org-title">GargoyleOffGrid</h3>
-<p class="org-desc">Offline-first resilient infrastructure tools.</p>
-<div class="org-tags"><span>Off-grid</span><span>Infrastructure</span></div>
-<div class="org-details">
-<p>Low-power tooling, resource tracking, and resilience systems for constrained environments.</p>
-<p class="tech"><strong>Tech:</strong> C++ · Python · JS</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/gargoyle.png" alt="GargoyleOffGrid">
+</div>
+
+<button class="card-title">✦ GargoyleOffGrid</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Offline-first resilience and infrastructure toolkit for constrained environments — resource tracking, low-power systems, documentation, and environmental monitoring tools.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>C++ · Python · JavaScript · Offline tooling · Resource tracking</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Off-grid</span><span>Infrastructure</span><span>Resilience</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- PhantomScanner -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/phantom-scanner.png" alt="PhantomScanner"></div>
-<h3 class="org-title">PhantomScanner</h3>
-<p class="org-desc">Multi-repo security scanning engine.</p>
-<div class="org-tags"><span>AppSec</span><span>Automation</span></div>
-<div class="org-details">
-<p>Normalizes scan results across repos into unified dashboards.</p>
-<p class="tech"><strong>Tech:</strong> Python · Semgrep · Trivy · Gitleaks</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/phantom-scanner.png" alt="PhantomScanner">
+</div>
+
+<button class="card-title">✦ PhantomScanner</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Multi-repository security scanning engine that runs automated audits and normalizes results across tools into unified security datasets and dashboards.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Python · Svelte · Semgrep · Bandit · Trivy · Gitleaks · SQLite · Postgres</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>AppSec</span><span>Scanning</span><span>Automation</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- CloakAndCipher -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/cloak-and-cipher.png" alt="CloakAndCipher"></div>
-<h3 class="org-title">CloakAndCipher</h3>
-<p class="org-desc">Developer-first AppSec pipelines.</p>
-<div class="org-tags"><span>CI</span><span>Security</span></div>
-<div class="org-details">
-<p>Drop-in security automation pipelines for real workflows.</p>
-<p class="tech"><strong>Tech:</strong> GitHub Actions · Bandit · Semgrep</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/cloak-and-cipher.png" alt="CloakAndCipher">
+</div>
+
+<button class="card-title">✦ CloakAndCipher</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Developer-first AppSec automation pipelines — reusable CI security components that make static and dynamic analysis part of everyday development instead of theater.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>GitHub Actions · Python · Bandit · Semgrep · Trivy · Secret detection</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>CI</span><span>Security</span><span>AppSec</span>
+</div>
+</div>
+</div>
+</div>
 
 <!-- aFungusAmongUs -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/a-fungus-among-us.jpg" alt="aFungusAmongUs"></div>
-<h3 class="org-title">aFungusAmongUs</h3>
-<p class="org-desc">Fungi learning and cultivation ecosystem.</p>
-<div class="org-tags"><span>Biology</span><span>Education</span></div>
-<div class="org-details">
-<p>Logging, mapping, and mushroom cultivation tools grounded in real practice.</p>
-<p class="tech"><strong>Tech:</strong> Python · Arduino · Data logging</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/a-fungus-among-us.jpg" alt="aFungusAmongUs">
+</div>
+
+<button class="card-title">✦ aFungusAmongUs</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Open-source fungi learning and cultivation ecosystem combining grow logs, seasonal mapping, automation helpers, and safety-first foraging knowledge. Practical, playful, and grounded in real-world mycology.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Python · CLI · Arduino · ESP · Raspberry Pi · Data logging · Seasonal datasets</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Fungi</span><span>Education</span><span>Cultivation</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- WickedBotany -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/wicked-botany.png" alt="WickedBotany"></div>
-<h3 class="org-title">WickedBotany</h3>
-<p class="org-desc">Dangerous plant research suite.</p>
-<div class="org-tags"><span>Botany</span><span>Simulation</span></div>
-<div class="org-details">
-<p>Toxicology, carnivorous plants, and chemical ecology modeling.</p>
-<p class="tech"><strong>Tech:</strong> Python · Simulation · Analytics</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/wicked-botany.png" alt="WickedBotany">
+</div>
+
+<button class="card-title">✦ WickedBotany</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Botanical research and cultivation suite focused on toxic, predatory, and chemically interesting plants — blending simulation, field data, and historical context for serious growers and researchers.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Python · Data modeling · Simulation · Greenhouse automation · Analytics</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Botany</span><span>Toxicology</span><span>Simulation</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- CatholicMedusa -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/catholic-medusa.png" alt="CatholicMedusa"></div>
-<h3 class="org-title">CatholicMedusa</h3>
-<p class="org-desc">Ball python genetics + husbandry platform.</p>
-<div class="org-tags"><span>Genetics</span><span>Husbandry</span></div>
-<div class="org-details">
-<p>Structured breeding, genetics, and care analytics for serious keepers.</p>
-<p class="tech"><strong>Tech:</strong> Python · Java · Modeling</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/catholic-medusa.png" alt="CatholicMedusa">
+</div>
+
+<button class="card-title">✦ CatholicMedusa</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Systems-driven ball python husbandry and genetics platform combining breeding records, modeling, environmental monitoring, and structured care analytics for serious keepers.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Python · Java · Genetics modeling · Sensor integration · APIs · Care analytics</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Genetics</span><span>Husbandry</span><span>Modeling</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- SnakeWitch -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/snakewitch.png" alt="SnakeWitch"></div>
-<h3 class="org-title">SnakeWitch</h3>
-<p class="org-desc">Lightweight snake husbandry utilities.</p>
-<div class="org-tags"><span>CLI</span><span>Utilities</span></div>
-<div class="org-details">
-<p>Quick calculators, logs, and reminders for daily reptile care.</p>
-<p class="tech"><strong>Tech:</strong> Python · CLI</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/snake-witch.png" alt="SnakeWitch">
+</div>
+
+<button class="card-title">✦ SnakeWitch</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Lightweight snake husbandry utilities — quick calculators, reminders, logs, and templates for day-to-day reptile care without heavy platform overhead.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Python · CLI · Google Sheets · AppScript · Templates</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Reptiles</span><span>CLI</span><span>Utilities</span>
+</div>
+</div>
+</div>
+</div>
 
 <!-- hypercalculia -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/hypercalculia.png" alt="hypercalculia"></div>
-<h3 class="org-title">hypercalculia</h3>
-<p class="org-desc">Offline scientific compute engine.</p>
-<div class="org-tags"><span>Math</span><span>Scientific</span></div>
-<div class="org-details">
-<p>Symbolic and numerical computing without cloud dependence.</p>
-<p class="tech"><strong>Tech:</strong> Python · Rust · NumPy · SciPy</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/hypercalculia.jpg" alt="hypercalculia">
+</div>
+
+<button class="card-title">✦ hypercalculia</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Offline-first scientific and mathematical compute engine aggregating symbolic, numerical, and simulation libraries into a reproducible, high-performance local environment.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Python · Rust · C++ · NumPy · SciPy · SymPy · JAX · OpenFOAM</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Scientific</span><span>Compute</span><span>Math</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- SeasonalSidekick -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/seasonal-sidekick.png" alt="SeasonalSidekick"></div>
-<h3 class="org-title">SeasonalSidekick</h3>
-<p class="org-desc">Year-round planning + seasonal automation.</p>
-<div class="org-tags"><span>Planning</span><span>Automation</span></div>
-<div class="org-details">
-<p>Holiday, logistics, safety, and planning helpers — Moose approved.</p>
-<p class="tech"><strong>Tech:</strong> JS · Sheets · AppScript</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/seasonal-sidekick.png" alt="SeasonalSidekick">
+</div>
+
+<button class="card-title">✦ SeasonalSidekick</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+All-season planning and automation toolkit for holidays, logistics, safety, recipes, and family workflows — practical helpers with a playful layer, minus the chaos.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>JavaScript · Web apps · JSON automation · Google Sheets · AppScript · Smart-home hooks</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Planning</span><span>Seasonal</span><span>Automation</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- the-waterworks -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/the-waterworks.gif" alt="the-waterworks"></div>
-<h3 class="org-title">the-waterworks</h3>
-<p class="org-desc">Water + utility system tooling.</p>
-<div class="org-tags"><span>Infrastructure</span></div>
-<div class="org-details">
-<p>Utility modeling, documentation, and operations tracking.</p>
-<p class="tech"><strong>Tech:</strong> PHP · Scripts</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/the-waterworks.gif" alt="the-waterworks">
+</div>
+
+<button class="card-title">✦ the-waterworks</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Utility and water system tooling for modeling, documenting, and managing real-world infrastructure — focused on clarity, durability, and offline access.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>PHP · Utility scripts · Documentation systems · Offline workflows</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Utilities</span><span>Infrastructure</span><span>Ops</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- AlexandriaArchiveAPI -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/alexandria.png" alt="AlexandriaArchiveAPI"></div>
-<h3 class="org-title">AlexandriaArchiveAPI</h3>
-<p class="org-desc">Ancient + medieval history data APIs.</p>
-<div class="org-tags"><span>History</span><span>API</span></div>
-<div class="org-details">
-<p>Structured cultural history datasets and schemas.</p>
-<p class="tech"><strong>Tech:</strong> Python · SQLite · APIs</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/alexandria.png" alt="AlexandriaArchiveAPI">
+</div>
+
+<button class="card-title">✦ AlexandriaArchiveAPI</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Code-first ancient and medieval history archive and API ecosystem — structured datasets and schemas covering how people actually lived, worked, and survived across civilizations.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Python · SQLite · Structured schemas · APIs · Historical data modeling</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>History</span><span>API</span><span>Datasets</span>
+</div>
+</div>
+</div>
+</div>
 
 <!-- Olivision -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/olivision.gif" alt="Olivision"></div>
-<h3 class="org-title">Olivision</h3>
-<p class="org-desc">Visual journaling + reflective tracking.</p>
-<div class="org-tags"><span>Insight</span></div>
-<div class="org-details">
-<p>Pattern-based personal reflection tools without gamification.</p>
-<p class="tech"><strong>Tech:</strong> Python · TypeScript</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/olivision.gif" alt="Olivision">
+</div>
+
+<button class="card-title">✦ Olivision</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Reflective visual journaling and gentle insight tools — turns habits and life patterns into visible signals without gamification or pressure. Built for self-understanding, not optimization theater.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Python · TypeScript · App-first design · Privacy-respecting models</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Reflection</span><span>Journaling</span><span>Insight</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- TheRestOfUs -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/the-rest-of-us.png" alt="TheRestOfUs"></div>
-<h3 class="org-title">TheRestOfUs</h3>
-<p class="org-desc">Narrative survival game.</p>
-<div class="org-tags"><span>Game Dev</span></div>
-<div class="org-details">
-<p>Grounded Midwest survival storytelling.</p>
-<p class="tech"><strong>Tech:</strong> Godot 4</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/the-rest-of-us.png" alt="TheRestOfUs">
+</div>
+
+<button class="card-title">✦ TheRestOfUs</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Narrative survival game set in a post-collapse Midwest — grounded storytelling, environmental realism, and human-scale survival rather than spectacle.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Godot 4 · Narrative systems · Environment design · Indie architecture</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>GameDev</span><span>Narrative</span><span>Survival</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- SelfTaughtSandbox -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/sandbox.png" alt="SelfTaughtSandbox"></div>
-<h3 class="org-title">SelfTaughtSandbox</h3>
-<p class="org-desc">Structured self-teaching lab system.</p>
-<div class="org-tags"><span>Learning</span></div>
-<div class="org-details">
-<p>Skill-track organized project + lab library.</p>
-<p class="tech"><strong>Tech:</strong> Manuals · Labs · Templates</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/sandbox.png" alt="SelfTaughtSandbox">
+</div>
+
+<button class="card-title">✦ SelfTaughtSandbox</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Structured self-teaching lab organized by skill tracks — projects, experiments, manuals, templates, and repeatable practice builds across dev, security, AI, automation, and hardware.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Skill tracks · Manuals · Templates · Labs · Project frameworks</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Learning</span><span>Labs</span><span>Skill-building</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- character-creator -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/character-creator.jpg" alt="character-creator"></div>
-<h3 class="org-title">character-creator</h3>
-<p class="org-desc">Character engineering suite.</p>
-<div class="org-tags"><span>Creative</span><span>Psychology</span></div>
-<div class="org-details">
-<p>Identity scaffolding + psychology-driven character design.</p>
-<p class="tech"><strong>Tech:</strong> Blender · Python</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/character-creator.jpg" alt="character-creator">
+</div>
+
+<button class="card-title">✦ character-creator</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Character engineering suite combining visual creation, identity scaffolding, and psychology-driven structure so characters stay coherent across stories, games, and worldbuilding systems.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Blender · Python · Automation · AI-assisted planning · Psychology models</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Creative</span><span>Characters</span><span>Worldbuilding</span>
+</div>
+</div>
+</div>
+</div>
 
 <!-- LazyDaisyAcres -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/lazy-daisy-acres.png" alt="LazyDaisyAcres"></div>
-<h3 class="org-title">LazyDaisyAcres</h3>
-<p class="org-desc">Automation-first homestead systems.</p>
-<div class="org-tags"><span>Homestead</span></div>
-<div class="org-details">
-<p>DIY builds, SOPs, offline tracking for property ops.</p>
-<p class="tech"><strong>Tech:</strong> Sensors · SOPs · Dashboards</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/lazy-daisy-acres.png" alt="LazyDaisyAcres">
+</div>
+
+<button class="card-title">✦ LazyDaisyAcres</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Automation-first homestead systems org focused on modular DIY infrastructure, low-maintenance routines, and offline-first tracking across animals, gardens, greenhouse, and property operations.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Offline-first · SOPs · Sensor modules · Dashboards · Field logs</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Homestead</span><span>Automation</span><span>Systems</span>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- HiveBeeWare -->
-<div class="card expandable"><div class="card-content">
-<div class="org-image"><img src="/images/orgs/hive-bee-ware.gif" alt="HiveBeeWare"></div>
-<h3 class="org-title">HiveBeeWare</h3>
-<p class="org-desc">Smart apiary + telemetry platform.</p>
-<div class="org-tags"><span>Beekeeping</span><span>IoT</span></div>
-<div class="org-details">
-<p>Hive telemetry, inspection dashboards, wax + honey workflows.</p>
-<p class="tech"><strong>Tech:</strong> ESP32 · Sensors · Telemetry</p>
-</div></div></div>
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/hive-bee-ware.gif" alt="HiveBeeWare">
+</div>
 
-    </div>
-  </section>
+<button class="card-title">✦ HiveBeeWare</button>
 
-</main>
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Smart apiary platform combining hive builds with IoT telemetry — hive weight and environment sensors, offline inspection dashboards, alerts, and wax and honey processing workflows.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>ESP32 · Sensors · Telemetry · Offline dashboards · 3D prints</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Beekeeping</span><span>IoT</span><span>Telemetry</span>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- mini-farm-animals -->
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/mini-farm-animals.gif" alt="mini-farm-animals">
+</div>
+
+<button class="card-title">✦ mini-farm-animals</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Practical knowledge base for mixed-species animal husbandry — housing, feeding, health, and care workflows across poultry, rabbits, livestock, and working animals.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Structured documentation · Species datasets · Care workflows</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Animals</span><span>Husbandry</span><span>Care</span>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- mini-farm-plants -->
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/mini-farm-plants.gif" alt="mini-farm-plants">
+</div>
+
+<button class="card-title">✦ mini-farm-plants</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Crop and plant care system for small farms and homesteads — planting schedules, soil needs, automation experiments, and seasonal crop management.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>C++ experiments · Ag data models · Care schedules</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Crops</span><span>Plants</span><span>Ag</span>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- self-sufficient-homestead -->
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/self-sufficient-homestead.gif" alt="self-sufficient-homestead">
+</div>
+
+<button class="card-title">✦ self-sufficient-homestead</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Systems-first framework for building a resilient, self-sustaining homestead — coordinating animals, water, infrastructure, and energy with reliability-focused automation.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>Automation workflows · Embedded systems · Offline-first design</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Resilience</span><span>Infrastructure</span><span>Off-grid</span>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- small-land-management -->
+<div class="card">
+<div class="card-content">
+<div class="card-image">
+<img src="images/orgs/small-land-management.gif" alt="small-land-management">
+</div>
+
+<button class="card-title">✦ small-land-management</button>
+
+<div class="card-section">
+<h4>ABOUT</h4>
+<p>
+Integrated planning and operations framework for managing small acreage — animals, crops, utilities, sensors, security, and long-term sustainability planning in one system model.
+</p>
+</div>
+
+<div class="card-section">
+<h4>TECH</h4>
+<p>OpenSCAD · Sensor systems · Automation · AI-assisted planning</p>
+</div>
+
+<div class="card-section tags">
+<h4>TAGS</h4>
+<div class="tag-list">
+<span>Land</span><span>Planning</span><span>Ops</span>
+</div>   <!-- .card-section tags -->
+</div>   <!-- .card-content -->
+</div>   <!-- .card -->
+
+    </div>       
+  </section>     
+</main>          
 
 <footer class="footer">
   <p>© 2025 Olivia Griffin</p>
@@ -291,3 +845,7 @@
 
 </body>
 </html>
+
+
+
+
