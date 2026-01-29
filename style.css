@@ -2046,4 +2046,26 @@ body#organizations .tech{
   font-size:.78rem;
   opacity:.72;
 }
+/* ===== ORG CARD LAYOUT CORRECTION ===== */
+
+body#organizations .card-content{
+  display:flex !important;
+  flex-direction:column !important;
+  text-align:center !important;
+}
+
+body#organizations .org-title{
+  text-align:center !important;
+}
+
+body#organizations .org-desc{
+  text-align:center !important;
+  max-width: 32ch;
+  margin-inline:auto;
+}
+
+body#organizations .org-tags{
+  justify-content:center !important;
+}
+
 
