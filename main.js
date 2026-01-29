@@ -135,48 +135,14 @@ document.addEventListener('DOMContentLoaded', () => {
    ORG CARDS — glow + expand
 ========================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("pointermove", e=>{
+document.querySelectorAll(".org-card").forEach(card=>{
+const r=card.getBoundingClientRect();
+card.style.setProperty("--mouse-x",((e.clientX-r.left)/r.width)*100+"%");
+card.style.setProperty("--mouse-y",((e.clientY-r.top)/r.height)*100+"%");
+});
+});
 
-  const wrap = document.getElementById("cards");
-  if (!wrap) return;
-
-  /* ---- glow tracking ---- */
-
-  wrap.addEventListener("pointermove", e => {
-    wrap.querySelectorAll(".card").forEach(card => {
-      const r = card.getBoundingClientRect();
-      const x = ((e.clientX - r.left) / r.width) * 100;
-      const y = ((e.clientY - r.top) / r.height) * 100;
-      card.style.setProperty("--mouse-x", x + "%");
-      card.style.setProperty("--mouse-y", y + "%");
-    });
-  });
-
-  wrap.querySelectorAll(".card").forEach(card => {
-    card.addEventListener("mouseleave", () => {
-      card.style.setProperty("--mouse-x","50%");
-      card.style.setProperty("--mouse-y","50%");
-    });
-  });
-
-  /* ---- expand toggle ---- */
-
-  wrap.querySelectorAll(".card.expandable").forEach(card => {
-    card.setAttribute("tabindex","0");
-
-    const toggle = () => {
-      const open = card.classList.toggle("open");
-      card.setAttribute("aria-expanded", open);
-    };
-
-    card.addEventListener("click", toggle);
-
-    card.addEventListener("keydown", e => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        toggle();
-      }
-    });
-  });
-
+document.querySelectorAll(".org-card").forEach(card=>{
+card.addEventListener("click",()=>card.classList.toggle("open"));
 });
