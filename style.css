@@ -1988,3 +1988,144 @@ body#organizations .tech{
   font-size: 0.85rem;
   opacity: 0.85;
 }
+/* ===============================
+   ORGANIZATIONS
+================================ */
+
+body#organizations{
+  background:#000;
+  color:#fff;
+  font-family:'Lato',system-ui,sans-serif;
+}
+
+.org-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:26px;
+  max-width:1200px;
+  margin:60px auto;
+  padding:0 20px;
+}
+
+.card{
+  background:radial-gradient(
+    120% 120% at 30% 0%,
+    rgba(255,255,255,.08),
+    rgba(255,255,255,.02)
+  );
+  border-radius:18px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.08),
+    0 18px 40px rgba(0,0,0,.6);
+  transition:transform .25s ease;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+}
+
+.org-card{
+  min-height:460px;
+  padding:26px 22px;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
+
+/* HERO */
+
+.org-hero{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.org-image{
+  height:150px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:14px;
+}
+
+.org-image img{
+  max-width:130px;
+  max-height:130px;
+  object-fit:contain;
+}
+
+.org-title{
+  font-size:1.05rem;
+  font-weight:600;
+  margin:6px 0;
+}
+
+.org-desc{
+  font-size:.85rem;
+  opacity:.8;
+  max-width:28ch;
+  line-height:1.4;
+}
+
+/* TAGS */
+
+.org-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  justify-content:center;
+  margin-top:14px;
+}
+
+.org-tags span{
+  font-size:.7rem;
+  padding:4px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+}
+
+/* EXPAND HINT */
+
+.org-expand-hint{
+  margin-top:auto;
+  padding-top:16px;
+  font-size:.7rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  opacity:.55;
+  cursor:pointer;
+}
+
+/* DETAILS */
+
+.org-details{
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transition:
+    max-height 420ms cubic-bezier(.4,0,.2,1),
+    opacity 220ms ease;
+  margin-top:14px;
+}
+
+.card.open .org-details{
+  max-height:500px;
+  opacity:1;
+}
+
+.card.open .org-expand-hint{
+  opacity:0;
+}
+
+.org-details p{
+  font-size:.82rem;
+  line-height:1.5;
+  opacity:.85;
+}
+
+.org-details .tech{
+  margin-top:10px;
+  font-size:.75rem;
+  opacity:.75;
+}
