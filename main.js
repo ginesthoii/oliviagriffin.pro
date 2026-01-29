@@ -175,3 +175,9 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener('mousemove', onMove);
     card.addEventListener('mouseleave', onLeave);
   });
+
+document.querySelectorAll(".card.expandable").forEach(card => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("open");
+  });
+});
