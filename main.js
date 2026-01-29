@@ -131,53 +131,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    /* =========================================
-   ORGANIZATIONS: glow tracking + expandable cards
+  /* =========================================
+   ORG CARDS — glow + expand
 ========================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
-  const cardsWrap = document.getElementById("cards");
-  if (!cardsWrap) return;
 
-  // Glow mouse tracking
-  cardsWrap.addEventListener("pointermove", (e) => {
-    const cards = cardsWrap.getElementsByClassName("card");
-    for (const card of cards) {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      card.style.setProperty("--mouse-x", `${x}px`);
-      card.style.setProperty("--mouse-y", `${y}px`);
-    }
+  const wrap = document.getElementById("cards");
+  if (!wrap) return;
+
+  /* ---- glow tracking ---- */
+
+  wrap.addEventListener("pointermove", e => {
+    wrap.querySelectorAll(".card").forEach(card => {
+      const r = card.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width) * 100;
+      const y = ((e.clientY - r.top) / r.height) * 100;
+      card.style.setProperty("--mouse-x", x + "%");
+      card.style.setProperty("--mouse-y", y + "%");
+    });
   });
 
-  // Expand/collapse (click)
-  const expandables = cardsWrap.querySelectorAll(".card.expandable");
-  expandables.forEach((card) => {
+  wrap.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("mouseleave", () => {
+      card.style.setProperty("--mouse-x","50%");
+      card.style.setProperty("--mouse-y","50%");
+    });
+  });
+
+  /* ---- expand toggle ---- */
+
+  wrap.querySelectorAll(".card.expandable").forEach(card => {
+    card.setAttribute("tabindex","0");
+
     const toggle = () => {
-      const isOpen = card.classList.toggle("open");
-      card.setAttribute("aria-expanded", String(isOpen));
+      const open = card.classList.toggle("open");
+      card.setAttribute("aria-expanded", open);
     };
 
     card.addEventListener("click", toggle);
 
-    // Keyboard: Enter/Space
-    card.addEventListener("keydown", (ev) => {
-      if (ev.key === "Enter" || ev.key === " ") {
-        ev.preventDefault();
+    card.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
         toggle();
       }
     });
   });
-});
 
-
-    card.addEventListener('mousemove', onMove);
-    card.addEventListener('mouseleave', onLeave);
-  });
-
-document.querySelectorAll(".card.expandable").forEach(card => {
-  card.addEventListener("click", () => {
-    card.classList.toggle("open");
-  });
 });
