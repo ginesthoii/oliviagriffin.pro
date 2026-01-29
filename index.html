@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Meta -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Olivia Griffin — Portfolio</title>
@@ -12,7 +13,10 @@
   <link rel="manifest" href="images/site.webmanifest" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap"
+    rel="stylesheet"
+  />
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
@@ -20,57 +24,69 @@
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<header class="header">
-  <nav class="nav-inner" aria-label="Main">
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="about.html">About</a>
-      <a href="#projects-visual">Projects</a>
-      <a href="organizations.html">Organizations</a>
-      <a href="#contact">Contact</a>
-    </div>
+  <!-- ===== NAVBAR ===== -->
+  <header class="header">
+    <nav class="nav-inner" aria-label="Main">
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="organizations.html">Organizations</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-    <button id="menu-icon" class="hamb" aria-expanded="false" aria-controls="mobile-nav">
-      ☰
-    </button>
-  </nav>
+      <button
+        id="menu-icon"
+        class="hamb"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        ☰
+      </button>
+    </nav>
 
-  <div id="mobile-nav" class="nav-bg" aria-label="Mobile Navigation"></div>
-</header>
+    <!-- Mobile drawer (JS fills this from desktop links) -->
+    <div id="mobile-nav" class="nav-bg" aria-label="Mobile Navigation"></div>
+  </header>
 
-<main>
+  <main>
 
-<!-- ===== HERO ===== -->
-<section id="home" class="hero">
-  <div class="title-wrap">
-    <h1>Olivia Griffin</h1>
-    <h2>Portfolio</h2>
-  </div>
-</section>
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero" aria-label="Intro">
+      <div class="title-wrap">
+        <h1>Olivia Griffin</h1>
+        <h2>Portfolio</h2>
+      </div>
+    </section>
 
-<!-- ===== FEATURE BAND ===== -->
-<section class="feature-band">
-  <div class="feature-wrap">
-    <div class="feature-copy">
-      <h2 class="roles">
-        <span class="line">Security-Minded Developer</span>
-        <span class="dot">•</span>
-        <span class="line">Full-Stack</span>
-        <span class="dot">•</span>
-        <span class="line">AppSec Automation & DevSecOps</span>
-      </h2>
-      <p class="next-steps">
-        Building systems that merge modern web development with security-first thinking.
-      </p>
-    </div>
-  </div>
-</section>
+    <!-- ===== FEATURE BAND ===== -->
+    <section class="feature-band" id="feature" aria-label="Focus Areas">
+      <div class="feature-wrap">
+        <div class="feature-copy">
+          <h2 class="roles">
+            <span class="line">Security-Minded Developer</span>
+            <span class="dot" aria-hidden="true">•</span>
+            <span class="line">Full-Stack</span>
+            <span class="dot" aria-hidden="true">•</span>
+            <span class="line">AppSec Automation &amp; DevSecOps</span>
+          </h2>
+
+          <p class="next-steps">
+            Next Steps: Expanding projects that merge application security with modern web development.
+          </p>
+        </div>
+      </div>
+
+      <!-- Phone pinned bottom-right -->
+      <div class="feature-mock" aria-hidden="true">
+        <img src="images/icons/iphone1.png" alt="" />
+      </div>
+    </section>
 
   
 <!-- ===== ABOUT ===== -->
-  
-<section id="about" class="about">
+    
+<section id="about" class="about" aria-label="About">
   <div class="section-intro">
     <h5>About</h5>
     <h1>Let me introduce myself.</h1>
@@ -78,53 +94,209 @@
   </div>
 
   <div class="about-content">
+    <!-- LEFT COLUMN -->
     <div class="about-col profile">
       <h3>Profile</h3>
 
       <ul class="info-list">
-        <li><strong>Name:</strong><span class="value">Olivia Griffin</span></li>
+        <li>
+          <strong>Name:</strong>
+          <span class="value">Olivia Griffin</span>
+        </li>
+
         <li>
           <strong>Profession:</strong>
-          <span class="value">Full-Stack Developer<br>Security Emphasis</span>
+          <span class="value">Full-Stack Developer<br>with Security Emphasis</span>
         </li>
+
         <li>
           <strong>Education:</strong>
           <span class="value">
-            University of Missouri, Columbia<br>
-            Washington University Cybersecurity
+            University of Missouri, Columbia - Graduate<br>
+            Washington University Cybersecurity Certification
           </span>
         </li>
       </ul>
 
       <div class="link-row">
         <a class="spark-btn" href="mailto:oliviagriffindev@gmail.com">Email</a>
-        <a class="spark-btn" href="https://github.com/ginesthoii" target="_blank">GitHub</a>
+        <a class="spark-btn" href="https://github.com/ginesthoii" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
 
+    <!-- RIGHT COLUMN -->
     <div class="about-col skills">
       <h3>Core Skills</h3>
+      <p>Specializations.</p>
+
       <ul class="skill-bars">
         <li>
-          <div class="skill-head"><span>HTML + Accessibility</span><span>90%</span></div>
+          <div class="skill-head">
+            <span class="skill-name">HTML + Accessibility</span>
+            <span class="skill-pct">90%</span>
+          </div>
           <div class="skill-bar" style="--pct:90%"></div>
         </li>
+
         <li>
-          <div class="skill-head"><span>CSS + Responsive UI</span><span>85%</span></div>
+          <div class="skill-head">
+            <span class="skill-name">CSS + Responsive UI</span>
+            <span class="skill-pct">85%</span>
+          </div>
           <div class="skill-bar" style="--pct:85%"></div>
         </li>
+
         <li>
-          <div class="skill-head"><span>JavaScript</span><span>70%</span></div>
+          <div class="skill-head">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-pct">70%</span>
+          </div>
           <div class="skill-bar is-muted" style="--pct:70%"></div>
         </li>
+
         <li>
-          <div class="skill-head"><span>Python + Automation</span><span>95%</span></div>
+          <div class="skill-head">
+            <span class="skill-name">SQL + Data Modeling</span>
+            <span class="skill-pct">95%</span>
+          </div>
           <div class="skill-bar" style="--pct:95%"></div>
+        </li>
+
+        <li>
+          <div class="skill-head">
+            <span class="skill-name">Python + Automation</span>
+            <span class="skill-pct">95%</span>
+          </div>
+          <div class="skill-bar" style="--pct:95%"></div>
+        </li>
+
+        <li>
+          <div class="skill-head">
+            <span class="skill-name">Security Fundamentals</span>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-bar is-muted" style="--pct:75%"></div>
         </li>
       </ul>
     </div>
   </div>
 </section>
+    
+    
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section class="certifications-section" id="certifications" aria-label="Certifications">
+      <div class="section-intro">
+        <h5>Credentials</h5>
+        <h1>Certifications</h1>
+        <p class="lead">Verified training and security fundamentals.</p>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-item">
+          <img class="cert-badge" src="images/badges/security-plus-badge.png" alt="CompTIA Security+ badge" />
+          <div class="cert-card">
+            <div class="cert-name">CompTIA Security+</div>
+          </div>
+        </div>
+
+        <div class="cert-item">
+          <img class="cert-badge" src="images/badges/washu-cyber.png" alt="WashU Cybersecurity Certification badge" />
+          <div class="cert-card">
+            <div class="cert-name">WashU Cybersecurity Certification</div>
+          </div>
+        </div>
+
+        <div class="cert-item">
+          <img class="cert-badge" src="images/badges/mizzou-multicultural.png" alt="Multicultural Certificate — Mizzou badge" />
+          <div class="cert-card">
+            <div class="cert-name">Multicultural Certificate (Mizzou)</div>
+          </div>
+        </div>
+
+        <div class="cert-item">
+          <img class="cert-badge" src="images/badges/oracle-ai-foundations.png" alt="Oracle AI Foundations badge" />
+          <div class="cert-card">
+            <div class="cert-name">Oracle AI Foundations (OCI)</div>
+          </div>
+        </div>
+
+        <div class="cert-item">
+          <img class="cert-badge" src="images/badges/oracle-tech-jumpstart.png" alt="Oracle Tech Jumpstart badge" />
+          <div class="cert-card">
+            <div class="cert-name">Oracle Tech Jumpstart</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- ===== ICON STACK SECTION ===== -->
+    
+    <section class="icon-stack" id="icons" aria-label="Icon Showcase">
+      <div class="section-intro">
+        <h5>Tools & Platforms</h5>
+        <h1>Tech Stack & Systems</h1>
+        <p class="lead">Tools I build with across web, security, automation, and IoT.how</p>
+      </div>
+
+      <div class="icon-wrapper">
+        <img src="images/icons/icon1.jpg" alt="Icon 1" class="icon" loading="lazy" />
+        <img src="images/icons/icon2.jpg" alt="Icon 2" class="icon" loading="lazy" />
+      </div>
+    </section>
+
+    
+
+    <!-- ===== STATS ===== -->
+
+    <section id="stats" class="stats-section" aria-labelledby="stats-title">
+      <div class="section-intro">
+        <h5>Stats</h5>
+        <h1 id="stats-title">By the Numbers</h1>
+      </div>
+
+      <div class="stats-list">
+        <article class="stat">
+          <div class="icon-part" aria-hidden="true"><i class="icon-pencil-ruler"></i></div>
+          <h3 class="stat-count" data-target="115">0</h3>
+          <h5 class="stat-title">Projects Completed</h5>
+        </article>
+
+        <article class="stat">
+          <div class="icon-part" aria-hidden="true"><i class="icon-users"></i></div>
+          <h3 class="stat-count" data-target="5">0</h3>
+          <h5 class="stat-title">Certifications</h5>
+        </article>
+
+        <article class="stat">
+          <div class="icon-part" aria-hidden="true"><i class="icon-badge"></i></div>
+          <h3 class="stat-count" data-target="4">0</h3>
+          <h5 class="stat-title">Awards</h5>
+        </article>
+
+        <article class="stat">
+          <div class="icon-part" aria-hidden="true"><i class="icon-light-bulb"></i></div>
+          <h3 class="stat-count" data-target="2000">0</h3>
+          <h5 class="stat-title">Crazy Ideas</h5>
+        </article>
+
+        <article class="stat">
+          <div class="icon-part" aria-hidden="true"><i class="icon-cup"></i></div>
+          <h3 class="stat-count" data-target="1500">0</h3>
+          <h5 class="stat-title">Coffee Cups</h5>
+        </article>
+
+        <article class="stat">
+          <div class="icon-part" aria-hidden="true"><i class="icon-clock"></i></div>
+          <h3 class="stat-count" data-target="7200">0</h3>
+          <h5 class="stat-title">Hours</h5>
+        </article>
+      </div>
+    </section>
+
+
+
 
 
 <!-- =====================================================
@@ -201,34 +373,51 @@
 </section>
 
 
-<!-- ===== CONTACT ===== -->
+    
+
+    <!-- ===== CONTACT ===== -->
 <section id="contact" class="contact-section">
-  <div class="section-intro">
-    <h5>Contact</h5>
-    <h1>Let’s connect.</h1>
-    <p class="lead">Send me a message and I’ll get back to you.</p>
-  </div>
+        <div class="section-intro">
+          <h5>Contact</h5>
+          <h1>Let’s connect.</h1>
+          <p class="lead">Send me a message and I’ll get back to you.</p>
+        </div>
 
-  <form class="contact-form" action="https://formspree.io/f/xlggjggb" method="POST">
-    <div class="contact-grid">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="email" placeholder="Your email" required />
-    </div>
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/xlggjggb"
+          method="POST"
+        >
+          <div class="contact-grid">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+          </div>
 
-    <input type="text" name="subject" placeholder="Subject" />
-    <textarea name="message" minlength="15" placeholder="Message" required></textarea>
-    <input type="text" name="_gotcha" style="display:none" />
-    <button type="submit" class="btn-outline">Send Message</button>
-  </form>
-</section>
+          <input type="text" name="subject" placeholder="Subject" />
 
-</main>
+          <textarea
+            name="message"
+            placeholder="Message (at least 15 characters)"
+            minlength="15"
+            required
+          ></textarea>
 
-<footer class="footer">
-  <p>© 2025 Olivia Griffin. All rights reserved.</p>
-</footer>
+          <input type="text" name="_gotcha" style="display:none" />
 
-<script src="main.js" defer></script>
+          <button type="submit" class="btn-outline">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>© 2025 Olivia Griffin. All rights reserved.</p>
+  </footer>
+
+  <!-- JS (end of body) -->
+  <script src="main.js" defer></script>
+
 </body>
 </html>
-
