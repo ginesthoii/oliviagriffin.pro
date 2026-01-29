@@ -65,231 +65,833 @@
     <section id="orgSections" class="org-grid" aria-label="Organizations grid">
       <div id="cards" class="cards-grid">
 
-        <!-- room-reader -->
-        <article class="card expandable" data-org="room-reader" tabindex="0" role="button" aria-expanded="false">
-          <div class="card-content">
-            <img src="images/orgs/room-reader.png" class="org-logo" alt="room-reader logo">
-            <h3>room-reader</h3>
-            <p class="summary">Offline NFC-based care visibility without cameras.</p>
-            <div class="tags">
-              <span>ESP32</span><span>NFC</span><span>Offline-first</span><span>Healthcare</span>
-            </div>
-            <div class="details">
-              <p>Room-level care visibility for assisted living and memory care using intentional NFC taps to record presence and duration.</p>
-              <p class="tech"><strong>Tech:</strong> ESP32 · PN532 · FastAPI · SQLite · Python</p>
-            </div>
-          </div>
-        </article>
+    <div class="org-grid">
 
-        <!-- CaregiverQR -->
-        <article class="card expandable" data-org="CaregiverQR" tabindex="0" role="button" aria-expanded="false">
-          <div class="card-content">
-            <img src="images/orgs/caregiver-qr.png" class="org-logo" alt="CaregiverQR logo">
-            <h3>CaregiverQR</h3>
-            <p class="summary">Lightweight QR-based daily care logging.</p>
-            <div class="tags">
-              <span>QR</span><span>Care</span><span>Low-friction</span>
-            </div>
-            <div class="details">
-              <p>Simple QR scanning system for logging meals, meds, and ADLs without heavy EMR systems.</p>
-              <p class="tech"><strong>Tech:</strong> QR Codes · Google Sheets · AppScript · JavaScript</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- lorie-ai -->
-        <article class="card expandable" data-org="lorie-ai" tabindex="0" role="button" aria-expanded="false">
-          <div class="card-content">
-            <img src="images/orgs/LORIE.gif" class="org-logo" alt="lorie-ai logo">
-            <h3>lorie-ai</h3>
-            <p class="summary">Fully local offline reasoning engine.</p>
-            <div class="tags">
-              <span>Local LLM</span><span>RAG</span><span>Offline</span>
-            </div>
-            <div class="details">
-              <p>Personal offline reasoning system combining curated knowledge and retrieval-augmented generation.</p>
-              <p class="tech"><strong>Tech:</strong> Python · Local LLMs · Embeddings · FastAPI · PyQt</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- ares-assist -->
-        <article class="card expandable" data-org="ares-assist" tabindex="0" role="button" aria-expanded="false">
-          <div class="card-content">
-            <img src="images/orgs/ares.png" class="org-logo" alt="ares-assist logo">
-            <h3>ares-assist</h3>
-            <p class="summary">Local-first security and assistive framework.</p>
-            <div class="tags">
-              <span>Security</span><span>Automation</span><span>Offline</span>
-            </div>
-            <div class="details">
-              <p>Cyber and physical perimeter layer supporting offline intelligence systems.</p>
-              <p class="tech"><strong>Tech:</strong> Python · Sensors · Automation · Policy Enforcement</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- StoryShield -->
-        <article class="card expandable" data-org="StoryShield" tabindex="0" role="button" aria-expanded="false">
-          <div class="card-content">
-            <img src="images/orgs/storyshield.png" class="org-logo" alt="StoryShield logo">
-            <h3>StoryShield</h3>
-            <p class="summary">Privacy-first reading and writing companion.</p>
-            <div class="tags">
-              <span>Privacy</span><span>Writing</span><span>Encryption</span>
-            </div>
-            <div class="details">
-              <p>Protects personal libraries and creative metadata with encryption and access controls.</p>
-              <p class="tech"><strong>Tech:</strong> AppSheet · AES-128 · JavaScript · HTML</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- GargoyleOffGrid -->
-        <article class="card expandable" data-org="GargoyleOffGrid" tabindex="0" role="button" aria-expanded="false">
-          <div class="card-content">
-            <img src="images/orgs/gargoyle.png" class="org-logo" alt="GargoyleOffGrid logo">
-            <h3>GargoyleOffGrid</h3>
-            <p class="summary">Offline-first tools for resilient living.</p>
-            <div class="tags">
-              <span>Off-grid</span><span>Infrastructure</span>
-            </div>
-            <div class="details">
-              <p>Tools and documentation for planning resilient systems under limited power and connectivity.</p>
-              <p class="tech"><strong>Tech:</strong> Python · C++ · Offline Tooling · Documentation</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- PhantomScanner -->
-        <article class="card expandable" data-org="PhantomScanner" tabindex="0" role="button" aria-expanded="false">
-          <div class="card-content">
-            <img src="images/orgs/phantom-scanner.png" class="org-logo" alt="PhantomScanner logo">
-            <h3>PhantomScanner</h3>
-            <p class="summary">Multi-repo security scanning engine.</p>
-            <div class="tags">
-              <span>AppSec</span><span>Automation</span>
-            </div>
-            <div class="details">
-              <p>Aggregates automated security scans across repositories into a unified dataset.</p>
-              <p class="tech"><strong>Tech:</strong> Python · Semgrep · Trivy · SQLite</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- CloakAndCipher -->
-        <article class="card expandable" data-org="CloakAndCipher" tabindex="0" role="button" aria-expanded="false">
-          <div class="card-content">
-            <img src="images/orgs/cloak-and-cipher-3.png" class="org-logo" alt="CloakAndCipher logo">
-            <h3>CloakAndCipher</h3>
-            <p class="summary">Developer-first security automation.</p>
-            <div class="tags">
-              <span>CI</span><span>Security</span>
-            </div>
-            <div class="details">
-              <p>Reusable AppSec pipelines and automation components for real-world workflows.</p>
-              <p class="tech"><strong>Tech:</strong> GitHub Actions · Bandit · Semgrep · Trivy</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- aFungusAmongUs -->
-        <article class="card expandable" data-org="aFungusAmongUs" tabindex="0" role="button" aria-expanded="false">
-          <div class="card-content">
-            <img src="images/orgs/a-fungus-among-us.jpg" class="org-logo" alt="aFungusAmongUs logo">
-            <h3>aFungusAmongUs</h3>
-            <p class="summary">Open-source fungal education ecosystem.</p>
-            <div class="tags">
-              <span>Biology</span><span>Education</span>
-            </div>
-            <div class="details">
-              <p>Learning, logging, and cultivation tools for fungi grounded in real-world practice.</p>
-              <p class="tech"><strong>Tech:</strong> Python · CLI · Sensors · Data Logging</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- WickedBotany -->
-        <article class="card expandable" data-org="WickedBotany" tabindex="0" role="button" aria-expanded="false">
-          <div class="card-content">
-            <img src="images/orgs/wicked-botany.png" class="org-logo" alt="WickedBotany logo">
-            <h3>WickedBotany</h3>
-            <p class="summary">Research suite for dangerous plants.</p>
-            <div class="tags">
-              <span>Botany</span><span>Simulation</span>
-            </div>
-            <div class="details">
-              <p>Explores toxicology, carnivorous plants, and historical plant use.</p>
-              <p class="tech"><strong>Tech:</strong> Python · Data Modeling · Simulation</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- CatholicMedusa -->
-        <article class="card expandable" data-org="CatholicMedusa" tabindex="0" role="button" aria-expanded="false">
-          <div class="card-content">
-            <img src="images/orgs/catholic-medusa.png" class="org-logo" alt="CatholicMedusa logo">
-            <h3>CatholicMedusa</h3>
-            <p class="summary">Ball python husbandry platform.</p>
-            <div class="tags">
-              <span>Husbandry</span><span>Biology</span>
-            </div>
-            <div class="details">
-              <p>Data-driven system for breeding, genetics, and long-term reptile care.</p>
-              <p class="tech"><strong>Tech:</strong> Python · Java · Genetics Modeling</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- SnakeWitch -->
-        <article class="card expandable" data-org="SnakeWitch" tabindex="0" role="button" aria-expanded="false">
-          <div class="card-content">
-            <img src="images/orgs/snake-witch.png" class="org-logo" alt="SnakeWitch logo">
-            <h3>SnakeWitch</h3>
-            <p class="summary">Lightweight snake-keeping tools.</p>
-            <div class="tags">
-              <span>CLI</span><span>Husbandry</span>
-            </div>
-            <div class="details">
-              <p>Quick utilities for feeding schedules, shed prediction, and logs.</p>
-              <p class="tech"><strong>Tech:</strong> Python · AppScript · Markdown</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- LazyDaisyAcres -->
-        <article class="card expandable" data-org="LazyDaisyAcres" tabindex="0" role="button" aria-expanded="false">
-          <div class="card-content">
-            <img src="images/orgs/lazy-daisy-acres.png" class="org-logo" alt="LazyDaisyAcres logo">
-            <h3>LazyDaisyAcres</h3>
-            <p class="summary">Automation-first homestead systems.</p>
-            <div class="tags">
-              <span>Homestead</span><span>Automation</span>
-            </div>
-            <div class="details">
-              <p>Offline-first infrastructure for animals, gardens, and property ops.</p>
-              <p class="tech"><strong>Tech:</strong> Sensors · SOPs · Dashboards</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- HiveBeeWare -->
-        <article class="card expandable" data-org="HiveBeeWare" tabindex="0" role="button" aria-expanded="false">
-          <div class="card-content">
-            <img src="images/orgs/HiveBeeWare.gif" class="org-logo" alt="HiveBeeWare logo">
-            <h3>HiveBeeWare</h3>
-            <p class="summary">Smart apiary platform.</p>
-            <div class="tags">
-              <span>Beekeeping</span><span>IoT</span>
-            </div>
-            <div class="details">
-              <p>Hive telemetry, inspections, alerts, and seasonal tracking.</p>
-              <p class="tech"><strong>Tech:</strong> ESP32 · Sensors · Telemetry · Offline Dashboards</p>
-            </div>
-          </div>
-        </article>
-
+  <!-- room-reader -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/room-reader.png" alt="room-reader">
+        </div>
+        <h3 class="org-title">room-reader</h3>
+        <p class="org-desc">
+          Room-level care visibility for assisted living, memory care, and nursing homes.
+          Offline-first. Secure. No cameras.
+        </p>
+        <div class="org-tags">
+          <span>ESP32</span><span>NFC</span><span>Offline-first</span><span>Healthcare</span>
+        </div>
       </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Uses intentional NFC badge taps at doorway, bedside, and care checkpoints to show when care actually happened —
+          recording presence and duration without audio, video, or invasive monitoring.
+        </p>
+        <p>
+          Designed to respect residents’ dignity, support caregivers by showing the real work they do,
+          and give families clear insight into daily care — even during outages.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          ESP32 · PN532 NFC · NTAG213 · Raspberry Pi · FastAPI · SQLite · Python · Offline-first sync
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CaregiverQR -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/caregiver-qr.png" alt="CaregiverQR">
+        </div>
+        <h3 class="org-title">CaregiverQR</h3>
+        <p class="org-desc">
+          Lightweight QR-based care tracking for caregivers, facilities, and families.
+        </p>
+        <div class="org-tags">
+          <span>QR</span><span>Care</span><span>Low-friction</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Log meals, medications, ADLs, and daily activities with simple scans.
+          Focuses on everyday transparency rather than heavy systems —
+          not a full HIPAA EMR, just a simple shared record families and staff can understand.
+        </p>
+        <p>
+          Built on familiar tools for fast setup and low-friction use,
+          especially suited to homes and smaller care settings.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          QR Codes · Google Sheets · Google Apps Script · AppSheet · JavaScript
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- lorie-ai -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/LORIE.gif" alt="lorie-ai">
+        </div>
+        <h3 class="org-title">lorie-ai</h3>
+        <p class="org-desc">
+          Local Offline Reasoning Intelligence Engine.
+        </p>
+        <div class="org-tags">
+          <span>Local LLM</span><span>RAG</span><span>Offline</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          A personal, fully offline LLM system for unified reasoning and retrieval on local hardware.
+        </p>
+        <p>
+          LORIE combines curated knowledge, retrieval-augmented generation,
+          and cross-domain reasoning to produce grounded answers without relying on the cloud.
+        </p>
+        <p>
+          Designed as a long-term personal knowledge system usable during outages,
+          travel, or low-connectivity environments while remaining fast on consumer hardware.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          Local LLMs · RAG · Embeddings · Python · PyQt6 · FastAPI · Offline-first architecture
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ares-assist -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/ares.png" alt="ares-assist">
+        </div>
+        <h3 class="org-title">ares-assist</h3>
+        <p class="org-desc">
+          Local-first security and assistive framework.
+        </p>
+        <div class="org-tags">
+          <span>Security</span><span>Automation</span><span>Offline</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Acts as the cyber and physical perimeter layer for offline intelligence systems.
+        </p>
+        <p>
+          Provides guardrails, monitoring, and control across digital workflows and real-world
+          interfaces such as sensors, alerts, lighting, and access controls.
+        </p>
+        <p>
+          Designed for predictable behavior and human-in-the-loop oversight,
+          prioritizing safety, privacy, and resilience.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          Python · Local security tooling · Sensors & automation · Policy enforcement · Offline-first design
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- StoryShield -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/storyshield.png" alt="StoryShield">
+        </div>
+        <h3 class="org-title">StoryShield</h3>
+        <p class="org-desc">
+          Privacy-first reading and creative writing companion.
+        </p>
+        <div class="org-tags">
+          <span>Privacy</span><span>Writing</span><span>Encryption</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Designed to protect personal libraries, notes, and creative work.
+        </p>
+        <p>
+          Applies encryption and access controls to reading data and creative metadata,
+          enabling structured workflows without exposing user behavior or habits.
+        </p>
+        <p>
+          Built for writers, researchers, and worldbuilders who want ownership and transparency.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          AppSheet · Google Sheets · AES-128 encryption · JavaScript · HTML
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- GargoyleOffGrid -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/gargoyle.png" alt="GargoyleOffGrid">
+        </div>
+        <h3 class="org-title">GargoyleOffGrid</h3>
+        <p class="org-desc">
+          Offline-first tools for resilient living and infrastructure.
+        </p>
+        <div class="org-tags">
+          <span>Off-grid</span><span>Infrastructure</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          An open-source collection of tools for planning, building, and maintaining resilient systems.
+        </p>
+        <p>
+          Provides documentation, low-power designs, and knowledge preservation tools
+          for constrained conditions.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          C++ · Python · JavaScript · Offline-first tooling · Documentation systems
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PhantomScanner -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/phantom-scanner.png" alt="PhantomScanner">
+        </div>
+        <h3 class="org-title">PhantomScanner</h3>
+        <p class="org-desc">
+          Core automation and security visibility engine.
+        </p>
+        <div class="org-tags">
+          <span>AppSec</span><span>Automation</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Runs automated security audits across many repositories,
+          normalizing results into a unified dataset.
+        </p>
+        <p>
+          Designed to give developers ongoing insight without expensive SaaS platforms.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          Python · Svelte · Semgrep · Bandit · Trivy · Gitleaks · SQLite / Postgres
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CloakAndCipher -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/cloak-and-cipher.png" alt="CloakAndCipher">
+        </div>
+        <h3 class="org-title">CloakAndCipher</h3>
+        <p class="org-desc">
+          Developer-first security automation and AppSec tooling.
+        </p>
+        <div class="org-tags">
+          <span>CI</span><span>Security</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Provides reusable security pipelines and scanners
+          that integrate directly into repositories.
+        </p>
+        <p>
+          Focused on reducing setup friction and security theater.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          GitHub Actions · Python · Bandit · Semgrep · Trivy · Secret detection
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- aFungusAmongUs -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/a-fungus-among-us.jpg" alt="aFungusAmongUs">
+        </div>
+        <h3 class="org-title">aFungusAmongUs</h3>
+        <p class="org-desc">
+          Learning, cultivating, and cooking with fungi.
+        </p>
+        <div class="org-tags">
+          <span>Biology</span><span>Education</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Supports growers, foragers, and learners through logging,
+          seasonal mapping, automation, and recipes.
+        </p>
+        <p>
+          Emphasizes safety, documentation, and ecological respect.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          Python · CLI tools · Arduino / ESP / Raspberry Pi · Data logging
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WickedBotany -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/wicked-botany.png" alt="WickedBotany">
+        </div>
+        <h3 class="org-title">WickedBotany</h3>
+        <p class="org-desc">
+          Botanical research focused on dangerous plants.
+        </p>
+        <div class="org-tags">
+          <span>Botany</span><span>Simulation</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Explores toxicology, carnivorous behavior, and historical plant use.
+        </p>
+        <p>
+          Designed for growers, researchers, and historians seeking understanding over aesthetics.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          Python · Data modeling · Simulation engines · Greenhouse automation
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- CatholicMedusa -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/catholic-medusa.png" alt="CatholicMedusa">
+        </div>
+        <h3 class="org-title">CatholicMedusa</h3>
+        <p class="org-desc">
+          Modular, systems-driven platform for ball python husbandry and breeding.
+        </p>
+        <div class="org-tags">
+          <span>Biology</span><span>Genetics</span><span>Automation</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Blends biological modeling, genetics, environmental monitoring,
+          and software tooling into a unified ecosystem for serious keepers.
+        </p>
+        <p>
+          Designed to replace scattered spreadsheets and guesswork with structured data,
+          traceability, and automation — without sacrificing animal welfare.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          Python · Java · Data modeling · Genetics simulation · Sensor integration · APIs
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SnakeWitch -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/snakewitch.png" alt="SnakeWitch">
+        </div>
+        <h3 class="org-title">SnakeWitch</h3>
+        <p class="org-desc">
+          Lightweight snake-keeping utilities for daily husbandry.
+        </p>
+        <div class="org-tags">
+          <span>CLI</span><span>Utilities</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Focuses on quick calculations, reminders, logs, and templates
+          that support keepers in real time without a full backend.
+        </p>
+        <p>
+          Complements CatholicMedusa by handling the “small but constant” tasks.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          Python · CLI tools · Google Sheets · AppScript · AppSheet · Markdown
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- hypercalculia -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/hypercalculia.png" alt="hypercalculia">
+        </div>
+        <h3 class="org-title">hypercalculia</h3>
+        <p class="org-desc">
+          Offline-first computation engine for scientific workloads.
+        </p>
+        <div class="org-tags">
+          <span>Math</span><span>Scientific Computing</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Aggregates proven numerical, algebraic, and simulation libraries
+          into a unified environment focused on accuracy and reproducibility.
+        </p>
+        <p>
+          Built for deep calculation without relying on cloud services.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          Python · Rust · C++ · NumPy · SciPy · SymPy · JAX · OpenFOAM
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SeasonalSidekick -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/seasonal-sidekick.png" alt="SeasonalSidekick">
+        </div>
+        <h3 class="org-title">SeasonalSidekick</h3>
+        <p class="org-desc">
+          Year-round assistant for seasonal planning and life logistics.
+        </p>
+        <div class="org-tags">
+          <span>Automation</span><span>Planning</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Helps plan, build, celebrate, and stay safe throughout the year —
+          from holidays to first aid and daily life routines.
+        </p>
+        <p>
+          Home of Moose, the year-round holiday helper.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          JavaScript · Web apps · JSON automation · Google Sheets · AppScript
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- the-waterworks -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/the-waterworks.gif" alt="the-waterworks">
+        </div>
+        <h3 class="org-title">the-waterworks</h3>
+        <p class="org-desc">
+          Tooling for water systems and utilities tracking.
+        </p>
+        <div class="org-tags">
+          <span>Infrastructure</span><span>Utilities</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Focuses on documenting, modeling, and managing real-world water systems,
+          from flow logic to automation helpers.
+        </p>
+        <p>
+          Built for homeowners, homesteaders, operators, and engineers.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          PHP · Utility scripting · Documentation systems
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- AlexandriaArchiveAPI -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/alexandria.png" alt="AlexandriaArchiveAPI">
+        </div>
+        <h3 class="org-title">AlexandriaArchiveAPI</h3>
+        <p class="org-desc">
+          Digital archive and API ecosystem for ancient and medieval history.
+        </p>
+        <div class="org-tags">
+          <span>History</span><span>APIs</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Preserves how people lived, worked, worshipped, and survived —
+          not just wars and rulers.
+        </p>
+        <p>
+          Designed as a code-first historical commons with structured schemas.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          Python · SQLite · Structured schemas · APIs · Historical data modeling
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Olivision -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/olivision.gif" alt="Olivision">
+        </div>
+        <h3 class="org-title">Olivision</h3>
+        <p class="org-desc">
+          Reflective apps for visual journaling and habit tracking.
+        </p>
+        <div class="org-tags">
+          <span>Personal Insight</span><span>Privacy</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Turns small moments and patterns into something you can see —
+          without pressure or gamification.
+        </p>
+        <p>
+          Built for self-understanding rather than optimization.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          Python · TypeScript · App-first design · Privacy-respecting models
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TheRestOfUs -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/the-rest-of-us.png" alt="TheRestOfUs">
+        </div>
+        <h3 class="org-title">TheRestOfUs</h3>
+        <p class="org-desc">
+          Narrative survival game set in a post-collapse Midwest.
+        </p>
+        <div class="org-tags">
+          <span>Game Dev</span><span>Narrative</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Focuses on grounded storytelling, environmental realism,
+          and quiet human moments.
+        </p>
+        <p>
+          Survival as lived experience rather than spectacle.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          Godot 4 · Narrative systems · Environmental design
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- mini-farm-animals -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/mini-farm-animals.gif" alt="mini-farm-animals">
+        </div>
+        <h3 class="org-title">mini-farm-animals</h3>
+        <p class="org-desc">
+          Knowledge base for small-scale animal husbandry.
+        </p>
+        <div class="org-tags">
+          <span>Farming</span><span>Care Systems</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Organizes care, feeding, housing, and health guidance
+          across many species with an emphasis on humane care.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          Structured documentation · Species datasets · Care workflows
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- mini-farm-plants -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/mini-farm-plants.gif" alt="mini-farm-plants">
+        </div>
+        <h3 class="org-title">mini-farm-plants</h3>
+        <p class="org-desc">
+          Crop and plant care system for small farms.
+        </p>
+        <div class="org-tags">
+          <span>Agriculture</span><span>Automation</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Documents planting schedules, soil needs,
+          and seasonal care for food crops and perennials.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          C++ automation experiments · Agricultural modeling · Care schedules
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- self-sufficient-homestead -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/self-sufficient.gif" alt="self-sufficient-homestead">
+        </div>
+        <h3 class="org-title">self-sufficient-homestead</h3>
+        <p class="org-desc">
+          Systems-first approach to resilient homesteading.
+        </p>
+        <div class="org-tags">
+          <span>Homestead</span><span>Automation</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Focuses on automating animal care, water, feed,
+          infrastructure, and energy with reliability over novelty.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          Embedded systems · Animal automation · Offline-first workflows
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- small-land-management -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/small-land.gif" alt="small-land-management">
+        </div>
+        <h3 class="org-title">small-land-management</h3>
+        <p class="org-desc">
+          Planning and operations framework for small acreage.
+        </p>
+        <div class="org-tags">
+          <span>Infrastructure</span><span>Planning</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Brings together animals, plants, infrastructure,
+          utilities, sensors, and long-term planning.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          OpenSCAD · Sensor systems · Automation · Infrastructure modeling
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SelfTaughtSandbox -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/sandbox.png" alt="SelfTaughtSandbox">
+        </div>
+        <h3 class="org-title">SelfTaughtSandbox</h3>
+        <p class="org-desc">
+          Structured self-teaching lab organized by skill tracks.
+        </p>
+        <div class="org-tags">
+          <span>Learning</span><span>Labs</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Reusable learning library of projects, experiments,
+          manuals, and notes across backend, frontend, AI,
+          security, automation, and hardware.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          Skill tracks · Manuals · Templates · Notes · Labs
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- character-creator -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/character-creator.jpg" alt="character-creator">
+        </div>
+        <h3 class="org-title">character-creator</h3>
+        <p class="org-desc">
+          Character engineering suite for coherent identity design.
+        </p>
+        <div class="org-tags">
+          <span>Creative</span><span>Psychology</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Combines visual creation, identity scaffolding,
+          and automation workflows with psychology systems.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          Blender · Python · Automation · AI-assisted planning
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LazyDaisyAcres -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/lazy-daisy-acres.png" alt="LazyDaisyAcres">
+        </div>
+        <h3 class="org-title">LazyDaisyAcres</h3>
+        <p class="org-desc">
+          Automation-first homestead systems organization.
+        </p>
+        <div class="org-tags">
+          <span>Homestead</span><span>Offline-first</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Modular DIY builds, low-maintenance routines,
+          and offline-first tracking tools for property operations.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          DIY systems · SOPs · Sensor modules · Dashboards · Field logs
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HiveBeeWare -->
+  <div class="card expandable">
+    <div class="card-content org-card">
+      <div class="org-hero">
+        <div class="org-image">
+          <img src="/images/orgs/hive-bee-ware.gif" alt="HiveBeeWare">
+        </div>
+        <h3 class="org-title">HiveBeeWare</h3>
+        <p class="org-desc">
+          Smart apiary platform combining hive builds and telemetry.
+        </p>
+        <div class="org-tags">
+          <span>Beekeeping</span><span>IoT</span>
+        </div>
+      </div>
+      <div class="org-expand-hint">View details</div>
+      <div class="org-details">
+        <p>
+          Combines physical hive builds with sensor telemetry
+          and offline dashboards for inspections and alerts.
+        </p>
+        <p class="tech">
+          <strong>Tech:</strong>
+          ESP32 · Sensors · Telemetry · Offline dashboards · 3D prints
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
     </section>
 
   </main>
