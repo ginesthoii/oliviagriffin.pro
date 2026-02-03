@@ -3,24 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — Olivia Griffin</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="main.js"></script>
 
-    <!-- Fonts -->
+  <title>About — Olivia Griffin</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap"
-    rel="stylesheet"/>
+        rel="stylesheet"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Scripts -->
+  <script defer src="main.js"></script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
   <link rel="manifest" href="images/site.webmanifest" />
-  
 </head>
 
 <body id="About">
+
   <!-- ===== NAVBAR ===== -->
   <header class="header">
     <nav class="nav-inner" aria-label="Main">
@@ -31,85 +35,122 @@
         <a href="organizations.html">Organizations</a>
         <a href="index.html#contact">Contact</a>
       </div>
-      <button id="menu-icon" class="hamb" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+
+      <button
+        id="menu-icon"
+        class="hamb"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        ☰
+      </button>
     </nav>
+
     <div id="mobile-nav" class="nav-bg"></div>
   </header>
 
-<main class="section" style="padding-top:120px">
 
-  <section class="about-page">
-    <div class="about-page__wrap">
+  <!-- ===== MAIN ===== -->
+  <main class="section" style="padding-top:120px">
 
-      <div class="about-page__photo">
-        <img src="images/olivia.png" alt="Olivia Griffin" loading="lazy">
-      </div>
+    <!-- ===== ABOUT HERO ===== -->
+    <section class="about-page">
+      <div class="about-page__wrap">
 
-      <div class="about-page__copy">
-        <h5>About</h5>
-        <h1>About Me</h1>
-        <p class="lead">Security-Minded Developer</p>
-
-        <p>
-          I build offline-first systems, automation-heavy tools, and security-minded web apps.
-        </p>
-
-        <div class="about-page__actions">
-          <a class="btn-ghost" href="projects.html">View Projects</a>
-          <a class="btn-ghost" href="index.html#contact">Contact</a>
-          <a class="btn-ghost" href="mailto:oliviagriffindev@gmail.com">Email</a>
-          <a class="btn-ghost" href="https://github.com/ginesthoii" target="_blank" rel="noopener">GitHub</a>
+        <!-- PHOTO -->
+        <div class="about-page__photo">
+          <img
+            src="images/olivia.png"
+            alt="Portrait of Olivia Griffin"
+            loading="lazy"
+            decoding="async"
+          >
         </div>
+
+        <!-- COPY -->
+        <div class="about-page__copy">
+          <h5>About</h5>
+          <h1>About Me</h1>
+
+          <p class="lead">
+            Security-Minded Developer
+          </p>
+
+          <p>
+            I build offline-first systems, automation-heavy tools, and security-minded web applications.
+            My focus is creating software that keeps working in imperfect real-world environments —
+            not just ideal lab conditions.
+          </p>
+
+          <div class="about-page__actions">
+            <a class="btn-ghost" href="projects.html">View Projects</a>
+            <a class="btn-ghost" href="index.html#contact">Contact</a>
+            <a class="btn-ghost" href="mailto:oliviagriffindev@gmail.com">Email</a>
+            <a
+              class="btn-ghost"
+              href="https://github.com/ginesthoii"
+              target="_blank"
+              rel="noopener"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ===== ABOUT PILLARS ===== -->
+    <section class="about-pillars">
+
+      <div class="about-pillars__grid">
+
+        <article class="about-pill">
+          <div class="about-pill__icon">⚙</div>
+          <h3>Resilient Systems</h3>
+          <p>
+            I’m a security-minded developer focused on building reliable, maintainable systems that are designed to keep working — even when conditions aren’t ideal.
+
+          </p>
+        </article>
+
+        <article class="about-pill">
+          <div class="about-pill__icon">⚒</div>
+          <h3>Clarity & Maintainability</h3>
+          <p>
+            I prioritize readable architecture, clear, strong naming, and documentation that future
+             me and others — can  quickly understand and trust.
+          </p>
+        </article>
+
+        <article class="about-pill">
+          <div class="about-pill__icon">⛉</div>
+          <h3>Practical Usability</h3>
+          <p>
+            I focus on tools that are intuitive, dependable, and designed for real workflows.
+            Software should be dependable, understandable, and useful in everyday life.
+          </p>
+        </article>
+
       </div>
 
-    </div>
+    </section>
 
-</main>
+  </main>
 
-</section>
 
-  <section class="about-pillars">
-
-  <div class="about-pillars__grid">
-
-    <article class="about-pill">
-      <div class="about-pill__icon">⚙</div>
-      <h3>Resilient Systems</h3>
-      <p>
-        I build automation-focused, security-minded systems designed to work reliably in real-world conditions. 
-        I care about redundancy, backups, and software that continues functioning even when environments are imperfect.
-      </p>
-    </article>
-
-    <article class="about-pill">
-      <div class="about-pill__icon">🧠</div>
-      <h3>Clarity & Maintainability</h3>
-      <p>
-        I prioritize readable architecture, strong naming, and clear documentation. 
-        Systems should be easy to understand, troubleshoot, and improve — including by future developers or future me.
-      </p>
-    </article>
-
-    <article class="about-pill">
-      <div class="about-pill__icon">🛡</div>
-      <h3>Practical Usability</h3>
-      <p>
-        I focus on tools that are accessible, intuitive, and dependable. 
-        Technology should support real people doing real work, not just look impressive in isolation.
-      </p>
-    </article>
-
-  </div>
-
-</section>
-
- 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <p>© 2025 Olivia Griffin. All rights reserved.</p>
+    <p>© <span id="year">2026</span> Olivia Griffin. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
+
+
+
+
 
 
 
