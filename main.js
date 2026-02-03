@@ -2,9 +2,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* =========================
-     Mobile drawer + smooth scroll
-  ========================== */
+  /* =================================================
+     MOBILE NAV DRAWER + SMOOTH SCROLL
+  ================================================= */
+
   const mob = document.getElementById('mobile-nav');
   const btn = document.getElementById('menu-icon');
   const linksDesktop = document.querySelectorAll('.nav-links a');
@@ -29,34 +30,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth' });
+
       mob?.classList.remove('active');
       btn?.setAttribute('aria-expanded', 'false');
     });
   });
 
- 
-  /* =========================
-     Services: mobile carousel
-  ========================== */
+
+  /* =================================================
+     SERVICES MOBILE CAROUSEL
+  ================================================= */
+
   const track = document.getElementById('servicesTrack');
   const prev = document.querySelector('.services-controls .prev');
   const next = document.querySelector('.services-controls .next');
 
   if (track && prev && next) {
     const slideBy = () => Math.max(track.clientWidth * 0.8, 280);
+
     prev.addEventListener('click', () =>
       track.scrollBy({ left: -slideBy(), behavior: 'smooth' })
     );
+
     next.addEventListener('click', () =>
       track.scrollBy({ left: slideBy(), behavior: 'smooth' })
     );
   }
 
-  /* =========================
-     Stats: count-up on view
-  ========================== */
+
+  /* =================================================
+     STATS COUNT-UP (INTERSECTION OBSERVER)
+  ================================================= */
+
   const statsSection = document.querySelector('#stats.stats-section');
+
   if (statsSection) {
+
     const DURATION = 1200;
     const ease = t => 1 - Math.pow(1 - t, 3);
     const fmt = new Intl.NumberFormat('en-US');
@@ -87,11 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
     io.observe(statsSection);
   }
 
-});
 
- /* =========================
-     INTERACTIVE NOISE CARDS
-  ========================== */
+  /* =================================================
+     INTERACTIVE NOISE / GLOW CARDS
+  ================================================= */
 
   const cards = document.querySelectorAll('.card');
 
@@ -122,62 +130,64 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     };
 
-    const onLeave = () => {
-      card.style.setProperty('--ratio-x', 0.5);
-      card.style.setProperty('--ratio-y', 0.5);
-      card.style.setProperty('--mouse-x', '50%');
-      card.style.setProperty('--mouse-y', '50%');
-    };
-
-
-
-    /* =========================================
-   ORGANIZATIONS: glow tracking + expandable cards
-========================================= */
-
-document.addEventListener("DOMContentLoaded", () => {
-  const cardsWrap = document.getElementById("cards");
-  if (!cardsWrap) return;
-
-  // Glow mouse tracking
-  cardsWrap.addEventListener("pointermove", (e) => {
-    const cards = cardsWrap.getElementsByClassName("card");
-    for (const card of cards) {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      card.style.setProperty("--mouse-x", `${x}px`);
-      card.style.setProperty("--mouse-y", `${y}px`);
-    }
-  });
-
-  // Expand/collapse (click)
-  const expandables = cardsWrap.querySelectorAll(".card.expandable");
-  expandables.forEach((card) => {
-    const toggle = () => {
-      const isOpen = card.classList.toggle("open");
-      card.setAttribute("aria-expanded", String(isOpen));
-    };
-
-    card.addEventListener("click", toggle);
-
-    // Keyboard: Enter/Space
-    card.addEventListener("keydown", (ev) => {
-      if (ev.key === "Enter" || ev.key === " ") {
-        ev.preventDefault();
-        toggle();
-      }
-    });
-  });
-});
-
+    const onLeave = () => update(0.5, 0.5);
 
     card.addEventListener('mousemove', onMove);
     card.addEventListener('mouseleave', onLeave);
   });
 
-document.querySelectorAll(".card.expandable").forEach(card => {
-  card.addEventListener("click", () => {
-    card.classList.toggle("open");
-  });
+
+  /* =================================================
+     ORGANIZATIONS CARDS
+     Glow tracking + expandable toggle
+  ================================================= */
+
+  const cardsWrap = document.getElementById("cards");
+
+  if (cardsWrap) {
+
+    /* Glow Mouse Tracking */
+    cardsWrap.addEventListener("pointermove", e => {
+      const cards = cardsWrap.getElementsByClassName("card");
+
+      for (const card of cards) {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+      }
+    });
+
+    /* Expandable Cards */
+    const expandables = cardsWrap.querySelectorAll(".card.expandable");
+
+    expandables.forEach(card => {
+
+      const toggle = () => {
+        const open = card.classList.toggle("open");
+        card.setAttribute("aria-expanded", String(open));
+      };
+
+      card.addEventListener("click", toggle);
+
+      card.addEventListener("keydown", ev => {
+        if (ev.key === "Enter" || ev.key === " ") {
+          ev.preventDefault();
+          toggle();
+        }
+      });
+
+    });
+  }
+
+
+  /* =================================================
+     DYNAMIC FOOTER YEAR (OPTIONAL BUT CLEAN)
+  ================================================= */
+
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
 });
