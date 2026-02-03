@@ -1828,6 +1828,8 @@ body{
   padding: clamp(60px, 8vw, 110px) var(--pad);
   max-width: var(--maxw);
   margin: 0 auto;
+  text-align: center;
+
 }
 
 .about-pillars__grid{
