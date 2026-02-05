@@ -2082,8 +2082,8 @@ margin-left: -60px;
     minmax(360px, 440px)
     minmax(520px, 1fr);
 
-gap: clamp(100px, 8vw, 160px);
-
+gap: clamp(70px, 6vw, 120px);
+  
   padding-top: clamp(180px, 24vh, 340px);
 }
 
