@@ -1749,10 +1749,10 @@ body#About main.section{
 
 .tech-avatar{
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 420px;
+  height: 420px;
 
-  margin-left: clamp(0px, .5vw, 2px);
+margin-left: -60px;
 }
 
 /* SWIRLING TECH BACKGROUND */
