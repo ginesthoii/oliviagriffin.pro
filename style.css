@@ -2103,7 +2103,7 @@ body#About main.section{
   height: 380px;
 
   /* ⭐ THIS controls left spacing ⭐ */
-  margin-left: clamp(40px, 6vw, 140px);
+margin-left: clamp(8px, 2vw, 60px);
 }
 
 
