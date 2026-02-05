@@ -1979,56 +1979,59 @@ body{
 }
 
 /* =====================================================
-   MAP HERO — FULL BLEED REVEAL
+   MAP HERO —  BLEED REVEAL
 ===================================================== */
-
 
 .about-page--map{
   position: relative;
 
-  /* FULL BLEED WIDTH */
+  /* Full viewport width */
   width: 100vw;
-  min-width: 100vw;
 
+  /* SINGLE centering system — DO NOT ADD calc() margins */
   left: 50%;
   transform: translateX(-50%);
 
-  /* CANCEL LAYOUT CONTAINER LIMITS */
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
+  /* Height */
+  min-height: 125vh;
 
-  /* FULL SCREEN HEIGHT */
-  min-height: 120vh;
-
-  /* HEADER COMPENSATION (header = 90px fixed) */
+  /* Header overlay compensation */
   margin-top: -90px;
   padding-top: 90px;
+  padding-bottom: 140px;
 
   overflow: hidden;
   background: black;
   z-index: 1;
 }
 
+
 /* =====================================================
-   MAP IMAGE LAYER
+   MAP IMAGE LAYER 
 ===================================================== */
 
 .map-bg{
   position: absolute;
   inset: 0;
 
+  /* Follow container, not viewport */
   width: 100%;
   height: 100%;
 
   object-fit: cover;
-  object-position: center 70%;
+
+  /* Show STL lower portion safely */
+  object-position: center 75%;
+
+  /* Overscan so edges never appear */
+  transform: scale(1.08);
 
   opacity: 0;
   z-index: 0;
 
   filter: brightness(.75) contrast(1.2);
-  transform: scale(1.04);
 }
+
 
 /* =====================================================
    BLACK INTRO FADE LAYER
@@ -2037,23 +2040,29 @@ body{
 .map-black{
   position: absolute;
   inset: 0;
+
   background: black;
+
   z-index: 1;
   opacity: 1;
 }
 
+
 /* =====================================================
-   CONTENT ABOVE MAP
+   CONTENT ABOVE MAP (LOWERS TEXT + GIF/IMAGE AREA)
 ===================================================== */
 
 .about-page--map .about-page__wrap{
   position: relative;
   z-index: 3;
-    padding-top: clamp(140px, 18vh, 260px);
+
+  /* Controls vertical placement of circle + text + buttons */
+  padding-top: clamp(180px, 24vh, 340px);
 }
 
+
 /* =====================================================
-   CINEMATIC REVEAL ANIMATION
+    REVEAL ANIMATION
 ===================================================== */
 
 .about-page--map.stl-visible .map-black{
@@ -2068,16 +2077,11 @@ body{
 
 @keyframes mapBlackFade{
   0%{ opacity:1; }
-  30%{ opacity:.9; }
-  60%{ opacity:.5; }
-  85%{ opacity:.2; }
   100%{ opacity:0; }
 }
 
 @keyframes mapFadeIn{
   0%{ opacity:0; }
-  40%{ opacity:.12; }
-  70%{ opacity:.22; }
   100%{ opacity:.35; }
 }
 
@@ -2085,6 +2089,7 @@ body{
   0%{ filter: brightness(.9) contrast(1.35); }
   100%{ filter: brightness(.75) contrast(1.2); }
 }
+
 
 /* =====================================================
    RESPONSIVE
@@ -2098,10 +2103,10 @@ body{
 
 @media (max-width: 768px){
   .about-page--map{
-    min-height: 70vh;
+    min-height: 85vh;
   }
 
   .map-bg{
-    object-position: center 78%;
+    object-position: center 82%;
   }
 }
