@@ -2003,18 +2003,15 @@ body#About main.section{
 }
 
 /* =====================================================
-   MAP HERO — TRUE FULL BLEED 
+   MAP HERO — TRUE FULL BLEED
 ===================================================== */
 
 .about-page--map{
   position: relative;
 
-  /* CRITICAL: DO NOT DELETE OLIVIA */
   width: 100%;
-
   min-height: 125vh;
 
-  /* Header overlay compensation */
   margin-top: -90px;
   padding-top: 90px;
   padding-bottom: 140px;
@@ -2026,7 +2023,7 @@ body#About main.section{
 
 
 /* =====================================================
-   MAP IMAGE LAYER 
+   MAP IMAGE LAYER
 ===================================================== */
 
 .map-bg{
@@ -2037,11 +2034,8 @@ body#About main.section{
   height: 100%;
 
   object-fit: cover;
-
-  /* Shows STL label */
   object-position: center 75%;
 
-  /* Overscan - NO EDGES */
   transform: scale(1.08);
 
   opacity: 0;
@@ -2063,28 +2057,51 @@ body#About main.section{
   opacity: 1;
 }
 
+
 /* =====================================================
-   CONTENT ABOVE MAP (TEXT + GIF/IMAGE POSITION)
+   CONTENT ABOVE MAP — RIGHT STAGE LAYOUT
 ===================================================== */
 
 .about-page--map .about-page__wrap{
   position: relative;
   z-index: 3;
 
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1400px;
 
-  /* Push grid RIGHT */
-  margin-left: auto;
-  margin-right: 0;
+  margin-left: auto;        /* pushes layout right */
+  margin-right: clamp(40px, 6vw, 160px);
 
   padding-inline: clamp(20px, 4vw, 60px);
 
   display: grid;
   grid-template-columns: 420px 1fr;
-  gap: 60px;
+  gap: 70px;
 
   padding-top: clamp(180px, 24vh, 340px);
 }
+
+
+/* =====================================================
+   AVATAR BLOCK
+===================================================== */
+
+.tech-avatar{
+  position: relative;
+  width: 380px;
+  height: 380px;
+  justify-self: end;   /* pushes circle right inside column */
+}
+
+
+/* =====================================================
+   RIGHT COPY
+===================================================== */
+
+.about-page__copy{
+  max-width: 640px;
+}
+
 
 /* =====================================================
    REVEAL ANIMATION
@@ -2120,15 +2137,29 @@ body#About main.section{
    RESPONSIVE
 ===================================================== */
 
+@media (max-width: 1100px){
+  .about-page--map .about-page__wrap{
+    margin-right: clamp(20px, 4vw, 80px);
+  }
+}
+
 @media (max-width: 980px){
-  .about-page__wrap{
+
+  .about-page--map .about-page__wrap{
     grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .tech-avatar{
+    justify-self: center;
   }
 }
 
 @media (max-width: 768px){
+
   .about-page--map{
-    min-height: 85vh;
+    min-height: 90vh;
   }
 
   .map-bg{
