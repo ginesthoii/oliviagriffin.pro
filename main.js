@@ -191,3 +191,32 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 });
+
+/* =================================
+   STL ABOUT BACKGROUND TRIGGER
+================================= */
+
+(function(){
+
+  const aboutMap = document.querySelector('.about-page--map');
+  if(!aboutMap) return;
+
+  if(!('IntersectionObserver' in window)){
+    aboutMap.classList.add('stl-visible');
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        aboutMap.classList.add('stl-visible');
+        obs.disconnect();
+      }
+    });
+  },{
+    threshold: 0.25
+  });
+
+  observer.observe(aboutMap);
+
+})();
