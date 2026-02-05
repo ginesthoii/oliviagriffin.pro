@@ -25,79 +25,56 @@
 
 <body id="About">
 
-  <!-- ===== NAVBAR ===== -->
-  <header class="header">
-    <nav class="nav-inner" aria-label="Main">
-      <div class="nav-links">
-        <a href="index.html#home">Home</a>
-        <a href="about.html" aria-current="page">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="organizations.html">Organizations</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-
-      <button
-        id="menu-icon"
-        class="hamb"
-        aria-expanded="false"
-        aria-controls="mobile-nav"
-      >
-        ☰
-      </button>
-    </nav>
-
-    <div id="mobile-nav" class="nav-bg"></div>
-  </header>
+<!-- NAV -->
+<header class="header">
+  <nav class="nav-inner">
+    <div class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="organizations.html">Organizations</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+</header>
 
 
-  <!-- ===== MAIN ===== -->
-  <main class="section" style="padding-top:120px">
+<main>
 
-    <!-- ===== ABOUT HERO ===== -->
-<section class="about-page about-page--map">
+<!-- HERO MAP (FULL BLEED) -->
+<section class="about-page--map">
 
-  <img
-    src="images/stl-map.webp"
-    class="map-bg"
-    alt=""
-    aria-hidden="true"
-  >
-
+  <img src="images/stl-map.webp" class="map-bg" alt="" aria-hidden="true">
   <div class="map-black"></div>
 
   <div class="about-page__wrap">
 
-    <!-- PHOTO -->
+    <!-- LEFT AVATAR -->
     <div class="about-page__photo">
+      <div class="tech-avatar">
 
-  <div class="tech-avatar">
+        <img
+          src="images/Skills_Animation_Dark.gif"
+          class="tech-bg"
+          alt=""
+          aria-hidden="true"
+        >
 
-    <img
-      src="images/Skills_Animation_Dark.gif"
-      class="tech-bg"
-      alt=""
-      aria-hidden="true"
-    >
+        <img
+          src="images/olivia.png"
+          class="tech-face"
+          alt="Portrait of Olivia Griffin"
+        >
 
-    <img
-      src="images/olivia.png"
-      class="tech-face"
-      alt="Portrait of Olivia Griffin"
-      loading="lazy"
-      decoding="async"
-    >
+      </div>
+    </div>
 
-  </div>
-
-</div>
-
-    <!-- COPY -->
+    <!-- RIGHT COPY -->
     <div class="about-page__copy">
+
       <h1>About Me</h1>
 
-      <p class="lead">
-        Security-Minded Developer
-      </p>
+      <p class="lead">Security-Minded Developer</p>
 
       <p>
         I build offline-first systems, automation-heavy tools,
@@ -108,9 +85,7 @@
         <a class="btn-ghost" href="projects.html">View Projects</a>
         <a class="btn-ghost" href="index.html#contact">Contact</a>
         <a class="btn-ghost" href="mailto:oliviagriffindev@gmail.com">Email</a>
-        <a class="btn-ghost" href="https://github.com/ginesthoii" target="_blank" rel="noopener">
-          GitHub
-        </a>
+        <a class="btn-ghost" href="https://github.com/ginesthoii" target="_blank">GitHub</a>
       </div>
 
     </div>
@@ -120,55 +95,40 @@
 </section>
 
 
-    <!-- ===== ABOUT PILLARS ===== -->
-    <section class="about-pillars">
+<!-- PILLARS -->
+<section class="about-pillars">
 
-      <div class="about-pillars__grid">
+  <div class="about-pillars__grid">
 
-        <article class="about-pill">
-          <div class="about-pill__icon">⚙</div>
-          <h3>Resilient Systems</h3>
-          <p>
-            I’m a security-minded developer focused on building reliable, maintainable systems that are designed to keep working — even when conditions aren’t ideal.
+    <article class="about-pill">
+      <div class="about-pill__icon">⚙</div>
+      <h3>Resilient Systems</h3>
+      <p>Reliable, maintainable systems built to survive real conditions.</p>
+    </article>
 
-          </p>
-        </article>
+    <article class="about-pill">
+      <div class="about-pill__icon">⚒</div>
+      <h3>Clarity & Maintainability</h3>
+      <p>Readable architecture, strong naming, future-proof documentation.</p>
+    </article>
 
-        <article class="about-pill">
-          <div class="about-pill__icon">⚒</div>
-          <h3>Clarity & Maintainability</h3>
-          <p>
-            I prioritize readable architecture, clear, strong naming, and documentation that future
-             me and others — can  quickly understand and trust.
-          </p>
-        </article>
+    <article class="about-pill">
+      <div class="about-pill__icon">⛉</div>
+      <h3>Practical Usability</h3>
+      <p>Tools designed for real workflows and everyday use.</p>
+    </article>
 
-        <article class="about-pill">
-          <div class="about-pill__icon">⛉</div>
-          <h3>Practical Usability</h3>
-          <p>
-            I focus on tools that are intuitive, dependable, and designed for real workflows.
-            Software should be dependable, understandable, and useful in everyday life.
-          </p>
-        </article>
+  </div>
 
-      </div>
+</section>
 
-    </section>
+</main>
 
-  </main>
-
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <p>© <span id="year">2026</span> Olivia Griffin. All rights reserved.</p>
-  </footer>
+<footer class="footer">
+  <p>© 2026 Olivia Griffin</p>
+</footer>
 
 </body>
 </html>
-
-
-
-
 
 
