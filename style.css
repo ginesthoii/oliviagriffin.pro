@@ -2002,7 +2002,6 @@ body#About main.section{
 
   color: rgba(255,255,255,.78);
 }
-
 /* =====================================================
    MAP HERO — TRUE FULL BLEED
 ===================================================== */
@@ -2024,7 +2023,7 @@ body#About main.section{
 
 
 /* =====================================================
-   MAP IMAGE LAYER
+   MAP IMAGE
 ===================================================== */
 
 .map-bg{
@@ -2060,7 +2059,7 @@ body#About main.section{
 
 
 /* =====================================================
-   CONTENT ABOVE MAP — CENTERED STAGE
+   CONTENT STAGE — CENTERED (NOT RIGHT ANCHORED)
 ===================================================== */
 
 .about-page--map .about-page__wrap{
@@ -2077,14 +2076,25 @@ body#About main.section{
 
   display: grid;
   grid-template-columns: 420px 1fr;
-  gap: 80px;
+  gap: 70px;
 
   padding-top: clamp(180px, 24vh, 340px);
 }
 
 
 /* =====================================================
-   AVATAR 
+   LEFT COLUMN — CIRCLE BREATHING ROOM
+===================================================== */
+
+.about-page__photo{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+/* =====================================================
+   AVATAR — LEFT BUT NOT HUGGING EDGE
 ===================================================== */
 
 .tech-avatar{
@@ -2092,8 +2102,8 @@ body#About main.section{
   width: 380px;
   height: 380px;
 
-  /* CONTROLS LEFT BREATHING SPACE  */
-  margin-left: clamp(40px, 6vw, 160px);;
+  /* ⭐ THIS controls left spacing ⭐ */
+  margin-left: clamp(40px, 6vw, 140px);
 }
 
 
@@ -2139,12 +2149,6 @@ body#About main.section{
 /* =====================================================
    RESPONSIVE
 ===================================================== */
-
-@media (max-width: 1100px){
-  .tech-avatar{
-    margin-left: clamp(30px, 5vw, 80px);
-  }
-}
 
 @media (max-width: 980px){
 
