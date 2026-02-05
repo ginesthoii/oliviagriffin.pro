@@ -1752,7 +1752,7 @@ body#About main.section{
   width: 380px;
   height: 380px;
 
-  margin-left: clamp(0px, 2vw, 40px);
+  margin-left: clamp(0px, 2vw, 12px);
 }
 
 /* SWIRLING TECH BACKGROUND */
