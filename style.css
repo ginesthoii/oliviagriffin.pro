@@ -2083,7 +2083,7 @@ body#About main.section{
   padding-top: clamp(180px, 24vh, 340px);
 
   /* Horizontal stage shift RIGHT */
-  transform: translateX(140px);
+  transform: translateX(180px);
 }
 
 /* =====================================================
