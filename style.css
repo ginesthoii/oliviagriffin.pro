@@ -2092,7 +2092,7 @@ body#About main.section{
   height: 380px;
 
   /* CONTROLS LEFT BREATHING SPACE  */
-  margin-left: clamp(60px, 7vw, 160px);
+  margin-left: clamp(40px, 6vw, 160px);;
 }
 
 
