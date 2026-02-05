@@ -1716,7 +1716,7 @@ body{
 ===================================================== */
 
 .about-page__photo{
-  width: 110%;
+  width: 100%;
 }
 
 /* =====================================================
@@ -1727,7 +1727,7 @@ body{
   position: relative;
   width: 380px;
   height: 380px;
-  z-index: 5;
+  z-index: 6;
 }
 
 /* SWIRLING TECH BACKGROUND */
@@ -1982,18 +1982,36 @@ body{
    MAP HERO — FULL BLEED REVEAL
 ===================================================== */
 
+
 .about-page--map{
   position: relative;
 
+  /* FULL BLEED WIDTH */
   width: 100vw;
+  min-width: 100vw;
+
   left: 50%;
   transform: translateX(-50%);
 
-  min-height: 100vh;
+  /* CANCEL LAYOUT CONTAINER LIMITS */
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 
-  overflow: visible;
+  /* FULL SCREEN HEIGHT */
+  min-height: 120vh;
+
+  /* HEADER COMPENSATION (header = 90px fixed) */
+  margin-top: -90px;
+  padding-top: 90px;
+
+  overflow: hidden;
   background: black;
+  z-index: 1;
 }
+
+/* =====================================================
+   MAP IMAGE LAYER
+===================================================== */
 
 .map-bg{
   position: absolute;
@@ -2003,8 +2021,6 @@ body{
   height: 100%;
 
   object-fit: cover;
-
-  /* PUSH STL LABEL LOWER */
   object-position: center 70%;
 
   opacity: 0;
@@ -2014,6 +2030,10 @@ body{
   transform: scale(1.04);
 }
 
+/* =====================================================
+   BLACK INTRO FADE LAYER
+===================================================== */
+
 .map-black{
   position: absolute;
   inset: 0;
@@ -2022,14 +2042,18 @@ body{
   opacity: 1;
 }
 
-/* CONTENT ABOVE MAP */
+/* =====================================================
+   CONTENT ABOVE MAP
+===================================================== */
+
 .about-page--map .about-page__wrap{
   position: relative;
   z-index: 3;
+    padding-top: clamp(140px, 18vh, 260px);
 }
 
 /* =====================================================
-   CINEMATIC BLACK → MAP REVEAL
+   CINEMATIC REVEAL ANIMATION
 ===================================================== */
 
 .about-page--map.stl-visible .map-black{
