@@ -2008,7 +2008,6 @@ body#About main.section{
 
 .about-page--map{
   position: relative;
-
   width: 100%;
   min-height: 125vh;
 
@@ -2059,7 +2058,7 @@ body#About main.section{
 
 
 /* =====================================================
-   CONTENT STAGE — CENTERED (NOT RIGHT ANCHORED)
+   CONTENT STAGE — TRUE CENTERED COMPOSITION
 ===================================================== */
 
 .about-page--map .about-page__wrap{
@@ -2075,15 +2074,18 @@ body#About main.section{
   padding-inline: clamp(24px, 5vw, 80px);
 
   display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 200px;
+
+  /* ⭐ CRITICAL — THIS FIXES YOUR SPACING PROBLEM ⭐ */
+  grid-template-columns: minmax(460px, 560px) 1fr;
+
+  gap: clamp(80px, 6vw, 140px);
 
   padding-top: clamp(180px, 24vh, 340px);
 }
 
 
 /* =====================================================
-   LEFT COLUMN — CIRCLE BREATHING ROOM
+   LEFT COLUMN — CIRCLE STAGING
 ===================================================== */
 
 .about-page__photo{
@@ -2102,8 +2104,7 @@ body#About main.section{
   width: 380px;
   height: 380px;
 
-  /* ⭐ THIS controls left spacing ⭐ */
-margin-left: clamp(0px, 2vw, 40px);
+  margin-left: clamp(0px, 2vw, 40px);
 }
 
 
