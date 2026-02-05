@@ -2083,7 +2083,7 @@ grid-template-columns:
   minmax(0, 1fr);
 
 
-gap: clamp(30px, 4vw, 60px);
+gap: clamp(20px, 3vw, 40px);
   padding-top: clamp(180px, 24vh, 340px);
 }
 
