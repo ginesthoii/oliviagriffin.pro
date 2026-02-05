@@ -2078,9 +2078,9 @@ margin-left: -60px;
 
   /* LEFT column = circle zone
      RIGHT column = text breathing room */
-  grid-template-columns:
-    minmax(360px, 440px)
-    minmax(520px, 1fr);
+grid-template-columns:
+  clamp(260px, 35vw, 440px)
+  minmax(0, 1fr);
 
 
 gap: clamp(100px, 8vw, 120px);
