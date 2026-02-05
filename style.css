@@ -2063,9 +2063,8 @@ body#About main.section{
   opacity: 1;
 }
 
-
 /* =====================================================
-   CONTENT ABOVE MAP (TEXT + GIF/IMAGE POSITIONING)
+   CONTENT ABOVE MAP (TEXT + GIF/IMAGE POSITION)
 ===================================================== */
 
 .about-page--map .about-page__wrap{
@@ -2080,10 +2079,12 @@ body#About main.section{
   grid-template-columns: 420px 1fr;
   gap: 60px;
 
-  /* Lowers circle + text area */
+  /* Vertical placement */
   padding-top: clamp(180px, 24vh, 340px);
-}
 
+  /* Horizontal stage shift RIGHT */
+  transform: translateX(140px);
+}
 
 /* =====================================================
    REVEAL ANIMATION
