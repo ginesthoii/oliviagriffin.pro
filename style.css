@@ -1751,8 +1751,8 @@ body#About main.section{
   position: relative;
   width: 380px;
   height: 380px;
-  margin-left: 120px; /* ← HARD VALUE FOR TESTING */
 
+  margin-left: clamp(0px, 2vw, 40px);
 }
 
 /* SWIRLING TECH BACKGROUND */
