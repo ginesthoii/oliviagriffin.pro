@@ -29,6 +29,8 @@
   --repo-sheen: rgba(255,255,255,.22);
 }
 
+/* ========== ROOT LAYOUT ========== */
+
 html,body{ height:100%; }
 html{ scrollbar-gutter: stable; }
 
@@ -37,11 +39,16 @@ body{
   color:var(--ink);
   font-family:"Lato",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   background:#000;
-  overflow-x:hidden; /* IMPORTANT */
+
+  /* CRITICAL — prevents transform overflow scrollbars */
+  overflow-x:hidden;
+
   scroll-behavior:smooth;
 }
 
+
 /* ========== GLOBAL SECTION INTRO  ========== */
+
 .section-intro{
   max-width: var(--maxw);
   margin: 0 auto clamp(30px,4vw,50px);
@@ -72,6 +79,8 @@ body{
 }
 
 
+/* ========== GLOBAL SECTION WRAPPER ========== */
+
 .section{
   min-height:60vh;
   padding:80px var(--pad);
@@ -79,8 +88,23 @@ body{
   margin:auto;
 }
 
-:target{ scroll-margin-top:100px; }
 
+/* ========== ABOUT PAGE FULL WIDTH OVERRIDE (CRITICAL FIX) ========== */
+
+body#About main.section{
+  max-width: none;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+
+
+/* ========== ANCHOR OFFSET FOR FIXED HEADER ========== */
+
+:target{
+  scroll-margin-top:100px;
+}
 /* ========== NAVBAR ========== */
 
 .header{
@@ -1979,20 +2003,15 @@ body{
 }
 
 /* =====================================================
-   MAP HERO —  BLEED REVEAL
+   MAP HERO — TRUE FULL BLEED 
 ===================================================== */
 
 .about-page--map{
   position: relative;
 
-  /* Full viewport width */
-  width: 100vw;
+  /* CRITICAL: DO NOT DELETE OLIVIA */
+  width: 100%;
 
-  /* SINGLE centering system — DO NOT ADD calc() margins */
-  left: 50%;
-  transform: translateX(-50%);
-
-  /* Height */
   min-height: 125vh;
 
   /* Header overlay compensation */
@@ -2014,16 +2033,15 @@ body{
   position: absolute;
   inset: 0;
 
-  /* Follow container, not viewport */
   width: 100%;
   height: 100%;
 
   object-fit: cover;
 
-  /* Show STL lower portion safely */
+  /* Shows STL label */
   object-position: center 75%;
 
-  /* Overscan so edges never appear */
+  /* Overscan - NO EDGES */
   transform: scale(1.08);
 
   opacity: 0;
@@ -2034,35 +2052,41 @@ body{
 
 
 /* =====================================================
-   BLACK INTRO FADE LAYER
+   BLACK INTRO FADE
 ===================================================== */
 
 .map-black{
   position: absolute;
   inset: 0;
-
   background: black;
-
   z-index: 1;
   opacity: 1;
 }
 
 
 /* =====================================================
-   CONTENT ABOVE MAP (LOWERS TEXT + GIF/IMAGE AREA)
+   CONTENT ABOVE MAP (TEXT + GIF/IMAGE POSITIONING)
 ===================================================== */
 
 .about-page--map .about-page__wrap{
   position: relative;
   z-index: 3;
 
-  /* Controls vertical placement of circle + text + buttons */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: clamp(20px, 4vw, 60px);
+
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 60px;
+
+  /* Lowers circle + text area */
   padding-top: clamp(180px, 24vh, 340px);
 }
 
 
 /* =====================================================
-    REVEAL ANIMATION
+   REVEAL ANIMATION
 ===================================================== */
 
 .about-page--map.stl-visible .map-black{
