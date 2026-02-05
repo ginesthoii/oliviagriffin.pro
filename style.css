@@ -2002,6 +2002,7 @@ body#About main.section{
 
   color: rgba(255,255,255,.78);
 }
+
 /* =====================================================
    MAP HERO — TRUE FULL BLEED
 ===================================================== */
@@ -2066,7 +2067,7 @@ body#About main.section{
   z-index: 3;
 
   width: 100%;
-  max-width: 1200px;
+  max-width: 1280px;   /* slightly wider so text breathes */
 
   margin-left: auto;
   margin-right: auto;
@@ -2075,10 +2076,13 @@ body#About main.section{
 
   display: grid;
 
-  /* ⭐ CRITICAL — THIS FIXES YOUR SPACING PROBLEM ⭐ */
-  grid-template-columns: minmax(460px, 560px) 1fr;
+  /* LEFT column = circle zone
+     RIGHT column = text breathing room */
+  grid-template-columns:
+    minmax(360px, 440px)
+    minmax(520px, 1fr);
 
-  gap: clamp(80px, 6vw, 40px);
+  gap: clamp(60px, 6vw, 120px);
 
   padding-top: clamp(180px, 24vh, 340px);
 }
@@ -2096,7 +2100,7 @@ body#About main.section{
 
 
 /* =====================================================
-   AVATAR — LEFT BUT NOT HUGGING EDGE
+   AVATAR — LEFT BUT NOT EDGE-HUGGING
 ===================================================== */
 
 .tech-avatar{
@@ -2104,16 +2108,17 @@ body#About main.section{
   width: 380px;
   height: 380px;
 
-  margin-left: clamp(0px, 2vw, 40px);
+  /* Move circle left/right safely */
+  margin-left: clamp(0px, 2vw, 32px);
 }
 
 
 /* =====================================================
-   RIGHT COPY
+   RIGHT COPY — REMOVE SMUSHING
 ===================================================== */
 
 .about-page__copy{
-  max-width: 640px;
+  max-width: 780px;
 }
 
 
