@@ -2078,7 +2078,7 @@ body#About main.section{
   /* ⭐ CRITICAL — THIS FIXES YOUR SPACING PROBLEM ⭐ */
   grid-template-columns: minmax(460px, 560px) 1fr;
 
-  gap: clamp(80px, 6vw, 140px);
+  gap: clamp(80px, 6vw, 40px);
 
   padding-top: clamp(180px, 24vh, 340px);
 }
