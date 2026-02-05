@@ -2059,7 +2059,7 @@ body#About main.section{
 
 
 /* =====================================================
-   CONTENT ABOVE MAP — RIGHT STAGE LAYOUT
+   CONTENT ABOVE MAP — CENTERED STAGE
 ===================================================== */
 
 .about-page--map .about-page__wrap{
@@ -2067,30 +2067,42 @@ body#About main.section{
   z-index: 3;
 
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
 
-  margin-left: auto;        /* pushes layout right */
-  margin-right: clamp(40px, 6vw, 160px);
+  margin-left: auto;
+  margin-right: auto;
 
-  padding-inline: clamp(20px, 4vw, 60px);
+  padding-inline: clamp(24px, 5vw, 80px);
 
   display: grid;
   grid-template-columns: 420px 1fr;
-  gap: 70px;
+  gap: 80px;
 
   padding-top: clamp(180px, 24vh, 340px);
 }
 
 
 /* =====================================================
-   AVATAR BLOCK
+   LEFT PHOTO COLUMN 
+===================================================== */
+
+.about-page__photo{
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+/* =====================================================
+   AVATAR 
 ===================================================== */
 
 .tech-avatar{
   position: relative;
   width: 380px;
   height: 380px;
-  justify-self: end;   /* pushes circle right inside column */
+
+  /* CONTROLS LEFT BREATHING SPACE  */
+  margin-left: clamp(60px, 7vw, 160px);
 }
 
 
@@ -2138,8 +2150,8 @@ body#About main.section{
 ===================================================== */
 
 @media (max-width: 1100px){
-  .about-page--map .about-page__wrap{
-    margin-right: clamp(20px, 4vw, 80px);
+  .tech-avatar{
+    margin-left: clamp(30px, 5vw, 80px);
   }
 }
 
@@ -2152,7 +2164,7 @@ body#About main.section{
   }
 
   .tech-avatar{
-    justify-self: center;
+    margin-left: 0;
   }
 }
 
