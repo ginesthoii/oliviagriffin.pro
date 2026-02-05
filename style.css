@@ -2072,18 +2072,18 @@ body#About main.section{
   z-index: 3;
 
   max-width: 1200px;
-  margin: 0 auto;
+
+  /* Push grid RIGHT */
+  margin-left: auto;
+  margin-right: 0;
+
   padding-inline: clamp(20px, 4vw, 60px);
 
   display: grid;
   grid-template-columns: 420px 1fr;
   gap: 60px;
 
-  /* Vertical placement */
   padding-top: clamp(180px, 24vh, 340px);
-
-  /* Horizontal stage shift RIGHT */
-  transform: translateX(180px);
 }
 
 /* =====================================================
