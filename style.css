@@ -2108,8 +2108,8 @@ margin-left: -60px;
   width: 400px;
   height: 400px;
 
-  /* Move circle left/right safely */
-  margin-left: clamp(0px, 2vw, 32px);
+  /* Move circle left/right  */
+  transform: translateX(-60px);
 }
 
 
