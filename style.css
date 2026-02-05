@@ -1842,77 +1842,200 @@ body#About main.section{
   line-height:1.8;
 }
 
-
 /* =====================================================
-   MAP HERO — FULL BLEED
+   MAP HERO — TRUE FULL BLEED
 ===================================================== */
 
 .about-page--map{
-  position:relative;
-  width:100%;
-  min-height:125vh;
+  position: relative;
+  width: 100%;
+  min-height: 125vh;
 
-  margin-top:-90px;
-  padding-top:90px;
-  padding-bottom:140px;
+  margin-top: -90px;
+  padding-top: 90px;
+  padding-bottom: 140px;
 
-  overflow:hidden;
-  background:black;
-}
-
-
-/* MAP IMAGE */
-
-.map-bg{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center 75%;
-  transform:scale(1.08);
-  opacity:0;
-  z-index:0;
-
-  filter:brightness(.75) contrast(1.2);
-}
-
-
-/* BLACK FADE */
-
-.map-black{
-  position:absolute;
-  inset:0;
-  background:black;
-  z-index:1;
+  overflow: hidden;
+  background: black;
+  z-index: 1;
 }
 
 
 /* =====================================================
-   HERO CONTENT GRID — MASTER LAYOUT
+   MAP IMAGE
+===================================================== */
+
+.map-bg{
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 75%;
+
+  transform: scale(1.08);
+
+  opacity: 0;
+  z-index: 0;
+
+  filter: brightness(.75) contrast(1.2);
+}
+
+
+/* =====================================================
+   BLACK INTRO FADE
+===================================================== */
+
+.map-black{
+  position: absolute;
+  inset: 0;
+  background: black;
+  z-index: 1;
+  opacity: 1;
+}
+
+
+/* =====================================================
+   CONTENT STAGE — MASTER HERO LAYOUT
 ===================================================== */
 
 .about-page--map .about-page__wrap{
-  position:relative;
-  z-index:3;
+  position: relative;
+  z-index: 3;
 
-  width:100%;
-  max-width:1280px;
+  width: 100%;
+  max-width: 1280px;
 
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
 
-  padding-inline: clamp(24px,5vw,80px);
+  padding-inline: clamp(24px, 5vw, 80px);
 
-  display:grid;
+  display: grid;
 
   grid-template-columns:
-    clamp(340px,28vw,420px)
-    minmax(0,1fr);
+    clamp(320px, 30vw, 420px)
+    minmax(0, 1fr);
 
-  gap: clamp(12px,2vw,28px);
+  gap: clamp(24px, 3vw, 60px);
 
-  padding-top: clamp(180px,24vh,340px);
+  padding-top: clamp(180px, 24vh, 340px);
+
+  /* ⭐ MASTER RIGHT SHIFT CONTROL ⭐ */
+  transform: translateX(80px);
+}
+
+
+/* =====================================================
+   LEFT COLUMN — CIRCLE STAGING
+===================================================== */
+
+.about-page__photo{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+/* =====================================================
+   TECH AVATAR — CIRCLE CONTROL
+===================================================== */
+
+.tech-avatar{
+  position: relative;
+  width: 420px;
+  height: 420px;
+
+  /* Fine tune circle position ONLY */
+  transform: translateX(-20px);
+}
+
+
+/* =====================================================
+   SWIRL GIF
+===================================================== */
+
+.tech-bg{
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  border-radius: 50%;
+
+  opacity: .85;
+
+  filter:
+    brightness(.9)
+    contrast(1.15)
+    saturate(1.05);
+
+  animation: techFloat 20s ease-in-out infinite alternate;
+}
+
+
+/* =====================================================
+   FACE IMAGE
+===================================================== */
+
+.tech-face{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 30%;
+  height: 30%;
+
+  transform: translate(-50%, -50%);
+
+  object-fit: cover;
+  border-radius: 14px;
+
+  box-shadow:
+    0 0 18px rgba(99, 97, 97, 0.45),
+    0 0 4px rgba(255,255,255,.18),
+    0 12px 30px rgba(0,0,0,.6);
+}
+
+
+/* =====================================================
+   ENERGY SHELL
+===================================================== */
+
+.tech-avatar::after{
+  content:"";
+  position:absolute;
+  inset:-8%;
+  border-radius:50%;
+
+  box-shadow:
+    0 0 40px rgba(245, 246, 246, 0.18),
+    inset 0 0 50px rgba(0,0,0,.65);
+
+  pointer-events:none;
+}
+
+
+/* =====================================================
+   FLOAT ANIMATION
+===================================================== */
+
+@keyframes techFloat{
+  0%{ transform: scale(1) rotate(0deg); }
+  100%{ transform: scale(1.05) rotate(2deg); }
+}
+
+
+/* =====================================================
+   RIGHT COPY — TEXT BREATHING ROOM
+===================================================== */
+
+.about-page__copy{
+  max-width: 760px;
 }
 
 
@@ -1931,18 +2054,18 @@ body#About main.section{
 }
 
 @keyframes mapBlackFade{
-  from{opacity:1;}
-  to{opacity:0;}
+  0%{ opacity:1; }
+  100%{ opacity:0; }
 }
 
 @keyframes mapFadeIn{
-  from{opacity:0;}
-  to{opacity:.35;}
+  0%{ opacity:0; }
+  100%{ opacity:.35; }
 }
 
 @keyframes mapSettle{
-  from{filter:brightness(.9) contrast(1.35);}
-  to{filter:brightness(.75) contrast(1.2);}
+  0%{ filter: brightness(.9) contrast(1.35); }
+  100%{ filter: brightness(.75) contrast(1.2); }
 }
 
 
@@ -1950,26 +2073,30 @@ body#About main.section{
    RESPONSIVE
 ===================================================== */
 
-@media (max-width:980px){
+@media (max-width: 980px){
 
   .about-page--map .about-page__wrap{
-    grid-template-columns:1fr;
-    justify-items:center;
-    text-align:center;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    transform: none; /* prevent offscreen shift on mobile */
   }
 
   .tech-avatar{
-    transform:none;
+    transform: none;
   }
 }
 
-@media (max-width:768px){
+@media (max-width: 768px){
 
   .about-page--map{
-    min-height:90vh;
+    min-height: 90vh;
   }
 
   .map-bg{
-    object-position:center 82%;
+    object-position: center 82%;
   }
 }
+
+
+
