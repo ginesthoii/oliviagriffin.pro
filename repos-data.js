@@ -1310,7 +1310,7 @@ export const REPO_SECTIONS = [
         name: "inventory-ops-sheets",
         href: "https://github.com/ginesthoii/inventory-ops-sheets",
         image:
-          "https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/inventory-spreadsheet.png",
+          "https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/inventory.gif",
         description:
           "Operational inventory templates for stock, assets, locations, reorder thresholds, spoilage, and seasonal usage.",
         tech: ["Google Sheets", "Excel (XLSX)", "Apps Script", "AppSheet", "Automations"],
