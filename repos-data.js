@@ -402,7 +402,7 @@ export const REPO_SECTIONS = [
       {
         name: "smart-page-downloader",
         href: "https://github.com/ginesthoii/smart-page-downloader",
-        image: "https://github.com/ginesthoii/ginesthoii/blob/main/assets/two/smart-downloader.gif?raw=1",
+        image: "https://github.com/ginesthoii/ginesthoii/blob/main/assets/smart-downloader-cloud.gif",
         description:
           "Automated PDF, image, and media downloader for dynamic web flows.",
         tech: ["Python", "Selenium"],
@@ -1310,7 +1310,7 @@ export const REPO_SECTIONS = [
         name: "inventory-ops-sheets",
         href: "https://github.com/ginesthoii/inventory-ops-sheets",
         image:
-          "https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/inventory.gif",
+          "https://raw.githubusercontent.com/ginesthoii/ginesthoii/main/assets/two/inventory-spreadsheet.png",
         description:
           "Operational inventory templates for stock, assets, locations, reorder thresholds, spoilage, and seasonal usage.",
         tech: ["Google Sheets", "Excel (XLSX)", "Apps Script", "AppSheet", "Automations"],
