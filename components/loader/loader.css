@@ -1,0 +1,28 @@
+/* ===== GLOBAL LOADER ===== */
+
+#loading{
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #000;
+  z-index: 99999;
+
+  transition: opacity .5s ease, visibility .5s ease;
+}
+
+#loading img{
+  width: 140px;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* hidden state */
+#loading.hidden{
+  opacity: 0;
+  visibility: hidden;
+}
