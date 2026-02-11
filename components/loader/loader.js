@@ -6,7 +6,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
 
   try {
-    const res = await fetch("/components/loader/loader.html");
+    const res = await fetch("components/loader/loader.html");
     const html = await res.text();
 
     document.body.insertAdjacentHTML("afterbegin", html);
