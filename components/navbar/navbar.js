@@ -1,9 +1,9 @@
 // navbar.js
 
 async function loadNavbar(){
-  try{
+  try {
 
-    // RELATIVE PATH (works on GitHub Pages subfolder)
+    // RELATIVE PATH for GitHub Pages subfolder hosting
     const res = await fetch("components/navbar/navbar.html");
 
     if(!res.ok){
@@ -15,7 +15,7 @@ async function loadNavbar(){
     const slot = document.getElementById("navbar-slot");
     if(slot) slot.innerHTML = html;
 
-    // Mobile toggle logic AFTER inject
+    // Mobile toggle AFTER injection
     const hamb = document.getElementById("hamb");
     const navBg = document.getElementById("navBg");
 
@@ -25,12 +25,8 @@ async function loadNavbar(){
       });
     }
 
-  }catch(err){
+  } catch(err){
     console.error("Navbar load error:", err);
-  }
-}
-
-loadNavbar();
   }
 }
 
