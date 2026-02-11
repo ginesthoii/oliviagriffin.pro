@@ -704,11 +704,13 @@ body{
   margin-top: 4rem;
   display: grid;
 
-  /* KEY FIX: vertical spacing between rows */
-  row-gap: 42px;     /* more space between top row and bottom row */
-  column-gap: 0px;
+  /* spacing */
+  row-gap: 42px;
+  column-gap: 28px;
 
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  /* AUTO BALANCING GRID — no hardcoded rows */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
   max-width: 1000px;
   margin-inline: auto;
   justify-items: center;
@@ -724,17 +726,13 @@ body{
 
 /* Each item = badge + label card */
 .cert-item{
-  grid-column: span 2; /* 3 across */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 18px;
   width: 100%;
+  max-width: 280px;
 }
-
-/* Bottom row centered */
-.cert-item:nth-child(4){ grid-column: 2 / span 2; }
-.cert-item:nth-child(5){ grid-column: 4 / span 2; }
 
 
 /* BADGES */
@@ -756,7 +754,6 @@ body{
   backdrop-filter: blur(6px);
   transition: .3s;
   text-align: center;
-  max-width: 280px;
 }
 
 .cert-card:hover{
@@ -780,44 +777,29 @@ body{
 }
 
 
-/* Responsive: 2 columns */
+/* ===== Responsive ===== */
+
+/* Tablet */
 @media (max-width: 900px){
   .cert-grid{
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 28px;     /* still spaced */
-    column-gap: 22px;  /* breathing room for tablet */
-  }
-
-  .cert-item{
-    grid-column: auto;
-  }
-
-  .cert-item:nth-child(4),
-  .cert-item:nth-child(5){
-    grid-column: auto;
-  }
-
-  /*  badge size consistentcy */
-  .cert-badge{
-    width: 130px;
-    height: 130px;
+    row-gap: 28px;
+    column-gap: 22px;
   }
 }
 
-/* Mobile: 1 column */
+/* Mobile */
 @media (max-width: 520px){
   .cert-grid{
     grid-template-columns: 1fr;
     row-gap: 22px;
   }
 
-  /* Keep same size (or slightly smaller if you want) */
   .cert-badge{
     width: 82px;
     height: 82px;
   }
 }
-
 
 /* ========== ICON STACK ========== */
 
