@@ -277,7 +277,7 @@ function initCharts() {
     }
   };
 
-  /* ===== Doughnut Chart — Languages ===== */
+  /* ===== Doughnut — Languages ===== */
 
   const langCanvas = document.getElementById("langChart");
   if (langCanvas) {
@@ -294,7 +294,7 @@ function initCharts() {
     });
   }
 
-  /* ===== Doughnut Chart — Categories ===== */
+  /* ===== Doughnut — Categories ===== */
 
   const catCanvas = document.getElementById("categoryChart");
   if (catCanvas) {
@@ -360,7 +360,7 @@ function initCharts() {
     });
   }
 
-  /* ===== Heatmap Tiles ===== */
+  /* ===== Heatmap Tiles Chart ===== */
 
   const heatmap = document.getElementById("heatmapChart");
   if (heatmap) {
