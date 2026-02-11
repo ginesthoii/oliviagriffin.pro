@@ -23,21 +23,11 @@
   <link rel="manifest" href="images/site.webmanifest" />
 </head>
 
-<body id="About">
+<body id="about">
 
-<!-- NAV -->
-<header class="header">
-  <nav class="nav-inner">
-    <div class="nav-links">
-      <a href="index.html#home">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="organizations.html">Organizations</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
-  </nav>
-</header>
-
+<!-- SHARED NAVBAR -->
+<div id="navbar-slot"></div>
+<script src="components/navbar/navbar.js"></script>
 
 <main>
 
@@ -61,7 +51,7 @@
         >
 
         <img
-          src="images/olivia.png"
+          src="images/olivia-character-transparent.png"
           class="tech-face"
           alt="Portrait of Olivia Griffin"
         >
@@ -122,6 +112,69 @@
 
 </section>
 
+<!-- IMAGE GALLERY -->
+<section class="about-gallery">
+
+  <div class="section-intro">
+    <h5>Visual Work</h5>
+    <h1>Build & Systems</h1>
+    <p class="lead">
+      Snapshots of builds, environments, and system experiments.
+    </p>
+  </div>
+
+  <div class="about-gallery__grid">
+    <img src="images/projects/green.gif" alt="Hive system build">
+    <img src="images/projects/processing.gif" alt="Greenhouse automation">
+    <img src="images/projects/lock.gif" alt="Sensor test rig">
+    <img src="images/projects/spreadsheet.gif" alt="Prototype enclosure">
+  </div>
+
+</section>
+
+
+
+<!-- NEXT STEPS BAND -->
+<section class="visual-band next-steps-band">
+
+  <!-- Background Wallpaper -->
+  <div class="visual-band__bg"></div>
+
+  <!-- Text -->
+  <div class="section-intro">
+    <h5>Next Steps</h5>
+    <h1>Growing as a developer with a security emphasis</h1>
+  </div>
+
+  <!-- Foreground SVG -->
+  <img
+    class="visual-band__svg"
+    src="images/next-steps.svg"
+    alt="Next steps roadmap illustration"
+  >
+
+</section>
+
+
+
+<!-- HOW I WORK BAND -->
+<section class="visual-band how-i-work-band">
+
+  <div class="visual-band__bg"></div>
+
+  <div class="section-intro">
+    <h5>How I Work</h5>
+    <h1>Build & Systems</h1>
+  </div>
+
+  <img
+    class="visual-band__svg"
+    src="images/how-i-work.svg"
+    alt="How I work process diagram"
+  >
+
+</section>
+
 </main>
 
 <footer class="footer">
@@ -130,5 +183,3 @@
 
 </body>
 </html>
-
-
