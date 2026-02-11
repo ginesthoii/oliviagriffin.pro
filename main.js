@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* =================================================
-     STATS COUNT-UP (INTERSECTION OBSERVER)
+     STATS COUNT-UP 
   ================================================= */
 
   const statsSection = document.querySelector('#stats.stats-section');
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* =================================================
-     DYNAMIC FOOTER YEAR (OPTIONAL BUT CLEAN)
+     DYNAMIC FOOTER YEAR 
   ================================================= */
 
   const yearEl = document.getElementById("year");
