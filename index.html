@@ -12,7 +12,6 @@
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 
   <!-- Loader -->
-
   <link rel="stylesheet" href="components/loader/loader.css">
 
   <!-- Fonts -->
@@ -27,30 +26,9 @@
 
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <header class="header">
-    <nav class="nav-inner" aria-label="Main">
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="organizations.html">Organizations</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-      <button
-        id="menu-icon"
-        class="hamb"
-        aria-expanded="false"
-        aria-controls="mobile-nav"
-      >
-        ☰
-      </button>
-    </nav>
-
-    <!-- Mobile drawer (JS fills this from desktop links) -->
-    <div id="mobile-nav" class="nav-bg" aria-label="Mobile Navigation"></div>
-  </header>
+  <!-- ===== SHARED NAVBAR (Injected) ===== -->
+  <div id="navbar-slot"></div>
+  <script src="/components/navbar/navbar.js" defer></script>
 
   <main>
 
