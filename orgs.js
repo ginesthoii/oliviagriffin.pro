@@ -277,7 +277,7 @@ function initCharts() {
     }
   };
 
-  /* ===== Doughnut — Languages ===== */
+  /* ===== Doughnut Chart — Languages ===== */
 
   const langCanvas = document.getElementById("langChart");
   if (langCanvas) {
@@ -294,7 +294,7 @@ function initCharts() {
     });
   }
 
-  /* ===== Doughnut — Categories ===== */
+  /* ===== Doughnut Chart — Categories ===== */
 
   const catCanvas = document.getElementById("categoryChart");
   if (catCanvas) {
