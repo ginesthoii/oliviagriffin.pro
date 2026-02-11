@@ -34,7 +34,7 @@ export const ORGS = [
   category: "Security",
   githubOrgSlug: "ares-assist",
   orgUrl: "https://github.com/ares-assist",
-  image: "images/orgs/ares.png",
+  image: "images/orgs/ares.gif",
   about: "Local-first cyber + physical perimeter layer for offline intelligence systems. Provides guardrails, monitoring, and control across software and real-world interfaces.",
   tech: "Python · Local security tooling · Sensors · Automation · Policy enforcement · Offline-first design",
   tags: ["Security","Automation","Perimeter"]
