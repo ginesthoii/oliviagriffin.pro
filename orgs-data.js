@@ -64,9 +64,9 @@ export const ORGS = [
   tags: ["CI","Security","AppSec"]
 },
 
-/* =========================
-   AI / COMPUTE / KNOWLEDGE
-========================= */
+/* =============================
+   AI / COMPUTATION / KNOWLEDGE
+=============================== */
 
 {
   id: "lorie-ai",
