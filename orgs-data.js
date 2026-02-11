@@ -114,7 +114,7 @@ export const ORGS = [
   category: "Creative",
   githubOrgSlug: "StoryShield",
   orgUrl: "https://github.com/StoryShield",
-  image: "images/orgs/storyshield.png",
+  image: "images/orgs/storyshield2.png",
   about: "Privacy-first reading and creative writing companion with encrypted library and metadata protection.",
   tech: "AppSheet · Google Sheets · AES-128 · JavaScript · HTML",
   tags: ["Privacy","Writing","Encryption"]
