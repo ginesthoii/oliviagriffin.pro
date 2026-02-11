@@ -1,18 +1,24 @@
+// navbar.js
 async function loadNavbar(){
   try{
 
-    // ROOT RELATIVE PATH 
-    const res = await fetch("/components/navbar/navbar.html");
+    const slot = document.getElementById("navbar-slot");
+    if(!slot){
+      console.warn("Navbar slot not found.");
+      return;
+    }
+
+    // RELATIVE SAFE PATH
+    const res = await fetch("./components/navbar/navbar.html");
 
     if(!res.ok){
       throw new Error(`Navbar fetch failed: ${res.status}`);
     }
 
     const html = await res.text();
+    slot.innerHTML = html;
 
-    document.getElementById("navbar-slot").innerHTML = html;
-
-    // Mobile toggle logic AFTER inject
+    // Bind hamburger AFTER inject
     const hamb = document.getElementById("hamb");
     const navBg = document.getElementById("navBg");
 
@@ -27,4 +33,4 @@ async function loadNavbar(){
   }
 }
 
-loadNavbar();
+document.addEventListener("DOMContentLoaded", loadNavbar);
