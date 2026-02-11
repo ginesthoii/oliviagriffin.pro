@@ -27,7 +27,6 @@ async function loadNavbar(){
 
   } catch(err){
     console.error("Navbar load error:", err);
-  }
 }
 
 document.addEventListener("DOMContentLoaded", loadNavbar);
