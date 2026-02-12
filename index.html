@@ -2,50 +2,51 @@
 <html lang="en">
 <head>
 
-  <!-- =====================================================
-       META
-  ===================================================== -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Olivia Griffin — Portfolio</title>
+<!-- =====================================================
+META
+===================================================== -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Olivia Griffin — Portfolio</title>
 
-  <!-- =====================================================
-       FAVICON
-  ===================================================== -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+<!-- =====================================================
+FAVICON
+===================================================== -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 
-  <!-- =====================================================
-       FONTS
-  ===================================================== -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap" rel="stylesheet"/>
+<!-- =====================================================
+FONTS
+===================================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap" rel="stylesheet"/>
 
-  <!-- =====================================================
-       CSS LOAD ORDER
-  ===================================================== -->
-  <link rel="stylesheet" href="core.css" />
-  <link rel="stylesheet" href="components/navbar/navbar.css" />
-  <link rel="stylesheet" href="components/loader/loader.css" />
-  <link rel="stylesheet" href="style.css" />
+<!-- =====================================================
+CSS LOAD ORDER
+Core → Components → Page
+===================================================== -->
+<link rel="stylesheet" href="core.css" />
+<link rel="stylesheet" href="components/navbar/navbar.css" />
+<link rel="stylesheet" href="components/loader/loader.css" />
+<link rel="stylesheet" href="style.css" />
 
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- =====================================================
+NAVBAR SLOT
+===================================================== -->
 <div id="navbar-slot"></div>
 <script src="components/navbar/navbar.js" defer></script>
 
 <main>
 
 <!-- =====================================================
-     HERO
+HERO
 ===================================================== -->
-<section class="section-divider"><span>HOME</span></section>
-
 <section id="home" class="hero">
   <div class="title-wrap">
     <h1>Olivia Griffin</h1>
@@ -53,11 +54,11 @@
   </div>
 </section>
 
-<!-- =====================================================
-     FEATURE BAND
-===================================================== -->
-<section class="section-divider"><span>FOCUS</span></section>
+<section class="section-divider"><span>FEATURE</span></section>
 
+<!-- =====================================================
+FEATURE BAND
+===================================================== -->
 <section class="feature-band" id="feature">
   <div class="feature-wrap">
     <div class="feature-copy">
@@ -68,9 +69,8 @@
         <span class="dot">•</span>
         <span class="line">AppSec Automation & DevSecOps</span>
       </h2>
-
       <p class="next-steps">
-        Expanding projects that merge application security with modern web development.
+        Next Steps: Expanding projects that merge application security with modern web development.
       </p>
     </div>
   </div>
@@ -80,266 +80,264 @@
   </div>
 </section>
 
-<!-- =====================================================
-     ABOUT
-===================================================== -->
 <section class="section-divider"><span>ABOUT</span></section>
 
-<section id="about" class="about" aria-label="About">
+<!-- =====================================================
+ABOUT
+===================================================== -->
+<section id="about" class="about">
 
-  <div class="section-intro">
-    <h5>About</h5>
-    <h1>Let me introduce myself.</h1>
-    <p class="lead">Security-Minded Developer.</p>
-  </div>
+<div class="section-intro">
+  <h5>About</h5>
+  <h1>Let me introduce myself.</h1>
+  <p class="lead">Security-Minded Developer.</p>
+</div>
 
-  <div class="about-content">
+<div class="about-content">
 
-    <!-- PROFILE -->
-    <div class="about-col profile">
-      <h3>Profile</h3>
+<div class="about-col profile">
+<h3>Profile</h3>
 
-      <ul class="info-list">
-        <li>
-          <strong>Name:</strong>
-          <span class="value">Olivia Griffin</span>
-        </li>
+<ul class="info-list">
+<li><strong>Name:</strong> <span class="value">Olivia Griffin</span></li>
+<li><strong>Profession:</strong> <span class="value">Full-Stack Developer<br>with Security Emphasis</span></li>
+<li><strong>Education:</strong> <span class="value">University of Missouri, Columbia<br>Washington University Cybersecurity Certification</span></li>
+</ul>
 
-        <li>
-          <strong>Profession:</strong>
-          <span class="value">
-            Full-Stack Developer<br>
-            with Security Emphasis
-          </span>
-        </li>
+<div class="link-row">
+<a class="spark-btn" href="mailto:oliviagriffindev@gmail.com">Email</a>
+<a class="spark-btn" href="https://github.com/ginesthoii" target="_blank">GitHub</a>
+</div>
 
-        <li>
-          <strong>Education:</strong>
-          <span class="value">
-            University of Missouri, Columbia - Graduate<br>
-            Washington University Cybersecurity Certification
-          </span>
-        </li>
-      </ul>
+</div>
 
-      <div class="link-row">
-        <a class="spark-btn" href="mailto:oliviagriffindev@gmail.com">Email</a>
-        <a class="spark-btn" href="https://github.com/ginesthoii" target="_blank">GitHub</a>
-      </div>
-    </div>
+<div class="about-col skills">
+<h3>Core Skills</h3>
 
-    <!-- SKILLS -->
-    <div class="about-col skills">
-      <h3>Core Skills</h3>
-      <p>Specializations.</p>
+<ul class="skill-bars">
 
-      <ul class="skill-bars">
-        <li>
-          <div class="skill-head">
-            <span>HTML + Accessibility</span>
-            <span>90%</span>
-          </div>
-          <div class="skill-bar" style="--pct:90%"></div>
-        </li>
+<li>
+<div class="skill-head">
+<span class="skill-name">HTML + Accessibility</span>
+<span class="skill-pct">90%</span>
+</div>
+<div class="skill-bar" style="--pct:90%"></div>
+</li>
 
-        <li>
-          <div class="skill-head">
-            <span>CSS + Responsive UI</span>
-            <span>85%</span>
-          </div>
-          <div class="skill-bar" style="--pct:85%"></div>
-        </li>
+<li>
+<div class="skill-head">
+<span class="skill-name">CSS + Responsive UI</span>
+<span class="skill-pct">85%</span>
+</div>
+<div class="skill-bar" style="--pct:85%"></div>
+</li>
 
-        <li>
-          <div class="skill-head">
-            <span>JavaScript</span>
-            <span>70%</span>
-          </div>
-          <div class="skill-bar is-muted" style="--pct:70%"></div>
-        </li>
+<li>
+<div class="skill-head">
+<span class="skill-name">JavaScript</span>
+<span class="skill-pct">70%</span>
+</div>
+<div class="skill-bar is-muted" style="--pct:70%"></div>
+</li>
 
-        <li>
-          <div class="skill-head">
-            <span>SQL + Data Modeling</span>
-            <span>95%</span>
-          </div>
-          <div class="skill-bar" style="--pct:95%"></div>
-        </li>
+<li>
+<div class="skill-head">
+<span class="skill-name">SQL + Data Modeling</span>
+<span class="skill-pct">95%</span>
+</div>
+<div class="skill-bar" style="--pct:95%"></div>
+</li>
 
-        <li>
-          <div class="skill-head">
-            <span>Python + Automation</span>
-            <span>95%</span>
-          </div>
-          <div class="skill-bar" style="--pct:95%"></div>
-        </li>
+<li>
+<div class="skill-head">
+<span class="skill-name">Python + Automation</span>
+<span class="skill-pct">95%</span>
+</div>
+<div class="skill-bar" style="--pct:95%"></div>
+</li>
 
-        <li>
-          <div class="skill-head">
-            <span>Security Fundamentals</span>
-            <span>75%</span>
-          </div>
-          <div class="skill-bar is-muted" style="--pct:75%"></div>
-        </li>
-      </ul>
+<li>
+<div class="skill-head">
+<span class="skill-name">Security Fundamentals</span>
+<span class="skill-pct">75%</span>
+</div>
+<div class="skill-bar is-muted" style="--pct:75%"></div>
+</li>
 
-    </div>
+</ul>
+</div>
 
-  </div>
+</div>
 </section>
 
-<!-- =====================================================
-     CERTIFICATIONS
-===================================================== -->
 <section class="section-divider"><span>CERTIFICATIONS</span></section>
 
+<!-- =====================================================
+CERTIFICATIONS
+===================================================== -->
 <section id="certifications" class="certifications-section">
 
-  <div class="section-intro">
-    <h5>Credentials</h5>
-    <h1>Certifications</h1>
-  </div>
+<div class="section-intro">
+<h5>Credentials</h5>
+<h1>Certifications</h1>
+</div>
 
-  <div class="cert-grid">
+<div class="cert-grid">
 
-    <div class="cert-item">
-      <img class="cert-badge" src="images/badges/security-plus-badge.png" />
-      <div class="cert-card"><div class="cert-name">CompTIA Security+</div></div>
-    </div>
+<div class="cert-item">
+<img class="cert-badge" src="images/badges/security-plus-badge.png">
+<div class="cert-card"><div class="cert-name">CompTIA Security+</div></div>
+</div>
 
-    <div class="cert-item">
-      <img class="cert-badge" src="images/badges/washu-cyber.png" />
-      <div class="cert-card"><div class="cert-name">WashU Cybersecurity Certification</div></div>
-    </div>
+<div class="cert-item">
+<img class="cert-badge" src="images/badges/washu-cyber.png">
+<div class="cert-card"><div class="cert-name">WashU Cybersecurity Certification</div></div>
+</div>
 
-    <div class="cert-item">
-      <img class="cert-badge" src="images/badges/mizzou-multicultural.png" />
-      <div class="cert-card"><div class="cert-name">Multicultural Certificate (Mizzou)</div></div>
-    </div>
+<div class="cert-item">
+<img class="cert-badge" src="images/badges/mizzou-multicultural.png">
+<div class="cert-card"><div class="cert-name">Multicultural Certificate (Mizzou)</div></div>
+</div>
 
-    <div class="cert-item">
-      <img class="cert-badge" src="images/badges/oracle-ai-foundations.png" />
-      <div class="cert-card"><div class="cert-name">Oracle AI Foundations</div></div>
-    </div>
+<div class="cert-item">
+<img class="cert-badge" src="images/badges/oracle-ai-foundations.png">
+<div class="cert-card"><div class="cert-name">Oracle AI Foundations</div></div>
+</div>
 
-    <div class="cert-item">
-      <img class="cert-badge" src="images/badges/oracle-tech-jumpstart.png" />
-      <div class="cert-card"><div class="cert-name">Oracle Tech Jumpstart</div></div>
-    </div>
+<div class="cert-item">
+<img class="cert-badge" src="images/badges/oracle-tech-jumpstart.png">
+<div class="cert-card"><div class="cert-name">Oracle Tech Jumpstart</div></div>
+</div>
 
-    <div class="cert-item">
-      <img class="cert-badge" src="images/badges/microsoft.png" />
-      <div class="cert-card"><div class="cert-name">Microsoft Office Specialist</div></div>
-    </div>
+<div class="cert-item">
+<img class="cert-badge" src="images/badges/microsoft.png">
+<div class="cert-card"><div class="cert-name">Microsoft Office Specialist</div></div>
+</div>
 
-  </div>
+</div>
 </section>
 
-<!-- =====================================================
-     ICON STACK
-===================================================== -->
 <section class="section-divider"><span>TECH STACK</span></section>
 
+<!-- =====================================================
+ICON STACK
+===================================================== -->
 <section class="icon-stack" id="icons">
 
-  <div class="section-intro">
-    <h5>Tools & Platforms</h5>
-    <h1>Tech Stack & Systems</h1>
-  </div>
+<div class="section-intro">
+<h5>Tools & Platforms</h5>
+<h1>Tech Stack & Systems</h1>
+</div>
 
-  <div class="icon-wrapper">
-    <img src="images/icons/icon1.jpg" class="icon" loading="lazy"/>
-    <img src="images/icons/icon2.jpg" class="icon" loading="lazy"/>
-  </div>
+<div class="icon-wrapper">
+<img src="images/icons/icon1.jpg" class="icon">
+<img src="images/icons/icon2.jpg" class="icon">
+</div>
 
 </section>
 
-<!-- =====================================================
-     STATS
-===================================================== -->
 <section class="section-divider"><span>STATS</span></section>
 
+<!-- =====================================================
+STATS
+===================================================== -->
 <section id="stats" class="stats-section">
 
-  <div class="section-intro">
-    <h5>Stats</h5>
-    <h1>By the Numbers</h1>
-  </div>
+<div class="section-intro">
+<h5>Stats</h5>
+<h1>By the Numbers</h1>
+</div>
 
-  <div class="stats-list">
+<div class="stats-list">
 
-    <article class="stat">
-      <h3 class="stat-count" data-target="115">0</h3>
-      <h5 class="stat-title">Projects Completed</h5>
-    </article>
+<article class="stat">
+<h3 class="stat-count" data-target="115">0</h3>
+<h5 class="stat-title">Projects Completed</h5>
+</article>
 
-    <article class="stat">
-      <h3 class="stat-count" data-target="5">0</h3>
-      <h5 class="stat-title">Certifications</h5>
-    </article>
+<article class="stat">
+<h3 class="stat-count" data-target="5">0</h3>
+<h5 class="stat-title">Certifications</h5>
+</article>
 
-    <article class="stat">
-      <h3 class="stat-count" data-target="4">0</h3>
-      <h5 class="stat-title">Awards</h5>
-    </article>
+<article class="stat">
+<h3 class="stat-count" data-target="2000">0</h3>
+<h5 class="stat-title">Crazy Ideas</h5>
+</article>
 
-    <article class="stat">
-      <h3 class="stat-count" data-target="2000">0</h3>
-      <h5 class="stat-title">Ideas</h5>
-    </article>
+<article class="stat">
+<h3 class="stat-count" data-target="1500">0</h3>
+<h5 class="stat-title">Coffee Cups</h5>
+</article>
 
-    <article class="stat">
-      <h3 class="stat-count" data-target="1500">0</h3>
-      <h5 class="stat-title">Coffee Cups</h5>
-    </article>
-
-    <article class="stat">
-      <h3 class="stat-count" data-target="7200">0</h3>
-      <h5 class="stat-title">Hours</h5>
-    </article>
-
-  </div>
+</div>
 </section>
 
+<section class="section-divider"><span>PROJECTS</span></section>
+
 <!-- =====================================================
-     CONTACT
+PROJECTS VISUAL
 ===================================================== -->
+<section id="projects-visual" class="project-showcase">
+
+<div class="section-intro">
+<h5>Visual Projects</h5>
+<h1>What I’m Building</h1>
+</div>
+
+<div class="project-cards">
+
+<a class="card" href="projects.html" style="--card-img:url('images/projects/mini-metadata-1.gif')">
+<div class="card-media"></div>
+<div class="card-content"><h3>Mini-Metadata</h3></div>
+</a>
+
+<a class="card" href="projects.html" style="--card-img:url('images/projects/enyo-1.gif')">
+<div class="card-media"></div>
+<div class="card-content"><h3>Enyo</h3></div>
+</a>
+
+<a class="card" href="projects.html" style="--card-img:url('images/projects/dome2-1.gif')">
+<div class="card-media"></div>
+<div class="card-content"><h3>Geodesic Dome</h3></div>
+</a>
+
+</div>
+</section>
+
 <section class="section-divider"><span>CONTACT</span></section>
 
+<!-- =====================================================
+CONTACT
+===================================================== -->
 <section id="contact" class="contact-section">
 
-  <div class="section-intro">
-    <h5>Contact</h5>
-    <h1>Let’s connect.</h1>
-  </div>
+<div class="section-intro">
+<h5>Contact</h5>
+<h1>Let’s connect.</h1>
+</div>
 
-  <form class="contact-form"
-        action="https://formspree.io/f/xlggjggb"
-        method="POST">
+<form class="contact-form" action="https://formspree.io/f/xlggjggb" method="POST">
 
-    <div class="contact-grid">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="email" placeholder="Your email" required />
-    </div>
+<div class="contact-grid">
+<input type="text" name="name" placeholder="Your name" required />
+<input type="email" name="email" placeholder="Your email" required />
+</div>
 
-    <input type="text" name="subject" placeholder="Subject" />
+<input type="text" name="subject" placeholder="Subject" />
 
-    <textarea name="message" minlength="15" required></textarea>
+<textarea name="message" minlength="15" required></textarea>
 
-    <input type="text" name="_gotcha" style="display:none" />
+<button type="submit" class="btn-outline">Send Message</button>
 
-    <button type="submit" class="btn-outline">
-      Send Message
-    </button>
-
-  </form>
+</form>
 
 </section>
 
 </main>
 
 <footer class="footer">
-  <p>© 2026 Olivia Griffin</p>
+<p>© 2025 Olivia Griffin. All rights reserved.</p>
 </footer>
 
 <script src="components/loader/loader.js" defer></script>
