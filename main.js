@@ -2,23 +2,31 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* =====================================================================================
-     HASH NAVIGATION (CROSS PAGE FIX → makes sure index.html#contact scrolls correctly)
-  ======================================================================================== */
+  /* =================================================
+     SCROLL WITH NAV OFFSET (GLOBAL HELPER)
+  ================================================= */
 
-  if (window.location.hash) {
-    const target = document.querySelector(window.location.hash);
+  function scrollWithOffset(target) {
 
-    if (target) {
-      setTimeout(() => {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }, 150);
-    }
+    if (!target) return;
+
+    const header = document.querySelector('.header');
+    const headerHeight = header ? header.offsetHeight : 0;
+
+    const elementPosition =
+      target.getBoundingClientRect().top + window.scrollY;
+
+    const offsetPosition = elementPosition - headerHeight - 8;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
   }
 
 
   /* =================================================
-     MOBILE NAV DRAWER + SMOOTH SCROLL
+     MOBILE NAV DRAWER + LINK CLONING
   ================================================= */
 
   const mob = document.getElementById('mobile-nav');
@@ -36,14 +44,33 @@ document.addEventListener('DOMContentLoaded', () => {
       mob.classList.toggle('active', open);
       btn.setAttribute('aria-expanded', String(open));
     });
+
   }
 
 
   /* =================================================
-     SAME PAGE SMOOTH SCROLL
+     HASH NAVIGATION (CROSS PAGE + REFRESH SUPPORT)
+  ================================================= */
+
+  if (window.location.hash) {
+
+    const target = document.querySelector(window.location.hash);
+
+    if (target) {
+      setTimeout(() => {
+        scrollWithOffset(target);
+      }, 120);
+    }
+
+  }
+
+
+  /* =================================================
+     SAME PAGE HASH CLICK SMOOTH SCROLL
   ================================================= */
 
   document.querySelectorAll('a[href^="#"]').forEach(link => {
+
     link.addEventListener('click', e => {
 
       const href = link.getAttribute('href');
@@ -52,11 +79,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!target) return;
 
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth' });
+
+      scrollWithOffset(target);
 
       mob?.classList.remove('active');
       btn?.setAttribute('aria-expanded', 'false');
+
     });
+
   });
 
 
@@ -70,8 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (track && prev && next) {
 
-    const slideBy = () =>
-      Math.max(track.clientWidth * 0.8, 280);
+    const slideBy = () => Math.max(track.clientWidth * 0.8, 280);
 
     prev.addEventListener('click', () =>
       track.scrollBy({ left: -slideBy(), behavior: 'smooth' })
@@ -80,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     next.addEventListener('click', () =>
       track.scrollBy({ left: slideBy(), behavior: 'smooth' })
     );
+
   }
 
 
@@ -105,7 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const step = now => {
         const t = Math.min(1, (now - start) / DURATION);
         el.textContent = fmt.format(Math.round(target * ease(t)));
-
         if (t < 1) requestAnimationFrame(step);
       };
 
@@ -125,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* =================================================
-     CARD GLOW TRACKING
+     INTERACTIVE GLOW CARDS
   ================================================= */
 
   const cards = document.querySelectorAll('.card');
@@ -148,7 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
       raf = requestAnimationFrame(() => {
 
         const rect = card.getBoundingClientRect();
-
         const x = (e.clientX - rect.left) / rect.width;
         const y = (e.clientY - rect.top) / rect.height;
 
@@ -158,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
         );
 
         raf = null;
+
       });
     };
 
@@ -165,11 +194,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     card.addEventListener('mousemove', onMove);
     card.addEventListener('mouseleave', onLeave);
+
   });
 
 
   /* =================================================
-     ORGANIZATION CARDS (EXPAND + GLOW)
+     ORGANIZATION CARDS (GLOW + EXPAND)
   ================================================= */
 
   const cardsWrap = document.getElementById("cards");
@@ -183,12 +213,12 @@ document.addEventListener('DOMContentLoaded', () => {
       for (const card of cards) {
 
         const rect = card.getBoundingClientRect();
-
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
 
         card.style.setProperty("--mouse-x", `${x}px`);
         card.style.setProperty("--mouse-y", `${y}px`);
+
       }
     });
 
@@ -211,48 +241,44 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
     });
+
   }
 
 
   /* =================================================
-     FOOTER YEAR AUTO UPDATE
+     DYNAMIC FOOTER YEAR
   ================================================= */
 
   const yearEl = document.getElementById("year");
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 });
 
 
 /* =================================================
-   ABOUT MAP INTERSECTION OBSERVER
+   STL ABOUT MAP OBSERVER
 ================================================= */
 
-(function () {
+(function(){
 
   const aboutMap = document.querySelector('.about-page--map');
+  if(!aboutMap) return;
 
-  if (!aboutMap) return;
-
-  if (!('IntersectionObserver' in window)) {
+  if(!('IntersectionObserver' in window)){
     aboutMap.classList.add('stl-visible');
     return;
   }
 
-  const observer = new IntersectionObserver((entries, obs) => {
-
-    entries.forEach(entry => {
-
-      if (entry.isIntersecting) {
+  const observer = new IntersectionObserver((entries, obs)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
         aboutMap.classList.add('stl-visible');
         obs.disconnect();
       }
-
     });
-
-  }, { threshold: 0.25 });
+  },{
+    threshold: 0.25
+  });
 
   observer.observe(aboutMap);
 
