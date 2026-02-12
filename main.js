@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* =================================================
-     MOBILE NAV DRAWER + SMOOTH SCROLL
+     MOBILE NAV DRAWER + SAFE SMOOTH SCROLL
   ================================================= */
 
   const mob = document.getElementById('mobile-nav');
@@ -22,17 +22,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+  /* =================================================
+     SAFE SMOOTH SCROLL
+  ================================================= */
+
+  document.querySelectorAll('a[href*="#"]').forEach(link => {
     link.addEventListener('click', e => {
-      const href = link.getAttribute('href');
-      const target = document.querySelector(href);
-      if (!target) return;
 
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth' });
+      try {
+        const url = new URL(link.href, window.location.origin);
 
-      mob?.classList.remove('active');
-      btn?.setAttribute('aria-expanded', 'false');
+        // Only intercept if SAME PAGE
+        if (url.pathname === window.location.pathname && url.hash) {
+
+          const target = document.querySelector(url.hash);
+
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+
+            mob?.classList.remove('active');
+            btn?.setAttribute('aria-expanded', 'false');
+          }
+        }
+
+      } catch {
+        // Fail silently — never break navigation
+      }
+
     });
   });
 
@@ -59,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* =================================================
-     STATS COUNT-UP 
+     STATS COUNT-UP
   ================================================= */
 
   const statsSection = document.querySelector('#stats.stats-section');
@@ -138,15 +156,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* =================================================
-     ORGANIZATIONS CARDS
-     Glow tracking + expandable toggle
+     ORGANIZATION CARD EFFECTS
   ================================================= */
 
   const cardsWrap = document.getElementById("cards");
 
   if (cardsWrap) {
 
-    /* Glow Mouse Tracking */
+    /* Glow Tracking */
     cardsWrap.addEventListener("pointermove", e => {
       const cards = cardsWrap.getElementsByClassName("card");
 
@@ -184,13 +201,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* =================================================
-     DYNAMIC FOOTER YEAR 
+     DYNAMIC FOOTER YEAR
   ================================================= */
 
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 });
+
 
 /* =================================
    STL ABOUT BACKGROUND TRIGGER
