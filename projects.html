@@ -23,13 +23,17 @@
   />
 
   <!-- ======================================
-       CSS: Base → Page → Components
+       CSS LOAD ORDER
+       Base/Global → Page → Components
   ======================================= -->
 
-  <!-- Page -->
+  <!-- GLOBAL SITE SYSTEM (NAVBAR + TOKENS + GLOBAL STRUCTURE) -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- PAGE VISUALS -->
   <link rel="stylesheet" href="projects.css" />
 
-  <!-- Components -->
+  <!-- COMPONENT CSS -->
   <link rel="stylesheet" href="components/loader/loader.css" />
 
   <!-- ======================================
@@ -41,12 +45,10 @@
 
 </head>
 
-
-
 <body id="projects">
 
   <!-- ======================================
-       SHARED NAVBAR 
+       SHARED NAVBAR SLOT
   ======================================= -->
   <div id="navbar-slot"></div>
   <script src="components/navbar/navbar.js" defer></script>
@@ -70,6 +72,7 @@
           type="search"
           placeholder="Search projects…"
           aria-label="Search projects"
+          autocomplete="off"
         />
 
         <div id="catbar" class="catbar"></div>
@@ -88,31 +91,20 @@
     </div>
   </header>
 
-
-
   <!-- ======================================
        MAIN CONTENT
   ======================================= -->
   <main class="page-main">
-
-    <!-- Interactive Cards Mount Point -->
     <div id="sections" class="interactive-cards"></div>
-
   </main>
 
-
-
   <!-- ======================================
-       SCRIPTS
+       GLOBAL SITE LOGIC
   ======================================= -->
-
-  <!-- Global Site Logic -->
   <script defer src="main.js"></script>
 
-  <!-- Page Module -->
+  <!-- PAGE MODULE -->
   <script type="module" src="projects.js"></script>
-
-
 
 </body>
 </html>
