@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- ======================================
+       META
+  ======================================= -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>About — Olivia Griffin</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap"
-        rel="stylesheet"/>
+  <!-- ======================================
+       FONTS
+  ======================================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Styles -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ======================================
+       CSS LOAD ORDER
+       Core → Components → Page
+  ======================================= -->
+
+  <!-- GLOBAL TOKENS + RESET -->
+  <link rel="stylesheet" href="core.css" />
+
+  <!-- COMPONENTS -->
+  <link rel="stylesheet" href="components/navbar/navbar.css" />
+
+  <!-- PAGE VISUALS (INDEX + ABOUT SHARE THIS) -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Scripts -->
+  <!-- ======================================
+       SCRIPTS
+  ======================================= -->
   <script defer src="main.js"></script>
 
-  <!-- Favicon -->
+  <!-- ======================================
+       FAVICON
+  ======================================= -->
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
 </head>
 
 <body id="about">
 
-<!-- SHARED NAVBAR -->
+<!-- ======================================
+     SHARED NAVBAR
+====================================== -->
 <div id="navbar-slot"></div>
 <script src="components/navbar/navbar.js" defer></script>
-  
+
 <main>
 
-<!-- HERO MAP (FULL BLEED) -->
+<!-- HERO MAP -->
 <section class="about-page--map">
 
   <img src="images/stl-map.webp" class="map-bg" alt="" aria-hidden="true">
@@ -62,7 +91,6 @@
     <div class="about-page__copy">
 
       <h1>About Me</h1>
-
       <p class="lead">Security-Minded Developer</p>
 
       <p>
@@ -82,7 +110,6 @@
   </div>
 
 </section>
-
 
 <!-- PILLARS -->
 <section class="about-pillars">
@@ -111,7 +138,7 @@
 
 </section>
 
-<!-- IMAGE GALLERY -->
+<!-- GALLERY -->
 <section class="about-gallery">
 
   <div class="section-intro">
@@ -131,34 +158,24 @@
 
 </section>
 
-
-
-<!-- NEXT STEPS BAND -->
+<!-- NEXT STEPS -->
 <section class="visual-band next-steps-band">
-
-  <!-- Background Wallpaper -->
   <div class="visual-band__bg"></div>
 
-  <!-- Text -->
   <div class="section-intro">
     <h5>Next Steps</h5>
     <h1>Growing as a developer with a security emphasis</h1>
   </div>
 
-  <!-- Foreground SVG -->
   <img
     class="visual-band__svg"
     src="images/next-steps.svg"
     alt="Next steps roadmap illustration"
   >
-
 </section>
 
-
-
-<!-- HOW I WORK BAND -->
+<!-- HOW I WORK -->
 <section class="visual-band how-i-work-band">
-
   <div class="visual-band__bg"></div>
 
   <div class="section-intro">
@@ -171,7 +188,6 @@
     src="images/how-i-work.svg"
     alt="How I work process diagram"
   >
-
 </section>
 
 </main>
