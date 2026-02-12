@@ -1,36 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- ======================================
+     META
+====================================== -->
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
 <title>Organizations — Olivia Griffin</title>
 
+<!-- ======================================
+     PERFORMANCE (Fonts)
+====================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- ======================================
+     CSS LOAD ORDER
+     Global → Page → Components
+====================================== -->
+
+<!-- GLOBAL SITE SYSTEM (NAVBAR + TOKENS + GLOBAL STRUCTURE) -->
+<link rel="stylesheet" href="style.css"/>
+
+<!-- PAGE VISUALS -->
 <link rel="stylesheet" href="orgs.css"/>
 
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap" rel="stylesheet"/>
+<!-- ======================================
+     FAVICONS
+====================================== -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
 
-<!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
-  
-<!-- Chart library -->
+<!-- ======================================
+     CHART LIBRARY
+====================================== -->
 <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<!-- Chart logic & Org UI -->
+<!-- ======================================
+     PAGE MODULE
+====================================== -->
 <script type="module" defer src="orgs.js"></script>
-
 
 </head>
 
 <body id="organizations">
 
-<!-- Shared Navbar -->
+<!-- ======================================
+     SHARED NAVBAR SLOT
+====================================== -->
 <div id="navbar-slot"></div>
 <script src="components/navbar/navbar.js" defer></script>
-  
+
+<!-- ======================================
+     MAIN CONTENT
+====================================== -->
 <main class="section orgs-page">
 
+  <!-- =========================
+       INTRO
+  ========================== -->
   <div class="section-intro orgs-intro">
     <h5>Labs + Ecosystems</h5>
     <h1>Organizations</h1>
@@ -42,7 +78,6 @@
   <!-- =========================
        ANALYTICS
   ========================== -->
-
   <section class="org-analytics">
 
     <h2>Org Analytics</h2>
@@ -78,12 +113,12 @@
   <!-- =========================
        SEARCH
   ========================== -->
-
   <section class="org-search">
     <input
       id="orgSearch"
       type="search"
       placeholder="Search orgs, tags, tech, descriptions…"
+      aria-label="Search organizations"
       autocomplete="off"
     />
   </section>
@@ -91,7 +126,6 @@
   <!-- =========================
        FILTERS
   ========================== -->
-
   <section class="org-filters" aria-label="Organization filters">
 
     <div class="filter-row">
@@ -121,12 +155,16 @@
   <!-- =========================
        CARDS
   ========================== -->
-
   <section class="org-grid">
     <div class="cards" id="orgCards"></div>
   </section>
 
 </main>
+
+<!-- ======================================
+     GLOBAL SITE LOGIC
+====================================== -->
+<script defer src="main.js"></script>
 
 </body>
 </html>
