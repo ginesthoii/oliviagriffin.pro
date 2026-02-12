@@ -21,14 +21,10 @@
   ===================================================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap" rel="stylesheet"/>
 
   <!-- =====================================================
        CSS LOAD ORDER
-       Core → Components → Page
   ===================================================== -->
   <link rel="stylesheet" href="core.css" />
   <link rel="stylesheet" href="components/navbar/navbar.css" />
@@ -39,146 +35,315 @@
 
 <body>
 
-  <!-- =====================================================
-       SHARED NAVBAR (INJECTED)
-  ===================================================== -->
-  <div id="navbar-slot"></div>
-  <script src="components/navbar/navbar.js" defer></script>
+<!-- NAVBAR -->
+<div id="navbar-slot"></div>
+<script src="components/navbar/navbar.js" defer></script>
 
-  <main>
+<main>
 
-    <!-- =====================================================
-         HERO
-    ===================================================== -->
-    <section id="home" class="hero">
-      <div class="title-wrap">
-        <h1>Olivia Griffin</h1>
-        <h2>Portfolio</h2>
+<!-- =====================================================
+     HERO
+===================================================== -->
+<section class="section-divider"><span>HOME</span></section>
+
+<section id="home" class="hero">
+  <div class="title-wrap">
+    <h1>Olivia Griffin</h1>
+    <h2>Portfolio</h2>
+  </div>
+</section>
+
+<!-- =====================================================
+     FEATURE BAND
+===================================================== -->
+<section class="section-divider"><span>FOCUS</span></section>
+
+<section class="feature-band" id="feature">
+  <div class="feature-wrap">
+    <div class="feature-copy">
+      <h2 class="roles">
+        <span class="line">Security-Minded Developer</span>
+        <span class="dot">•</span>
+        <span class="line">Full-Stack</span>
+        <span class="dot">•</span>
+        <span class="line">AppSec Automation & DevSecOps</span>
+      </h2>
+
+      <p class="next-steps">
+        Expanding projects that merge application security with modern web development.
+      </p>
+    </div>
+  </div>
+
+  <div class="feature-mock">
+    <img src="images/icons/iphone1.png" alt="" />
+  </div>
+</section>
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+<section class="section-divider"><span>ABOUT</span></section>
+
+<section id="about" class="about" aria-label="About">
+
+  <div class="section-intro">
+    <h5>About</h5>
+    <h1>Let me introduce myself.</h1>
+    <p class="lead">Security-Minded Developer.</p>
+  </div>
+
+  <div class="about-content">
+
+    <!-- PROFILE -->
+    <div class="about-col profile">
+      <h3>Profile</h3>
+
+      <ul class="info-list">
+        <li>
+          <strong>Name:</strong>
+          <span class="value">Olivia Griffin</span>
+        </li>
+
+        <li>
+          <strong>Profession:</strong>
+          <span class="value">
+            Full-Stack Developer<br>
+            with Security Emphasis
+          </span>
+        </li>
+
+        <li>
+          <strong>Education:</strong>
+          <span class="value">
+            University of Missouri, Columbia - Graduate<br>
+            Washington University Cybersecurity Certification
+          </span>
+        </li>
+      </ul>
+
+      <div class="link-row">
+        <a class="spark-btn" href="mailto:oliviagriffindev@gmail.com">Email</a>
+        <a class="spark-btn" href="https://github.com/ginesthoii" target="_blank">GitHub</a>
       </div>
-    </section>
+    </div>
 
-    <!-- =====================================================
-         FEATURE BAND
-    ===================================================== -->
-    <section class="feature-band" id="feature">
-      <div class="feature-wrap">
-        <div class="feature-copy">
-          <h2 class="roles">
-            <span class="line">Security-Minded Developer</span>
-            <span class="dot">•</span>
-            <span class="line">Full-Stack</span>
-            <span class="dot">•</span>
-            <span class="line">AppSec Automation & DevSecOps</span>
-          </h2>
+    <!-- SKILLS -->
+    <div class="about-col skills">
+      <h3>Core Skills</h3>
+      <p>Specializations.</p>
 
-          <p class="next-steps">
-            Next Steps: Expanding projects that merge application security with modern web development.
-          </p>
-        </div>
-      </div>
+      <ul class="skill-bars">
+        <li>
+          <div class="skill-head">
+            <span>HTML + Accessibility</span>
+            <span>90%</span>
+          </div>
+          <div class="skill-bar" style="--pct:90%"></div>
+        </li>
 
-      <div class="feature-mock">
-        <img src="images/icons/iphone1.png" alt="" />
-      </div>
-    </section>
+        <li>
+          <div class="skill-head">
+            <span>CSS + Responsive UI</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar" style="--pct:85%"></div>
+        </li>
 
-    <!-- =====================================================
-         ABOUT
-    ===================================================== -->
-    <section id="about" class="about">
-      <div class="section-intro">
-        <h5>About</h5>
-        <h1>Let me introduce myself.</h1>
-        <p class="lead">Security-Minded Developer.</p>
-      </div>
+        <li>
+          <div class="skill-head">
+            <span>JavaScript</span>
+            <span>70%</span>
+          </div>
+          <div class="skill-bar is-muted" style="--pct:70%"></div>
+        </li>
 
-      <div class="about-content">
-        <!-- Profile + Skills unchanged -->
-      </div>
-    </section>
+        <li>
+          <div class="skill-head">
+            <span>SQL + Data Modeling</span>
+            <span>95%</span>
+          </div>
+          <div class="skill-bar" style="--pct:95%"></div>
+        </li>
 
-    <!-- =====================================================
-         CERTIFICATIONS
-    ===================================================== -->
-    <section id="certifications" class="certifications-section">
-      <div class="section-intro">
-        <h5>Credentials</h5>
-        <h1>Certifications</h1>
-        <p class="lead">Verified training and security fundamentals.</p>
-      </div>
+        <li>
+          <div class="skill-head">
+            <span>Python + Automation</span>
+            <span>95%</span>
+          </div>
+          <div class="skill-bar" style="--pct:95%"></div>
+        </li>
 
-      <div class="cert-grid">
-        <!-- Your cert cards unchanged -->
-      </div>
-    </section>
+        <li>
+          <div class="skill-head">
+            <span>Security Fundamentals</span>
+            <span>75%</span>
+          </div>
+          <div class="skill-bar is-muted" style="--pct:75%"></div>
+        </li>
+      </ul>
 
-    <!-- =====================================================
-         ICON STACK / TECH SHOWCASE
-    ===================================================== -->
-    <section class="icon-stack" id="icons">
-      <div class="section-intro">
-        <h5>Tools & Platforms</h5>
-        <h1>Tech Stack & Systems</h1>
-        <p class="lead">
-          Tools I build with across web, security, automation, and IoT.
-        </p>
-      </div>
+    </div>
 
-      <div class="icon-wrapper">
-        <img src="images/icons/icon1.jpg" class="icon" />
-        <img src="images/icons/icon2.jpg" class="icon" />
-      </div>
-    </section>
+  </div>
+</section>
 
-    <!-- =====================================================
-         CONTACT
-         (NAVBAR ANCHOR TARGET)
-    ===================================================== -->
-    <section id="contact" class="contact-section">
-      <div class="section-intro">
-        <h5>Contact</h5>
-        <h1>Let’s connect.</h1>
-        <p class="lead">Send me a message and I’ll get back to you.</p>
-      </div>
+<!-- =====================================================
+     CERTIFICATIONS
+===================================================== -->
+<section class="section-divider"><span>CERTIFICATIONS</span></section>
 
-      <form class="contact-form"
-            action="https://formspree.io/f/xlggjggb"
-            method="POST">
+<section id="certifications" class="certifications-section">
 
-        <div class="contact-grid">
-          <input type="text" name="name" placeholder="Your name" required />
-          <input type="email" name="email" placeholder="Your email" required />
-        </div>
+  <div class="section-intro">
+    <h5>Credentials</h5>
+    <h1>Certifications</h1>
+  </div>
 
-        <input type="text" name="subject" placeholder="Subject" />
+  <div class="cert-grid">
 
-        <textarea name="message"
-                  minlength="15"
-                  required></textarea>
+    <div class="cert-item">
+      <img class="cert-badge" src="images/badges/security-plus-badge.png" />
+      <div class="cert-card"><div class="cert-name">CompTIA Security+</div></div>
+    </div>
 
-        <input type="text" name="_gotcha" style="display:none" />
+    <div class="cert-item">
+      <img class="cert-badge" src="images/badges/washu-cyber.png" />
+      <div class="cert-card"><div class="cert-name">WashU Cybersecurity Certification</div></div>
+    </div>
 
-        <button type="submit" class="btn-outline">
-          Send Message
-        </button>
+    <div class="cert-item">
+      <img class="cert-badge" src="images/badges/mizzou-multicultural.png" />
+      <div class="cert-card"><div class="cert-name">Multicultural Certificate (Mizzou)</div></div>
+    </div>
 
-      </form>
-    </section>
+    <div class="cert-item">
+      <img class="cert-badge" src="images/badges/oracle-ai-foundations.png" />
+      <div class="cert-card"><div class="cert-name">Oracle AI Foundations</div></div>
+    </div>
 
-  </main>
+    <div class="cert-item">
+      <img class="cert-badge" src="images/badges/oracle-tech-jumpstart.png" />
+      <div class="cert-card"><div class="cert-name">Oracle Tech Jumpstart</div></div>
+    </div>
 
-  <!-- =====================================================
-       FOOTER
-  ===================================================== -->
-  <footer class="footer">
-    <p>© 2025 Olivia Griffin. All rights reserved.</p>
-  </footer>
+    <div class="cert-item">
+      <img class="cert-badge" src="images/badges/microsoft.png" />
+      <div class="cert-card"><div class="cert-name">Microsoft Office Specialist</div></div>
+    </div>
 
-  <!-- =====================================================
-       JS
-  ===================================================== -->
-  <script src="components/loader/loader.js" defer></script>
-  <script src="main.js" defer></script>
+  </div>
+</section>
+
+<!-- =====================================================
+     ICON STACK
+===================================================== -->
+<section class="section-divider"><span>TECH STACK</span></section>
+
+<section class="icon-stack" id="icons">
+
+  <div class="section-intro">
+    <h5>Tools & Platforms</h5>
+    <h1>Tech Stack & Systems</h1>
+  </div>
+
+  <div class="icon-wrapper">
+    <img src="images/icons/icon1.jpg" class="icon" loading="lazy"/>
+    <img src="images/icons/icon2.jpg" class="icon" loading="lazy"/>
+  </div>
+
+</section>
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+<section class="section-divider"><span>STATS</span></section>
+
+<section id="stats" class="stats-section">
+
+  <div class="section-intro">
+    <h5>Stats</h5>
+    <h1>By the Numbers</h1>
+  </div>
+
+  <div class="stats-list">
+
+    <article class="stat">
+      <h3 class="stat-count" data-target="115">0</h3>
+      <h5 class="stat-title">Projects Completed</h5>
+    </article>
+
+    <article class="stat">
+      <h3 class="stat-count" data-target="5">0</h3>
+      <h5 class="stat-title">Certifications</h5>
+    </article>
+
+    <article class="stat">
+      <h3 class="stat-count" data-target="4">0</h3>
+      <h5 class="stat-title">Awards</h5>
+    </article>
+
+    <article class="stat">
+      <h3 class="stat-count" data-target="2000">0</h3>
+      <h5 class="stat-title">Ideas</h5>
+    </article>
+
+    <article class="stat">
+      <h3 class="stat-count" data-target="1500">0</h3>
+      <h5 class="stat-title">Coffee Cups</h5>
+    </article>
+
+    <article class="stat">
+      <h3 class="stat-count" data-target="7200">0</h3>
+      <h5 class="stat-title">Hours</h5>
+    </article>
+
+  </div>
+</section>
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+<section class="section-divider"><span>CONTACT</span></section>
+
+<section id="contact" class="contact-section">
+
+  <div class="section-intro">
+    <h5>Contact</h5>
+    <h1>Let’s connect.</h1>
+  </div>
+
+  <form class="contact-form"
+        action="https://formspree.io/f/xlggjggb"
+        method="POST">
+
+    <div class="contact-grid">
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+    </div>
+
+    <input type="text" name="subject" placeholder="Subject" />
+
+    <textarea name="message" minlength="15" required></textarea>
+
+    <input type="text" name="_gotcha" style="display:none" />
+
+    <button type="submit" class="btn-outline">
+      Send Message
+    </button>
+
+  </form>
+
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Olivia Griffin</p>
+</footer>
+
+<script src="components/loader/loader.js" defer></script>
+<script src="main.js" defer></script>
 
 </body>
 </html>
