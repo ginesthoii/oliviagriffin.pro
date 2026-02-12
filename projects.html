@@ -2,109 +2,128 @@
 <html lang="en">
 
 <head>
-  <!-- ======================================
-       META
-  ======================================= -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Projects — Olivia Griffin</title>
+<!-- ======================================
+     META
+====================================== -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- ======================================
-       PERFORMANCE (Fonts)
-  ======================================= -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Projects — Olivia Griffin</title>
 
-  <!-- Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap"
-    rel="stylesheet"
-  />
 
-  <!-- ======================================
-       CSS LOAD ORDER
-       Base/Global → Page → Components
-  ======================================= -->
+<!-- ======================================
+     PERFORMANCE (Fonts)
+====================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- GLOBAL SITE SYSTEM (NAVBAR + TOKENS + GLOBAL STRUCTURE) -->
-  <link rel="stylesheet" href="style.css" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;900&display=swap"
+  rel="stylesheet"
+/>
 
-  <!-- PAGE VISUALS -->
-  <link rel="stylesheet" href="projects.css" />
 
-  <!-- COMPONENT CSS -->
-  <link rel="stylesheet" href="components/loader/loader.css" />
+<!-- ======================================
+     CSS LOAD ORDER
+     CORE → COMPONENT → PAGE → LOCAL COMPONENTS
+====================================== -->
 
-  <!-- ======================================
-       FAVICONS
-  ======================================= -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+<!-- CORE SYSTEM -->
+<link rel="stylesheet" href="core.css" />
+
+<!-- NAVBAR COMPONENT -->
+<link rel="stylesheet" href="components/navbar/navbar.css" />
+
+<!-- PAGE VISUALS -->
+<link rel="stylesheet" href="projects.css" />
+
+<!-- LOCAL COMPONENTS -->
+<link rel="stylesheet" href="components/loader/loader.css" />
+
+
+<!-- ======================================
+     FAVICONS
+====================================== -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 
 </head>
 
+
+
 <body id="projects">
 
-  <!-- ======================================
-       SHARED NAVBAR SLOT
-  ======================================= -->
-  <div id="navbar-slot"></div>
-  <script src="components/navbar/navbar.js" defer></script>
 
-  <!-- ======================================
-       HERO
-  ======================================= -->
-  <header class="page-hero" style="padding-top:120px;">
-    <div class="hero-inner">
+<!-- ======================================
+     SHARED NAVBAR SLOT
+====================================== -->
+<div id="navbar-slot"></div>
+<script src="components/navbar/navbar.js" defer></script>
 
-      <h1>Projects</h1>
 
-      <p>
-        Local-first systems • Security-minded builds • Automation • Creative tools
-      </p>
 
-      <div class="controls">
+<!-- ======================================
+     HERO
+====================================== -->
+<header class="page-hero" style="padding-top:120px;">
+  <div class="hero-inner">
 
-        <input
-          id="search"
-          type="search"
-          placeholder="Search projects…"
-          aria-label="Search projects"
-          autocomplete="off"
-        />
+    <h1>Projects</h1>
 
-        <div id="catbar" class="catbar"></div>
+    <p>
+      Local-first systems • Security-minded builds • Automation • Creative tools
+    </p>
 
-        <div class="filter-right">
-          <select id="tagSelect">
-            <option value="">All tags</option>
-          </select>
+    <div class="controls">
 
-          <button id="clearFilters" class="clear-btn">
-            Clear
-          </button>
-        </div>
+      <input
+        id="search"
+        type="search"
+        placeholder="Search projects…"
+        aria-label="Search projects"
+        autocomplete="off"
+      />
 
+      <div id="catbar" class="catbar"></div>
+
+      <div class="filter-right">
+        <select id="tagSelect">
+          <option value="">All tags</option>
+        </select>
+
+        <button id="clearFilters" class="clear-btn">
+          Clear
+        </button>
       </div>
+
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- ======================================
-       MAIN CONTENT
-  ======================================= -->
-  <main class="page-main">
-    <div id="sections" class="interactive-cards"></div>
-  </main>
 
-  <!-- ======================================
-       GLOBAL SITE LOGIC
-  ======================================= -->
-  <script defer src="main.js"></script>
 
-  <!-- PAGE MODULE -->
-  <script type="module" src="projects.js"></script>
+<!-- ======================================
+     MAIN CONTENT
+====================================== -->
+<main class="page-main">
+  <div id="sections" class="interactive-cards"></div>
+</main>
+
+
+
+<!-- ======================================
+     GLOBAL SITE LOGIC
+====================================== -->
+<script defer src="main.js"></script>
+
+
+<!-- ======================================
+     PAGE MODULE
+====================================== -->
+<script type="module" src="projects.js"></script>
+
 
 </body>
 </html>
