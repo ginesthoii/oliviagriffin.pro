@@ -10,6 +10,7 @@
 
 <title>Organizations — Olivia Griffin</title>
 
+
 <!-- ======================================
      PERFORMANCE (Fonts)
 ====================================== -->
@@ -21,16 +22,21 @@
   rel="stylesheet"
 />
 
+
 <!-- ======================================
      CSS LOAD ORDER
-     Global → Page → Components
+     CORE → COMPONENT → PAGE
 ====================================== -->
 
-<!-- GLOBAL SITE SYSTEM (NAVBAR + TOKENS + GLOBAL STRUCTURE) -->
-<link rel="stylesheet" href="style.css"/>
+<!-- CORE SYSTEM -->
+<link rel="stylesheet" href="core.css"/>
+
+<!-- NAVBAR COMPONENT -->
+<link rel="stylesheet" href="components/navbar/navbar.css"/>
 
 <!-- PAGE VISUALS -->
 <link rel="stylesheet" href="orgs.css"/>
+
 
 <!-- ======================================
      FAVICONS
@@ -39,10 +45,12 @@
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
 
+
 <!-- ======================================
      CHART LIBRARY
 ====================================== -->
 <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 <!-- ======================================
      PAGE MODULE
@@ -51,7 +59,10 @@
 
 </head>
 
+
+
 <body id="organizations">
+
 
 <!-- ======================================
      SHARED NAVBAR SLOT
@@ -59,10 +70,13 @@
 <div id="navbar-slot"></div>
 <script src="components/navbar/navbar.js" defer></script>
 
+
+
 <!-- ======================================
      MAIN CONTENT
 ====================================== -->
 <main class="section orgs-page">
+
 
   <!-- =========================
        INTRO
@@ -74,6 +88,8 @@
       Independent orgs and long-running systems I maintain and evolve.
     </p>
   </div>
+
+
 
   <!-- =========================
        ANALYTICS
@@ -110,6 +126,8 @@
 
   </section>
 
+
+
   <!-- =========================
        SEARCH
   ========================== -->
@@ -122,6 +140,8 @@
       autocomplete="off"
     />
   </section>
+
+
 
   <!-- =========================
        FILTERS
@@ -152,6 +172,8 @@
 
   </section>
 
+
+
   <!-- =========================
        CARDS
   ========================== -->
@@ -159,12 +181,16 @@
     <div class="cards" id="orgCards"></div>
   </section>
 
+
 </main>
+
+
 
 <!-- ======================================
      GLOBAL SITE LOGIC
 ====================================== -->
 <script defer src="main.js"></script>
+
 
 </body>
 </html>
