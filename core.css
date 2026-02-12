@@ -1,0 +1,117 @@
+/* =====================================================
+   CORE SYSTEM CSS
+   Global tokens + reset + base layout only
+===================================================== */
+
+
+/* =====================================================
+   RESET / BASE NORMALIZE
+===================================================== */
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+  font-family:'Lato', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background:#070707;
+  color:#eef2ff;
+  line-height:1.5;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+}
+
+
+/* =====================================================
+   GLOBAL TOKENS (USED BY NAVBAR + PAGES)
+===================================================== */
+
+:root{
+
+  /* ---------- Core Colors ---------- */
+  --bg:#070707;
+  --text:#eef2ff;
+  --muted:rgba(238,242,255,.7);
+  --line:#ffffff26;
+
+  /* ---------- Layout ---------- */
+  --maxw:1200px;
+  --pad:clamp(16px,3vw,36px);
+
+  /* ---------- Typography ---------- */
+  --nav:clamp(1rem,2.2vw,2.1rem);
+
+  /* ---------- Effects ---------- */
+  --noise-base:url("images/textures/noise-base.webp");
+  --noise-top:url("images/textures/noise-top.png");
+
+}
+
+
+/* =====================================================
+   GLOBAL MEDIA BEHAVIOR
+===================================================== */
+
+img,
+picture,
+video,
+canvas,
+svg{
+  display:block;
+  max-width:100%;
+}
+
+
+/* =====================================================
+   GLOBAL LINKS 
+===================================================== */
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* =====================================================
+   GLOBAL SECTION SPACING 
+   Pages can override
+===================================================== */
+
+.section{
+  width:100%;
+  max-width:var(--maxw);
+  margin-inline:auto;
+  padding-inline:var(--pad);
+}
+
+
+/* =====================================================
+   GLOBAL INPUT BASE 
+===================================================== */
+
+input,
+select,
+textarea,
+button{
+  font-family:inherit;
+  color:inherit;
+}
+
+
+/* =====================================================
+   ACCESSIBILITY BASE
+===================================================== */
+
+:focus-visible{
+  outline:2px solid #7fd6ff;
+  outline-offset:2px;
+}
